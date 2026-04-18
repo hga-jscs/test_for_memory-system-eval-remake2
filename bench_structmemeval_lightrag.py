@@ -118,49 +118,67 @@ def eval_case(task):
         model=config.llm["model"],
     )
 
-    ingest_case(mem, case, category)
-    t0 = time.time()
-    mem.build_index()
-    ingest_time_ms = (time.time() - t0) * 1000
-    audit = mem.audit_ingest()
+    try:
+        ingest_case(mem, case, category)
+        t0 = time.time()
+        mem.build_index()
+        ingest_time_ms = (time.time() - t0) * 1000
+        audit = mem.audit_ingest()
 
-    t1 = time.time()
-    tokens_before = llm.total_tokens
-    correct = 0
-    qa_results = []
+        t1 = time.time()
+        tokens_before = llm.total_tokens
+        correct = 0
+        qa_results = []
 
-    for q in queries:
-        question  = q.get("question", "")
-        reference = q.get("reference_answer", {})
-        pred = answer_with_memory(llm, mem, question)
-        ok   = judge_answer(llm, question, pred, reference, category)
-        if ok:
-            correct += 1
-        qa_results.append({
-            "question": question[:80],
-            "correct":  ok,
-            "pred":     pred[:120],
-        })
+        for q in queries:
+            question  = q.get("question", "")
+            reference = q.get("reference_answer", {})
+            pred = answer_with_memory(llm, mem, question)
+            ok   = judge_answer(llm, question, pred, reference, category)
+            if ok:
+                correct += 1
+            qa_results.append({
+                "question": question[:80],
+                "correct":  ok,
+                "pred":     pred[:120],
+            })
 
-    infer_time_ms    = (time.time() - t1) * 1000
-    infer_llm_tokens = llm.total_tokens - tokens_before
+        infer_time_ms    = (time.time() - t1) * 1000
+        infer_llm_tokens = llm.total_tokens - tokens_before
 
-    mem.reset()
+        return {
+            "case_id":    case_id,
+            "category":   category,
+            "n_queries":  len(queries),
+            "correct":    correct,
+            "ingest_chunks":         audit["ingest_chunks"],
+            "ingest_time_ms":        audit["ingest_time_ms"],
+            "ingest_llm_calls":      audit["ingest_llm_calls"],
+            "ingest_llm_prompt":     audit["ingest_llm_prompt_tokens"],
+            "ingest_llm_completion": audit["ingest_llm_completion_tokens"],
+            "infer_time_ms":         round(infer_time_ms),
+            "infer_llm_tokens":      infer_llm_tokens,
+            "qa_results":            qa_results,
+        }
+    finally:
+        # 无论成功失败都要清理，避免跨 case 泄漏异步状态。
+        mem.reset()
 
-    return {
-        "case_id":    case_id,
-        "category":   category,
-        "n_queries":  len(queries),
-        "correct":    correct,
-        "ingest_chunks":         audit["ingest_chunks"],
-        "ingest_time_ms":        audit["ingest_time_ms"],
-        "ingest_llm_calls":      audit["ingest_llm_calls"],
-        "ingest_llm_prompt":     audit["ingest_llm_prompt_tokens"],
-        "ingest_llm_completion": audit["ingest_llm_completion_tokens"],
-        "infer_time_ms":         round(infer_time_ms),
-        "infer_llm_tokens":      infer_llm_tokens,
-        "qa_results":            qa_results,
-    }
+
+def _evaluate_lightrag_health(results, errors, total_tasks):
+    health = evaluate_execution_health(results=results, errors=errors, total_tasks=total_tasks)
+    if not health.ok:
+        return health
+
+    attempted = health.completed_cases + health.error_cases
+    completion_rate = (health.completed_cases / attempted) if attempted else 0.0
+    if health.completed_cases < max(1, int(total_tasks * 0.5)):
+        health.ok = False
+        health.reason = "too few completed cases for lightrag"
+    elif completion_rate < 0.8:
+        health.ok = False
+        health.reason = "error ratio too high for lightrag"
+    return health
 
 
 def main() -> int:
@@ -176,6 +194,15 @@ def main() -> int:
     for cat, cnt in sorted(cat_cnt.items()):
         print(f"  {cat}: {cnt} cases")
     print(f"  合计: {len(tasks)} cases | MAX_WORKERS={MAX_WORKERS}\n")
+
+    # 预检：尽早暴露配置/依赖问题，避免 172 个 case 重复报同一类错误。
+    try:
+        _ = get_config()
+        LightRAGBenchMemory._check_runtime_deps()
+    except Exception as e:
+        print(f"[PRECHECK][FATAL] {e}")
+        print("[BENCH-STATUS] ok=False reason=precheck failed total=0 completed=0 skipped=0 errors=1 evaluated_queries=0")
+        return 2
 
     results, errors = [], []
     t_wall_start = time.time()
@@ -239,7 +266,7 @@ def main() -> int:
     with open(RESULTS_PATH, "w", encoding="utf-8") as f:
         json.dump({"results": results, "errors": errors}, f, indent=2, ensure_ascii=False)
     print(f"\n结果已保存到 {RESULTS_PATH}")
-    health = evaluate_execution_health(results=results, errors=errors, total_tasks=len(tasks))
+    health = _evaluate_lightrag_health(results=results, errors=errors, total_tasks=len(tasks))
     print(
         "[BENCH-STATUS] "
         f"ok={health.ok} reason={health.reason} total={health.total_tasks} "
