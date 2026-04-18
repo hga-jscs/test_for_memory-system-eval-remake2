@@ -125,8 +125,8 @@ python -c "from lightrag_bench_src import LightRAGBenchMemory; print('ok')"
   - `model`
   - `config_source`
 - LightRAG 上游 `chat.completions.parse` 在部分 OpenAI-compatible SDK/网关（含 DashScope 路线）不可用。当前仓库已对该路径做兼容：
-  - 优先调用 `parse`（若客户端支持）
-  - 不支持时回退到 `chat.completions.create` + JSON response_format 路径
+  - 统一使用 `chat.completions.create` 路径（不再调用 `parse`）
+  - 当请求是结构化关键词提取时，自动规整为 `response_format={"type":"json_object"}`，随后本地 JSON 解析
   - 因此不会再以 `'AsyncCompletions' object has no attribute 'parse'` 作为主错误
 
 ---

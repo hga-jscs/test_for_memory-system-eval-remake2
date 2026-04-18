@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import asyncio
 import os
+import re
 import sys
 import time
 from functools import partial
@@ -120,11 +121,18 @@ class LightRAGBenchMemory:
                 **kwargs,
             )
 
+        embed_callable = openai_embed
+        if hasattr(openai_embed, "func") and callable(getattr(openai_embed, "func")):
+            # Avoid nested EmbeddingFunc wrapping:
+            # openai_embed itself is already an EmbeddingFunc(declared_dim=1536 by decorator).
+            # If we partial(openai_embed, ...), inner wrapper can override our configured dim.
+            embed_callable = openai_embed.func
+
         embedding_func = EmbeddingFunc(
             embedding_dim=configured_dim,
             max_token_size=int(os.getenv("LIGHTRAG_MAX_EMBED_TOKENS", "8192")),
             func=partial(
-                openai_embed,
+                embed_callable,
                 model=embedding_model,
                 api_key=emb_conf.get("api_key"),
                 base_url=emb_conf.get("base_url"),
@@ -189,9 +197,16 @@ class LightRAGBenchMemory:
         except Exception as e:
             err_text = str(e)
             if "Embedding dimension mismatch detected" in err_text:
+                actual_dim = "unknown"
+                matched = re.search(r"total elements \((\d+)\).*expected dimension \((\d+)\)", err_text)
+                if matched:
+                    total_elements = int(matched.group(1))
+                    expected_dim = int(self._embedding_meta.get("dim") or 0)
+                    if expected_dim > 0 and total_elements % expected_dim == 0:
+                        actual_dim = str(total_elements // expected_dim)
                 raise RuntimeError(
                     "[LightRAGBenchMemory] build_index 失败：embedding 维度不匹配。"
-                    f" expected_dim={self._embedding_meta.get('dim')} actual_dim=unknown "
+                    f" expected_dim={self._embedding_meta.get('dim')} actual_dim={actual_dim} "
                     f"model={self._embedding_meta.get('model')} config_source={self._embedding_meta.get('source')}"
                 ) from e
             if "bound to a different event loop" in err_text:
