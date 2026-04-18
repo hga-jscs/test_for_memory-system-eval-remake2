@@ -11,9 +11,11 @@ import requests
 
 try:
     from openai import OpenAI
+    import httpx
     from httpx import Timeout
 except ImportError:
     OpenAI = None
+    httpx = None
     Timeout = None
 
 from .logger import get_logger
@@ -44,16 +46,34 @@ class OpenAIClient(BaseLLMClient):
             raise ImportError("请先安装 openai: pip install openai")
 
         self._logger = get_logger()
-        self._client = OpenAI(
-            api_key=api_key,
-            base_url=base_url,
-            timeout=Timeout(300.0, connect=10.0),
-            max_retries=0,
-        )
+        self._client = self._build_openai_client(api_key=api_key, base_url=base_url)
         self._model = model
         self._temperature = temperature
         self._max_tokens = max_tokens
         self._total_tokens = 0
+
+    def _build_openai_client(self, api_key: str, base_url: str) -> OpenAI:
+        client_kwargs = {
+            "api_key": api_key,
+            "base_url": base_url,
+            "timeout": Timeout(300.0, connect=10.0),
+            "max_retries": 0,
+        }
+        try:
+            return OpenAI(**client_kwargs)
+        except TypeError as err:
+            if "proxies" not in str(err).lower() or httpx is None:
+                raise
+            self._logger.warning(
+                "检测到 openai/httpx 版本兼容问题（proxies 参数）。切换到显式 httpx.Client 兼容模式。"
+            )
+            http_client = httpx.Client(timeout=Timeout(300.0, connect=10.0))
+            return OpenAI(
+                api_key=api_key,
+                base_url=base_url,
+                max_retries=0,
+                http_client=http_client,
+            )
 
     @property
     def total_tokens(self) -> int:

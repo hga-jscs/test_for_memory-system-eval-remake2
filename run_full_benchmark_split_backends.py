@@ -117,6 +117,7 @@ def run_script(
 
     env = os.environ.copy()
     env["PYTHONUNBUFFERED"] = "1"
+    bench_status_failed = False
 
     with log_path.open("w", encoding="utf-8") as log_file:
         log_file.write(f"# start: {utc_now()}\n")
@@ -135,11 +136,16 @@ def run_script(
         for line in process.stdout:
             log_file.write(line)
             print(f"[{backend}/{script_path.stem}] {line.rstrip()}", flush=True)
+            if "[BENCH-STATUS]" in line and "ok=False" in line:
+                bench_status_failed = True
 
         return_code = process.wait()
 
     elapsed = time.time() - start
-    status = "PASS" if return_code == 0 else f"FAIL({return_code})"
+    if return_code == 0 and bench_status_failed:
+        status = "FAIL(health-check)"
+    else:
+        status = "PASS" if return_code == 0 else f"FAIL({return_code})"
     print(
         f"[DEBUG] done backend={backend} script={script} status={status} elapsed={elapsed:.1f}s",
         flush=True,

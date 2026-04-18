@@ -5,6 +5,7 @@
 每个 category 跑 2~3 cases，覆盖完整 ingest→retrieve→answer→judge 流程。
 """
 import json
+from benchmark_io_utils import load_json_with_fallback
 import re
 import sys
 import time
@@ -117,7 +118,7 @@ def test_structmemeval():
         print(f"\n  [{cat}] {len(fps)} cases")
 
         for fp in fps:
-            case = json.load(open(fp))
+            case = load_json_with_fallback(fp)
             case_id = case.get("case_id", fp.stem)
             queries = case.get("queries", [])
             if not queries:
@@ -183,7 +184,7 @@ def test_amemgym():
     print("AMemGym: 3 users, full MCQ pipeline")
     print("=" * 70)
 
-    data = json.load(open("data/amemgym/v1.base/data.json"))
+    data = load_json_with_fallback("data/amemgym/v1.base/data.json")
     users = data if isinstance(data, list) else list(data.values())
 
     total_correct, total_q = 0, 0
@@ -253,7 +254,7 @@ def test_memory_probe():
     print("memory-probe: conv 0, 5 QA per category")
     print("=" * 70)
 
-    data = json.load(open("memory-probe/data/locomo10.json"))
+    data = load_json_with_fallback("memory-probe/data/locomo10.json")
     convs = data if isinstance(data, list) else data.get("conversations", [data])
     conv = convs[0]
     conversation = conv["conversation"]

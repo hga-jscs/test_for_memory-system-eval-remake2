@@ -6,16 +6,17 @@ LightRAG: tree=3L, top_k=5
 """
 
 import json
+import os
 import sys
 import time
 from collections import defaultdict
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from lightrag_bench_src import LightRAGBenchMemory
 from benchmark_io_utils import load_json_with_fallback
+from benchmark_status_utils import evaluate_execution_health
 
 BASE = Path("StructMemEval/benchmark")
 CATEGORIES = {
@@ -24,6 +25,8 @@ CATEGORIES = {
     "recommendations":        BASE / "recommendations" / "data",
 }
 
+# LightRAG 当前版本在同一进程中并发评测容易触发 asyncio.Lock 绑定不同事件循环。
+# correctness 优先：强制串行安全模式。
 MAX_WORKERS  = 1
 RESULTS_PATH = Path("results_structmemeval_lightrag.json")
 SAVE_BASE    = Path("/tmp/bench_lightrag_sme")
@@ -88,6 +91,12 @@ def judge_answer(llm, question, pred, reference, category):
     return "yes" in result.lower()
 
 
+def _make_case_workdir(category: str, case_id: str) -> str:
+    # 必须唯一，避免 doc_status:default_key 等共享状态污染。
+    unique = f"{os.getpid()}_{time.time_ns()}"
+    return str(SAVE_BASE / f"{category[:12]}_{case_id[:16]}_{unique}")
+
+
 def eval_case(task):
     category = task["category"]
     path     = task["path"]
@@ -100,7 +109,7 @@ def eval_case(task):
                 "skipped": True, "reason": "no queries"}
 
     config   = get_config()
-    save_dir = str(SAVE_BASE / f"{category[:12]}_{case_id[:16]}")
+    save_dir = _make_case_workdir(category, case_id)
 
     mem = LightRAGBenchMemory(save_dir=save_dir)
     llm = OpenAIClient(
@@ -154,7 +163,7 @@ def eval_case(task):
     }
 
 
-def main():
+def main() -> int:
     SAVE_BASE.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
@@ -171,30 +180,26 @@ def main():
     results, errors = [], []
     t_wall_start = time.time()
 
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        futures = {executor.submit(eval_case, t): t for t in tasks}
-        done = 0
-        for future in as_completed(futures):
-            done += 1
-            task = futures[future]
-            try:
-                r = future.result()
-                results.append(r)
-                if r.get("skipped"):
-                    tag    = "SKIP"
-                    detail = r["reason"]
-                else:
-                    tag    = f"{r['correct']}/{r['n_queries']}"
-                    detail = (
-                        f"chunks={r['ingest_chunks']}  "
-                                                f"ingest={r['ingest_time_ms']}ms  infer={r['infer_time_ms']}ms  "
-                        f"llm_calls={r['ingest_llm_calls']}"
-                    )
-                print(f"[{done:3d}/{len(tasks)}] {r['category'][:22]:22s} {r['case_id'][:28]:28s} {tag}  {detail}")
-            except Exception as e:
-                errors.append({"path": str(task["path"]), "error": str(e)})
-                print(f"[{done:3d}/{len(tasks)}] ERROR {task['path'].name}: {e}")
-                import traceback; traceback.print_exc()
+    for done, task in enumerate(tasks, start=1):
+        try:
+            r = eval_case(task)
+            results.append(r)
+            if r.get("skipped"):
+                tag = "SKIP"
+                detail = r["reason"]
+            else:
+                tag = f"{r['correct']}/{r['n_queries']}"
+                detail = (
+                    f"chunks={r['ingest_chunks']}  "
+                    f"ingest={r['ingest_time_ms']}ms  infer={r['infer_time_ms']}ms  "
+                    f"llm_calls={r['ingest_llm_calls']}"
+                )
+            print(f"[{done:3d}/{len(tasks)}] {r['category'][:22]:22s} {r['case_id'][:28]:28s} {tag}  {detail}")
+        except Exception as e:
+            errors.append({"path": str(task["path"]), "error": str(e)})
+            print(f"[{done:3d}/{len(tasks)}] ERROR {task['path'].name}: {e}")
+            import traceback
+            traceback.print_exc()
 
     wall_ms = (time.time() - t_wall_start) * 1000
 
@@ -234,7 +239,15 @@ def main():
     with open(RESULTS_PATH, "w", encoding="utf-8") as f:
         json.dump({"results": results, "errors": errors}, f, indent=2, ensure_ascii=False)
     print(f"\n结果已保存到 {RESULTS_PATH}")
+    health = evaluate_execution_health(results=results, errors=errors, total_tasks=len(tasks))
+    print(
+        "[BENCH-STATUS] "
+        f"ok={health.ok} reason={health.reason} total={health.total_tasks} "
+        f"completed={health.completed_cases} skipped={health.skipped_cases} "
+        f"errors={health.error_cases} evaluated_queries={health.evaluated_queries}"
+    )
+    return 0 if health.ok else 2
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
