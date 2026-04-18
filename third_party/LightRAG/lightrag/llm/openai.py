@@ -327,9 +327,23 @@ async def openai_complete_if_cache(
     try:
         # Don't use async with context manager, use client directly
         if "response_format" in kwargs:
-            response = await openai_async_client.chat.completions.parse(
-                model=api_model, messages=messages, **kwargs
-            )
+            parse_method = getattr(openai_async_client.chat.completions, "parse", None)
+            if callable(parse_method):
+                response = await parse_method(model=api_model, messages=messages, **kwargs)
+            else:
+                fallback_kwargs = dict(kwargs)
+                # OpenAI-compatible endpoints often support chat.completions.create but not parse.
+                # Fall back to json_object mode for structured output.
+                if not isinstance(fallback_kwargs.get("response_format"), dict):
+                    fallback_kwargs["response_format"] = {"type": "json_object"}
+                logger.warning(
+                    "chat.completions.parse is unavailable on current async client; "
+                    "fallback to chat.completions.create with response_format=%s",
+                    fallback_kwargs["response_format"],
+                )
+                response = await openai_async_client.chat.completions.create(
+                    model=api_model, messages=messages, **fallback_kwargs
+                )
         else:
             response = await openai_async_client.chat.completions.create(
                 model=api_model, messages=messages, **kwargs

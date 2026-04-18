@@ -36,6 +36,7 @@ class LightRAGBenchMemory:
         self._loop: Optional[asyncio.AbstractEventLoop] = None
         self.backend_mode = "uninitialized"
         self._ingest_time_ms = 0
+        self._embedding_meta: Dict[str, Any] = {}
 
     @staticmethod
     def _check_runtime_deps() -> None:
@@ -87,6 +88,26 @@ class LightRAGBenchMemory:
         conf = get_config()
         llm_conf = conf.llm
         emb_conf = conf.embedding
+        embedding_model = emb_conf.get("model", "text-embedding-v3")
+        configured_dim_raw = emb_conf.get("dim", 1024)
+        try:
+            configured_dim = int(configured_dim_raw)
+        except (TypeError, ValueError) as e:
+            raise RuntimeError(
+                "[LightRAGBenchMemory] embedding.dim 配置非法，必须是整数。"
+                f"current_value={configured_dim_raw!r} source=config.yaml:embedding.dim model={embedding_model}"
+            ) from e
+        if configured_dim <= 0:
+            raise RuntimeError(
+                "[LightRAGBenchMemory] embedding.dim 配置非法，必须是正整数。"
+                f"current_value={configured_dim} source=config.yaml:embedding.dim model={embedding_model}"
+            )
+        config_source = "config.yaml:embedding.dim"
+        self._embedding_meta = {
+            "model": embedding_model,
+            "dim": configured_dim,
+            "source": config_source,
+        }
 
         async def _llm_model_func(prompt, system_prompt=None, history_messages=None, **kwargs):
             return await openai_complete_if_cache(
@@ -100,17 +121,45 @@ class LightRAGBenchMemory:
             )
 
         embedding_func = EmbeddingFunc(
-            embedding_dim=int(os.getenv("LIGHTRAG_EMBEDDING_DIM", "1024")),
+            embedding_dim=configured_dim,
             max_token_size=int(os.getenv("LIGHTRAG_MAX_EMBED_TOKENS", "8192")),
             func=partial(
                 openai_embed,
-                model=emb_conf.get("model", "text-embedding-v3"),
+                model=embedding_model,
                 api_key=emb_conf.get("api_key"),
                 base_url=emb_conf.get("base_url"),
             ),
+            send_dimensions=True,
+            model_name=embedding_model,
         )
 
         return LightRAG, _llm_model_func, embedding_func
+
+    def _validate_embedding_contract(self, embedding_func: Any) -> None:
+        assert self._loop is not None
+        probe_text = ["[LightRAGBenchMemory] embedding dimension probe"]
+        model_name = self._embedding_meta.get("model", "<unknown>")
+        source = self._embedding_meta.get("source", "config")
+        expected_dim = int(self._embedding_meta.get("dim", embedding_func.embedding_dim))
+        try:
+            vectors = self._run_coro(embedding_func(probe_text))
+        except Exception as e:
+            raise RuntimeError(
+                "[LightRAGBenchMemory] embedding 预检失败。"
+                f" expected_dim={expected_dim} actual_dim=unknown model={model_name} config_source={source}"
+            ) from e
+
+        actual_dim = getattr(vectors, "shape", [0, 0])[1] if getattr(vectors, "ndim", 0) == 2 else None
+        if actual_dim != expected_dim:
+            raise RuntimeError(
+                "[LightRAGBenchMemory] embedding 维度不匹配。"
+                f" expected_dim={expected_dim} actual_dim={actual_dim} model={model_name} config_source={source}"
+            )
+        print(
+            "[LightRAGBenchMemory][DEBUG] "
+            f"embedding_probe_ok expected_dim={expected_dim} actual_dim={actual_dim} "
+            f"model={model_name} source={source}"
+        )
 
     def build_index(self) -> None:
         if not self._buffer:
@@ -118,14 +167,20 @@ class LightRAGBenchMemory:
 
         self._check_runtime_deps()
         LightRAG, llm_func, embedding_func = self._build_runtime()
+        print(
+            "[LightRAGBenchMemory][DEBUG] "
+            f"embedding_config model={self._embedding_meta.get('model')} "
+            f"dim={self._embedding_meta.get('dim')} source={self._embedding_meta.get('source')}"
+        )
 
         os.makedirs(self.save_dir, exist_ok=True)
+        self._loop = asyncio.new_event_loop()
+        self._validate_embedding_contract(embedding_func)
         rag = LightRAG(
             working_dir=self.save_dir,
             llm_model_func=llm_func,
             embedding_func=embedding_func,
         )
-        self._loop = asyncio.new_event_loop()
 
         t0 = time.time()
         try:
@@ -133,13 +188,19 @@ class LightRAGBenchMemory:
             self._run_coro(rag.ainsert("\n\n".join(self._buffer)))
         except Exception as e:
             err_text = str(e)
+            if "Embedding dimension mismatch detected" in err_text:
+                raise RuntimeError(
+                    "[LightRAGBenchMemory] build_index 失败：embedding 维度不匹配。"
+                    f" expected_dim={self._embedding_meta.get('dim')} actual_dim=unknown "
+                    f"model={self._embedding_meta.get('model')} config_source={self._embedding_meta.get('source')}"
+                ) from e
             if "bound to a different event loop" in err_text:
                 raise RuntimeError(
                     "[LightRAGBenchMemory] build_index 失败：检测到 asyncio.Lock 绑定不同事件循环。"
                     "请确保单进程串行执行，并为每个 case 使用唯一 working_dir。"
                 ) from e
             raise RuntimeError(
-                "[LightRAGBenchMemory] build_index 失败。该问题通常不是 API 接口错误，而是并发/事件循环复用导致的异步锁冲突。"
+                "[LightRAGBenchMemory] build_index 失败。请查看上游异常以确认是 embedding/LLM 兼容问题还是事件循环冲突。"
             ) from e
 
         self._backend = rag

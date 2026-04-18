@@ -116,6 +116,19 @@ pip install -e third_party/LightRAG
 python -c "from lightrag_bench_src import LightRAGBenchMemory; print('ok')"
 ```
 
+### 4.1 DashScope(OpenAI-compatible) 关键兼容点
+
+- `lightrag_bench_src.py` 会优先读取 `config.yaml -> embedding.dim` 作为 LightRAG 的 `embedding_dim`，并在 build_index 前做一次 embedding 维度预检（日志会打印 `expected_dim/actual_dim/model/source`）。
+- 若出现维度不匹配，错误会明确给出：
+  - `expected_dim`
+  - `actual_dim`
+  - `model`
+  - `config_source`
+- LightRAG 上游 `chat.completions.parse` 在部分 OpenAI-compatible SDK/网关（含 DashScope 路线）不可用。当前仓库已对该路径做兼容：
+  - 优先调用 `parse`（若客户端支持）
+  - 不支持时回退到 `chat.completions.create` + JSON response_format 路径
+  - 因此不会再以 `'AsyncCompletions' object has no attribute 'parse'` 作为主错误
+
 ---
 
 ## 5) MemGPT（Letta）
