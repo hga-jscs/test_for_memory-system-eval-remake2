@@ -118,6 +118,12 @@ class LightRAGBenchMemory:
             self._run_coro(rag.initialize_storages())
             self._run_coro(rag.ainsert("\n\n".join(self._buffer)))
         except Exception as e:
+            err_text = str(e)
+            if "bound to a different event loop" in err_text:
+                raise RuntimeError(
+                    "[LightRAGBenchMemory] build_index 失败：检测到 asyncio.Lock 绑定不同事件循环。"
+                    "请确保单进程串行执行，并为每个 case 使用唯一 working_dir。"
+                ) from e
             raise RuntimeError(
                 "[LightRAGBenchMemory] build_index 失败。该问题通常不是 API 接口错误，而是并发/事件循环复用导致的异步锁冲突。"
             ) from e

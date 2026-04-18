@@ -6,6 +6,7 @@ from typing import Any, Dict, Optional
 
 import yaml
 
+from benchmark_io_utils import read_text_with_fallback
 from .logger import get_logger
 
 _config: Optional["Config"] = None
@@ -22,8 +23,7 @@ class Config:
         if not config_path.exists():
             raise FileNotFoundError(f"配置文件不存在: {config_path}")
 
-        with open(config_path, "r", encoding="utf-8") as f:
-            self._data = yaml.safe_load(f) or {}
+        self._data = yaml.safe_load(read_text_with_fallback(config_path)) or {}
 
         self._logger.info("配置加载完成: %s", config_path)
 
@@ -48,8 +48,7 @@ class Config:
         if not hasattr(self, "_prompts"):
             prompts_path = Path(__file__).parent.parent / "prompts.yaml"
             if prompts_path.exists():
-                with open(prompts_path, "r", encoding="utf-8") as f:
-                    self._prompts = yaml.safe_load(f) or {}
+                self._prompts = yaml.safe_load(read_text_with_fallback(prompts_path)) or {}
             else:
                 self._prompts = {}
         if adaptor not in self._prompts:

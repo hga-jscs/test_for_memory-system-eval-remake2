@@ -74,24 +74,12 @@ class OpenAIClient(BaseLLMClient):
         self._total_tokens = 0
 
     def _build_openai_client(self, api_key: str, base_url: str) -> OpenAI:
-        client_kwargs = {
-            "api_key": api_key,
-            "base_url": base_url,
-            "timeout": Timeout(300.0, connect=10.0),
-        }
-        try:
-            return OpenAI(**client_kwargs)
-        except TypeError as err:
-            if "proxies" not in str(err).lower() or httpx is None:
-                raise
-            self._logger.warning(
-                "检测到 openai/httpx 版本兼容问题（proxies 参数）。切换到显式 httpx.Client 兼容模式。"
-            )
-            return OpenAI(
-                api_key=api_key,
-                base_url=base_url,
-                http_client=httpx.Client(timeout=Timeout(300.0, connect=10.0)),
-            )
+        return create_openai_client_compatible(
+            api_key=api_key,
+            base_url=base_url,
+            timeout=Timeout(300.0, connect=10.0),
+            logger=self._logger,
+        )
 
     @property
     def total_tokens(self) -> int:
@@ -260,3 +248,27 @@ class MockLLMClient(BaseLLMClient):
         """生成重规划检查响应"""
         # 模拟：大多数情况继续，偶尔重规划
         return {"action": "CONTINUE"}
+
+
+def create_openai_client_compatible(
+    *,
+    api_key: str,
+    base_url: str,
+    timeout: Optional[Timeout] = None,
+    logger=None,
+) -> OpenAI:
+    if OpenAI is None:
+        raise ImportError("请先安装 openai 库: pip install openai")
+    timeout = timeout or Timeout(300.0, connect=10.0)
+    try:
+        return OpenAI(api_key=api_key, base_url=base_url, timeout=timeout)
+    except TypeError as err:
+        if "proxies" not in str(err).lower() or httpx is None:
+            raise
+        if logger is not None:
+            logger.warning("检测到 openai/httpx proxies 兼容问题，切换显式 http_client。")
+        return OpenAI(
+            api_key=api_key,
+            base_url=base_url,
+            http_client=httpx.Client(timeout=timeout),
+        )
