@@ -1,0 +1,37 @@
+# ── API keys / secrets ────────────────────────────────────────────────────
+config.yaml
+.env
+*.env
+.env.*
+
+# ── External repos (cloned from upstream, not part of this project) ───────
+AriadneMem/
+Adaptive_Memory_Admission_Control_LLM_Agents/
+Marco-DeepResearch/
+memoRaxis_remote/
+ProcMEM/
+
+# ── Temp / runtime ────────────────────────────────────────────────────────
+temp/
+log/
+pdfs/
+logs_*.txt
+logs_hipporag_runner.txt
+
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# ── IDE / Claude ──────────────────────────────────────────────────────────
+.idea/
+.vscode/
+.claude/
+
+# ── OS ────────────────────────────────────────────────────────────────────
+.DS_Store

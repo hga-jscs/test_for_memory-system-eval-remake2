@@ -1,0 +1,1443 @@
+{
+  "results": [
+    {
+      "case_id": "static_001",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 3,
+      "ingest_time_ms": 74265,
+      "ingest_mem_size": 11,
+      "infer_time_ms": 3291,
+      "infer_llm_tokens": 265,
+      "qa_results": [
+        {
+          "question": "What do you have every morning at the bakery?",
+          "correct": true,
+          "pred": "A pastel de nata."
+        }
+      ]
+    },
+    {
+      "case_id": "static_002",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 2,
+      "ingest_time_ms": 59581,
+      "ingest_mem_size": 7,
+      "infer_time_ms": 3011,
+      "infer_llm_tokens": 229,
+      "qa_results": [
+        {
+          "question": "Where do you go when you need tools?",
+          "correct": true,
+          "pred": "The hardware store on Bedford Ave, 2 blocks away."
+        }
+      ]
+    },
+    {
+      "case_id": "static_003",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 2,
+      "ingest_time_ms": 56802,
+      "ingest_mem_size": 5,
+      "infer_time_ms": 2179,
+      "infer_llm_tokens": 202,
+      "qa_results": [
+        {
+          "question": "What do you enjoy doing in the evenings?",
+          "correct": true,
+          "pred": "I enjoy taking walks along the Seine in the evenings."
+        }
+      ]
+    },
+    {
+      "case_id": "static_004",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 2,
+      "ingest_time_ms": 60062,
+      "ingest_mem_size": 5,
+      "infer_time_ms": 3264,
+      "infer_llm_tokens": 224,
+      "qa_results": [
+        {
+          "question": "What do you like to do for your morning coffee?",
+          "correct": true,
+          "pred": "I like to start the day with morning coffee at a small cafe on Oranienstrasse."
+        }
+      ]
+    },
+    {
+      "case_id": "static_005",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 2,
+      "ingest_time_ms": 57334,
+      "ingest_mem_size": 6,
+      "infer_time_ms": 2530,
+      "infer_llm_tokens": 285,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast?",
+          "correct": true,
+          "pred": "You usually have a pastel de nata for breakfast."
+        }
+      ]
+    },
+    {
+      "case_id": "static_006",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 2,
+      "ingest_time_ms": 57823,
+      "ingest_mem_size": 12,
+      "infer_time_ms": 4192,
+      "infer_llm_tokens": 254,
+      "qa_results": [
+        {
+          "question": "What can you tell me about your neighbor?",
+          "correct": true,
+          "pred": "My neighbor is Liam, a musician who lives next door. I sometimes hear him practicing."
+        }
+      ]
+    },
+    {
+      "case_id": "static_007",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 2,
+      "ingest_time_ms": 38175,
+      "ingest_mem_size": 10,
+      "infer_time_ms": 3264,
+      "infer_llm_tokens": 333,
+      "qa_results": [
+        {
+          "question": "Who is your neighbor?",
+          "correct": true,
+          "pred": "Mike"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_001",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 116953,
+      "ingest_mem_size": 15,
+      "infer_time_ms": 3914,
+      "infer_llm_tokens": 280,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday morning?",
+          "correct": true,
+          "pred": "Take a Saturday morning walk to Battery Park to see the Statue of Liberty."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_002",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 146682,
+      "ingest_mem_size": 8,
+      "infer_time_ms": 3357,
+      "infer_llm_tokens": 302,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday morning?",
+          "correct": true,
+          "pred": "Go for a morning jog through Yoyogi Park, then stop by the small shop for your favorite morning matcha."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_003",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 154284,
+      "ingest_mem_size": 14,
+      "infer_time_ms": 4990,
+      "infer_llm_tokens": 422,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday morning?",
+          "correct": true,
+          "pred": "Take a Saturday morning walk to Battery Park to see the Statue of Liberty — it’s something you love doing! 🗽"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_004",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 115611,
+      "ingest_mem_size": 15,
+      "infer_time_ms": 3855,
+      "infer_llm_tokens": 319,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday morning?",
+          "correct": true,
+          "pred": "Visit the Rose Street Artists Market."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_005",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 0,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 104314,
+      "ingest_mem_size": 12,
+      "infer_time_ms": 3966,
+      "infer_llm_tokens": 349,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday morning?",
+          "correct": false,
+          "pred": "Cycle to the lakes for morning exercise—then relax in a nearby park."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_006",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 127174,
+      "ingest_mem_size": 13,
+      "infer_time_ms": 3776,
+      "infer_llm_tokens": 397,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday morning?",
+          "correct": true,
+          "pred": "Head to the flea market at Assistens Cemetery—enjoy browsing vintage finds, then grab a coffee and cardamom bun at Mirab"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_007",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 0,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 73976,
+      "ingest_mem_size": 17,
+      "infer_time_ms": 3598,
+      "infer_llm_tokens": 348,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday morning?",
+          "correct": false,
+          "pred": "Visit the Rose Street Artists Market."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_2tr_001",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 6,
+      "ingest_time_ms": 187242,
+      "ingest_mem_size": 10,
+      "infer_time_ms": 5031,
+      "infer_llm_tokens": 420,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "Take a Saturday walk near Yoyogi Park — you’re now living in Shibuya, which is close to Yoyogi Park, and you enjoy those"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_2tr_002",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 111288,
+      "ingest_mem_size": 4,
+      "infer_time_ms": 2874,
+      "infer_llm_tokens": 320,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "You usually have chilaquiles and fresh jugo for breakfast at Mercado Roma."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_2tr_003",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 85752,
+      "ingest_mem_size": 10,
+      "infer_time_ms": 2553,
+      "infer_llm_tokens": 349,
+      "qa_results": [
+        {
+          "question": "Who is my neighbor based on where I live now?",
+          "correct": true,
+          "pred": "Thabo"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_2tr_004",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 124309,
+      "ingest_mem_size": 8,
+      "infer_time_ms": 3293,
+      "infer_llm_tokens": 406,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "Head to Dolores Park in the morning and get tacos at La Taqueria—just like your established Saturday routine!"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_2tr_005",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 90399,
+      "ingest_mem_size": 15,
+      "infer_time_ms": 2185,
+      "infer_llm_tokens": 373,
+      "qa_results": [
+        {
+          "question": "Who is my neighbor based on where I live now?",
+          "correct": true,
+          "pred": "Rosa"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_2tr_006",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 121113,
+      "ingest_mem_size": 10,
+      "infer_time_ms": 3732,
+      "infer_llm_tokens": 407,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "Avocado toast and cold brew at Devoción."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_2tr_007",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 107971,
+      "ingest_mem_size": 12,
+      "infer_time_ms": 4262,
+      "infer_llm_tokens": 453,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "This Saturday, attend your morning yoga class and explore the Ubud Art Market — it’s part of your established Saturday r"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_3tr_001",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 0,
+      "ingest_chunks": 7,
+      "ingest_time_ms": 107754,
+      "ingest_mem_size": 11,
+      "infer_time_ms": 6197,
+      "infer_llm_tokens": 625,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": false,
+          "pred": "Since you now live in Paris (memory [13]) and love Saturday mornings at Smorgasburg (memory [3]), but Smorgasburg is in "
+        }
+      ]
+    },
+    {
+      "case_id": "transition_3tr_002",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 7,
+      "ingest_time_ms": 127960,
+      "ingest_mem_size": 9,
+      "infer_time_ms": 5156,
+      "infer_llm_tokens": 432,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "This Saturday, you should take an early morning walk through the Arashiyama bamboo grove—part of your established Saturd"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_3tr_003",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 7,
+      "ingest_time_ms": 122618,
+      "ingest_mem_size": 11,
+      "infer_time_ms": 3352,
+      "infer_llm_tokens": 375,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "Boat noodles and Thai iced tea at street stalls."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_3tr_004",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 7,
+      "ingest_time_ms": 155960,
+      "ingest_mem_size": 13,
+      "infer_time_ms": 2879,
+      "infer_llm_tokens": 327,
+      "qa_results": [
+        {
+          "question": "Who is my neighbor based on where I live now?",
+          "correct": true,
+          "pred": "Seamus is your neighbor."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_3tr_005",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 7,
+      "ingest_time_ms": 173741,
+      "ingest_mem_size": 11,
+      "infer_time_ms": 4338,
+      "infer_llm_tokens": 523,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "Based on your current residence in Gamla Stan, Stockholm, you usually have **kanelbulle and bryggkaffe** at a tiny café "
+        }
+      ]
+    },
+    {
+      "case_id": "transition_3tr_006",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 7,
+      "ingest_time_ms": 172405,
+      "ingest_mem_size": 13,
+      "infer_time_ms": 4889,
+      "infer_llm_tokens": 504,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "This Saturday, get lost in the souks and drink mint tea in a riad courtyard—your established Saturday routine in Marrake"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_3tr_007",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 0,
+      "ingest_chunks": 7,
+      "ingest_time_ms": 262193,
+      "ingest_mem_size": 7,
+      "infer_time_ms": 36830,
+      "infer_llm_tokens": 198,
+      "qa_results": [
+        {
+          "question": "Who is my neighbor based on where I live now?",
+          "correct": false,
+          "pred": "I don’t have access to your current location or personal information, so I can’t determine who your neighbor is."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_4tr_001",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 9,
+      "ingest_time_ms": 202815,
+      "ingest_mem_size": 10,
+      "infer_time_ms": 4577,
+      "infer_llm_tokens": 407,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "This Saturday, do your sunrise yoga on Bondi Beach followed by brunch at Bills."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_4tr_002",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 0,
+      "ingest_chunks": 5,
+      "ingest_time_ms": 105077,
+      "ingest_mem_size": 2,
+      "infer_time_ms": 3740,
+      "infer_llm_tokens": 382,
+      "qa_results": [
+        {
+          "question": "Who is my neighbor based on where I live now?",
+          "correct": false,
+          "pred": "Elif, Ketut, and Maria are your neighbors. Elif is specifically mentioned as your neighbor in Kadıköy (where you’re relo"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_4tr_003",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 9,
+      "ingest_time_ms": 160623,
+      "ingest_mem_size": 12,
+      "infer_time_ms": 3486,
+      "infer_llm_tokens": 420,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "You usually have a full English breakfast and flat white at Allpress Espresso."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_4tr_004",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 9,
+      "ingest_time_ms": 208263,
+      "ingest_mem_size": 18,
+      "infer_time_ms": 3811,
+      "infer_llm_tokens": 466,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "This Saturday, do sunrise yoga on Bondi Beach, then enjoy brunch at Bills — a perfect reflection of your current Bondi r"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_4tr_005",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 9,
+      "ingest_time_ms": 301362,
+      "ingest_mem_size": 18,
+      "infer_time_ms": 2869,
+      "infer_llm_tokens": 410,
+      "qa_results": [
+        {
+          "question": "Who is my neighbor based on where I live now?",
+          "correct": true,
+          "pred": "Yuki"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_4tr_006",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 9,
+      "ingest_time_ms": 217198,
+      "ingest_mem_size": 12,
+      "infer_time_ms": 15244,
+      "infer_llm_tokens": 628,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "Based on your current life in Recoleta, Buenos Aires, you usually have **facturas and submarino at a grand confitería on"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_4tr_007",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 9,
+      "ingest_time_ms": 244134,
+      "ingest_mem_size": 14,
+      "infer_time_ms": 3830,
+      "infer_llm_tokens": 468,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "Explore the Porta Portese flea market — it’s your Saturday routine and you’re now living in Trastevere, Rome, which is n"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_5tr_001",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 11,
+      "ingest_time_ms": 145590,
+      "ingest_mem_size": 10,
+      "infer_time_ms": 4703,
+      "infer_llm_tokens": 427,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "Go for a bike ride along the Stanley Park Seawall — it’s part of your Saturday routine and you love life in Vancouver (a"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_5tr_002",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 7,
+      "ingest_time_ms": 140788,
+      "ingest_mem_size": 7,
+      "infer_time_ms": 3178,
+      "infer_llm_tokens": 367,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "You usually have a flat white and eggs benedict at Dizengoff."
+        }
+      ]
+    },
+    {
+      "case_id": "transition_5tr_003",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 11,
+      "ingest_time_ms": 237367,
+      "ingest_mem_size": 10,
+      "infer_time_ms": 2788,
+      "infer_llm_tokens": 430,
+      "qa_results": [
+        {
+          "question": "Who is my neighbor based on where I live now?",
+          "correct": true,
+          "pred": "Soo-jin"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_5tr_004",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 11,
+      "ingest_time_ms": 208999,
+      "ingest_mem_size": 10,
+      "infer_time_ms": 5312,
+      "infer_llm_tokens": 682,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "Based on your current relocation to Shibuya, Tokyo (Memory [4]), and your recent plan to have *tamago sando and matcha l"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_5tr_005",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 11,
+      "ingest_time_ms": 270186,
+      "ingest_mem_size": 16,
+      "infer_time_ms": 4415,
+      "infer_llm_tokens": 487,
+      "qa_results": [
+        {
+          "question": "What should I do this Saturday based on where I live now?",
+          "correct": true,
+          "pred": "This Saturday, browse the Feira da Ladra flea market for vintage records—perfect for your love of vintage culture and co"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_5tr_006",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 11,
+      "ingest_time_ms": 281535,
+      "ingest_mem_size": 11,
+      "infer_time_ms": 2448,
+      "infer_llm_tokens": 413,
+      "qa_results": [
+        {
+          "question": "Who is my neighbor based on where I live now?",
+          "correct": true,
+          "pred": "Elif"
+        }
+      ]
+    },
+    {
+      "case_id": "transition_5tr_007",
+      "category": "state_machine_location",
+      "n_queries": 1,
+      "correct": 1,
+      "ingest_chunks": 11,
+      "ingest_time_ms": 257305,
+      "ingest_mem_size": 18,
+      "infer_time_ms": 3439,
+      "infer_llm_tokens": 489,
+      "qa_results": [
+        {
+          "question": "What do I usually have for breakfast based on where I live now?",
+          "correct": true,
+          "pred": "You usually have overnight oats and bryggkaffe at a lakeside café."
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_100",
+      "category": "tree_based",
+      "n_queries": 2,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 44641,
+      "ingest_mem_size": 0,
+      "infer_time_ms": 6830,
+      "infer_llm_tokens": 232,
+      "qa_results": [
+        {
+          "question": "Are Brenda Nguyen and Johnny Fisher related to each other at work through collea",
+          "correct": false,
+          "pred": "No."
+        },
+        {
+          "question": "Are Billy Sanchez and George Coleman related to each other at work through colle",
+          "correct": false,
+          "pred": "No."
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_10_with_path_1",
+      "category": "tree_based",
+      "n_queries": 1,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 22654,
+      "ingest_mem_size": 0,
+      "infer_time_ms": 3057,
+      "infer_llm_tokens": 153,
+      "qa_results": [
+        {
+          "question": "Are Brenda Nguyen and Johnny Fisher related to each other at work through collea",
+          "correct": false,
+          "pred": "No."
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_10_with_path_2",
+      "category": "tree_based",
+      "n_queries": 1,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 26865,
+      "ingest_mem_size": 0,
+      "infer_time_ms": 4340,
+      "infer_llm_tokens": 235,
+      "qa_results": [
+        {
+          "question": "Are Billy Sanchez and George Coleman related to each other at work through colle",
+          "correct": false,
+          "pred": "No. There is no direct or indirect colleague/work connection between Billy Sanchez and George Coleman in the given memor"
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_150",
+      "category": "tree_based",
+      "n_queries": 2,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 44443,
+      "ingest_mem_size": 0,
+      "infer_time_ms": 6336,
+      "infer_llm_tokens": 232,
+      "qa_results": [
+        {
+          "question": "Are Brenda Nguyen and Johnny Fisher related to each other at work through collea",
+          "correct": false,
+          "pred": "No."
+        },
+        {
+          "question": "Are Billy Sanchez and George Coleman related to each other at work through colle",
+          "correct": false,
+          "pred": "No."
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_20",
+      "category": "tree_based",
+      "n_queries": 2,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 40234,
+      "ingest_mem_size": 0,
+      "infer_time_ms": 6956,
+      "infer_llm_tokens": 386,
+      "qa_results": [
+        {
+          "question": "Are Brenda Nguyen and Johnny Fisher related to each other at work through collea",
+          "correct": false,
+          "pred": "No."
+        },
+        {
+          "question": "Are Billy Sanchez and George Coleman related to each other at work through colle",
+          "correct": false,
+          "pred": "No. There is no direct or indirect colleague relationship linking Billy Sanchez and George Coleman in the given memories"
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_200",
+      "category": "tree_based",
+      "n_queries": 2,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 44507,
+      "ingest_mem_size": 0,
+      "infer_time_ms": 7150,
+      "infer_llm_tokens": 232,
+      "qa_results": [
+        {
+          "question": "Are Brenda Nguyen and Johnny Fisher related to each other at work through collea",
+          "correct": false,
+          "pred": "No."
+        },
+        {
+          "question": "Are Billy Sanchez and George Coleman related to each other at work through colle",
+          "correct": false,
+          "pred": "No."
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_250",
+      "category": "tree_based",
+      "n_queries": 2,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 44615,
+      "ingest_mem_size": 0,
+      "infer_time_ms": 7452,
+      "infer_llm_tokens": 232,
+      "qa_results": [
+        {
+          "question": "Are Brenda Nguyen and Johnny Fisher related to each other at work through collea",
+          "correct": false,
+          "pred": "No."
+        },
+        {
+          "question": "Are Billy Sanchez and George Coleman related to each other at work through colle",
+          "correct": false,
+          "pred": "No."
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_30",
+      "category": "tree_based",
+      "n_queries": 2,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 68567,
+      "ingest_mem_size": 0,
+      "infer_time_ms": 8303,
+      "infer_llm_tokens": 386,
+      "qa_results": [
+        {
+          "question": "Are Brenda Nguyen and Johnny Fisher related to each other at work through collea",
+          "correct": false,
+          "pred": "No."
+        },
+        {
+          "question": "Are Billy Sanchez and George Coleman related to each other at work through colle",
+          "correct": false,
+          "pred": "No. There is no direct or indirect colleague relationship linking Billy Sanchez and George Coleman in the given memories"
+        }
+      ]
+    },
+    {
+      "case_id": "graph_0_trimmed_40",
+      "category": "tree_based",
+      "n_queries": 2,
+      "correct": 0,
+      "ingest_chunks": 1,
+      "ingest_time_ms": 104145,
+      "ingest_mem_size": 1,
+      "infer_time_ms": 99760,
+      "infer_llm_tokens": 232,
+      "qa_results": [
+        {
+          "question": "Are Brenda Nguyen and Johnny Fisher related to each other at work through collea",
+          "correct": false,
+          "pred": "No."
+        },
+        {
+          "question": "Are Billy Sanchez and George Coleman related to each other at work through colle",
+          "correct": false,
+          "pred": "No."
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_0_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_1_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_2_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_3_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_4_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_5_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_6_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_7_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_8_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_10_with_path_1.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_10_with_path_2.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_20.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_250.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_30.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_40.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/tree_based/graph_configs/graph_9_trimmed_50.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_275.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_350.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_275.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_350.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_275.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_350.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_275.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_350.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_275.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_350.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_100.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_150.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_200.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_275.json",
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_350.json",
+      "error": "[Errno 61] Connection refused"
+    }
+  ]
+}

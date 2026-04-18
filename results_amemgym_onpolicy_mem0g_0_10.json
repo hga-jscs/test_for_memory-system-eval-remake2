@@ -1,0 +1,234 @@
+{
+  "results": [
+    {
+      "user_id": "e8bbeec8-7398-4751-8ca4-dd65bbd2d31d",
+      "n_periods": 11,
+      "n_queries_per_period": 10,
+      "total_evals": 110,
+      "total_correct": 24,
+      "accuracy": 21.82,
+      "wall_s": 1297.4,
+      "period_results": [
+        {
+          "period_idx": 0,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 1,
+          "correct": 4,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 2,
+          "correct": 3,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 3,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 4,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 5,
+          "correct": 0,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 6,
+          "correct": 1,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 7,
+          "correct": 3,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 8,
+          "correct": 1,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 9,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 10,
+          "correct": 4,
+          "n_queries": 10
+        }
+      ]
+    },
+    {
+      "user_id": "875a8a65-5b3e-4cfb-b5f1-635d840cdeaf",
+      "n_periods": 11,
+      "n_queries_per_period": 10,
+      "total_evals": 110,
+      "total_correct": 31,
+      "accuracy": 28.18,
+      "wall_s": 1216.8,
+      "period_results": [
+        {
+          "period_idx": 0,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 1,
+          "correct": 3,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 2,
+          "correct": 3,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 3,
+          "correct": 3,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 4,
+          "correct": 5,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 5,
+          "correct": 6,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 6,
+          "correct": 3,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 7,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 8,
+          "correct": 0,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 9,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 10,
+          "correct": 2,
+          "n_queries": 10
+        }
+      ]
+    },
+    {
+      "user_id": "7b567597-7ba1-463f-aea1-8aea872098f0",
+      "n_periods": 11,
+      "n_queries_per_period": 10,
+      "total_evals": 110,
+      "total_correct": 28,
+      "accuracy": 25.45,
+      "wall_s": 3189.0,
+      "period_results": [
+        {
+          "period_idx": 0,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 1,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 2,
+          "correct": 4,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 3,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 4,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 5,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 6,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 7,
+          "correct": 4,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 8,
+          "correct": 3,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 9,
+          "correct": 2,
+          "n_queries": 10
+        },
+        {
+          "period_idx": 10,
+          "correct": 3,
+          "n_queries": 10
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "user_id": 3,
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "user_id": 4,
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "user_id": 5,
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "user_id": 6,
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "user_id": 7,
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "user_id": 8,
+      "error": "[Errno 61] Connection refused"
+    },
+    {
+      "user_id": 9,
+      "error": "[Errno 61] Connection refused"
+    }
+  ],
+  "system": "mem0g",
+  "mode": "on-policy"
+}

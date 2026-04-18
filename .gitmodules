@@ -1,0 +1,9 @@
+[submodule "StructMemEval"]
+	path = StructMemEval
+	url = https://github.com/yandex-research/StructMemEval.git
+[submodule "memory-probe"]
+	path = memory-probe
+	url = https://github.com/boqiny/memory-probe.git
+[submodule "amemgym"]
+	path = amemgym
+	url = https://github.com/AGI-Eval-Official/amemgym.git

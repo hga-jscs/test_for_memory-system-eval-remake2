@@ -1,0 +1,1905 @@
+{
+  "results": [
+    {
+      "user_id": "e8bbeec8-7398-4751-8ca4-dd65bbd2d31d",
+      "n_periods": 11,
+      "n_sessions": 46,
+      "n_qa": 10,
+      "correct": 3,
+      "ingest_ms": 590930.6538105011,
+      "ingest_chunks": 46,
+      "ingest_mem_size": 94,
+      "infer_ms": 7391.980171203613,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3135,
+      "qa_results": [
+        {
+          "question": "What are some engaging activities I can organize for my monthly bridge gathering",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "For a small, close-knit gathering of seasoned players, focus",
+          "pred_ans": "For a small, close-knit gathering of seasoned players, focus"
+        },
+        {
+          "question": "How can I best mentor young women in my community to support their personal and ",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "Facilitate regular small group sessions where young women ca",
+          "pred_ans": "Facilitate regular small group sessions where young women ca"
+        },
+        {
+          "question": "What are effective ways to introduce more native Alabama plants into my rose gar",
+          "correct_idx": 4,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "If you prefer working on your garden seasonally, focus on ad",
+          "pred_ans": "To gently incorporate native Alabama plants into your rose g"
+        },
+        {
+          "question": "How can I organize a successful potluck that accommodates guests with different ",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "With limited prep time and guests who have allergies or diet",
+          "pred_ans": "Since you have a full day to prepare and guests with allergi"
+        },
+        {
+          "question": "What strategies can I use to increase participation in choir performances, espec",
+          "correct_idx": 4,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Focus on building confidence and camaraderie among newer mem",
+          "pred_ans": "To boost participation, pair newer singers with experienced "
+        },
+        {
+          "question": "How can I stay safe and active while volunteering, especially with changing heal",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Choose volunteer roles that allow you to maintain a safe dis",
+          "pred_ans": "Look for volunteer opportunities that can be done from home,"
+        },
+        {
+          "question": "What are some meaningful historic sites or cultural events I could help organize",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For individuals seeking affordable solo tours, look for free",
+          "pred_ans": "For a small group traveling together by car with a moderate "
+        },
+        {
+          "question": "Which needlecraft techniques would be best to teach at a beginner’s workshop for",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "With a single session and students who already know the basi",
+          "pred_ans": "For teens just starting out and attending casual, flexible s"
+        },
+        {
+          "question": "How should I adapt my soul food recipes for guests who prefer lighter or healthi",
+          "correct_idx": 3,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "If your guests need to manage a chronic condition, prioritiz",
+          "pred_ans": "For those seeking generally healthier options with ingredien"
+        },
+        {
+          "question": "What would be the best way to celebrate an Alabama Crimson Tide game at my home ",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Set up your backyard with cozy seating and decorate with Ala",
+          "pred_ans": "Set up your backyard with cozy seating and decorate with Ala"
+        }
+      ]
+    },
+    {
+      "user_id": "875a8a65-5b3e-4cfb-b5f1-635d840cdeaf",
+      "n_periods": 11,
+      "n_sessions": 43,
+      "n_qa": 10,
+      "correct": 5,
+      "ingest_ms": 548475.8269786835,
+      "ingest_chunks": 43,
+      "ingest_mem_size": 86,
+      "infer_ms": 7679.308891296387,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3187,
+      "qa_results": [
+        {
+          "question": "What’s a good way to balance my ambition to make partner at my accounting firm w",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "With a demanding work schedule and limited social engagement",
+          "pred_ans": "With a demanding work schedule and limited social engagement"
+        },
+        {
+          "question": "Could you recommend effective strategies for mentoring junior team members while",
+          "correct_idx": 5,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For a consulting-focused team of moderate size, facilitate r",
+          "pred_ans": "With a moderately sized group, consider organizing rotating "
+        },
+        {
+          "question": "What are some best practices for leading process improvement initiatives within ",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "With a large team and managerial authority, prioritize estab",
+          "pred_ans": "With a large team and managerial authority, prioritize estab"
+        },
+        {
+          "question": "How can I organize a historical walking tour of Boston for my friends or colleag",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "For a smaller group with a full day to explore, plan a self-",
+          "pred_ans": "With a mid-sized group and a few hours to spare, select a fo"
+        },
+        {
+          "question": "What are some challenging hiking destinations in New England that match my exper",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For a club of seasoned hikers, the Bonds Traverse in the Whi",
+          "pred_ans": "For a solo hiker seeking a serious challenge, consider tackl"
+        },
+        {
+          "question": "Can you suggest ways to introduce more contemporary art into my home decor while",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "With a moderate budget in a spacious home, focus on curating",
+          "pred_ans": "With a moderate budget in a spacious home, focus on curating"
+        },
+        {
+          "question": "What are effective ways to improve risk assessment procedures in my accounting p",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "Given your scale and advanced systems, strengthen risk asses",
+          "pred_ans": "Given your scale and advanced systems, strengthen risk asses"
+        },
+        {
+          "question": "How can I get more involved with community gardening projects and make a positiv",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "If you want to guide a community garden but have moderate av",
+          "pred_ans": "With ample time and a desire to lead, consider initiating a "
+        },
+        {
+          "question": "What’s the best way to prepare homemade lasagna for a small group gathering?",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "For a cozy gathering, make a small batch of lasagna using ro",
+          "pred_ans": "For a cozy gathering, make a small batch of lasagna using ro"
+        },
+        {
+          "question": "Are there any upcoming Irish music festivals or cultural events in Boston I shou",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "If you’re drawn to big Irish festivals but rarely have weeke",
+          "pred_ans": "Since you enjoy major Irish music festivals but only have oc"
+        }
+      ]
+    },
+    {
+      "user_id": "7b567597-7ba1-463f-aea1-8aea872098f0",
+      "n_periods": 11,
+      "n_sessions": 54,
+      "n_qa": 10,
+      "correct": 4,
+      "ingest_ms": 588648.9980220795,
+      "ingest_chunks": 54,
+      "ingest_mem_size": 78,
+      "infer_ms": 7455.091953277588,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3149,
+      "qa_results": [
+        {
+          "question": "What are some effective ways to balance volunteering at my church with my work a",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "Given your flexible schedule and moderate family demands, yo",
+          "pred_ans": "Given your flexible schedule and moderate family demands, yo"
+        },
+        {
+          "question": "Which budgeting method would fit best for hosting dinner parties while maintaini",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "A flexible budgeting approach like the 50/30/20 rule would s",
+          "pred_ans": "A flexible budgeting approach like the 50/30/20 rule would s"
+        },
+        {
+          "question": "How can I improve my skills to move from billing clerk to office manager?",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "To advance toward an office manager role, focus on learning ",
+          "pred_ans": "Make use of the available professional courses and certifica"
+        },
+        {
+          "question": "What’s a good way to choose my next historical fiction book?",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Since your reading time is concentrated on weekends and you ",
+          "pred_ans": "Since your reading time is concentrated on weekends and you "
+        },
+        {
+          "question": "What organizational tips can help me manage my church women’s group projects mor",
+          "correct_idx": 3,
+          "pred_idx": 4,
+          "match": false,
+          "gold_ans": "When coordinating multiple events with a large membership, b",
+          "pred_ans": "For ongoing, complex projects with a medium-sized group, ass"
+        },
+        {
+          "question": "How do I plan a coastal road trip that balances sightseeing and relaxation with ",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "On a weekend getaway, focus on a shorter stretch of coastlin",
+          "pred_ans": "On a weekend getaway, focus on a shorter stretch of coastlin"
+        },
+        {
+          "question": "What are some strategies for developing leadership qualities as I consider futur",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "As someone who leads informally and has limited mentorship, ",
+          "pred_ans": "Since you already oversee a team and occasionally receive gu"
+        },
+        {
+          "question": "Can you suggest recipes from my vintage cookbooks that would work for large gath",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "For a diverse menu with a mid-sized crowd, select internatio",
+          "pred_ans": "Hosting a large Italian-themed event calls for hearty, crowd"
+        },
+        {
+          "question": "What tips do you have for exploring local community events with my family while ",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "With a generous budget and a multigenerational group, consid",
+          "pred_ans": "For a multigenerational family on a moderate budget, focus o"
+        },
+        {
+          "question": "How can I stay motivated and effectively learn new bookkeeping systems?",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Connect with a virtual peer group or participate in online f",
+          "pred_ans": "Join a small study group or local workshop focused on bookke"
+        }
+      ]
+    },
+    {
+      "user_id": "4fff017c-193c-41b9-b6fa-515ecb8cdcba",
+      "n_periods": 11,
+      "n_sessions": 49,
+      "n_qa": 10,
+      "correct": 2,
+      "ingest_ms": 622482.7919006348,
+      "ingest_chunks": 49,
+      "ingest_mem_size": 100,
+      "infer_ms": 7438.41290473938,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3122,
+      "qa_results": [
+        {
+          "question": "What are some effective ways I can encourage bipartisan collaboration on tough c",
+          "correct_idx": 1,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "In your role as committee chair within a somewhat divided en",
+          "pred_ans": "As a committee member in a moderately contentious atmosphere"
+        },
+        {
+          "question": "Can you suggest good woodworking projects that I could donate to local organizat",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "With extensive facilities and plenty of time, you might take",
+          "pred_ans": "With access to a well-equipped workspace and a short timefra"
+        },
+        {
+          "question": "What are some meaningful ways to get more involved with volunteering in the Denv",
+          "correct_idx": 4,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "Volunteer as a mentor with organizations such as Minds Matte",
+          "pred_ans": "Get involved with weekend service projects like park cleanup"
+        },
+        {
+          "question": "How should I plan a solo road trip in Colorado to discover new historical sites?",
+          "correct_idx": 3,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For a quick getaway, select a cluster of historical sites wi",
+          "pred_ans": "For a longer solo journey, map out a route that includes Col"
+        },
+        {
+          "question": "What strategies can I use to improve my public speaking skills for larger audien",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "To further elevate your impact in high-stakes sessions, focu",
+          "pred_ans": "To connect even more effectively with diverse crowds, experi"
+        },
+        {
+          "question": "Can you suggest some unique Adams County dishes to include at my next potluck di",
+          "correct_idx": 3,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Hosting a small home gathering for mostly vegan guests? Serv",
+          "pred_ans": "For a mostly vegan group at an outdoor picnic, bring Adams C"
+        },
+        {
+          "question": "How can I balance my legislative workload with family and personal activities mo",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "With your current workload intensity, prioritize protecting ",
+          "pred_ans": "During this particularly demanding period, consider setting "
+        },
+        {
+          "question": "What type of negotiation techniques should I focus on to resolve conflicts in to",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "In a small group where debate is present but not overly inte",
+          "pred_ans": "In a small group where debate is present but not overly inte"
+        },
+        {
+          "question": "Do you have recommendations for art museums or exhibits outside Denver that fit ",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "For a short drive from Denver, consider visiting Boulder’s M",
+          "pred_ans": "For those fascinated by Art Deco furniture, the Longmont Mus"
+        },
+        {
+          "question": "Can you offer advice on the best time and route for driving Route 66, considerin",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "For a group road trip during milder months, start your Route",
+          "pred_ans": "For a group road trip during milder months, start your Route"
+        }
+      ]
+    },
+    {
+      "user_id": "453d5aa4-82ae-4247-ab90-cd1c50b77de7",
+      "n_periods": 11,
+      "n_sessions": 49,
+      "n_qa": 10,
+      "correct": 0,
+      "ingest_ms": 651581.7220211029,
+      "ingest_chunks": 49,
+      "ingest_mem_size": 100,
+      "infer_ms": 7438.514232635498,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3140,
+      "qa_results": [
+        {
+          "question": "What are some creative ways I can make accounting mentoring sessions more engagi",
+          "correct_idx": 3,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "For a small group of seasoned professionals, facilitate roun",
+          "pred_ans": "In a one-on-one setting with someone who has some experience"
+        },
+        {
+          "question": "How can I best organize spontaneous hiking trips with my local group, considerin",
+          "correct_idx": 3,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "With weekly hikes close to home, automate reminders for meet",
+          "pred_ans": "For impromptu hikes within a short drive, maintain a digital"
+        },
+        {
+          "question": "What strategies can I use to balance CPA exam preparation with my work and commu",
+          "correct_idx": 4,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "Start your day early with focused CPA exam study sessions be",
+          "pred_ans": "With a busy workweek, reserve your weekends for CPA exam stu"
+        },
+        {
+          "question": "Could you recommend some local arts events or galleries that fit my interest in ",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "On weekends, explore smaller venues like the Wheelwright Mus",
+          "pred_ans": "Consider visiting the Georgia O’Keeffe Museum in Santa Fe, w"
+        },
+        {
+          "question": "What's the best way to stay emotionally resilient during high-pressure accountin",
+          "correct_idx": 3,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "If you're working solo, integrate creative routines into you",
+          "pred_ans": "Leverage your position by actively nurturing a supportive en"
+        },
+        {
+          "question": "How can I improve my communication skills in accounting presentations for divers",
+          "correct_idx": 0,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "To engage learners effectively in a recorded format, use cle",
+          "pred_ans": "In face-to-face sessions with community members, use approac"
+        },
+        {
+          "question": "Can you suggest healthy, simple recipes using farmers' market ingredients that w",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Try making a roasted vegetable and grilled chicken salad usi",
+          "pred_ans": "For a quick and healthy option, whip up a farmers’ market st"
+        },
+        {
+          "question": "Should I consider taking on freelance accounting projects while preparing for my",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "With your current flexibility, you can comfortably integrate",
+          "pred_ans": "Taking on freelance accounting projects could be beneficial,"
+        },
+        {
+          "question": "What are some effective ways for someone in their mid-thirties to expand their n",
+          "correct_idx": 2,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Engage intensively with online forums and virtual groups ded",
+          "pred_ans": "Make networking a regular part of your schedule by joining w"
+        },
+        {
+          "question": "How can I maintain an innovative mindset in solving accounting challenges, espec",
+          "correct_idx": 3,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Tap into your mentoring relationships to discuss complex aud",
+          "pred_ans": "When routine bookkeeping feels monotonous, inject innovation"
+        }
+      ]
+    },
+    {
+      "user_id": "3409cc29-513d-43ea-a8b6-4964de8d6d39",
+      "n_periods": 11,
+      "n_sessions": 45,
+      "n_qa": 10,
+      "correct": 5,
+      "ingest_ms": 605539.0391349792,
+      "ingest_chunks": 45,
+      "ingest_mem_size": 100,
+      "infer_ms": 7105.151891708374,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 2971,
+      "qa_results": [
+        {
+          "question": "What are some effective ways I can transition my furniture restoration hobby int",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "Focus on maximizing your limited funds by sourcing secondhan",
+          "pred_ans": "Focus on maximizing your limited funds by sourcing secondhan"
+        },
+        {
+          "question": "How can I make my home cooking more authentic to both southern and Haitian flavo",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Since you can order ingredients online and have advanced coo",
+          "pred_ans": "Since you can order ingredients online and have advanced coo"
+        },
+        {
+          "question": "What steps should I take to pursue a career in museum curation?",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "Now that you've completed your graduate studies and have a f",
+          "pred_ans": "With a bachelor's degree and an active approach to networkin"
+        },
+        {
+          "question": "How can I improve my harmonica skills to perform confidently at jam sessions and",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Since you already perform regularly and prefer learning inde",
+          "pred_ans": "Joining a harmonica group class will help you build confiden"
+        },
+        {
+          "question": "Which travel approach would best suit me for a structured and memorable trip to ",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "With ample time and family in tow, a cruise or all-inclusive",
+          "pred_ans": "With ample time and family in tow, a cruise or all-inclusive"
+        },
+        {
+          "question": "How can I balance my creative interests with the need for a stable and structure",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "Look for opportunities that allow you to work primarily from",
+          "pred_ans": "Look for opportunities that allow you to work primarily from"
+        },
+        {
+          "question": "What steps should I take to get involved in local history or social issues initi",
+          "correct_idx": 3,
+          "pred_idx": 5,
+          "match": false,
+          "gold_ans": "With weekends as your primary availability and a desire to l",
+          "pred_ans": "With a substantial amount of time and a preference for joini"
+        },
+        {
+          "question": "Which event planning roles would best fit my organizational and creative skills?",
+          "correct_idx": 4,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Consider becoming a Corporate Event Specialist or Internal E",
+          "pred_ans": "Consider roles such as Community Event Coordinator or Outrea"
+        },
+        {
+          "question": "How can I make my living space more comfortable and visually engaging on a budge",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "With plenty of time to dedicate to your space, try rearrangi",
+          "pred_ans": "With plenty of time to dedicate to your space, try rearrangi"
+        },
+        {
+          "question": "What strategies can I use to maintain motivation and productivity while I'm expl",
+          "correct_idx": 1,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "With a flexible routine, create a weekly checklist of career",
+          "pred_ans": "Balance consistency with adaptability by setting loose daily"
+        }
+      ]
+    },
+    {
+      "user_id": "fd788a8b-ca97-403b-a6f7-8cd80fea4abd",
+      "n_periods": 11,
+      "n_sessions": 46,
+      "n_qa": 10,
+      "correct": 3,
+      "ingest_ms": 595607.7299118042,
+      "ingest_chunks": 46,
+      "ingest_mem_size": 100,
+      "infer_ms": 6318.026065826416,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3152,
+      "qa_results": [
+        {
+          "question": "What are some effective ways I can improve my office filing system to prepare fo",
+          "correct_idx": 3,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Implement robust digital document management tools that supp",
+          "pred_ans": "Focus on optimizing folder structures and naming conventions"
+        },
+        {
+          "question": "How can I make my model train layout more realistic and enjoyable given my avail",
+          "correct_idx": 3,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "For a large layout on a tight budget, use recycled materials",
+          "pred_ans": "With ample space but a moderate budget, maximize realism by "
+        },
+        {
+          "question": "Can you suggest Southern comfort food recipes using ingredients I usually keep a",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "For a quick Southern-inspired dinner, toss together a fresh ",
+          "pred_ans": "For a quick Southern-inspired dinner, toss together a fresh "
+        },
+        {
+          "question": "What are some ideas to make my porch guitar sessions more enjoyable for myself a",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "With your strong skills and a lively crowd, consider organiz",
+          "pred_ans": "For a cozy gathering, choose familiar tunes that everyone ca"
+        },
+        {
+          "question": "How should I organize my fishing trip if I want to try a new location, based on ",
+          "correct_idx": 0,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "With a full week to explore, consider traveling to a renowne",
+          "pred_ans": "With weekends as your window and a preference for boat fishi"
+        },
+        {
+          "question": "What changes can I make to my office inventory management routine to enhance eff",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Given limited time, focus on quick wins like setting up auto",
+          "pred_ans": "Given limited time, focus on quick wins like setting up auto"
+        },
+        {
+          "question": "Could you recommend ways to refresh my home poker nights to keep things interest",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For a larger gathering and ample funds, create a tournament-",
+          "pred_ans": "With a cozy group and a generous budget, elevate your poker "
+        },
+        {
+          "question": "How can I gradually take on more managerial duties at work given my current sche",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "Given your fixed schedule and access to online training, pla",
+          "pred_ans": "Given your fixed schedule and access to online training, pla"
+        },
+        {
+          "question": "What should I consider when planning a scenic drive or small town visit to fit m",
+          "correct_idx": 4,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "On a history-focused day trip, select a town with notable la",
+          "pred_ans": "For a longer trip with diverse activities, map out a route t"
+        },
+        {
+          "question": "Can you suggest easy home repair or maintenance projects that I can tackle over ",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "Since you have a wide array of power tools and plenty of ene",
+          "pred_ans": "With your solid set of power tools and moderate activity lev"
+        }
+      ]
+    },
+    {
+      "user_id": "e0e12fb1-6cf5-4cb0-8ac7-ea3424a7311f",
+      "n_periods": 11,
+      "n_sessions": 45,
+      "n_qa": 10,
+      "correct": 2,
+      "ingest_ms": 589855.4351329803,
+      "ingest_chunks": 45,
+      "ingest_mem_size": 100,
+      "infer_ms": 6963.032960891724,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3099,
+      "qa_results": [
+        {
+          "question": "What are some effective ways to promote a new community art studio in my neighbo",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Since your studio is about to open and you have a moderate b",
+          "pred_ans": "Since your studio is about to open and you have a moderate b"
+        },
+        {
+          "question": "Can you suggest some engaging art workshop ideas I could run for families at loc",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "For a short workshop focused on children, try a 'Mini Master",
+          "pred_ans": "With a half-day format for families, host a collaborative mu"
+        },
+        {
+          "question": "How can I best organize a community garden focusing on native Mexican plants?",
+          "correct_idx": 3,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Enfócate en macetas y jardineras verticales para aprovechar ",
+          "pred_ans": "Organiza el jardín comunitario dividiendo el espacio en cama"
+        },
+        {
+          "question": "Do you have any tips for making family trips to Mexico more culturally enriching",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "As a couple with plenty of time in Mexico, immerse yourselve",
+          "pred_ans": "With a long stay and several generations traveling together,"
+        },
+        {
+          "question": "What’s the best way to involve local youth in collaborative art projects?",
+          "correct_idx": 5,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Organize a large-scale art festival where over twenty youth ",
+          "pred_ans": "Organize a mural or sculpture project where youth work in sm"
+        },
+        {
+          "question": "How can I enhance my event management process for local festivals or art fairs?",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "For mid-sized events managed by a small team, leverage techn",
+          "pred_ans": "With a larger organizing group and a bigger crowd, establish"
+        },
+        {
+          "question": "What should I consider when planning to teach bilingual (Spanish/English) art cl",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "When teaching art classes to a group with strong skills in b",
+          "pred_ans": "For a class with balanced bilingual students meeting exclusi"
+        },
+        {
+          "question": "Could you recommend strategies for making traditional Mexican dishes healthier f",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "With your strong background in Mexican cooking, experiment w",
+          "pred_ans": "Leverage your advanced skills to create low-sodium versions "
+        },
+        {
+          "question": "What are some fun ways to stay active and connect with others in my community as",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "Explore afternoon meetups such as group walks in the park, l",
+          "pred_ans": "Explore afternoon meetups such as group walks in the park, l"
+        },
+        {
+          "question": "How can I approach seeking partnerships or sponsorships for community art projec",
+          "correct_idx": 3,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Engage with established foundations and corporate sponsors, ",
+          "pred_ans": "Utilize your broad network to identify brands or organizatio"
+        }
+      ]
+    },
+    {
+      "user_id": "192bb826-f774-42d7-98bb-0672da149aa0",
+      "n_periods": 11,
+      "n_sessions": 45,
+      "n_qa": 10,
+      "correct": 2,
+      "ingest_ms": 597020.1086997986,
+      "ingest_chunks": 45,
+      "ingest_mem_size": 98,
+      "infer_ms": 7149.001121520996,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3000,
+      "qa_results": [
+        {
+          "question": "What’s the best way for me to connect with potential clients at local community ",
+          "correct_idx": 1,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "At events focused on giving back, showcase your expertise by",
+          "pred_ans": "In intimate settings, focus on building trust by engaging in"
+        },
+        {
+          "question": "Can you recommend strategies for balancing my real estate career with my passion",
+          "correct_idx": 1,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "With a demanding work schedule and a strong commitment to fr",
+          "pred_ans": "Take advantage of your adaptable work hours by scheduling sh"
+        },
+        {
+          "question": "Which recipe or dish should I try next to celebrate my African American heritage",
+          "correct_idx": 3,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "For a small, close-knit dinner, craft a refined plate of bla",
+          "pred_ans": "For a festive gathering with a large group of friends, showc"
+        },
+        {
+          "question": "How should I prepare for mentoring younger agents who are just starting out?",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "With your extensive mentoring background and a larger team t",
+          "pred_ans": "Since you have some prior experience mentoring agents and wi"
+        },
+        {
+          "question": "What’s a good way for me to find and join pick-up basketball games in new cities",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "When you travel every few months and want a laid-back game, ",
+          "pred_ans": "Since you regularly seek out games and enjoy a relaxed vibe,"
+        },
+        {
+          "question": "How can I make my urban art gallery visits more enriching and social?",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "To deepen your appreciation during gallery visits, consider ",
+          "pred_ans": "Enhance your gallery visits by inviting friends who share yo"
+        },
+        {
+          "question": "What should I focus on to become a top performer in my real estate market?",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "To excel in a market with consistent growth, prioritize buil",
+          "pred_ans": "To excel in a market with consistent growth, prioritize buil"
+        },
+        {
+          "question": "Could you suggest R&B playlists or artists that match the vibe I want for my nex",
+          "correct_idx": 0,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "For a relaxed dinner atmosphere with guests eager to discove",
+          "pred_ans": "If you want an energetic setting and your guests are up for "
+        },
+        {
+          "question": "How can I make the most of weekend trips to cities like DC and Philly while mana",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "With a generous budget, you can book tickets for major sport",
+          "pred_ans": "To enjoy food and nightlife on a moderate budget, seek out h"
+        },
+        {
+          "question": "What’s the best way to grow my referral network among other brokers and agents?",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "With your established network, focus on deepening relationsh",
+          "pred_ans": "With your established network, focus on deepening relationsh"
+        }
+      ]
+    },
+    {
+      "user_id": "571e744a-d097-4b1d-88cf-4ba76dbbeb0d",
+      "n_periods": 11,
+      "n_sessions": 44,
+      "n_qa": 10,
+      "correct": 3,
+      "ingest_ms": 567625.3461837769,
+      "ingest_chunks": 44,
+      "ingest_mem_size": 100,
+      "infer_ms": 6929.967880249023,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3082,
+      "qa_results": [
+        {
+          "question": "Given my passion for art and entertaining, what are some creative themes I could",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Create a vibrant outdoor soirée with interactive art station",
+          "pred_ans": "Create a vibrant outdoor soirée with interactive art station"
+        },
+        {
+          "question": "How can I best mentor young professionals in finance, considering my goal to mov",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Focus on providing strategic guidance and leadership develop",
+          "pred_ans": "Dedicate your monthly meetings to building core financial sk"
+        },
+        {
+          "question": "What are some effective ways for me to maintain social connections and stay acti",
+          "correct_idx": 1,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "With weekends as your main free time, plan recurring outings",
+          "pred_ans": "Use your weekday evenings to arrange intimate dinners, book "
+        },
+        {
+          "question": "I'm planning a trip to Europe and want to balance cultural experiences with rela",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Start your journey in romantic Florence, exploring art and h",
+          "pred_ans": "Start your journey in romantic Florence, exploring art and h"
+        },
+        {
+          "question": "What strategies should I use to drive collaboration and growth in my finance tea",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "To boost team spirit and collaboration in a mid-sized group,",
+          "pred_ans": "With a mid-sized team experiencing workflow challenges, orga"
+        },
+        {
+          "question": "How can I incorporate more Southern-inspired comfort dishes into healthy weeknig",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "With ample time, you can enjoy healthier takes on Southern f",
+          "pred_ans": "For quick yet wholesome Southern-inspired dinners, opt for s"
+        },
+        {
+          "question": "Which accounting software should I recommend for a small arts non-profit I'm adv",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "For a smaller organization with straightforward needs and a ",
+          "pred_ans": "For a smaller organization with straightforward needs and a "
+        },
+        {
+          "question": "What are some fun ways to stay connected with other Indianapolis Colts fans outs",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Consider organizing or joining a local Colts fan meetup each",
+          "pred_ans": "Join a Colts-focused online group or forum and participate i"
+        },
+        {
+          "question": "If I want to organize a fundraiser around a music or theater theme, what steps s",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "To maximize impact for your music or theater-themed fundrais",
+          "pred_ans": "Focus on collaborating with local artists and students to sh"
+        },
+        {
+          "question": "How do I set up a personal fitness plan that keeps me motivated and allows me to",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Join a local fitness studio that offers a variety of classes",
+          "pred_ans": "Organize regular walking meetups or outdoor yoga sessions wi"
+        }
+      ]
+    },
+    {
+      "user_id": "08575ecd-d53c-490b-95af-2f926fbcb0f7",
+      "n_periods": 11,
+      "n_sessions": 57,
+      "n_qa": 10,
+      "correct": 4,
+      "ingest_ms": 739864.9380207062,
+      "ingest_chunks": 57,
+      "ingest_mem_size": 100,
+      "infer_ms": 7047.502040863037,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3138,
+      "qa_results": [
+        {
+          "question": "What native plants should I focus on growing if I want to start a small nursery ",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "With a moderate-sized plot and local gardeners as your main ",
+          "pred_ans": "With ample space and a focus on serving local gardeners, pri"
+        },
+        {
+          "question": "Can you suggest affordable upgrades for my woodworking workspace to improve comf",
+          "correct_idx": 4,
+          "pred_idx": 4,
+          "match": true,
+          "gold_ans": "In a dedicated workspace with a moderate budget, consider up",
+          "pred_ans": "In a dedicated workspace with a moderate budget, consider up"
+        },
+        {
+          "question": "How could I best learn more about the genealogy of my Cajun ancestors in Vermili",
+          "correct_idx": 3,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "With significant time and the ability to combine online and ",
+          "pred_ans": "Given your ample weekly availability for in-person research,"
+        },
+        {
+          "question": "What type of fishing gear would be most effective for solo trips on the Vermilio",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "For solo trips targeting a variety of fish and using a power",
+          "pred_ans": "When fishing alone from a canoe and aiming for a mixed catch"
+        },
+        {
+          "question": "Which traditional Cajun dishes should I try preparing with locally caught fish, ",
+          "correct_idx": 2,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Elevate your weekend with a traditional fish sauce piquant, ",
+          "pred_ans": "For a hearty weekend feast, try making fish étouffée, which "
+        },
+        {
+          "question": "What's the best way to preserve and showcase local history artifacts for the Ver",
+          "correct_idx": 4,
+          "pred_idx": 4,
+          "match": true,
+          "gold_ans": "For written documents featured in the print newsletter, tran",
+          "pred_ans": "For written documents featured in the print newsletter, tran"
+        },
+        {
+          "question": "How can I keep my landscaping business competitive while focusing on environment",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Appeal to city homeowners by providing water-wise landscapin",
+          "pred_ans": "Appeal to city homeowners by providing water-wise landscapin"
+        },
+        {
+          "question": "What are some ways I can safely enjoy solo hunting trips as I get older?",
+          "correct_idx": 0,
+          "pred_idx": 5,
+          "match": false,
+          "gold_ans": "For longer solo hunting trips in more isolated areas, it's w",
+          "pred_ans": "When hunting alone nearby and managing some physical limitat"
+        },
+        {
+          "question": "How can I improve my communication with landscaping clients who request frequent",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Since your clients reach out frequently through digital chan",
+          "pred_ans": "Since your clients reach out frequently through digital chan"
+        },
+        {
+          "question": "What are good ways to pass on local plant knowledge and Cajun traditions to youn",
+          "correct_idx": 4,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "At family get-togethers, set up interactive workshops where ",
+          "pred_ans": "Organize interactive workshops within local schools where st"
+        }
+      ]
+    },
+    {
+      "user_id": "12e593e3-cb16-46f1-af5d-ba49251cb6d4",
+      "n_periods": 11,
+      "n_sessions": 56,
+      "n_qa": 10,
+      "correct": 3,
+      "ingest_ms": 840256.3817501068,
+      "ingest_chunks": 56,
+      "ingest_mem_size": 100,
+      "infer_ms": 9688.947916030884,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3147,
+      "qa_results": [
+        {
+          "question": "What steps can I take to effectively balance writing my novel with pursuing free",
+          "correct_idx": 1,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Focus your available hours on high-paying journalism gigs, s",
+          "pred_ans": "With a substantial amount of weekly time available, create a"
+        },
+        {
+          "question": "Could you recommend strategies for making new connections at poetry readings or ",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "At poetry readings or book clubs, try joining small group di",
+          "pred_ans": "At poetry readings or book clubs, try joining small group di"
+        },
+        {
+          "question": "What are some effective ways to enhance my market trend analysis skills for the ",
+          "correct_idx": 0,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "Consider enrolling in specialized courses focused on market ",
+          "pred_ans": "Leverage reputable online resources such as industry blogs, "
+        },
+        {
+          "question": "How can I get the most out of solo travel experiences in cultural hubs like Toky",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Enhance your social experience by booking boutique hostels o",
+          "pred_ans": "To connect with locals in Tokyo and Seoul without overspendi"
+        },
+        {
+          "question": "What tools or methods should I use to stay motivated and productive while writin",
+          "correct_idx": 2,
+          "pred_idx": 4,
+          "match": false,
+          "gold_ans": "In a collaborative workspace, take advantage of digital plat",
+          "pred_ans": "For focused writing sessions at home, utilize apps like Pace"
+        },
+        {
+          "question": "Can you suggest ways to expand my blog audience, especially around East Asian cu",
+          "correct_idx": 3,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Expand your reach by producing a regular podcast series or d",
+          "pred_ans": "Enhance your blog by adding video interviews with East Asian"
+        },
+        {
+          "question": "What are some engaging Korean dishes to cook for a small group, and how can I ad",
+          "correct_idx": 4,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "If you need gluten-free options for a cozy meal, focus on di",
+          "pred_ans": "For an intimate vegetarian meal, try preparing bibimbap with"
+        },
+        {
+          "question": "How should I prioritize developing screenwriting skills alongside novel writing ",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Since your main goal is to advance in screenwriting and you'",
+          "pred_ans": "Since your main goal is to advance in screenwriting and you'"
+        },
+        {
+          "question": "What are some ways I can stay physically and mentally active during busy writing",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "During intense writing stretches, try incorporating short mo",
+          "pred_ans": "During intense writing stretches, try incorporating short mo"
+        },
+        {
+          "question": "Can you recommend a reading list that complements my interests and helps inspire",
+          "correct_idx": 0,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "For moments when inspiration strikes unexpectedly, keep a sl",
+          "pred_ans": "Make the most of your daily reading routine by exploring ess"
+        }
+      ]
+    },
+    {
+      "user_id": "0ab93c51-21b3-47cc-aa1b-5171dc61062d",
+      "n_periods": 11,
+      "n_sessions": 46,
+      "n_qa": 10,
+      "correct": 6,
+      "ingest_ms": 663248.5570907593,
+      "ingest_chunks": 46,
+      "ingest_mem_size": 100,
+      "infer_ms": 7947.344779968262,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3041,
+      "qa_results": [
+        {
+          "question": "What are some effective strategies for negotiating a promotion or raise at work?",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Initiate a candid conversation with your supervisor about yo",
+          "pred_ans": "Prepare a well-documented case highlighting your achievement"
+        },
+        {
+          "question": "Can you suggest the best way to budget for a trip to a new city while still enjo",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For a longer stay on a tight budget, prioritize affordable l",
+          "pred_ans": "With a moderate budget and nearly a week to explore, book co"
+        },
+        {
+          "question": "What should I do to stay motivated and productive when working on a long-term da",
+          "correct_idx": 4,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "As a solo contributor with a fast-approaching deadline, crea",
+          "pred_ans": "With a smaller group and ongoing deadlines, keep motivation "
+        },
+        {
+          "question": "How can I deepen my appreciation for jazz and hip-hop beyond listening, especial",
+          "correct_idx": 2,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Attend regular workshops and jam sessions in your area to ac",
+          "pred_ans": "Seek out occasional hands-on workshops or masterclasses when"
+        },
+        {
+          "question": "What should I consider when adapting classic soul food recipes for vegan friends",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "Since your guests are plant-based but not strictly vegan, yo",
+          "pred_ans": "Since your guests are plant-based but not strictly vegan, yo"
+        },
+        {
+          "question": "How can I make the most out of my pickup basketball sessions to improve skills a",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Make an effort to rotate teams and chat with different playe",
+          "pred_ans": "Make an effort to rotate teams and chat with different playe"
+        },
+        {
+          "question": "What approach should I take to strategically plan my next big career move toward",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Capitalize on your active involvement in professional circle",
+          "pred_ans": "Capitalize on your active involvement in professional circle"
+        },
+        {
+          "question": "How can I select new music to explore that aligns with my tastes but also expand",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "When listening with others and seeking a bit of variety, sta",
+          "pred_ans": "When listening with others and seeking a bit of variety, sta"
+        },
+        {
+          "question": "What are some tactics I can use to mediate conflicts on my team more effectively",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "When tensions are rising among a blend of established and ne",
+          "pred_ans": "When tensions are rising among a blend of established and ne"
+        },
+        {
+          "question": "How can I build a reading routine that mixes history, biographies, and other gen",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Dedicate two or three evenings each week to reading, alterna",
+          "pred_ans": "Dedicate two or three evenings each week to reading, alterna"
+        }
+      ]
+    },
+    {
+      "user_id": "782a8a45-6eed-4534-ac2e-5369b8119728",
+      "n_periods": 11,
+      "n_sessions": 46,
+      "n_qa": 10,
+      "correct": 4,
+      "ingest_ms": 611940.6163692474,
+      "ingest_chunks": 46,
+      "ingest_mem_size": 100,
+      "infer_ms": 7646.365165710449,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3136,
+      "qa_results": [
+        {
+          "question": "What are some beginner-friendly ways to expand my gardening skills, especially f",
+          "correct_idx": 1,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Since you have plenty of land and time, explore larger-scale",
+          "pred_ans": "With a modest backyard and a few hours each week, focus on c"
+        },
+        {
+          "question": "How can I improve my vehicle inspection process to identify more subtle defects?",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "Your familiarity with sophisticated software and a lighter w",
+          "pred_ans": "Your familiarity with sophisticated software and a lighter w"
+        },
+        {
+          "question": "What advice do you have for organizing a small, intimate football watch party at",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For a small group, prepare a couple of classic comfort dishe",
+          "pred_ans": "With just a few friends gathering, coordinate ahead so each "
+        },
+        {
+          "question": "How can I support local textile artists and initiatives while also pursuing my o",
+          "correct_idx": 5,
+          "pred_idx": 4,
+          "match": false,
+          "gold_ans": "With a generous budget and a more passive role, you can make",
+          "pred_ans": "Even as an observer, your moderate budget allows you to supp"
+        },
+        {
+          "question": "What steps can I take to manage travel anxiety if I want to start taking short R",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "To manage your moderate travel unease, organize RV trips wit",
+          "pred_ans": "To manage your moderate travel unease, organize RV trips wit"
+        },
+        {
+          "question": "Which career advancement opportunities should I consider as a transportation ins",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Given your advanced credentials and interest in both field a",
+          "pred_ans": "Given your advanced credentials and interest in both field a"
+        },
+        {
+          "question": "How can I make my handmade knit or crochet gifts more personalized for different",
+          "correct_idx": 4,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "For a child's birthday, create a playful and vibrant item su",
+          "pred_ans": "To thank a teen or adult, tailor your handmade gift to their"
+        },
+        {
+          "question": "Can you suggest Southern comfort recipes using fresh ingredients I can prepare f",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "With your own garden harvest, prepare a gluten-free Southern",
+          "pred_ans": "For a plant-based Southern spread, pick up fresh okra, tomat"
+        },
+        {
+          "question": "What routines can I adopt to stay both physically active and stress-free, given ",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "With a structured workday and the ability to move freely at ",
+          "pred_ans": "Given some physical limitations and a more flexible daily ro"
+        },
+        {
+          "question": "How can I deepen my appreciation for local art exhibitions, especially as someon",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "To truly immerse yourself in local exhibitions featuring div",
+          "pred_ans": "To truly immerse yourself in local exhibitions featuring div"
+        }
+      ]
+    },
+    {
+      "user_id": "76cb68d0-6f65-4758-ab68-d3f9aac194df",
+      "n_periods": 11,
+      "n_sessions": 40,
+      "n_qa": 10,
+      "correct": 4,
+      "ingest_ms": 534041.8810844421,
+      "ingest_chunks": 40,
+      "ingest_mem_size": 92,
+      "infer_ms": 7201.5039920806885,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 2929,
+      "qa_results": [
+        {
+          "question": "What skills should I focus on to improve my chances of becoming a lead mechanic ",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "To advance as a lead mechanic in your steady workplace, focu",
+          "pred_ans": "As your workplace expands and you balance technical and lead"
+        },
+        {
+          "question": "Can you recommend some history-rich small towns in America for a relaxing getawa",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "If you're traveling solo in the rejuvenating months, head to",
+          "pred_ans": "If you're traveling solo in the rejuvenating months, head to"
+        },
+        {
+          "question": "What should I keep in mind when mentoring a new technician who is struggling wit",
+          "correct_idx": 4,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Although your technician is skilled but new to this field, a",
+          "pred_ans": "With some prior experience, your mentee can handle more resp"
+        },
+        {
+          "question": "How can I manage anxiety during stressful troubleshooting sessions at work?",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Since you mostly work independently, structure your troubles",
+          "pred_ans": "When troubleshooting feels overwhelming, lean on your collea"
+        },
+        {
+          "question": "What are some strategic openings I can practice to improve my chess game at the ",
+          "correct_idx": 4,
+          "pred_idx": 4,
+          "match": true,
+          "gold_ans": "Morning matches against attacking opponents benefit from ope",
+          "pred_ans": "Morning matches against attacking opponents benefit from ope"
+        },
+        {
+          "question": "Could you suggest hearty Midwestern dishes I could cook for my weekly VFW gather",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "For a small gathering, take advantage of your kitchen by mak",
+          "pred_ans": "For a small gathering, take advantage of your kitchen by mak"
+        },
+        {
+          "question": "What are some effective techniques for troubleshooting refractory machinery when",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "In a small group using both basic and intermediate tools, as",
+          "pred_ans": "Solo troubleshooting with high-end electronic diagnostics ca"
+        },
+        {
+          "question": "Can you recommend Irish folk music concerts or events happening in my area this ",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Since you have plenty of free weekends, I recommend checking",
+          "pred_ans": "Since you have plenty of free weekends, I recommend checking"
+        },
+        {
+          "question": "What are some good books or biographies to read given my interest in history, sc",
+          "correct_idx": 3,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For those who like to absorb history through audio, 'Sapiens",
+          "pred_ans": "If you enjoy listening while learning about scientific break"
+        },
+        {
+          "question": "How could I get more involved in community events or volunteer work, considering",
+          "correct_idx": 3,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "With a few hours to spare and a preference for hands-on work",
+          "pred_ans": "Since you have a moderate amount of time and enjoy organizin"
+        }
+      ]
+    },
+    {
+      "user_id": "c9b22027-cc8e-4051-9cfb-79fb96f461b5",
+      "n_periods": 11,
+      "n_sessions": 49,
+      "n_qa": 10,
+      "correct": 7,
+      "ingest_ms": 698665.1110649109,
+      "ingest_chunks": 49,
+      "ingest_mem_size": 100,
+      "infer_ms": 5756.927013397217,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3284,
+      "qa_results": [
+        {
+          "question": "What are some effective ways to network with other engineers and street artists ",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Join small, local meetups or workshops that bring together e",
+          "pred_ans": "Join small, local meetups or workshops that bring together e"
+        },
+        {
+          "question": "What strategies can I use to balance planning solo travel to places like Marrake",
+          "correct_idx": 1,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Since you’ll be taking time off for a brief getaway, focus o",
+          "pred_ans": "For an extended solo journey while keeping up with ongoing w"
+        },
+        {
+          "question": "Which machine learning specialization should I focus on to make a meaningful imp",
+          "correct_idx": 3,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "To drive change in global development projects, focus on mac",
+          "pred_ans": "Given your expertise, specializing in machine learning for s"
+        },
+        {
+          "question": "Can you suggest street art tours or workshops in LA that would offer fresh inspi",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "If you prefer exploring independently, download the Street A",
+          "pred_ans": "If you prefer exploring independently, download the Street A"
+        },
+        {
+          "question": "How do I best approach leading a small team for a technical project, given my re",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "With a small team of primarily junior members, invest time i",
+          "pred_ans": "With a small team of primarily junior members, invest time i"
+        },
+        {
+          "question": "What are some innovative ways to incorporate traditional Mexican ingredients lik",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Try crafting a smoky chipotle-infused hollandaise to drizzle",
+          "pred_ans": "Try crafting a smoky chipotle-infused hollandaise to drizzle"
+        },
+        {
+          "question": "How can I stay consistently motivated to learn advanced data analysis techniques",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "Given your moderate weekly commitment and structured class e",
+          "pred_ans": "Given your moderate weekly commitment and structured class e"
+        },
+        {
+          "question": "What are some tips for finding and joining intimate concerts in Los Angeles that",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "Seek out jazz and blues nights at spots like Sam First or Th",
+          "pred_ans": "Seek out jazz and blues nights at spots like Sam First or Th"
+        },
+        {
+          "question": "Can you recommend books—both fiction and non-fiction—that reflect themes of crea",
+          "correct_idx": 1,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "Since you enjoy immersing yourself in longer works, 'Big Mag",
+          "pred_ans": "If you read regularly and enjoy books that are neither too s"
+        },
+        {
+          "question": "What are some engaging hiking routes near Los Angeles that suit my preferred lev",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "If you’re looking for a moderately challenging hike with a m",
+          "pred_ans": "If you’re looking for a moderately challenging hike with a m"
+        }
+      ]
+    },
+    {
+      "user_id": "187f0241-479d-404c-9601-1971cbe1cef5",
+      "n_periods": 11,
+      "n_sessions": 46,
+      "n_qa": 10,
+      "correct": 3,
+      "ingest_ms": 586180.2768707275,
+      "ingest_chunks": 46,
+      "ingest_mem_size": 100,
+      "infer_ms": 6949.783086776733,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 2888,
+      "qa_results": [
+        {
+          "question": "I'm considering expanding our community programs—what strategies should I use to",
+          "correct_idx": 1,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "With a moderate budget, focus on building relationships thro",
+          "pred_ans": "For a diverse audience and significant funding, organize inc"
+        },
+        {
+          "question": "I'd like to start experimenting with new cuisines at home—how should I choose re",
+          "correct_idx": 1,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Challenge yourself with intricate recipes from lesser-known ",
+          "pred_ans": "Explore recipes from global cuisines that introduce new tech"
+        },
+        {
+          "question": "What are some effective ways to revamp my garden for both relaxation and food pr",
+          "correct_idx": 1,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Since you have a spacious garden but mainly weekends to tend",
+          "pred_ans": "With a moderate-sized garden and frequent evening time, blen"
+        },
+        {
+          "question": "How should I approach planning a hiking trip that balances adventure and solitud",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Plan a multi-day journey with your friends on remote trails ",
+          "pred_ans": "Plan a multi-day journey with your friends on remote trails "
+        },
+        {
+          "question": "I’m interested in joining or starting a book club focused on cultural and histor",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "If your group brings together many perspectives and meets ev",
+          "pred_ans": "For a group with varied backgrounds meeting monthly, choose "
+        },
+        {
+          "question": "What are some practical steps I can take to transition from community management",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Since you have some committee experience, enrolling in a pol",
+          "pred_ans": "Since you have some committee experience, enrolling in a pol"
+        },
+        {
+          "question": "I want to host effective community workshops—is it better to focus on in-person,",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "With your advanced facilitation skills and a group that vari",
+          "pred_ans": "With your advanced facilitation skills and a group that vari"
+        },
+        {
+          "question": "How can I integrate evidence-based decision making more deeply into my team's pr",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Leverage your team's strong data expertise by implementing a",
+          "pred_ans": "To embed evidence-based decision making in your team's workf"
+        },
+        {
+          "question": "Can you suggest travel destinations that combine historic sites with natural won",
+          "correct_idx": 2,
+          "pred_idx": 4,
+          "match": false,
+          "gold_ans": "Look into visiting Morocco, where you can explore the histor",
+          "pred_ans": "Indulge in a grand tour of Italy, pairing the ancient ruins "
+        },
+        {
+          "question": "What are some meaningful ways I can refresh my art practice and find inspiration",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "Use your generous studio hours to dive into collaborative pr",
+          "pred_ans": "Focus on small-scale mixed media projects that can be comple"
+        }
+      ]
+    },
+    {
+      "user_id": "b4657c7a-db78-4335-8750-28f2b0db3957",
+      "n_periods": 11,
+      "n_sessions": 47,
+      "n_qa": 10,
+      "correct": 3,
+      "ingest_ms": 582428.8001060486,
+      "ingest_chunks": 47,
+      "ingest_mem_size": 92,
+      "infer_ms": 7372.7240562438965,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3134,
+      "qa_results": [
+        {
+          "question": "What are some creative ways I can improve teamwork and morale on my assembly lin",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "To boost morale and teamwork in a close-knit group, introduc",
+          "pred_ans": "To boost morale and teamwork in a close-knit group, introduc"
+        },
+        {
+          "question": "Can you suggest hearty comfort food recipes for hosting a fall potluck?",
+          "correct_idx": 3,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "An intimate fall potluck with no dietary restrictions is per",
+          "pred_ans": "With a group of this size and a need for vegetarian-friendly"
+        },
+        {
+          "question": "What's the best way to get more involved with community volunteering in Lansing?",
+          "correct_idx": 0,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "To support young people in Lansing while keeping your schedu",
+          "pred_ans": "To make a positive environmental impact in Lansing during yo"
+        },
+        {
+          "question": "How can I plan a safe and memorable kayaking trip around Lake Michigan?",
+          "correct_idx": 3,
+          "pred_idx": 2,
+          "match": false,
+          "gold_ans": "Embark on a multi-day expedition by mapping out a challengin",
+          "pred_ans": "For a day trip, pick a scenic area like Indiana Dunes where "
+        },
+        {
+          "question": "What steps should I take to advance from assembler to team leader at work?",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "To progress to a team leader role, concentrate on mastering ",
+          "pred_ans": "To move up from assembler to team leader, focus on identifyi"
+        },
+        {
+          "question": "Can you recommend activities or attractions in the Great Lakes region for a week",
+          "correct_idx": 2,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "For a family-friendly getaway with kids, visit Wisconsin Del",
+          "pred_ans": "If you’re heading out with friends and want a relaxed vibe, "
+        },
+        {
+          "question": "How should I manage my time between work, volunteering, and hobbies to avoid bur",
+          "correct_idx": 0,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "To prevent feeling overwhelmed, prioritize downtime and self",
+          "pred_ans": "When your schedule feels overwhelming but supporting your co"
+        },
+        {
+          "question": "What are some ways I can introduce newcomers to the Lansing Riverfront Park clea",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "With a small group of teens or youth, introduce them by pair",
+          "pred_ans": "With a small group of teens or youth, introduce them by pair"
+        },
+        {
+          "question": "How can I best support local artists during First Fridays at the gallery?",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "Create an immersive experience by featuring artists who work",
+          "pred_ans": "Create an immersive experience by featuring artists who work"
+        },
+        {
+          "question": "What strategies can I use to teach assembly line safety and efficiency to new hi",
+          "correct_idx": 1,
+          "pred_idx": 4,
+          "match": false,
+          "gold_ans": "Leverage classroom-based discussions and scenario analysis t",
+          "pred_ans": "Begin with structured classroom sessions focused on basic sa"
+        }
+      ]
+    },
+    {
+      "user_id": "7203b59e-2fc6-4bf8-9cee-0a792ee7ea2c",
+      "n_periods": 11,
+      "n_sessions": 48,
+      "n_qa": 10,
+      "correct": 4,
+      "ingest_ms": 594807.0831298828,
+      "ingest_chunks": 48,
+      "ingest_mem_size": 100,
+      "infer_ms": 8718.905925750732,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3131,
+      "qa_results": [
+        {
+          "question": "What's the best way for me to learn computer skills online without a strict sche",
+          "correct_idx": 2,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "Look for live online workshops or webinars that allow you to",
+          "pred_ans": "Take advantage of your computer by enrolling in self-paced v"
+        },
+        {
+          "question": "Which eco-friendly truck model should I consider for my delivery work, given my ",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "If your deliveries are focused on local and regional areas a",
+          "pred_ans": "If your deliveries are focused on local and regional areas a"
+        },
+        {
+          "question": "Can you suggest some chess improvement techniques that would work best for my so",
+          "correct_idx": 4,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "With lots of time and a social approach, set up regular ches",
+          "pred_ans": "Since you enjoy playing with friends and have a moderate amo"
+        },
+        {
+          "question": "I'm looking for new history or science books to read; any recommendations that f",
+          "correct_idx": 3,
+          "pred_idx": 3,
+          "match": true,
+          "gold_ans": "If you prefer print books and a balanced level of depth, che",
+          "pred_ans": "If you prefer print books and a balanced level of depth, che"
+        },
+        {
+          "question": "What steps can I take to make my home garden more productive, considering my ava",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Take advantage of your large garden by using tillers and irr",
+          "pred_ans": "Focus on enriching your soil naturally by adding compost and"
+        },
+        {
+          "question": "How can I keep social gatherings enjoyable and meaningful as I get older, given ",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "To keep gatherings meaningful as you age, focus on creating ",
+          "pred_ans": "To keep gatherings meaningful as you age, focus on creating "
+        },
+        {
+          "question": "I want to try new Ecuadorian recipes—what would you suggest based on my cooking ",
+          "correct_idx": 2,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "Your adventurous approach and access to a full kitchen mean ",
+          "pred_ans": "With your solid skills and a well-equipped kitchen, try maki"
+        },
+        {
+          "question": "How should I plan a spontaneous East Coast road trip, considering my travel comp",
+          "correct_idx": 2,
+          "pred_idx": 2,
+          "match": true,
+          "gold_ans": "For a quick family escape, pick a nearby East Coast spot wit",
+          "pred_ans": "For a quick family escape, pick a nearby East Coast spot wit"
+        },
+        {
+          "question": "Could you recommend new ways to improve my delivery organization system, dependi",
+          "correct_idx": 2,
+          "pred_idx": 4,
+          "match": false,
+          "gold_ans": "Given your moderate workload and proficiency with online too",
+          "pred_ans": "With a lighter delivery schedule and strong tech capabilitie"
+        },
+        {
+          "question": "What's the best way for me to stay healthy and active while working as a truck d",
+          "correct_idx": 2,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "Your flexible part-time schedule gives you the freedom to ex",
+          "pred_ans": "Given your long and unpredictable hours, prioritize short ou"
+        }
+      ]
+    },
+    {
+      "user_id": "456dcc8e-55b5-4d2e-a070-b71fdca1d310",
+      "n_periods": 11,
+      "n_sessions": 42,
+      "n_qa": 10,
+      "correct": 6,
+      "ingest_ms": 602388.7741565704,
+      "ingest_chunks": 42,
+      "ingest_mem_size": 97,
+      "infer_ms": 7427.46901512146,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 3005,
+      "qa_results": [
+        {
+          "question": "What are some creative ways I can incorporate South Asian art themes into my din",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "With a moderate group at home or in your garden, use hand-pa",
+          "pred_ans": "With a moderate group at home or in your garden, use hand-pa"
+        },
+        {
+          "question": "Which business structure would be best for starting my catering venture?",
+          "correct_idx": 2,
+          "pred_idx": 1,
+          "match": false,
+          "gold_ans": "If your family is ready to embrace significant growth and ri",
+          "pred_ans": "A Limited Liability Company (LLC) would suit your family-run"
+        },
+        {
+          "question": "What kind of yoga routine would best suit my stress management needs?",
+          "correct_idx": 0,
+          "pred_idx": 3,
+          "match": false,
+          "gold_ans": "For managing stress at home, consider a dynamic power yoga r",
+          "pred_ans": "At home, a consistent yoga practice focusing on moderate flo"
+        },
+        {
+          "question": "How can I design a philosophical discussion event that's engaging for book club ",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "Invite a thought-provoking speaker, such as a local philosop",
+          "pred_ans": "Invite a thought-provoking speaker, such as a local philosop"
+        },
+        {
+          "question": "What pricing strategy should I use for my catering menu?",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "For events that prioritize creativity and visual impact, imp",
+          "pred_ans": "For events that prioritize creativity and visual impact, imp"
+        },
+        {
+          "question": "What cities should I visit for inspiration in art, culture, and cuisine?",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "For an unforgettable family experience, consider exploring P",
+          "pred_ans": "For an unforgettable family experience, consider exploring P"
+        },
+        {
+          "question": "How can I market my catering business to align with my artistic vision?",
+          "correct_idx": 0,
+          "pred_idx": 4,
+          "match": false,
+          "gold_ans": "Highlight the rich stories and traditions behind your dishes",
+          "pred_ans": "Participate in local events and art-focused gatherings, pres"
+        },
+        {
+          "question": "What menu items could I feature to appeal to both traditional and adventurous ea",
+          "correct_idx": 4,
+          "pred_idx": 0,
+          "match": false,
+          "gold_ans": "For an energetic crowd with a strong preference for South As",
+          "pred_ans": "For a lively gathering with a diverse crowd, offer classic f"
+        },
+        {
+          "question": "What steps can I take to ensure financial stability as I launch my business?",
+          "correct_idx": 0,
+          "pred_idx": 0,
+          "match": true,
+          "gold_ans": "With a moderate upfront investment and a steady but not high",
+          "pred_ans": "With a moderate upfront investment and a steady but not high"
+        },
+        {
+          "question": "How can I balance personal time with event planning and household responsibiliti",
+          "correct_idx": 1,
+          "pred_idx": 1,
+          "match": true,
+          "gold_ans": "Since you have significant time and family support, involve ",
+          "pred_ans": "Since you have significant time and family support, involve "
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,87 @@
+{
+  "results": [],
+  "errors": [
+    {
+      "user_id": 0,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 1,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 2,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 3,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 4,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 5,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 6,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 7,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 8,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 9,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 10,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 11,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 12,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 13,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 14,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 15,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 16,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 17,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 18,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    },
+    {
+      "user_id": 19,
+      "error": "Query error: Database error: error returned from database: (code: 1032) attempt to write a readonly database"
+    }
+  ],
+  "system": "A-MEM",
+  "mode": "on-policy"
+}

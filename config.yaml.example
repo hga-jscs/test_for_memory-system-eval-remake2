@@ -1,0 +1,12 @@
+llm:
+  provider: openai
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  model: qwen-plus
+  api_key: YOUR_API_KEY_HERE
+
+embedding:
+  provider: openai
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  model: text-embedding-v3
+  api_key: YOUR_API_KEY_HERE
+  dim: 1024
