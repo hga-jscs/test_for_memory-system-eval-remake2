@@ -12,6 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from simpleMem_src import SimpleRAGMemory, get_config, OpenAIClient, get_logger
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_DIR = Path("StructMemEval/benchmark/data/state_machine_location")
 CASES = ["static_001.json", "static_002.json"]
@@ -20,8 +21,7 @@ logger = get_logger()
 
 
 def load_case(filename: str) -> dict:
-    with open(DATA_DIR / filename) as f:
-        return json.load(f)
+    return load_json_with_fallback(DATA_DIR / filename)
 
 
 def ingest_case(mem: SimpleRAGMemory, case: dict):

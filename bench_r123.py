@@ -26,6 +26,8 @@ from adaptors import (
     SingleTurnAdaptor, IterativeAdaptor, PlanAndActAdaptor,
     AdaptorResult,
 )
+from benchmark_io_utils import load_json_with_fallback
+
 
 
 # ── System factory ───────────────────────────────────────────
@@ -101,7 +103,7 @@ def judge_answer(llm, question, pred, reference, category="default"):
 # ═══════════════════════════════════════════════════════════════
 
 def run_memory_probe(system, r_modes):
-    data = json.load(open("memory-probe/data/locomo10.json"))
+    data = load_json_with_fallback("memory-probe/data/locomo10.json")
     convs = data if isinstance(data, list) else data.get("conversations", [data])
     top_k = get_top_k(system)
     config = get_config()
@@ -113,7 +115,7 @@ def run_memory_probe(system, r_modes):
         prior = []
         done_ids = set()
         if results_path.exists():
-            prior = json.load(open(results_path)).get("results", [])
+            prior = load_json_with_fallback(results_path).get("results", [])
             done_ids = {r["conv_id"] for r in prior}
 
         results = list(prior)
@@ -213,7 +215,7 @@ def run_structmemeval(system, r_modes):
         prior = []
         done_keys = set()
         if results_path.exists():
-            prior = json.load(open(results_path)).get("results", [])
+            prior = load_json_with_fallback(results_path).get("results", [])
             done_keys = {(r["category"], r["case_id"]) for r in prior if not r.get("skipped")}
 
         results = list(prior)
@@ -222,7 +224,7 @@ def run_structmemeval(system, r_modes):
         for ti, task in enumerate(tasks):
             cat = task["category"]
             fp = task["path"]
-            case = json.load(open(fp))
+            case = load_json_with_fallback(fp)
             case_id = case.get("case_id", fp.stem)
             queries = case.get("queries", [])
 
@@ -289,7 +291,7 @@ def find_correct_index(qa, period_state):
 
 
 def run_amemgym(system, r_modes, start=0, end=None):
-    data = json.load(open("data/amemgym/v1.base/data.json"))
+    data = load_json_with_fallback("data/amemgym/v1.base/data.json")
     all_users = data if isinstance(data, list) else list(data.values())
     end = end or len(all_users)
     users = list(enumerate(all_users))[start:end]

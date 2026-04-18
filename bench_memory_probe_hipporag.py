@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from hipporag_bench_src import HippoRAGMemory
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_PATH    = Path("memory-probe/data/locomo10.json")
 MAX_WORKERS  = 1
@@ -141,7 +142,7 @@ def main():
     print("memory-probe 全量评测 (HippoRAG, openie_mode=online, chunk_size=1000)")
     print("=" * 70)
 
-    data  = json.load(open(DATA_PATH))
+    data  = load_json_with_fallback(DATA_PATH)
     convs = data if isinstance(data, list) else data.get("conversations", [data])
     print(f"  对话数: {len(convs)} | MAX_WORKERS={MAX_WORKERS}\n")
 

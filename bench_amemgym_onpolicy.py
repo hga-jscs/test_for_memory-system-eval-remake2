@@ -27,6 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_PATH = Path("data/amemgym/v1.base/data.json")
 
@@ -280,7 +281,7 @@ def main():
     print(f"AMemGym ON-POLICY 评测 ({cfg['label']}, top_k={cfg['top_k']})")
     print("=" * 70)
 
-    data  = json.load(open(DATA_PATH))
+    data  = load_json_with_fallback(DATA_PATH)
     all_users = data if isinstance(data, list) else list(data.values())
     start = args.start
     end = args.end if args.end is not None else len(all_users)

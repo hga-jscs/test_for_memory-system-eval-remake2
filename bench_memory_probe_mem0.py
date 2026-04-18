@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from mem0_bench_src import Mem0RAGMemory
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_PATH    = Path("memory-probe/data/locomo10.json")
 MAX_WORKERS  = 1    # 过夜串行：避免 DashScope API 并发限速
@@ -143,8 +144,7 @@ def main():
     print("memory-probe (LoCoMo) 全量评测 (mem0, 并行)")
     print("=" * 70)
 
-    with open(DATA_PATH) as f:
-        data = json.load(f)
+    data = load_json_with_fallback(DATA_PATH)
     print(f"总对话数: {len(data)} | MAX_WORKERS={MAX_WORKERS}")
     total_qa = sum(len([qa for qa in c["qa"] if "answer" in qa]) for c in data)
     print(f"总有效 QA 数: {total_qa}\n")

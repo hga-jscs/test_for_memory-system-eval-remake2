@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from amem_bench_src import AMemBenchMemory
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_PATH    = Path("memory-probe/data/locomo10.json")
 MAX_WORKERS  = 1
@@ -125,14 +126,14 @@ def main():
     print("memory-probe 全量评测 (A-MEM, evolution=ON, top_k=10)")
     print("=" * 70)
 
-    data  = json.load(open(DATA_PATH))
+    data  = load_json_with_fallback(DATA_PATH)
     convs = data if isinstance(data, list) else data.get("conversations", [data])
 
     # ── Resume: 跳过已完成的 conv ─────────────────────────────────
     prior_results = []
     done_convs = set()
     if RESULTS_PATH.exists():
-        prior = json.load(open(RESULTS_PATH))
+        prior = load_json_with_fallback(RESULTS_PATH)
         prior_results = prior.get("results", [])
         done_convs = {r["conv_id"] for r in prior_results}
         print(f"  Resume: 跳过 {len(done_convs)} 个已完成 conv")

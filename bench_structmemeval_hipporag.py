@@ -17,6 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from hipporag_bench_src import HippoRAGMemory
+from benchmark_io_utils import load_json_with_fallback
 
 BASE = Path("StructMemEval/benchmark")
 CATEGORIES = {
@@ -107,7 +108,7 @@ def judge_answer(llm: OpenAIClient, question: str, pred: str,
 def eval_case(task: dict) -> dict:
     category = task["category"]
     path     = task["path"]
-    case     = json.load(open(path))
+    case     = load_json_with_fallback(path)
     case_id  = case.get("case_id", path.stem)
     queries  = case.get("queries", [])
 
@@ -190,7 +191,7 @@ def main():
     # ── Resume: 跳过已完成的 case ─────────────────────────────────────────
     prior_results, prior_errors = [], []
     if RESULTS_PATH.exists():
-        prior = json.load(open(RESULTS_PATH))
+        prior = load_json_with_fallback(RESULTS_PATH)
         prior_results = prior.get("results", [])
         prior_errors  = prior.get("errors", [])
         done_keys = {(r["category"], r["case_id"]) for r in prior_results if not r.get("skipped")}

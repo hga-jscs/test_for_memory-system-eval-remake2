@@ -12,6 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from simpleMem_src import SimpleRAGMemory, get_config, OpenAIClient, get_logger
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_PATH = Path("memory-probe/data/locomo10.json")
 MAX_SESSIONS = 3
@@ -21,8 +22,7 @@ logger = get_logger()
 
 
 def load_locomo():
-    with open(DATA_PATH) as f:
-        return json.load(f)
+    return load_json_with_fallback(DATA_PATH)
 
 
 def ingest_sessions(mem: SimpleRAGMemory, conv: dict, max_sessions: int):

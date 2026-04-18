@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from hipporag_bench_src import HippoRAGMemory
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_PATH    = Path("data/amemgym/v1.base/data.json")
 MAX_WORKERS  = 1    # 串行：HippoRAG build_index 本身多线程，额外进程并发无益
@@ -154,7 +155,7 @@ def main():
     print("AMemGym 全量评测 (HippoRAG, openie_mode=online, chunk_size=1000)")
     print("=" * 70)
 
-    data = json.load(open(DATA_PATH))
+    data = load_json_with_fallback(DATA_PATH)
     users = data if isinstance(data, list) else list(data.values())
     print(f"  用户数: {len(users)} | MAX_WORKERS={MAX_WORKERS}\n")
 

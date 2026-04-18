@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from lightrag_bench_src import LightRAGBenchMemory
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_PATH    = Path("data/amemgym/v1.base/data.json")
 MAX_WORKERS  = 1
@@ -136,7 +137,7 @@ def main():
     print("AMemGym 全量评测 (LightRAG, tree=3L, top_k=5)")
     print("=" * 70)
 
-    data = json.load(open(DATA_PATH))
+    data = load_json_with_fallback(DATA_PATH)
     users = data if isinstance(data, list) else list(data.values())
     print(f"  用户数: {len(users)} | MAX_WORKERS={MAX_WORKERS}\n")
 
