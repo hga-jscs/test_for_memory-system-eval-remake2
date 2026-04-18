@@ -1,0 +1,125 @@
+﻿=== Step2 Report: M 轴源点定位 ===
+Root: D:\MemGPT\letta
+PkgRoot: D:\MemGPT\letta\letta
+Generated: 02/07/2026 14:03:19
+
+### 1) Recall (Messages) - final write/read
+---- D:\MemGPT\letta\letta\services\message_manager.py : line 467 (pattern=def\s+create_many_messages_async|def\s+create_many_messages|def\s+create_many) ----
+   465:     @enforce_types
+   466:     @trace_method
+   467:     async def create_many_messages_async(
+   468:         self,
+   469:         pydantic_msgs: List[PydanticMessage],
+
+---- D:\MemGPT\letta\letta\services\message_manager.py : line 1125 (pattern=def\s+search_messages_async|def\s+search_messages) ----
+  1123:     @enforce_types
+  1124:     @trace_method
+  1125:     async def search_messages_async(
+  1126:         self,
+  1127:         agent_id: str,
+
+---- D:\MemGPT\letta\letta\services\message_manager.py : line 1245 (pattern=def\s+search_messages_async|def\s+search_messages) ----
+  1243:             return message_tuples
+  1244: 
+  1245:     async def search_messages_org_async(
+  1246:         self,
+  1247:         actor: PydanticUser,
+
+
+### 2) Archival (Passages) - final write/read
+---- D:\MemGPT\letta\letta\services\passage_manager.py : line 543 (pattern=def\s+insert_passage) ----
+   541:     @enforce_types
+   542:     @trace_method
+   543:     async def insert_passage(
+   544:         self,
+   545:         agent_state: AgentState,
+
+---- D:\MemGPT\letta\letta\services\agent_manager.py : line 2183 (pattern=def\s+search_agent_archival_memory_async|query_agent_passages_async) ----
+  2181:     ) -> List[PydanticPassage]:
+  2182:         """
+  2183:         DEPRECATED: Use query_source_passages_async or query_agent_passages_async instead.
+  2184:         This method is kept only for test compatibility and will be removed in a future version.
+  2185: 
+
+---- D:\MemGPT\letta\letta\services\agent_manager.py : line 2191 (pattern=def\s+search_agent_archival_memory_async|query_agent_passages_async) ----
+  2189: 
+  2190:         logger.warning(
+  2191:             "list_passages_async is deprecated. Use query_source_passages_async or query_agent_passages_async instead.",
+  2192:             stacklevel=2,
+  2193:         )
+
+---- D:\MemGPT\letta\letta\services\agent_manager.py : line 2287 (pattern=def\s+search_agent_archival_memory_async|query_agent_passages_async) ----
+  2285:     @enforce_types
+  2286:     @trace_method
+  2287:     async def query_agent_passages_async(
+  2288:         self,
+  2289:         actor: PydanticUser,
+
+---- D:\MemGPT\letta\letta\services\agent_manager.py : line 2405 (pattern=def\s+search_agent_archival_memory_async|query_agent_passages_async) ----
+  2403:     @enforce_types
+  2404:     @trace_method
+  2405:     async def search_agent_archival_memory_async(
+  2406:         self,
+  2407:         agent_id: str,
+
+---- D:\MemGPT\letta\letta\services\agent_manager.py : line 2490 (pattern=def\s+search_agent_archival_memory_async|query_agent_passages_async) ----
+  2488:         # Only use embedding-based search if embedding config is available
+  2489:         use_embedding_search = agent_state.embedding_config is not None
+  2490:         passages_with_metadata = await self.query_agent_passages_async(
+  2491:             actor=actor,
+  2492:             agent_id=agent_id,
+
+
+### 3) Core (Blocks) - final write + render
+---- D:\MemGPT\letta\letta\services\block_manager.py : line 255 (pattern=def\s+update_block_async) ----
+   253:     @raise_on_invalid_id(param_name="block_id", expected_prefix=PrimitiveType.BLOCK)
+   254:     @trace_method
+   255:     async def update_block_async(self, block_id: str, block_update: BlockUpdate, actor: PydanticUser) -> PydanticBlock:
+   256:         """Update a block by its ID with the given BlockUpdate object."""
+   257:         async with db_registry.async_session() as session:
+
+---- D:\MemGPT\letta\letta\services\agent_manager.py : line 1629 (pattern=def\s+update_memory_if_changed_async) ----
+  1627:     @raise_on_invalid_id(param_name="agent_id", expected_prefix=PrimitiveType.AGENT)
+  1628:     @trace_method
+  1629:     async def update_memory_if_changed_async(self, agent_id: str, new_memory: Memory, actor: PydanticUser) -> PydanticAgentState:
+  1630:         """
+  1631:         Update internal memory object and system prompt if there have been modifications.
+
+---- D:\MemGPT\letta\letta\schemas\memory.py : line 271 (pattern=def\s+compile) ----
+   269:         s.write("</directories>")
+   270: 
+   271:     def compile(self, tool_usage_rules=None, sources=None, max_files_open=None, llm_config=None) -> str:
+   272:         """Efficiently render memory, tool rules, and sources into a prompt string."""
+   273:         s = StringIO()
+
+---- D:\MemGPT\letta\letta\schemas\memory.py : line 311 (pattern=def\s+compile) ----
+   309: 
+   310:     @trace_method
+   311:     async def compile_async(self, tool_usage_rules=None, sources=None, max_files_open=None, llm_config=None) -> str:
+   312:         """Async version that offloads to a thread for CPU-bound string building."""
+   313:         return await asyncio.to_thread(
+
+
+### 4) Tool layer shell (NOT base, but must identify)
+---- D:\MemGPT\letta\letta\services\tool_executor\core_tool_executor.py : line 83 (pattern=def\s+conversation_search|def\s+archival_memory_search|def\s+archival_memory_insert) ----
+    81:         return "Sent message successfully."
+    82: 
+    83:     async def conversation_search(
+    84:         self,
+    85:         agent_state: AgentState,
+
+---- D:\MemGPT\letta\letta\services\tool_executor\core_tool_executor.py : line 280 (pattern=def\s+conversation_search|def\s+archival_memory_search|def\s+archival_memory_insert) ----
+   278:             raise e
+   279: 
+   280:     async def archival_memory_search(
+   281:         self,
+   282:         agent_state: AgentState,
+
+---- D:\MemGPT\letta\letta\services\tool_executor\core_tool_executor.py : line 309 (pattern=def\s+conversation_search|def\s+archival_memory_search|def\s+archival_memory_insert) ----
+   307:             raise e
+   308: 
+   309:     async def archival_memory_insert(
+   310:         self, agent_state: AgentState, actor: User, content: str, tags: Optional[list[str]] = None
+   311:     ) -> Optional[str]:
+
+

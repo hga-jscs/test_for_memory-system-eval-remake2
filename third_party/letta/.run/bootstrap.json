@@ -1,0 +1,41 @@
+﻿Letta.letta.schemas.providers.base - WARNING - DEPRECATION: Creating provider with 'api_key' directly is deprecated. Use the encrypted fields (`api_key_enc`) instead.
+Letta.letta.schemas.providers.base - WARNING - DEPRECATION: Creating provider with 'access_key' directly is deprecated. Use the encrypted fields (`access_key_enc`) instead.
+Letta.letta.orm.sqlalchemy_base - WARNING - SECURITY: Reading org-scoped model User without actor. IDs: ['user-00000000-0000-4000-8000-000000000000']. This bypasses organization filtering.
+Default user: id='user-00000000-0000-4000-8000-000000000000' organization_id='org-00000000-0000-4000-8000-000000000000' name='default_user' created_at=None updated_at=datetime.datetime(2026, 2, 7, 7, 23, 40, 125590, tzinfo=datetime.timezone.utc) is_deleted=False and org: id='org-00000000-0000-4000-8000-000000000000' name='default_org' created_at=datetime.datetime(2026, 2, 7, 7, 23, 39, 418342, tzinfo=datetime.timezone.utc) privileged_tools=False
+Letta.letta.services.provider_manager - INFO - Syncing 2 base providers to database
+Letta.letta.orm.sqlalchemy_base - WARNING - SECURITY: Listing org-scoped model Provider without actor. This bypasses organization filtering.
+Letta.letta.orm.sqlalchemy_base - WARNING - SECURITY: Listing org-scoped model Provider without actor. This bypasses organization filtering.
+Letta.letta.server.server - INFO - Syncing provider models to database
+Letta.letta.orm.sqlalchemy_base - WARNING - SECURITY: Listing org-scoped model Provider without actor. This bypasses organization filtering.
+Letta.letta.server.server - ERROR - Failed to sync models for provider bedrock: No module named 'aioboto3'
+Traceback (most recent call last):
+  File "D:\MemGPT\letta\letta\server\server.py", line 462, in _sync_provider_models_async
+    llm_models = await enabled_provider.list_llm_models_async()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MemGPT\letta\letta\schemas\providers\bedrock.py", line 81, in list_llm_models_async
+    models = await self.bedrock_get_model_list_async()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MemGPT\letta\letta\schemas\providers\bedrock.py", line 54, in bedrock_get_model_list_async
+    from aioboto3.session import Session
+ModuleNotFoundError: No module named 'aioboto3'
+Letta.letta.services.provider_manager - INFO - === Starting sync for provider 'letta' (ID: provider-191e3f4b-abe4-4205-ab81-932039746fed) ===
+Letta.letta.services.provider_manager - INFO -   Organization ID: None
+Letta.letta.services.provider_manager - INFO -   LLM models to sync: ['letta/letta-free']
+Letta.letta.services.provider_manager - INFO -   Embedding models to sync: ['letta/letta-free']
+Letta.letta.services.provider_manager - INFO - Processing 1 LLM models for provider letta
+Letta.letta.services.provider_manager - INFO -   Checking LLM model: letta/letta-free (name: letta-free)
+Letta.letta.orm.sqlalchemy_base - WARNING - SECURITY: Listing org-scoped model ProviderModel without actor. This bypasses organization filtering.
+Letta.letta.services.provider_manager - INFO -     LLM model letta/letta-free already exists (ID: model-475579d9-d04f-4629-86ec-3b1283afdf01), skipping
+Letta.letta.services.provider_manager - INFO - Processing 1 embedding models for provider letta
+Letta.letta.services.provider_manager - INFO -   Checking embedding model: letta/letta-free (name: letta-free)
+Letta.letta.orm.sqlalchemy_base - WARNING - SECURITY: Listing org-scoped model ProviderModel without actor. This bypasses organization filtering.
+Letta.letta.services.provider_manager - INFO -     Embedding model letta/letta-free already exists (ID: model-91914330-4ea1-4d00-b9ac-287bca73209b), skipping
+Letta.letta.orm.sqlalchemy_base - WARNING - SECURITY: Reading org-scoped model Provider without actor. IDs: ['provider-191e3f4b-abe4-4205-ab81-932039746fed']. This bypasses organization filtering.
+Letta.letta.server.server - INFO - Synced 1 LLM models and 1 embedding models for provider letta
+Letta.letta.data_sources.redis_client - INFO - Redis not configured, using noop client
+Letta.letta.orm.sqlalchemy_base - WARNING - SECURITY: Listing org-scoped model SandboxConfig without actor. This bypasses organization filtering.
+{
+  "org_id": "org-00000000-0000-4000-8000-000000000000",
+  "user_id": "user-00000000-0000-4000-8000-000000000000",
+  "agent_id": "agent-2c2e3155-2e4b-4b3b-be41-b410cfc28ad5"
+}

@@ -1,0 +1,52 @@
+﻿=== Cross Check (best-effort) ===
+AgentV3: D:\MemGPT\letta\letta\agents\letta_agent_v3.py
+Hits: _checkpoint_messages / create_many_messages
+---- D:\MemGPT\letta\letta\agents\letta_agent_v3.py : line 499 (pattern=_checkpoint_messages|create_many_messages) ----
+   498: 
+   499:     async def _checkpoint_messages(self, run_id: str, step_id: str, new_messages: list[Message], in_context_messages: list[Message]):
+   500:         """
+
+---- D:\MemGPT\letta\letta\agents\letta_agent_v3.py : line 521 (pattern=_checkpoint_messages|create_many_messages) ----
+   520:         # persist the new message objects - ONLY place where messages are persisted
+   521:         persisted_messages = await self.message_manager.create_many_messages_async(
+   522:             new_messages,
+
+---- D:\MemGPT\letta\letta\agents\letta_agent_v3.py : line 815 (pattern=_checkpoint_messages|create_many_messages) ----
+   814:                             # update the messages
+   815:                             await self._checkpoint_messages(
+   816:                                 run_id=run_id,
+
+---- D:\MemGPT\letta\letta\agents\letta_agent_v3.py : line 884 (pattern=_checkpoint_messages|create_many_messages) ----
+   883:             step_progression, step_metrics = await self._step_checkpoint_finish(step_metrics, agent_step_span, logged_step)
+   884:             await self._checkpoint_messages(
+   885:                 run_id=run_id,
+
+---- D:\MemGPT\letta\letta\agents\letta_agent_v3.py : line 933 (pattern=_checkpoint_messages|create_many_messages) ----
+   932:                     yield message
+   933:                 await self._checkpoint_messages(
+   934:                     run_id=run_id,
+
+
+Router v1 agents: D:\MemGPT\letta\letta\server\rest_api\routers\v1\agents.py
+Hits: AgentLoop
+---- D:\MemGPT\letta\letta\server\rest_api\routers\v1\agents.py : line 15 (pattern=AgentLoop) ----
+    14: 
+    15: from letta.agents.agent_loop import AgentLoop
+    16: from letta.agents.base_agent_v2 import BaseAgentV2
+
+---- D:\MemGPT\letta\letta\server\rest_api\routers\v1\agents.py : line 1598 (pattern=AgentLoop) ----
+  1597:         if agent_eligible and model_compatible:
+  1598:             agent_loop = AgentLoop.load(agent_state=agent, actor=actor)
+  1599:             result = await agent_loop.step(
+
+---- D:\MemGPT\letta\letta\server\rest_api\routers\v1\agents.py : line 1853 (pattern=AgentLoop) ----
+  1852:         if agent_eligible and model_compatible:
+  1853:             agent_loop = AgentLoop.load(agent_state=agent, actor=actor)
+  1854:             result = await agent_loop.step(
+
+---- D:\MemGPT\letta\letta\server\rest_api\routers\v1\agents.py : line 2175 (pattern=AgentLoop) ----
+  2174:     if agent_eligible and model_compatible:
+  2175:         agent_loop = AgentLoop.load(agent_state=agent, actor=actor)
+  2176:         return await agent_loop.build_request(
+
+
