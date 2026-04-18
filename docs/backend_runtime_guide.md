@@ -78,10 +78,22 @@ python -c "from raptor_bench_src import RaptorBenchMemory; print('ok')"
 pip install -r third_party/HippoRAG/requirements.txt
 ```
 
+推荐（更稳妥）：
+
+```bash
+pip install -e third_party/HippoRAG
+```
+
+说明（关键）：
+- 本仓库 `hipporag_bench_src.py` 会优先把 `third_party/HippoRAG/src` 加入 `sys.path` 后直接 `import hipporag`。
+- **源码路径直导入不会自动安装依赖**，因此即便代码能 import 到 `hipporag`，运行时仍可能缺少 `python-igraph`。
+- `bench_structmemeval_hipporag.py` 已加入前置依赖检查：启动时会同时检查 `hipporag` 与 `from igraph import Graph`，缺失时会立即失败并给出安装提示，避免在几十个 case 中重复报错。
+
 检查：
 
 ```bash
 python -c "from hipporag_bench_src import HippoRAGMemory; print('ok')"
+python -c "import igraph; print('igraph ok')"
 ```
 
 ---
