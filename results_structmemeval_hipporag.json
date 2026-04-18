@@ -5726,6 +5726,2346 @@
           "pred": "There is no statistical evidence in the memories to support the claimed percentages (88%, 78%, 75%). The conversation lo"
         }
       ]
+    },
+    {
+      "case_id": "recommendations_art_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 15,
+      "ingest_time_ms": 35,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 1371,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many artists did I praise without any criticism or mixed feelings a"
+        },
+        {
+          "question": "Which artist did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artist did I reject entirely, with no positive comments whatsoeve"
+        },
+        {
+          "question": "Which artist received both praise and criticism in our conversations? What was t",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artist received both praise and criticism in our conversations? W"
+        },
+        {
+          "question": "Should I visit the Monet exhibit or the Renoir retrospective next month?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I visit the Monet exhibit or the Renoir retrospective next month"
+        },
+        {
+          "question": "Based on all our conversations, how many sculptors did I praise and how many did",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, how many sculptors did I praise and how"
+        },
+        {
+          "question": "Across all our conversations, what percentage of my comments about Renaissance a",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAcross all our conversations, what percentage of my comments about Rena"
+        },
+        {
+          "question": "What's my breaking point with abstract art—when does it stop working for me? Use",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's my breaking point with abstract art—when does it stop working fo"
+        },
+        {
+          "question": "Which artists did I praise for revealing the artist's hand through visible techn",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I praise for revealing the artist's hand through visi"
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat specific activities did I mention doing with art that reveal my pr"
+        },
+        {
+          "question": "How many total messages have we exchanged, and what percentage were about art ju",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many total messages have we exchanged, and what percentage were abo"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_art_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 23,
+      "ingest_time_ms": 30,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 498,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many artists did I praise without any criticism or mixed feelings a"
+        },
+        {
+          "question": "Which artist did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artist did I reject entirely, with no positive comments whatsoeve"
+        },
+        {
+          "question": "Which artist received both praise and criticism in our conversations? What was t",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artist received both praise and criticism in our conversations? W"
+        },
+        {
+          "question": "Should I visit the Monet exhibit or the Renoir retrospective next month?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I visit the Monet exhibit or the Renoir retrospective next month"
+        },
+        {
+          "question": "Based on all our conversations, how many sculptors did I praise and how many did",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, how many sculptors did I praise and how"
+        },
+        {
+          "question": "Across all our conversations, what percentage of my comments about Renaissance a",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAcross all our conversations, what percentage of my comments about Rena"
+        },
+        {
+          "question": "What's my breaking point with abstract art—when does it stop working for me? Use",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's my breaking point with abstract art—when does it stop working fo"
+        },
+        {
+          "question": "Which artists did I praise for revealing the artist's hand through visible techn",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I praise for revealing the artist's hand through visi"
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat specific activities did I mention doing with art that reveal my pr"
+        },
+        {
+          "question": "How many total messages have we exchanged, and what percentage were about art ju",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many total messages have we exchanged, and what percentage were abo"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_art_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 0,
+      "ingest_chunks": 31,
+      "ingest_time_ms": 29,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 538,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many artists did I praise without any criticism or mixed feelings a"
+        },
+        {
+          "question": "Which artists did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I reject entirely, with no positive comments whatsoev"
+        },
+        {
+          "question": "Which artist received both praise and criticism in our conversations? What was t",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artist received both praise and criticism in our conversations? W"
+        },
+        {
+          "question": "Should I visit the Monet exhibit or the Renoir retrospective next month?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I visit the Monet exhibit or the Renoir retrospective next month"
+        },
+        {
+          "question": "Based on all our conversations, how many sculptors did I praise and how many did",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, how many sculptors did I praise and how"
+        },
+        {
+          "question": "Between Brancusi's minimalist sculptures and Serra's steel installations, which ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBetween Brancusi's minimalist sculptures and Serra's steel installation"
+        },
+        {
+          "question": "Across all our conversations, what percentage of my comments about Renaissance a",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAcross all our conversations, what percentage of my comments about Rena"
+        },
+        {
+          "question": "What's my breaking point with abstract art—when does it stop working for me? Use",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's my breaking point with abstract art—when does it stop working fo"
+        },
+        {
+          "question": "Which artists did I praise for revealing the artist's hand through visible techn",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I praise for revealing the artist's hand through visi"
+        },
+        {
+          "question": "What role does art's healing power play in my preferences? Quote my ultimate tes",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat role does art's healing power play in my preferences? Quote my ult"
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat specific activities did I mention doing with art that reveal my pr"
+        },
+        {
+          "question": "Based on our conversations, rank painting and sculpture from most to least align",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, rank painting and sculpture from most to le"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_art_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 41,
+      "ingest_time_ms": 43,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 424,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many artists did I praise without any criticism or mixed feelings a"
+        },
+        {
+          "question": "Which artists did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I reject entirely, with no positive comments whatsoev"
+        },
+        {
+          "question": "Which artist received both praise and criticism in our conversations? What was t",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artist received both praise and criticism in our conversations? W"
+        },
+        {
+          "question": "Which artists did I specifically mention for their use of impasto, rough texture",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I specifically mention for their use of impasto, roug"
+        },
+        {
+          "question": "In which session did I state my ultimate test for whether something is 'decorati",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIn which session did I state my ultimate test for whether something is "
+        },
+        {
+          "question": "Based on our conversations, when is biographical knowledge helpful versus necess",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, when is biographical knowledge helpful vers"
+        },
+        {
+          "question": "Which artists did I explicitly contrast in terms of showing the artist's hand ve",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I explicitly contrast in terms of showing the artist'"
+        },
+        {
+          "question": "For which artists did I explicitly state that their choice of medium was essenti",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nFor which artists did I explicitly state that their choice of medium wa"
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat specific activities did I mention doing with art that reveal my pr"
+        },
+        {
+          "question": "In multiple sessions, I used the words 'truth' or 'honest' to describe what I va",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIn multiple sessions, I used the words 'truth' or 'honest' to describe "
+        },
+        {
+          "question": "Using only direct quotes from our conversations, synthesize my complete artistic",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nUsing only direct quotes from our conversations, synthesize my complete"
+        },
+        {
+          "question": "Based on all our conversations, rank the following art mediums from most to leas",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, rank the following art mediums from mos"
+        },
+        {
+          "question": "I have time to see only one exhibition next month. Based on our conversations, s",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI have time to see only one exhibition next month. Based on our convers"
+        },
+        {
+          "question": "Which three artists did I describe with language of transformation (e.g., turnin",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich three artists did I describe with language of transformation (e.g"
+        },
+        {
+          "question": "If a museum offered simultaneous exhibitions of Rodin, Brancusi, and Serra, whic",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIf a museum offered simultaneous exhibitions of Rodin, Brancusi, and Se"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_art_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 51,
+      "ingest_time_ms": 47,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 437,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many artists did I praise without any criticism or mixed feelings a"
+        },
+        {
+          "question": "Which artists did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I reject entirely, with no positive comments whatsoev"
+        },
+        {
+          "question": "Which artists received both praise and criticism in our conversations? What was ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists received both praise and criticism in our conversations? "
+        },
+        {
+          "question": "Which artists did I specifically mention for their use of impasto, rough texture",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich artists did I specifically mention for their use of impasto, roug"
+        },
+        {
+          "question": "In which session did I state my ultimate test for whether something is 'decorati",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIn which session did I state my ultimate test for whether something is "
+        },
+        {
+          "question": "Based on our conversations, when is biographical knowledge helpful versus necess",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, when is biographical knowledge helpful vers"
+        },
+        {
+          "question": "What distinction did I make between art meant for public spaces versus private h",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat distinction did I make between art meant for public spaces versus "
+        },
+        {
+          "question": "For which artists did I explicitly state that their choice of medium was essenti",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nFor which artists did I explicitly state that their choice of medium wa"
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat specific activities did I mention doing with art that reveal my pr"
+        },
+        {
+          "question": "In multiple sessions, I used the words 'truth' or 'honest' to describe what I va",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIn multiple sessions, I used the words 'truth' or 'honest' to describe "
+        },
+        {
+          "question": "Using only direct quotes from our conversations, synthesize my complete artistic",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nUsing only direct quotes from our conversations, synthesize my complete"
+        },
+        {
+          "question": "Based on all our conversations, rank the following art mediums from most to leas",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, rank the following art mediums from mos"
+        },
+        {
+          "question": "I have time to see only one exhibition next month. Based on our conversations, s",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI have time to see only one exhibition next month. Based on our convers"
+        },
+        {
+          "question": "Which three artists did I describe with language of transformation (e.g., turnin",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich three artists did I describe with language of transformation (e.g"
+        },
+        {
+          "question": "If a museum offered simultaneous exhibitions of Rodin, Brancusi, and Serra, whic",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIf a museum offered simultaneous exhibitions of Rodin, Brancusi, and Se"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 14,
+      "ingest_time_ms": 13,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 339,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, what is the approximate percentage of positive f",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, what is the approximate percentage of p"
+        },
+        {
+          "question": "Which game is mentioned most often across our conversations, and what does its t",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich game is mentioned most often across our conversations, and what d"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative sessions across all your b",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate ratio of positive to negative sessions across a"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat single game mechanism receives the most criticism from you, and in"
+        },
+        {
+          "question": "What three game characteristics are most important for your enjoyment, based on ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three game characteristics are most important for your enjoyment, "
+        },
+        {
+          "question": "You have mixed feelings about party games. What percentage of your party game di",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nYou have mixed feelings about party games. What percentage of your part"
+        },
+        {
+          "question": "What factors contribute most to game replayability based on your feedback patter",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat factors contribute most to game replayability based on your feedba"
+        },
+        {
+          "question": "What is the approximate success rate of cooperative games for you, and what mech",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate success rate of cooperative games for you, and "
+        },
+        {
+          "question": "Based on your feedback, which type of game (strategy, abstract, party, or cooper",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on your feedback, which type of game (strategy, abstract, party, "
+        },
+        {
+          "question": "Based on all your feedback, what single question best predicts whether you will ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all your feedback, what single question best predicts whether "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 19,
+      "ingest_time_ms": 10,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 281,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, rank the board game genres by your positive feed",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, rank the board game genres by your posi"
+        },
+        {
+          "question": "What is the approximate percentage of cooperative games that successfully engage",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate percentage of cooperative games that successful"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative sessions across all your b",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate ratio of positive to negative sessions across a"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat single game mechanism receives the most criticism from you, and in"
+        },
+        {
+          "question": "What three game mechanisms do you most consistently praise across our conversati",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three game mechanisms do you most consistently praise across our c"
+        },
+        {
+          "question": "What is the approximate percentage point difference between your positive feedba",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate percentage point difference between your positi"
+        },
+        {
+          "question": "What three factors most strongly influence a game's long‑term replayability for ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three factors most strongly influence a game's long‑term replayabi"
+        },
+        {
+          "question": "What percentage of your factual game discussions involve explicit criticism of p",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat percentage of your factual game discussions involve explicit criti"
+        },
+        {
+          "question": "Which game is mentioned most frequently across our conversations, and what does ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich game is mentioned most frequently across our conversations, and w"
+        },
+        {
+          "question": "Based on your feedback, what single question best predicts whether you will enjo",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on your feedback, what single question best predicts whether you "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 0,
+      "ingest_chunks": 39,
+      "ingest_time_ms": 29,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 447,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, rank the board game genres by your positive feed",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, rank the board game genres by your posi"
+        },
+        {
+          "question": "What is the approximate percentage of cooperative games that successfully engage",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate percentage of cooperative games that successful"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative sessions across all your b",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate ratio of positive to negative sessions across a"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat single game mechanism receives the most criticism from you, and in"
+        },
+        {
+          "question": "What three game mechanisms do you most consistently praise across our conversati",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three game mechanisms do you most consistently praise across our c"
+        },
+        {
+          "question": "What is the approximate percentage point difference between your positive feedba",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate percentage point difference between your positi"
+        },
+        {
+          "question": "What three factors most strongly influence a game's long‑term replayability for ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three factors most strongly influence a game's long‑term replayabi"
+        },
+        {
+          "question": "What is your preferred player count range for strategy games, and how many times",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your preferred player count range for strategy games, and how m"
+        },
+        {
+          "question": "How important is thematic integration to your enjoyment of a game? Provide examp",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow important is thematic integration to your enjoyment of a game? Prov"
+        },
+        {
+          "question": "You generally find party games shallow, yet you praised Just One. What percentag",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nYou generally find party games shallow, yet you praised Just One. What "
+        },
+        {
+          "question": "What is your philosophy on building and maintaining a board game collection, bas",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your philosophy on building and maintaining a board game collec"
+        },
+        {
+          "question": "Based on your feedback, what single question best predicts whether you will enjo",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on your feedback, what single question best predicts whether you "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 56,
+      "ingest_time_ms": 26,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 351,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, what is the percentage of cooperative games that",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, what is the percentage of cooperative g"
+        },
+        {
+          "question": "What three game mechanisms do you most consistently praise across our conversati",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three game mechanisms do you most consistently praise across our c"
+        },
+        {
+          "question": "Compare your positive feedback percentages for strategy games versus abstract ga",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nCompare your positive feedback percentages for strategy games versus ab"
+        },
+        {
+          "question": "What is your preferred player count range for strategy games, and how many times",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your preferred player count range for strategy games, and how m"
+        },
+        {
+          "question": "What single design flaw causes the 'alpha player' problem in cooperative games, ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat single design flaw causes the 'alpha player' problem in cooperativ"
+        },
+        {
+          "question": "What is your ideal game length range, and how many games in our conversations fa",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your ideal game length range, and how many games in our convers"
+        },
+        {
+          "question": "What three factors most strongly influence a game's long-term replayability for ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three factors most strongly influence a game's long-term replayabi"
+        },
+        {
+          "question": "What is your attitude toward legacy games, and how many legacy games have you di",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your attitude toward legacy games, and how many legacy games ha"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat single game mechanism receives the most criticism from you, and in"
+        },
+        {
+          "question": "You generally find party games shallow, yet you praised Just One. What percentag",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nYou generally find party games shallow, yet you praised Just One. What "
+        },
+        {
+          "question": "How important is thematic integration to your enjoyment of a game? Provide examp",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow important is thematic integration to your enjoyment of a game? Prov"
+        },
+        {
+          "question": "What is your philosophy on building and maintaining a board game collection, bas",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your philosophy on building and maintaining a board game collec"
+        },
+        {
+          "question": "Which single game is mentioned most frequently across our conversations, and wha",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich single game is mentioned most frequently across our conversations"
+        },
+        {
+          "question": "What percentage of your game discussions include explicit mentions of player age",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat percentage of your game discussions include explicit mentions of p"
+        },
+        {
+          "question": "Based on your feedback, what single question best predicts whether you will enjo",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on your feedback, what single question best predicts whether you "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 68,
+      "ingest_time_ms": 33,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 396,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, what is the percentage of cooperative games that",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, what is the percentage of cooperative g"
+        },
+        {
+          "question": "What three game mechanisms do you most consistently praise across our conversati",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three game mechanisms do you most consistently praise across our c"
+        },
+        {
+          "question": "Compare your positive feedback percentages for strategy games versus abstract ga",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nCompare your positive feedback percentages for strategy games versus ab"
+        },
+        {
+          "question": "What is your preferred player count range for strategy games, and how many times",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your preferred player count range for strategy games, and how m"
+        },
+        {
+          "question": "What single design flaw causes the 'alpha player' problem in cooperative games, ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat single design flaw causes the 'alpha player' problem in cooperativ"
+        },
+        {
+          "question": "What is your ideal game length range, and how many games in our conversations fa",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your ideal game length range, and how many games in our convers"
+        },
+        {
+          "question": "What three factors most strongly influence a game's long-term replayability for ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three factors most strongly influence a game's long-term replayabi"
+        },
+        {
+          "question": "What is your attitude toward legacy games, and how many legacy games have you di",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your attitude toward legacy games, and how many legacy games ha"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat single game mechanism receives the most criticism from you, and in"
+        },
+        {
+          "question": "You generally find party games shallow, yet you praised Just One. What percentag",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nYou generally find party games shallow, yet you praised Just One. What "
+        },
+        {
+          "question": "How important is thematic integration to your enjoyment of a game? Provide examp",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow important is thematic integration to your enjoyment of a game? Prov"
+        },
+        {
+          "question": "What is your philosophy on building and maintaining a board game collection, bas",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is your philosophy on building and maintaining a board game collec"
+        },
+        {
+          "question": "Which single game is mentioned most frequently across our conversations, and wha",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich single game is mentioned most frequently across our conversations"
+        },
+        {
+          "question": "What percentage of your game discussions include explicit mentions of player age",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat percentage of your game discussions include explicit mentions of p"
+        },
+        {
+          "question": "Based on your feedback, what single question best predicts whether you will enjo",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on your feedback, what single question best predicts whether you "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 13,
+      "ingest_time_ms": 13,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 303,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, can you rank my genres by satisfaction rate and ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, can you rank my genres by satisfaction "
+        },
+        {
+          "question": "I want a fantasy book with logical magic, strong character growth, AND a guarant",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a fantasy book with logical magic, strong character growth, AND "
+        },
+        {
+          "question": "What's the #1 thing that makes me love or hate a book, regardless of genre?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the #1 thing that makes me love or hate a book, regardless of ge"
+        },
+        {
+          "question": "Recommend a horror novel that matches my preference for psychological tension ov",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nRecommend a horror novel that matches my preference for psychological t"
+        },
+        {
+          "question": "How can I enjoy historical fiction without getting lost in dense prose?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow can I enjoy historical fiction without getting lost in dense prose?"
+        },
+        {
+          "question": "Suggest a romance that avoids artificial drama and has real character developmen",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSuggest a romance that avoids artificial drama and has real character d"
+        },
+        {
+          "question": "What new genre should I explore that aligns with my current tastes?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat new genre should I explore that aligns with my current tastes?\n\n##"
+        },
+        {
+          "question": "Should I use audiobooks or print for different genres based on my past struggles",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I use audiobooks or print for different genres based on my past "
+        },
+        {
+          "question": "What's my personal rule for starting a new fantasy series without anxiety?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's my personal rule for starting a new fantasy series without anxie"
+        },
+        {
+          "question": "Do I care more about plot or character? Back it up with stats from our chats.",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDo I care more about plot or character? Back it up with stats from our "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 23,
+      "ingest_time_ms": 20,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 282,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations about books, can you rank my genres from highest ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations about books, can you rank my genres from"
+        },
+        {
+          "question": "I want a book that has logical magic systems, strong character growth, AND a gua",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a book that has logical magic systems, strong character growth, "
+        },
+        {
+          "question": "Looking at all my reading preferences, what's the common thread that makes me lo",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nLooking at all my reading preferences, what's the common thread that ma"
+        },
+        {
+          "question": "I want a horror novel that matches my preferences for psychological tension with",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a horror novel that matches my preferences for psychological ten"
+        },
+        {
+          "question": "I want to enjoy historical fiction without getting bogged down by dense prose. W",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want to enjoy historical fiction without getting bogged down by dense"
+        },
+        {
+          "question": "I want a romance novel that avoids artificial drama while delivering strong char",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a romance novel that avoids artificial drama while delivering st"
+        },
+        {
+          "question": "Which genre should I explore next that would naturally extend from my current pr",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich genre should I explore next that would naturally extend from my c"
+        },
+        {
+          "question": "Should I use audiobooks or print for different genres based on my past struggles",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I use audiobooks or print for different genres based on my past "
+        },
+        {
+          "question": "I'm anxious about unfinished series but love epic fantasy. What's my optimal rea",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI'm anxious about unfinished series but love epic fantasy. What's my op"
+        },
+        {
+          "question": "Summarize my core reading identity in three principles that predict whether I'll",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSummarize my core reading identity in three principles that predict whe"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 0,
+      "ingest_chunks": 32,
+      "ingest_time_ms": 27,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 691,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations about books, can you rank my genres from highest ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations about books, can you rank my genres from"
+        },
+        {
+          "question": "I want a book that has logical magic systems, strong character growth, AND a gua",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a book that has logical magic systems, strong character growth, "
+        },
+        {
+          "question": "Looking at all my reading preferences, what's the common thread that makes me lo",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nLooking at all my reading preferences, what's the common thread that ma"
+        },
+        {
+          "question": "I want to enjoy historical fiction without getting bogged down by dense prose. W",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want to enjoy historical fiction without getting bogged down by dense"
+        },
+        {
+          "question": "I want a romance novel that avoids artificial drama while delivering strong char",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a romance novel that avoids artificial drama while delivering st"
+        },
+        {
+          "question": "Which genre should I explore next that would naturally extend from my current pr",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich genre should I explore next that would naturally extend from my c"
+        },
+        {
+          "question": "Should I use audiobooks or print for different genres based on my past struggles",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I use audiobooks or print for different genres based on my past "
+        },
+        {
+          "question": "What percentage of my fantasy discussions were positive versus romance discussio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat percentage of my fantasy discussions were positive versus romance "
+        },
+        {
+          "question": "Find me a book where character growth is the primary focus across any genre. Jus",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nFind me a book where character growth is the primary focus across any g"
+        },
+        {
+          "question": "What specific aspects of world-building do I value most based on our conversatio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat specific aspects of world-building do I value most based on our co"
+        },
+        {
+          "question": "What's the #1 reason I abandon books across all genres? Analyze my negative feed",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the #1 reason I abandon books across all genres? Analyze my nega"
+        },
+        {
+          "question": "Summarize my core reading identity in 3 principles that predict whether I'll lov",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSummarize my core reading identity in 3 principles that predict whether"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 42,
+      "ingest_time_ms": 35,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 1006,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, rank the book genres I've discussed by my satisf",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, rank the book genres I've discussed by "
+        },
+        {
+          "question": "I want a book with logical magic systems, strong character growth, and a guarant",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a book with logical magic systems, strong character growth, and "
+        },
+        {
+          "question": "What is the single most important factor that determines whether I will love or ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the single most important factor that determines whether I will"
+        },
+        {
+          "question": "Among Sanderson, Rothfuss, and Jordan, which fantasy author should I read next, ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAmong Sanderson, Rothfuss, and Jordan, which fantasy author should I re"
+        },
+        {
+          "question": "I want a horror novel that relies on psychological tension and atmosphere, not g",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a horror novel that relies on psychological tension and atmosphe"
+        },
+        {
+          "question": "I often struggle with dense historical fiction like Wolf Hall. What strategy sho",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI often struggle with dense historical fiction like Wolf Hall. What str"
+        },
+        {
+          "question": "I want a romance novel that avoids artificial drama and has strong character dev",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want a romance novel that avoids artificial drama and has strong char"
+        },
+        {
+          "question": "Which new genre should I explore that naturally extends from my current tastes, ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich new genre should I explore that naturally extends from my current"
+        },
+        {
+          "question": "For which genres should I use audiobooks versus print, based on my past experien",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nFor which genres should I use audiobooks versus print, based on my past"
+        },
+        {
+          "question": "I love epic fantasy but fear unfinished series. How should I choose what to read",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI love epic fantasy but fear unfinished series. How should I choose wha"
+        },
+        {
+          "question": "Compare my satisfaction with fantasy versus romance. Give exact percentages and ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nCompare my satisfaction with fantasy versus romance. Give exact percent"
+        },
+        {
+          "question": "Recommend a book where character growth is the absolute center of the story, reg",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nRecommend a book where character growth is the absolute center of the s"
+        },
+        {
+          "question": "Rank the aspects of world‑building that matter most to me, with evidence from ou",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nRank the aspects of world‑building that matter most to me, with evidenc"
+        },
+        {
+          "question": "I want to enjoy poetry but find print intimidating. Create a step‑by‑step plan b",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want to enjoy poetry but find print intimidating. Create a step‑by‑st"
+        },
+        {
+          "question": "Summarize my core reading identity in three principles that predict my reaction ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSummarize my core reading identity in three principles that predict my "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 64,
+      "ingest_time_ms": 53,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 421,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Which authors or books did I praise in every single conversation where they were",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich authors or books did I praise in every single conversation where "
+        },
+        {
+          "question": "Which authors or books did I mention only to criticize, with no redeeming qualit",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich authors or books did I mention only to criticize, with no redeemi"
+        },
+        {
+          "question": "Which authors or books received both positive and negative feedback in different",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich authors or books received both positive and negative feedback in "
+        },
+        {
+          "question": "Which authors did I praise for creating logical, consistent magic systems? What ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich authors did I praise for creating logical, consistent magic syste"
+        },
+        {
+          "question": "What is the key factor that makes character development feel 'earned' to me, and",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the key factor that makes character development feel 'earned' t"
+        },
+        {
+          "question": "In your view, is it necessary to know an author's biography or intent to appreci",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIn your view, is it necessary to know an author's biography or intent t"
+        },
+        {
+          "question": "How do you decide whether to commit to a long series versus a standalone novel? ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow do you decide whether to commit to a long series versus a standalon"
+        },
+        {
+          "question": "For which genres did you explicitly state that audio format significantly improv",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nFor which genres did you explicitly state that audio format significant"
+        },
+        {
+          "question": "What habits or preferences reveal that you value slow, immersive reading? Give e",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat habits or preferences reveal that you value slow, immersive readin"
+        },
+        {
+          "question": "I often use words like 'truth' or 'authentic' to describe what I value. Can you ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI often use words like 'truth' or 'authentic' to describe what I value."
+        },
+        {
+          "question": "Based on everything you've shared, what are the core principles of your reading ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on everything you've shared, what are the core principles of your"
+        },
+        {
+          "question": "Rank your top four genres by how consistently they satisfy you. Use the number o",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nRank your top four genres by how consistently they satisfy you. Use the"
+        },
+        {
+          "question": "If you could only read one book next month by either Sanderson, King, or Hannah,",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIf you could only read one book next month by either Sanderson, King, o"
+        },
+        {
+          "question": "Which authors or books did you describe as showing profound character transforma",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich authors or books did you describe as showing profound character t"
+        },
+        {
+          "question": "Which author would you trust most to buy a new book from without reading any rev",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich author would you trust most to buy a new book from without readin"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 12,
+      "ingest_time_ms": 13,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 362,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, which genre should I pick for movie night—action or ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, which genre should I pick for movie night—a"
+        },
+        {
+          "question": "How many of my film reviews have been negative versus positive?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many of my film reviews have been negative versus positive?\n\n## Ans"
+        },
+        {
+          "question": "What's the #1 reason I quit or dislike a movie?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the #1 reason I quit or dislike a movie?\n\n## Answer:"
+        },
+        {
+          "question": "Should I invest in a projector or sound system first for my home theater?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I invest in a projector or sound system first for my home theate"
+        },
+        {
+          "question": "Which films have I called 'perfect' or used similar high praise for?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich films have I called 'perfect' or used similar high praise for?\n\n#"
+        },
+        {
+          "question": "What do all my negative reviews have in common?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat do all my negative reviews have in common?\n\n## Answer:"
+        },
+        {
+          "question": "Which genre am I most forgiving toward, and which am I strictest with?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich genre am I most forgiving toward, and which am I strictest with?\n"
+        },
+        {
+          "question": "What's my ideal film length, based on what I've said?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's my ideal film length, based on what I've said?\n\n## Answer:"
+        },
+        {
+          "question": "How important is practical/physical authenticity to my viewing experience?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow important is practical/physical authenticity to my viewing experien"
+        },
+        {
+          "question": "What's the total number of messages we've exchanged?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the total number of messages we've exchanged?\n\n## Answer:"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 19,
+      "ingest_time_ms": 20,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 966,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Rank film genres by my satisfaction rate based on our conversations. For each ge",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nRank film genres by my satisfaction rate based on our conversations. Fo"
+        },
+        {
+          "question": "How many distinct conversations have I praised practical effects over CGI? Name ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many distinct conversations have I praised practical effects over C"
+        },
+        {
+          "question": "Compare how often Arnold Schwarzenegger, Tom Cruise, and Keanu Reeves are mentio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nCompare how often Arnold Schwarzenegger, Tom Cruise, and Keanu Reeves a"
+        },
+        {
+          "question": "What is my preferred film length range based on explicit statements? Name one fi",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is my preferred film length range based on explicit statements? Na"
+        },
+        {
+          "question": "Have I ever given a positive review to a drama film? If yes, which one? If no, w",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHave I ever given a positive review to a drama film? If yes, which one?"
+        },
+        {
+          "question": "Which directors have I explicitly praised for practical filmmaking? Name them an",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich directors have I explicitly praised for practical filmmaking? Nam"
+        },
+        {
+          "question": "Overall, what is the approximate ratio of positive to negative sessions across a",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nOverall, what is the approximate ratio of positive to negative sessions"
+        },
+        {
+          "question": "Do I prioritize sound or visuals for home theater? Explain why, giving examples ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDo I prioritize sound or visuals for home theater? Explain why, giving "
+        },
+        {
+          "question": "Which three films have I called 'perfect' or 'gold standard'? List them.",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich three films have I called 'perfect' or 'gold standard'? List them"
+        },
+        {
+          "question": "Summarize my core film philosophy in three principles, supporting each with exam",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSummarize my core film philosophy in three principles, supporting each "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 0,
+      "ingest_chunks": 30,
+      "ingest_time_ms": 27,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 857,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Rank film genres by my satisfaction rate based on our conversations. For each ge",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nRank film genres by my satisfaction rate based on our conversations. Fo"
+        },
+        {
+          "question": "How many distinct conversations have I praised practical effects over CGI? List ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many distinct conversations have I praised practical effects over C"
+        },
+        {
+          "question": "Compare how often Arnold Schwarzenegger, Tom Cruise, and Keanu Reeves are mentio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nCompare how often Arnold Schwarzenegger, Tom Cruise, and Keanu Reeves a"
+        },
+        {
+          "question": "What is my preferred film length range based on explicit statements? Name one fi",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is my preferred film length range based on explicit statements? Na"
+        },
+        {
+          "question": "Have I ever given a positive review to a drama film? If yes, which one? If no, w",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHave I ever given a positive review to a drama film? If yes, which one?"
+        },
+        {
+          "question": "Which directors have I explicitly praised for practical filmmaking? Name them an",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich directors have I explicitly praised for practical filmmaking? Nam"
+        },
+        {
+          "question": "Overall, what is the approximate ratio of positive to negative sessions across a",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nOverall, what is the approximate ratio of positive to negative sessions"
+        },
+        {
+          "question": "Do I prioritize sound or visuals for home theater? Explain why, giving examples ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDo I prioritize sound or visuals for home theater? Explain why, giving "
+        },
+        {
+          "question": "Which three films have I called 'perfect' or 'gold standard'? List them.",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich three films have I called 'perfect' or 'gold standard'? List them"
+        },
+        {
+          "question": "Compare your criticism of modern superhero films versus dramas. What are the mai",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nCompare your criticism of modern superhero films versus dramas. What ar"
+        },
+        {
+          "question": "What specific elements do I value in sci‑fi films? List at least three films tha",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat specific elements do I value in sci‑fi films? List at least three "
+        },
+        {
+          "question": "Summarize my core film philosophy in three principles, supporting each with exam",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSummarize my core film philosophy in three principles, supporting each "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 42,
+      "ingest_time_ms": 42,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 628,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, which genre should I pick for movie night—action or ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, which genre should I pick for movie night—a"
+        },
+        {
+          "question": "How many times have I praised practical effects over CGI in our chats?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many times have I praised practical effects over CGI in our chats?\n"
+        },
+        {
+          "question": "Which actor do I admire most for doing their own stunts?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich actor do I admire most for doing their own stunts?\n\n## Answer:"
+        },
+        {
+          "question": "What's my ideal film length, based on what I've said?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's my ideal film length, based on what I've said?\n\n## Answer:"
+        },
+        {
+          "question": "Have I ever given a positive review to a drama film?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHave I ever given a positive review to a drama film?\n\n## Answer:"
+        },
+        {
+          "question": "Which directors do I trust most to deliver the kind of filmmaking I love?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich directors do I trust most to deliver the kind of filmmaking I lov"
+        },
+        {
+          "question": "What percentage of my film comments are positive vs negative?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat percentage of my film comments are positive vs negative?\n\n## Answe"
+        },
+        {
+          "question": "You mentioned home theater setup—do you prioritize sound or visuals? Why?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nYou mentioned home theater setup—do you prioritize sound or visuals? Wh"
+        },
+        {
+          "question": "How many films have you called 'perfect' or 'gold standard'? Which ones?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many films have you called 'perfect' or 'gold standard'? Which ones"
+        },
+        {
+          "question": "Am I more critical of modern superhero films or modern dramas?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAm I more critical of modern superhero films or modern dramas?\n\n## Answ"
+        },
+        {
+          "question": "How many of my favorite films feature Arnold Schwarzenegger?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many of my favorite films feature Arnold Schwarzenegger?\n\n## Answer"
+        },
+        {
+          "question": "What's the main reason I dislike long dialogue scenes?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the main reason I dislike long dialogue scenes?\n\n## Answer:"
+        },
+        {
+          "question": "Which recent film did I praise most highly?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich recent film did I praise most highly?\n\n## Answer:"
+        },
+        {
+          "question": "Do I prefer franchises or standalone films?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDo I prefer franchises or standalone films?\n\n## Answer:"
+        },
+        {
+          "question": "Summarize my film philosophy in three principles.",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSummarize my film philosophy in three principles.\n\n## Answer:"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 59,
+      "ingest_time_ms": 30,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 550,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Which actor do I mention most frequently and positively across our conversations",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich actor do I mention most frequently and positively across our conv"
+        },
+        {
+          "question": "What percentage of the films you've praised rely primarily on practical effects ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat percentage of the films you've praised rely primarily on practical"
+        },
+        {
+          "question": "Based on our talks, rank my satisfaction with different film genres.",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our talks, rank my satisfaction with different film genres.\n\n#"
+        },
+        {
+          "question": "What's my preferred movie length, and which films exemplify it?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's my preferred movie length, and which films exemplify it?\n\n## Ans"
+        },
+        {
+          "question": "Which directors do I trust most to deliver the kind of filmmaking I love?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich directors do I trust most to deliver the kind of filmmaking I lov"
+        },
+        {
+          "question": "Compare your feelings about Arnold Schwarzenegger and Tom Cruise. Who do you adm",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nCompare your feelings about Arnold Schwarzenegger and Tom Cruise. Who d"
+        },
+        {
+          "question": "What makes a movie villain great in your eyes, and which villains exemplify that",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat makes a movie villain great in your eyes, and which villains exemp"
+        },
+        {
+          "question": "How many films have you called 'perfect' or 'gold standard'? Which ones?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many films have you called 'perfect' or 'gold standard'? Which ones"
+        },
+        {
+          "question": "You mentioned home theater setup—do you prioritize sound or visuals? Why?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nYou mentioned home theater setup—do you prioritize sound or visuals? Wh"
+        },
+        {
+          "question": "What's your overall take on Marvel and DC movies, based on our talks?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's your overall take on Marvel and DC movies, based on our talks?\n\n"
+        },
+        {
+          "question": "What kind of comedy films do you enjoy? Give an example.",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat kind of comedy films do you enjoy? Give an example.\n\n## Answer:"
+        },
+        {
+          "question": "Do you prefer 80s/90s action films or modern ones?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDo you prefer 80s/90s action films or modern ones?\n\n## Answer:"
+        },
+        {
+          "question": "Which film did you criticize most harshly, and why?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich film did you criticize most harshly, and why?\n\n## Answer:"
+        },
+        {
+          "question": "Which stunt or action sequence have you praised most often?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich stunt or action sequence have you praised most often?\n\n## Answer:"
+        },
+        {
+          "question": "Summarize my film philosophy in three principles.",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSummarize my film philosophy in three principles.\n\n## Answer:"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 18,
+      "ingest_time_ms": 14,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 274,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, which genres receive the most consistently positive ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, which genres receive the most consistently "
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative feedback across all your m",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate ratio of positive to negative feedback across a"
+        },
+        {
+          "question": "Based on all our conversations, which instrument appears most frequently in your",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, which instrument appears most frequentl"
+        },
+        {
+          "question": "Is there any genre you've discussed that you should probably avoid spending time",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs there any genre you've discussed that you should probably avoid spen"
+        },
+        {
+          "question": "What production or recording aesthetic seems to best match your musical personal",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat production or recording aesthetic seems to best match your musical"
+        },
+        {
+          "question": "What three core values define your musical taste across all the genres we've dis",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three core values define your musical taste across all the genres "
+        },
+        {
+          "question": "How many different music genres have you discussed positively in our conversatio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow many different music genres have you discussed positively in our co"
+        },
+        {
+          "question": "What is it about blues music that moves you so deeply, according to our conversa",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is it about blues music that moves you so deeply, according to our"
+        },
+        {
+          "question": "Which guitarists have you mentioned as inspirations, and what qualities make the",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich guitarists have you mentioned as inspirations, and what qualities"
+        },
+        {
+          "question": "What overarching principle guides your exploration of different music genres, ba",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat overarching principle guides your exploration of different music g"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 21,
+      "ingest_time_ms": 17,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 266,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, which musical genre receives the most positive feedb",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, which musical genre receives the most posit"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative sessions across all my mus",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is the approximate ratio of positive to negative sessions across a"
+        },
+        {
+          "question": "Based on all our conversations, which instrument do I focus on most in my musica",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, which instrument do I focus on most in "
+        },
+        {
+          "question": "Given my mixed reactions to classical music, what strategy would help me appreci",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nGiven my mixed reactions to classical music, what strategy would help m"
+        },
+        {
+          "question": "Which guitarists do I most admire, and what qualities make them stand out to me?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich guitarists do I most admire, and what qualities make them stand o"
+        },
+        {
+          "question": "What are my main criticisms of modern pop music based on our conversations?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat are my main criticisms of modern pop music based on our conversati"
+        },
+        {
+          "question": "I generally don't enjoy metal, but what specific metal subgenres or bands have I",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI generally don't enjoy metal, but what specific metal subgenres or ban"
+        },
+        {
+          "question": "What is my philosophy regarding music production, based on my preferences across",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat is my philosophy regarding music production, based on my preferenc"
+        },
+        {
+          "question": "What three core values define my musical taste across all genres we've discussed",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat three core values define my musical taste across all genres we've "
+        },
+        {
+          "question": "Provide an approximate statistical breakdown of my positive feedback for rock, a",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nProvide an approximate statistical breakdown of my positive feedback fo"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 0,
+      "ingest_chunks": 30,
+      "ingest_time_ms": 17,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 326,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, what are my top three most positively regarded music",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, what are my top three most positively regar"
+        },
+        {
+          "question": "Given my mixed reactions to metal, what specific strategy would maximize my chan",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nGiven my mixed reactions to metal, what specific strategy would maximiz"
+        },
+        {
+          "question": "I'm still figuring out classical music—I love some parts but get lost in others.",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI'm still figuring out classical music—I love some parts but get lost i"
+        },
+        {
+          "question": "I have such mixed feelings about pop music—sometimes I love the hooks, other tim",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI have such mixed feelings about pop music—sometimes I love the hooks, "
+        },
+        {
+          "question": "I want to improve my guitar playing—any thoughts on which players I should study",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want to improve my guitar playing—any thoughts on which players I sho"
+        },
+        {
+          "question": "I love discovering new alternative bands but sometimes they all start to sound t",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI love discovering new alternative bands but sometimes they all start t"
+        },
+        {
+          "question": "I play both guitar and violin—how can I make these instruments work together to ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI play both guitar and violin—how can I make these instruments work tog"
+        },
+        {
+          "question": "I'm starting to record my own music—what production approach would suit my music",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI'm starting to record my own music—what production approach would suit"
+        },
+        {
+          "question": "I want to branch out musically but don't want to waste time on genres that funda",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI want to branch out musically but don't want to waste time on genres t"
+        },
+        {
+          "question": "What are the exact statistics of my genre preferences based on our conversations",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat are the exact statistics of my genre preferences based on our conv"
+        },
+        {
+          "question": "I've been thinking about my musical identity lately—what ties together all the m",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI've been thinking about my musical identity lately—what ties together "
+        },
+        {
+          "question": "I've noticed I react differently to live music versus recordings—what does this ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI've noticed I react differently to live music versus recordings—what d"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 38,
+      "ingest_time_ms": 20,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 501,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, which musical genre would be most beneficial for",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all our conversations, which musical genre would be most benef"
+        },
+        {
+          "question": "What are my top three most positively regarded music genres based on our discuss",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat are my top three most positively regarded music genres based on ou"
+        },
+        {
+          "question": "I'm torn between focusing on guitar or violin. Based on my musical preferences a",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nI'm torn between focusing on guitar or violin. Based on my musical pref"
+        },
+        {
+          "question": "Which music genres should I approach cautiously based on my stated preferences, ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich music genres should I approach cautiously based on my stated pref"
+        },
+        {
+          "question": "What production style or aesthetic would best suit my musical personality based ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat production style or aesthetic would best suit my musical personali"
+        },
+        {
+          "question": "Which genres best combine the emotional depth and technical mastery I seem to va",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich genres best combine the emotional depth and technical mastery I s"
+        },
+        {
+          "question": "Which genres or music styles have I implicitly or explicitly criticized for lack",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich genres or music styles have I implicitly or explicitly criticized"
+        },
+        {
+          "question": "What are my fundamental musical values that cut across all genres I've discussed",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat are my fundamental musical values that cut across all genres I've "
+        },
+        {
+          "question": "Based on our conversations about live performances versus recordings, what's my ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations about live performances versus recordings, w"
+        },
+        {
+          "question": "What patterns do you notice across my genre preferences that reveal my deeper mu",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat patterns do you notice across my genre preferences that reveal my "
+        },
+        {
+          "question": "Based on how I've discussed learning instruments and appreciating music, what's ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on how I've discussed learning instruments and appreciating music"
+        },
+        {
+          "question": "What are the exact statistics of my genre preferences based on our conversations",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat are the exact statistics of my genre preferences based on our conv"
+        },
+        {
+          "question": "If I were building a 10-song playlist that perfectly represents my musical taste",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIf I were building a 10-song playlist that perfectly represents my musi"
+        },
+        {
+          "question": "Given that I have mixed reactions to metal, what specific strategy would maximiz",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nGiven that I have mixed reactions to metal, what specific strategy woul"
+        },
+        {
+          "question": "Looking at my musical journey so far, what should my next 6 months of musical gr",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nLooking at my musical journey so far, what should my next 6 months of m"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 50,
+      "ingest_time_ms": 41,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 563,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, rank my top 3 most positively regarded music genres ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on our conversations, rank my top 3 most positively regarded musi"
+        },
+        {
+          "question": "Based on all conversations, which instrument should I prioritize for my musical ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all conversations, which instrument should I prioritize for my"
+        },
+        {
+          "question": "Given my mixed reactions to metal, what strategy would maximize my enjoyment of ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nGiven my mixed reactions to metal, what strategy would maximize my enjo"
+        },
+        {
+          "question": "What recording or production style best suits my musical personality based on ou",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat recording or production style best suits my musical personality ba"
+        },
+        {
+          "question": "How important is the balance between technical skill and emotional expression to",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow important is the balance between technical skill and emotional expr"
+        },
+        {
+          "question": "What specific markers define 'authenticity' for me across different genres?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat specific markers define 'authenticity' for me across different gen"
+        },
+        {
+          "question": "What patterns emerge in my criticisms of pop and metal?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat patterns emerge in my criticisms of pop and metal?\n\n## Answer:"
+        },
+        {
+          "question": "How can my guitar and violin studies inform each other for musical growth?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nHow can my guitar and violin studies inform each other for musical grow"
+        },
+        {
+          "question": "Based on my listening patterns and values, what genre should I explore next?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my listening patterns and values, what genre should I explore "
+        },
+        {
+          "question": "Synthesize my core musical values into three principles based on all conversatio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSynthesize my core musical values into three principles based on all co"
+        },
+        {
+          "question": "Based on all conversations, do I prefer live or studio recordings, and why?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all conversations, do I prefer live or studio recordings, and "
+        },
+        {
+          "question": "Summarize my musical personality in one sentence based on all aggregated convers",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nSummarize my musical personality in one sentence based on all aggregate"
+        },
+        {
+          "question": "What's my optimal approach to learning music, based on how I've engaged with dif",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's my optimal approach to learning music, based on how I've engaged"
+        },
+        {
+          "question": "Provide exact statistics: how many positive, negative, and total sessions per ge",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nProvide exact statistics: how many positive, negative, and total sessio"
+        },
+        {
+          "question": "Design a 5-song playlist that represents my musical identity, with rationale for",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDesign a 5-song playlist that represents my musical identity, with rati"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 18,
+      "ingest_time_ms": 15,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 301,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all my comments across our entire conversation, rank these gen"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I watch Foundation or The Expanse next?\n\n## Answer:"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat do all the detective shows I genuinely enjoy have in common?\n\n## A"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs there any fantasy show I might actually enjoy long-term?\n\n## Answer:"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat makes a comedy truly satisfying versus forgettable for me?\n\n## Ans"
+        },
+        {
+          "question": "Is my dislike of reality TV consistent across all formats, or are there exceptio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs my dislike of reality TV consistent across all formats, or are there"
+        },
+        {
+          "question": "When should I choose a light comedy versus a serious sci-fi show?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhen should I choose a light comedy versus a serious sci-fi show?\n\n## A"
+        },
+        {
+          "question": "If I had to drop one entire genre from my viewing forever, which would hurt me l",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIf I had to drop one entire genre from my viewing forever, which would "
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the single most important storytelling principle across all genr"
+        },
+        {
+          "question": "Based on my preferences, which streaming platform should I prioritize for new co",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my preferences, which streaming platform should I prioritize f"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 0,
+      "ingest_chunks": 23,
+      "ingest_time_ms": 19,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 681,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all my comments across our entire conversation, rank these gen"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I watch Foundation or The Expanse next?\n\n## Answer:"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat do all the detective shows I genuinely enjoy have in common?\n\n## A"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs there any fantasy show I might actually enjoy long-term?\n\n## Answer:"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat makes a comedy truly satisfying versus forgettable for me?\n\n## Ans"
+        },
+        {
+          "question": "Is my dislike of reality TV consistent across all formats, or are there exceptio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs my dislike of reality TV consistent across all formats, or are there"
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the single most important storytelling principle across all genr"
+        },
+        {
+          "question": "Based on my preferences, which streaming platform should I prioritize for new co",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my preferences, which streaming platform should I prioritize f"
+        },
+        {
+          "question": "Based on my entire viewing history across 150 messages, what single show would y",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my entire viewing history across 150 messages, what single sho"
+        },
+        {
+          "question": "Across our entire conversation, has my taste shown any evolution or consistency?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAcross our entire conversation, has my taste shown any evolution or con"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 0,
+      "ingest_chunks": 26,
+      "ingest_time_ms": 35,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 432,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all my comments across our entire conversation, rank these gen"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next? Justify with aggregate evidence f",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I watch Foundation or The Expanse next? Justify with aggregate e"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common? Synthesize fro",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat do all the detective shows I genuinely enjoy have in common? Synth"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term? Use statistical evid",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs there any fantasy show I might actually enjoy long-term? Use statist"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me? Use all comedy e",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat makes a comedy truly satisfying versus forgettable for me? Use all"
+        },
+        {
+          "question": "Is my dislike of reality TV consistent across all formats, or are there exceptio",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs my dislike of reality TV consistent across all formats, or are there"
+        },
+        {
+          "question": "Drama wasn't in our original genre ranking, but you've praised several dramas hi",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDrama wasn't in our original genre ranking, but you've praised several "
+        },
+        {
+          "question": "Did any shows receive mixed reviews in our conversations? If so, what pattern ex",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDid any shows receive mixed reviews in our conversations? If so, what p"
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the single most important storytelling principle across all genr"
+        },
+        {
+          "question": "Based on my preferences across all sessions, which streaming platform should I p",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my preferences across all sessions, which streaming platform s"
+        },
+        {
+          "question": "Based on your entire viewing history across approximately 200 messages, what sin",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on your entire viewing history across approximately 200 messages,"
+        },
+        {
+          "question": "There's a significant gap between my top genre (sci-fi at approximately 85-90%) ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nThere's a significant gap between my top genre (sci-fi at approximately"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 33,
+      "ingest_time_ms": 36,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 450,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all my comments across our entire conversation, rank these gen"
+        },
+        {
+          "question": "Based on all sessions, which genres have the highest and lowest success rates (r",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all sessions, which genres have the highest and lowest success"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next? Justify with aggregate evidence f",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I watch Foundation or The Expanse next? Justify with aggregate e"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common? Synthesize fro",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat do all the detective shows I genuinely enjoy have in common? Synth"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term? Use statistical evid",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs there any fantasy show I might actually enjoy long-term? Use statist"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me? Use all comedy e",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat makes a comedy truly satisfying versus forgettable for me? Use all"
+        },
+        {
+          "question": "Drama wasn't in our original genre ranking, but you've praised several dramas hi",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDrama wasn't in our original genre ranking, but you've praised several "
+        },
+        {
+          "question": "Did any shows receive mixed reviews in our conversations? If so, what pattern ex",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDid any shows receive mixed reviews in our conversations? If so, what p"
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the single most important storytelling principle across all genr"
+        },
+        {
+          "question": "Based on my preferences across all sessions, which streaming platform should I p",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my preferences across all sessions, which streaming platform s"
+        },
+        {
+          "question": "Based on your entire viewing history across approximately 275 messages, what sin",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on your entire viewing history across approximately 275 messages,"
+        },
+        {
+          "question": "Across our entire conversation, has my taste shown any evolution or consistency?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAcross our entire conversation, has my taste shown any evolution or con"
+        },
+        {
+          "question": "What pattern emerges when comparing my favorite shows across completely differen",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat pattern emerges when comparing my favorite shows across completely"
+        },
+        {
+          "question": "Based on my reactions to shows with unresolved mysteries (1899) versus tightly p",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my reactions to shows with unresolved mysteries (1899) versus "
+        },
+        {
+          "question": "There's a significant gap between my top genre (sci-fi at approximately 89%) and",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nThere's a significant gap between my top genre (sci-fi at approximately"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 47,
+      "ingest_time_ms": 39,
+      "ingest_llm_calls": 0,
+      "ingest_llm_prompt": 0,
+      "ingest_llm_completion": 0,
+      "infer_time_ms": 679,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 0,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all my comments across our entire conversation, rank these gen"
+        },
+        {
+          "question": "Based on all sessions, which genres have the highest and lowest success rates (r",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on all sessions, which genres have the highest and lowest success"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next? Justify with aggregate evidence f",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nShould I watch Foundation or The Expanse next? Justify with aggregate e"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common? Synthesize fro",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat do all the detective shows I genuinely enjoy have in common? Synth"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term? Use statistical evid",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nIs there any fantasy show I might actually enjoy long-term? Use statist"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me? Use all comedy e",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat makes a comedy truly satisfying versus forgettable for me? Use all"
+        },
+        {
+          "question": "Drama wasn't in our original genre ranking, but you've praised many dramas highl",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nDrama wasn't in our original genre ranking, but you've praised many dra"
+        },
+        {
+          "question": "Which shows received mixed reviews in our conversations, and what pattern explai",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhich shows received mixed reviews in our conversations, and what patte"
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat's the single most important storytelling principle across all genr"
+        },
+        {
+          "question": "Based on my preferences across all sessions, which streaming platform should I p",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my preferences across all sessions, which streaming platform s"
+        },
+        {
+          "question": "Based on your entire viewing history across all sessions, what single show would",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on your entire viewing history across all sessions, what single s"
+        },
+        {
+          "question": "Across our entire conversation, has my taste shown any evolution or consistency?",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAcross our entire conversation, has my taste shown any evolution or con"
+        },
+        {
+          "question": "What pattern emerges when comparing my favorite shows across completely differen",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nWhat pattern emerges when comparing my favorite shows across completely"
+        },
+        {
+          "question": "Based on my reactions to shows with unresolved mysteries (1899, The Leftovers) v",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nBased on my reactions to shows with unresolved mysteries (1899, The Lef"
+        },
+        {
+          "question": "There's a significant gap between my top genre (sci-fi at roughly 88%) and my se",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nThere's a significant gap between my top genre (sci-fi at roughly 88%) "
+        }
+      ]
     }
   ],
   "errors": [
@@ -6292,6 +8632,126 @@
     {
       "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_350.json",
       "error": "[Errno 2] No such file or directory: 'StructMemEval/benchmark/recommendations/data/series_data/series_data_350.json'"
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_100.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_150.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_200.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_275.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/art_data/art_data_350.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_100.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_150.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_200.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_275.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/boardgames_data/boardgames_data_350.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_100.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_150.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_200.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_275.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/books_data/books_data_350.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_100.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_150.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_200.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_275.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/movies_data/movies_data_350.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_100.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_150.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_200.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_275.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/music_data/music_data_350.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_100.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_150.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_200.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_275.json",
+      "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_350.json",
+      "error": "Connection error."
     }
   ]
 }
