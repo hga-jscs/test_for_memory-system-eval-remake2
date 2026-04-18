@@ -9,6 +9,7 @@ import os
 import sys
 import time
 from functools import partial
+from importlib.util import find_spec
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -35,6 +36,18 @@ class LightRAGBenchMemory:
         self._loop: Optional[asyncio.AbstractEventLoop] = None
         self.backend_mode = "uninitialized"
         self._ingest_time_ms = 0
+
+    @staticmethod
+    def _check_runtime_deps() -> None:
+        missing: list[str] = []
+        if find_spec("lightrag") is None:
+            missing.append("lightrag")
+        if missing:
+            missing_str = ", ".join(missing)
+            raise RuntimeError(
+                "[LightRAGBenchMemory] 缺少必需依赖模块："
+                f"{missing_str}。请先按 docs/backend_runtime_guide.md 安装 LightRAG 依赖。"
+            )
 
     def add_memory(self, text: str, metadata: Optional[Dict] = None) -> None:
         self.add_text(text)
@@ -103,6 +116,7 @@ class LightRAGBenchMemory:
         if not self._buffer:
             raise ValueError("[LightRAGBenchMemory] buffer is empty, nothing to index.")
 
+        self._check_runtime_deps()
         LightRAG, llm_func, embedding_func = self._build_runtime()
 
         os.makedirs(self.save_dir, exist_ok=True)
@@ -150,9 +164,11 @@ class LightRAGBenchMemory:
 
     def reset(self) -> None:
         self._buffer = []
+        if self._backend is not None:
+            self._shutdown_backend()
         self._backend = None
         if self._loop is not None:
-            self._loop.close()
+            self._shutdown_loop()
             self._loop = None
         self._ingest_time_ms = 0
         self.backend_mode = "uninitialized"
@@ -166,6 +182,53 @@ class LightRAGBenchMemory:
         if self._loop is None:
             self._loop = asyncio.new_event_loop()
         return self._loop.run_until_complete(coro)
+
+    def _shutdown_backend(self) -> None:
+        if self._backend is None:
+            return
+        if self._loop is None:
+            self._loop = asyncio.new_event_loop()
+
+        try:
+            finalize = getattr(self._backend, "finalize_storages", None)
+            if callable(finalize):
+                self._run_coro(finalize())
+        except Exception as e:  # noqa: BLE001 - cleanup path best effort
+            print(f"[LightRAGBenchMemory][WARN] finalize_storages failed: {e}")
+
+        try:
+            llm_func = getattr(self._backend, "llm_model_func", None)
+            shutdown = getattr(llm_func, "shutdown", None)
+            if callable(shutdown):
+                self._run_coro(shutdown())
+        except Exception as e:  # noqa: BLE001 - cleanup path best effort
+            print(f"[LightRAGBenchMemory][WARN] llm_model_func.shutdown failed: {e}")
+
+        try:
+            from lightrag.kg.shared_storage import finalize_share_data
+
+            finalize_share_data()
+        except Exception as e:  # noqa: BLE001 - cleanup path best effort
+            print(f"[LightRAGBenchMemory][WARN] finalize_share_data failed: {e}")
+
+    def _shutdown_loop(self) -> None:
+        assert self._loop is not None
+        loop = self._loop
+        try:
+            pending = [t for t in asyncio.all_tasks(loop) if not t.done()]
+        except Exception:
+            pending = []
+        if pending:
+            print(f"[LightRAGBenchMemory][DEBUG] cancelling pending_tasks={len(pending)}")
+            for task in pending:
+                task.cancel()
+            try:
+                loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
+            except Exception as e:  # noqa: BLE001 - cleanup path best effort
+                print(f"[LightRAGBenchMemory][WARN] pending task cleanup failed: {e}")
+
+        loop.run_until_complete(loop.shutdown_asyncgens())
+        loop.close()
 
     def audit_ingest(self) -> Dict[str, Any]:
         return {
