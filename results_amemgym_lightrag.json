@@ -5,12 +5,11 @@
       "n_queries": 10,
       "correct": 3,
       "ingest_chunks": 46,
-      "ingest_time_ms": 27,
+      "ingest_time_ms": 29,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 284,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 2077,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -80,12 +79,11 @@
       "n_queries": 10,
       "correct": 3,
       "ingest_chunks": 43,
-      "ingest_time_ms": 26,
+      "ingest_time_ms": 23,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 497,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 1104,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -155,12 +153,11 @@
       "n_queries": 10,
       "correct": 4,
       "ingest_chunks": 54,
-      "ingest_time_ms": 28,
+      "ingest_time_ms": 25,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 488,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 480,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -230,12 +227,11 @@
       "n_queries": 10,
       "correct": 3,
       "ingest_chunks": 49,
-      "ingest_time_ms": 29,
+      "ingest_time_ms": 22,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 482,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 629,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -309,8 +305,7 @@
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 329,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 273,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -380,12 +375,11 @@
       "n_queries": 10,
       "correct": 2,
       "ingest_chunks": 45,
-      "ingest_time_ms": 14,
+      "ingest_time_ms": 20,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 275,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 230,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -455,12 +449,11 @@
       "n_queries": 10,
       "correct": 2,
       "ingest_chunks": 46,
-      "ingest_time_ms": 29,
+      "ingest_time_ms": 19,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 199,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 173,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -530,12 +523,11 @@
       "n_queries": 10,
       "correct": 4,
       "ingest_chunks": 45,
-      "ingest_time_ms": 34,
+      "ingest_time_ms": 19,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 153,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 230,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -609,8 +601,7 @@
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 164,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 144,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -680,12 +671,11 @@
       "n_queries": 10,
       "correct": 6,
       "ingest_chunks": 44,
-      "ingest_time_ms": 26,
+      "ingest_time_ms": 20,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 226,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 143,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -755,12 +745,11 @@
       "n_queries": 10,
       "correct": 3,
       "ingest_chunks": 57,
-      "ingest_time_ms": 24,
+      "ingest_time_ms": 23,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 145,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 143,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -830,12 +819,11 @@
       "n_queries": 10,
       "correct": 5,
       "ingest_chunks": 56,
-      "ingest_time_ms": 25,
+      "ingest_time_ms": 22,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 155,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 142,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -905,12 +893,11 @@
       "n_queries": 10,
       "correct": 1,
       "ingest_chunks": 46,
-      "ingest_time_ms": 20,
+      "ingest_time_ms": 19,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 157,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 172,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -984,8 +971,7 @@
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 154,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 148,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -1055,12 +1041,11 @@
       "n_queries": 10,
       "correct": 1,
       "ingest_chunks": 40,
-      "ingest_time_ms": 10,
+      "ingest_time_ms": 19,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 113,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 152,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -1130,12 +1115,11 @@
       "n_queries": 10,
       "correct": 1,
       "ingest_chunks": 49,
-      "ingest_time_ms": 22,
+      "ingest_time_ms": 21,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 132,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 146,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -1205,12 +1189,11 @@
       "n_queries": 10,
       "correct": 0,
       "ingest_chunks": 46,
-      "ingest_time_ms": 20,
+      "ingest_time_ms": 19,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 158,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 146,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -1280,12 +1263,11 @@
       "n_queries": 10,
       "correct": 3,
       "ingest_chunks": 47,
-      "ingest_time_ms": 12,
+      "ingest_time_ms": 23,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 129,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 149,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -1355,12 +1337,11 @@
       "n_queries": 10,
       "correct": 1,
       "ingest_chunks": 48,
-      "ingest_time_ms": 21,
+      "ingest_time_ms": 19,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 373,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 135,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -1430,12 +1411,11 @@
       "n_queries": 10,
       "correct": 6,
       "ingest_chunks": 42,
-      "ingest_time_ms": 21,
+      "ingest_time_ms": 16,
       "ingest_llm_calls": 0,
       "ingest_llm_prompt": 0,
       "ingest_llm_completion": 0,
-      "infer_time_ms": 521,
-      "infer_emb_calls": 10,
+      "infer_time_ms": 149,
       "infer_llm_tokens": 0,
       "qa_results": [
         {
@@ -1501,5 +1481,86 @@
       ]
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "user_id": 0,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 1,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 2,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 3,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 4,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 5,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 6,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 7,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 8,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 9,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 10,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 11,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 12,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 13,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 14,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 15,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 16,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 17,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 18,
+      "error": "'tree_nodes'"
+    },
+    {
+      "user_id": 19,
+      "error": "'tree_nodes'"
+    }
+  ]
 }
