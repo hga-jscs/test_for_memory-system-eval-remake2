@@ -23,7 +23,7 @@ for _raptor_repo in _RAPTOR_REPO_CANDIDATES:
         sys.path.insert(0, str(_raptor_repo))
         break
 
-from simpleMem_src import get_config
+from simpleMem_src import create_openai_client_compatible, get_config
 
 import logging
 logger = logging.getLogger(__name__)
@@ -101,8 +101,11 @@ class RaptorBenchMemory:
                 self.base_url = conf.get("base_url")
                 self.api_key = conf.get("api_key")
                 self.model = conf.get("model", "text-embedding-v3")
-                from openai import OpenAI
-                self._client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+                self._client = create_openai_client_compatible(
+                    api_key=self.api_key,
+                    base_url=self.base_url,
+                    logger=logger,
+                )
 
             def create_embedding(self, text: str):
                 text = text.replace("\n", " ")
@@ -112,8 +115,11 @@ class RaptorBenchMemory:
         class _CompatSummarizationModel(BaseSummarizationModel):
             def __init__(self):
                 conf = get_config().llm
-                from openai import OpenAI
-                self._client = OpenAI(api_key=conf.get("api_key"), base_url=conf.get("base_url"))
+                self._client = create_openai_client_compatible(
+                    api_key=conf.get("api_key"),
+                    base_url=conf.get("base_url"),
+                    logger=logger,
+                )
                 self.model = conf.get("model")
                 self.llm_calls = 0
                 self.prompt_tokens = 0

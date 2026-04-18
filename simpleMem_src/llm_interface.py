@@ -53,27 +53,13 @@ class OpenAIClient(BaseLLMClient):
         self._total_tokens = 0
 
     def _build_openai_client(self, api_key: str, base_url: str) -> OpenAI:
-        client_kwargs = {
-            "api_key": api_key,
-            "base_url": base_url,
-            "timeout": Timeout(300.0, connect=10.0),
-            "max_retries": 0,
-        }
-        try:
-            return OpenAI(**client_kwargs)
-        except TypeError as err:
-            if "proxies" not in str(err).lower() or httpx is None:
-                raise
-            self._logger.warning(
-                "检测到 openai/httpx 版本兼容问题（proxies 参数）。切换到显式 httpx.Client 兼容模式。"
-            )
-            http_client = httpx.Client(timeout=Timeout(300.0, connect=10.0))
-            return OpenAI(
-                api_key=api_key,
-                base_url=base_url,
-                max_retries=0,
-                http_client=http_client,
-            )
+        return create_openai_client_compatible(
+            api_key=api_key,
+            base_url=base_url,
+            timeout=Timeout(300.0, connect=10.0),
+            max_retries=0,
+            logger=self._logger,
+        )
 
     @property
     def total_tokens(self) -> int:
@@ -160,7 +146,13 @@ def get_embedding(text: str, config: dict) -> List[float]:
     if provider == "ark_multimodal":
         return _get_embedding_ark_multimodal(text, base_url, api_key, model, dim)
     else:
-        client = OpenAI(api_key=api_key, base_url=base_url)
+        client = create_openai_client_compatible(
+            api_key=api_key,
+            base_url=base_url,
+            timeout=Timeout(120.0, connect=10.0),
+            max_retries=0,
+            logger=get_logger(),
+        )
         try:
             resp = client.embeddings.create(input=[text], model=model)
             return resp.data[0].embedding
@@ -192,3 +184,37 @@ def _get_embedding_ark_multimodal(
     except Exception as e:
         get_logger().error("Ark Embedding 失败: %s", e)
         return [0.0] * dim
+
+
+def create_openai_client_compatible(
+    *,
+    api_key: str,
+    base_url: str,
+    timeout: Optional[Timeout] = None,
+    max_retries: int = 0,
+    logger=None,
+) -> OpenAI:
+    if OpenAI is None:
+        raise ImportError("请先安装 openai: pip install openai")
+
+    if timeout is None and Timeout is not None:
+        timeout = Timeout(300.0, connect=10.0)
+    kwargs = {"api_key": api_key, "base_url": base_url, "max_retries": max_retries}
+    if timeout is not None:
+        kwargs["timeout"] = timeout
+    try:
+        return OpenAI(**kwargs)
+    except TypeError as err:
+        # 常见问题：openai 与 httpx 版本组合在处理代理参数时不兼容。
+        if "proxies" not in str(err).lower() or httpx is None:
+            raise
+        if logger is not None:
+            logger.warning("检测到 openai/httpx proxies 兼容问题，切换显式 http_client。")
+        http_client = httpx.Client(timeout=timeout)
+        fallback_kwargs = {
+            "api_key": api_key,
+            "base_url": base_url,
+            "max_retries": max_retries,
+            "http_client": http_client,
+        }
+        return OpenAI(**fallback_kwargs)

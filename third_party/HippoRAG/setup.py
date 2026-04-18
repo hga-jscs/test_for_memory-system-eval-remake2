@@ -1,7 +1,12 @@
 import setuptools
+from pathlib import Path
 
-with open("README.md", "r", encoding="utf-8-sig") as f:
-    long_description = f.read()
+ROOT = Path(__file__).resolve().parent
+readme_path = ROOT / "README.md"
+try:
+    long_description = readme_path.read_text(encoding="utf-8-sig")
+except UnicodeDecodeError:
+    long_description = readme_path.read_text(encoding="utf-8")
 
 setuptools.setup(
     name="hipporag",
