@@ -32,6 +32,7 @@ class LightRAGBenchMemory:
         self.chunk_size = chunk_size
         self._buffer: List[str] = []
         self._backend = None
+        self._loop: Optional[asyncio.AbstractEventLoop] = None
         self.backend_mode = "uninitialized"
         self._ingest_time_ms = 0
 
@@ -110,14 +111,15 @@ class LightRAGBenchMemory:
             llm_model_func=llm_func,
             embedding_func=embedding_func,
         )
+        self._loop = asyncio.new_event_loop()
 
         t0 = time.time()
         try:
-            asyncio.run(rag.initialize_storages())
-            asyncio.run(rag.ainsert("\n\n".join(self._buffer)))
+            self._run_coro(rag.initialize_storages())
+            self._run_coro(rag.ainsert("\n\n".join(self._buffer)))
         except Exception as e:
             raise RuntimeError(
-                "[LightRAGBenchMemory] build_index 失败，请根据 docs/backend_runtime_guide.md 排查 API 配置与依赖版本。"
+                "[LightRAGBenchMemory] build_index 失败。该问题通常不是 API 接口错误，而是并发/事件循环复用导致的异步锁冲突。"
             ) from e
 
         self._backend = rag
@@ -130,7 +132,7 @@ class LightRAGBenchMemory:
             raise RuntimeError("[LightRAGBenchMemory] backend is not ready, call build_index() first.")
         try:
             from lightrag import QueryParam
-            resp = asyncio.run(self._backend.aquery(query, param=QueryParam(mode="hybrid", top_k=top_k)))
+            resp = self._run_coro(self._backend.aquery(query, param=QueryParam(mode="hybrid", top_k=top_k)))
         except Exception as e:
             raise RuntimeError(
                 "[LightRAGBenchMemory] retrieve 失败，请根据 docs/backend_runtime_guide.md 排查。"
@@ -143,8 +145,21 @@ class LightRAGBenchMemory:
     def reset(self) -> None:
         self._buffer = []
         self._backend = None
+        if self._loop is not None:
+            self._loop.close()
+            self._loop = None
         self._ingest_time_ms = 0
         self.backend_mode = "uninitialized"
+
+    def _run_coro(self, coro: Any) -> Any:
+        """Run all async operations on one dedicated loop.
+
+        Reusing multiple asyncio.run() calls for the same LightRAG instance can bind
+        internal asyncio.Lock objects to different loops (notably doc_status:default_key).
+        """
+        if self._loop is None:
+            self._loop = asyncio.new_event_loop()
+        return self._loop.run_until_complete(coro)
 
     def audit_ingest(self) -> Dict[str, Any]:
         return {

@@ -16,6 +16,7 @@
 """
 import argparse
 import json
+from benchmark_io_utils import load_json_with_fallback
 import sys
 import time
 from pathlib import Path
@@ -42,7 +43,7 @@ def test_state_machine():
 
     data_dir = Path("StructMemEval/benchmark/data/state_machine_location")
     fp = sorted(data_dir.glob("*.json"))[0]
-    case = json.load(open(fp))
+    case = load_json_with_fallback(fp)
     print(f"  case: {fp.name}, sessions={len(case.get('sessions', []))}, queries={len(case.get('queries', []))}")
 
     mem = AMemBenchMemory(save_dir=str(SAVE_BASE / "sm"))
@@ -102,7 +103,7 @@ def test_tree_based():
 
     data_dir = Path("StructMemEval/benchmark/tree_based/graph_configs")
     fp = sorted(data_dir.glob("*.json"))[0]
-    case = json.load(open(fp))
+    case = load_json_with_fallback(fp)
     print(f"  case: {fp.name}, sessions={len(case.get('sessions', []))}, queries={len(case.get('queries', []))}")
 
     mem = AMemBenchMemory(save_dir=str(SAVE_BASE / "tb"))
@@ -155,7 +156,7 @@ def test_recommendations():
     data_dir = Path("StructMemEval/benchmark/recommendations/data")
     fps = sorted(data_dir.rglob("*.json"))
     fp = fps[0]
-    case = json.load(open(fp))
+    case = load_json_with_fallback(fp)
     print(f"  case: {fp.name}, sessions={len(case.get('sessions', []))}, queries={len(case.get('queries', []))}")
 
     mem = AMemBenchMemory(save_dir=str(SAVE_BASE / "rec"))
@@ -199,7 +200,7 @@ def test_amemgym():
     print("AMemGym")
     print("=" * 60)
 
-    data = json.load(open("data/amemgym/v1.base/data.json"))
+    data = load_json_with_fallback("data/amemgym/v1.base/data.json")
     users = data if isinstance(data, list) else list(data.values())
     user = users[0]
     print(f"  user: {user.get('id', '0')}, periods={len(user.get('periods', []))}, qas={len(user.get('qas', []))}")
@@ -258,7 +259,7 @@ def test_memory_probe():
     print("=" * 60)
 
     import re as _re
-    data = json.load(open("memory-probe/data/locomo10.json"))
+    data = load_json_with_fallback("memory-probe/data/locomo10.json")
     convs = data if isinstance(data, list) else data.get("conversations", [data])
     conv = convs[0]
     conversation = conv["conversation"]

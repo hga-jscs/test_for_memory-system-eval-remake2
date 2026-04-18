@@ -13,6 +13,7 @@
 """
 
 import json
+from benchmark_io_utils import load_json_with_fallback
 import sys
 import time
 import shutil
@@ -129,7 +130,7 @@ def test_structmemeval_state_machine():
 
     sm_dir = Path("StructMemEval/benchmark/data/state_machine_location")
     fp = sorted(sm_dir.rglob("*.json"))[0]
-    case = json.load(open(fp))
+    case = load_json_with_fallback(fp)
     queries = case.get("queries", [])[:3]
     print(f"  File: {fp.name}")
     print(f"  Sessions: {len(case.get('sessions', []))}, Queries (using {len(queries)})")
@@ -185,7 +186,7 @@ def test_structmemeval_tree_based():
     if not fps:
         fps = sorted(tb_dir.rglob("*.json"))
     fp = fps[0]
-    case = json.load(open(fp))
+    case = load_json_with_fallback(fp)
     queries = case.get("queries", [])[:3]
 
     sessions = case.get("sessions", [])
@@ -249,7 +250,7 @@ def test_structmemeval_recommendations():
 
     rec_dir = Path("StructMemEval/benchmark/recommendations/data")
     fp = sorted(rec_dir.rglob("*.json"))[0]
-    case = json.load(open(fp))
+    case = load_json_with_fallback(fp)
     queries = case.get("queries", [])[:2]
     print(f"  File: {fp.name}")
     print(f"  Sessions: {len(case.get('sessions',[]))}, Queries (using {len(queries)})")
@@ -296,7 +297,7 @@ def test_amemgym():
     print(SEP)
 
     data_path = Path("data/amemgym/v1.base/data.json")
-    data = json.load(open(data_path))
+    data = load_json_with_fallback(data_path)
     users = data.get("users", data) if isinstance(data, dict) else data
     if isinstance(users, dict):
         users = list(users.values())
@@ -384,7 +385,7 @@ def test_memory_probe():
         print("  [SKIP] 找不到 memory-probe 数据")
         return
 
-    data = json.load(open(data_path))
+    data = load_json_with_fallback(data_path)
     convs = data if isinstance(data, list) else data.get("conversations", [data])
     conv = convs[0]
     conversation = conv["conversation"]

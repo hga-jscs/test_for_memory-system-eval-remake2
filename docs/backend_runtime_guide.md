@@ -18,6 +18,29 @@ source .venv/bin/activate
 pip install -U pip
 ```
 
+### 1.1 代理与网络分层（必须区分）
+
+这部分是高频踩坑点：**Docker Desktop 代理、Windows 系统代理、Conda 下载代理、localhost 直连是四个层次**，不要混配。
+
+- Docker Desktop 代理：仅影响容器网络，不等于主机 Python/conda 请求。
+- Windows 系统代理：可能影响浏览器与部分系统组件，不应默认让本地服务走代理。
+- Conda/Pip 代理：应单独配置（例如 `conda config --set proxy_servers...`），不要假设自动继承系统代理就正确。
+- 本地服务直连：访问本机 Letta 必须绕过代理。
+
+建议在 shell 中显式设置：
+
+```bash
+export NO_PROXY=localhost,127.0.0.1
+export no_proxy=localhost,127.0.0.1
+```
+
+对于 Windows PowerShell：
+
+```powershell
+$env:NO_PROXY=\"localhost,127.0.0.1\"
+$env:no_proxy=\"localhost,127.0.0.1\"
+```
+
 ---
 
 ## 2) RAPTOR
@@ -75,6 +98,7 @@ python -c "from lightrag_bench_src import LightRAGBenchMemory; print('ok')"
 1. 已安装 Letta SDK / 源码依赖
 2. Letta server 已启动
 3. 设置 `LETTA_BASE_URL`
+4. 确保 `NO_PROXY=localhost,127.0.0.1`，避免本地请求被转发到代理
 
 ```bash
 export LETTA_BASE_URL=http://127.0.0.1:8283

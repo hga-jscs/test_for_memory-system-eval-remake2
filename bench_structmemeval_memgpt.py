@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from memgpt_bench_src import MemGPTBenchMemory
 from benchmark_io_utils import load_json_with_fallback
+from benchmark_status_utils import evaluate_execution_health
 
 BASE = Path("StructMemEval/benchmark")
 CATEGORIES = {
@@ -154,7 +155,7 @@ def eval_case(task):
     }
 
 
-def main():
+def main() -> int:
     SAVE_BASE.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
@@ -234,7 +235,15 @@ def main():
     with open(RESULTS_PATH, "w", encoding="utf-8") as f:
         json.dump({"results": results, "errors": errors}, f, indent=2, ensure_ascii=False)
     print(f"\n结果已保存到 {RESULTS_PATH}")
+    health = evaluate_execution_health(results=results, errors=errors, total_tasks=len(tasks))
+    print(
+        "[BENCH-STATUS] "
+        f"ok={health.ok} reason={health.reason} total={health.total_tasks} "
+        f"completed={health.completed_cases} skipped={health.skipped_cases} "
+        f"errors={health.error_cases} evaluated_queries={health.evaluated_queries}"
+    )
+    return 0 if health.ok else 2
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
