@@ -16,7 +16,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
-from hipporag_bench_src import HippoRAGMemory
+from hipporag_bench_src import (
+    HippoRAGMemory,
+    HippoRAGDependencyError,
+    ensure_hipporag_runtime_dependencies,
+)
 from benchmark_io_utils import load_json_with_fallback
 from benchmark_status_utils import evaluate_execution_health
 
@@ -185,6 +189,12 @@ def main() -> int:
     print("=" * 70)
     print("StructMemEval 全量评测 (HippoRAG, openie_mode=online, chunk_size=1000)")
     print("=" * 70)
+    print("[Preflight] 检查 HippoRAG 运行依赖 ...")
+    try:
+        ensure_hipporag_runtime_dependencies(verbose=True)
+    except HippoRAGDependencyError as exc:
+        print(f"[BENCH-STATUS] ok=False reason=preflight dependency check failed: {exc}")
+        return 2
 
     tasks = collect_cases()
     from collections import Counter

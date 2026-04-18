@@ -12,6 +12,7 @@ import os
 import sys
 import shutil
 import time
+import importlib
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -31,6 +32,60 @@ for _hippo_src in _HIPPO_SRC_CANDIDATES:
 
 CHUNK_SIZE = 1000       # 预分块目标字符数（与 MAB cs1000 对齐）
 DEFAULT_TOP_K = 5
+
+
+class HippoRAGDependencyError(RuntimeError):
+    """HippoRAG 运行时依赖缺失。"""
+
+
+def ensure_hipporag_runtime_dependencies(verbose: bool = True) -> None:
+    """前置检查 HippoRAG 运行依赖，缺失时抛出聚焦且可执行的错误。
+
+    检查项：
+    1) `import hipporag`
+    2) `from igraph import Graph`
+    """
+    checks = []
+
+    try:
+        importlib.import_module("hipporag")
+        checks.append("hipporag=ok")
+    except ModuleNotFoundError as exc:
+        # `import hipporag` 过程中也可能因为其内部依赖缺失而抛出 ModuleNotFoundError。
+        if exc.name in {"igraph", "python_igraph"}:
+            checks.append(f"hipporag=blocked_by_{exc.name}")
+            detail = (
+                "缺少 igraph/python-igraph 依赖，HippoRAG StructMemEval 无法运行。\n"
+                "请安装 python-igraph（PyPI 包名通常是 python-igraph / python_igraph）。\n"
+                "示例：pip install python-igraph==0.11.8"
+            )
+            raise HippoRAGDependencyError(detail) from exc
+        checks.append(f"hipporag=missing({exc})")
+        detail = (
+            "缺少 hipporag 包（或源码路径不可见），HippoRAG backend 无法运行。\n"
+            "请确认 third_party/HippoRAG/src 已在 PYTHONPATH，或执行：\n"
+            "  pip install -e third_party/HippoRAG"
+        )
+        raise HippoRAGDependencyError(detail) from exc
+    except Exception as exc:
+        checks.append(f"hipporag=error({exc})")
+        detail = f"HippoRAG 导入失败：{exc}"
+        raise HippoRAGDependencyError(detail) from exc
+
+    try:
+        from igraph import Graph  # type: ignore  # noqa: F401
+        checks.append("igraph=ok")
+    except Exception as exc:
+        checks.append(f"igraph=missing({exc})")
+        detail = (
+            "缺少 igraph/python-igraph 依赖，HippoRAG StructMemEval 无法运行。\n"
+            "请安装 python-igraph（PyPI 包名通常是 python-igraph / python_igraph）。\n"
+            "示例：pip install python-igraph==0.11.8"
+        )
+        raise HippoRAGDependencyError(detail) from exc
+
+    if verbose:
+        print(f"[HippoRAG][Preflight] {' | '.join(checks)}")
 
 
 def _text_to_chunks(text: str, chunk_size: int = CHUNK_SIZE) -> List[str]:
@@ -74,6 +129,7 @@ def _patch_llm_tracking(h) -> None:
 
 def _build_hipporag(save_dir: str):
     """创建并返回一个 HippoRAG 实例（DashScope 直连，无需 embedding proxy）。"""
+    ensure_hipporag_runtime_dependencies(verbose=False)
     from hipporag import HippoRAG  # type: ignore
     from hipporag.utils.config_utils import BaseConfig  # type: ignore
 
@@ -148,6 +204,8 @@ class HippoRAGMemory:
 
     def build_index(self) -> None:
         """构建 HippoRAG 图索引（昂贵操作，整个 user/case 所有 chunk 一次性传入）。"""
+        ensure_hipporag_runtime_dependencies(verbose=False)
+
         if not self._buffer:
             raise ValueError("[HippoRAGMemory] buffer is empty, nothing to index.")
 
