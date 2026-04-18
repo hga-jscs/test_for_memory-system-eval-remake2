@@ -13,6 +13,8 @@ import sys
 import shutil
 import time
 import importlib
+import importlib.util
+import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -25,10 +27,9 @@ _HIPPO_SRC_CANDIDATES = [
     _REPO_ROOT / "memoRaxis" / "external" / "hipporag_repo" / "src",
     _REPO_ROOT / "third_party" / "HippoRAG" / "src",
 ]
-for _hippo_src in _HIPPO_SRC_CANDIDATES:
-    if _hippo_src.exists() and str(_hippo_src) not in sys.path:
-        sys.path.insert(0, str(_hippo_src))
-        break
+_THIRD_PARTY_HIPPO_ROOT = _REPO_ROOT / "third_party" / "HippoRAG"
+_THIRD_PARTY_HIPPO_SETUP = _THIRD_PARTY_HIPPO_ROOT / "setup.py"
+_THIRD_PARTY_HIPPO_REQ = _THIRD_PARTY_HIPPO_ROOT / "requirements.txt"
 
 CHUNK_SIZE = 1000       # 预分块目标字符数（与 MAB cs1000 对齐）
 DEFAULT_TOP_K = 5
@@ -38,14 +39,98 @@ class HippoRAGDependencyError(RuntimeError):
     """HippoRAG 运行时依赖缺失。"""
 
 
+def _discover_hipporag_source() -> Optional[Path]:
+    for candidate in _HIPPO_SRC_CANDIDATES:
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def _ensure_hipporag_source_visibility() -> Dict[str, str]:
+    """统一 HippoRAG 源码可见性策略：优先直连仓库内 third_party/memoRaxis 源码。"""
+    source_root = _discover_hipporag_source()
+    if source_root is None:
+        return {"mode": "missing_source", "detail": "no source candidate exists"}
+
+    source_root_str = str(source_root)
+    if source_root_str not in sys.path:
+        sys.path.insert(0, source_root_str)
+
+    spec = importlib.util.find_spec("hipporag")
+    if spec is None:
+        return {
+            "mode": "source_not_visible",
+            "source_root": source_root_str,
+            "detail": "find_spec('hipporag') returned None",
+        }
+
+    origin = str(spec.origin or "unknown")
+    return {
+        "mode": "source_visible",
+        "source_root": source_root_str,
+        "module_origin": origin,
+    }
+
+
+def _inspect_editable_install_constraints() -> Dict[str, str]:
+    """检查上游 editable install 可能的硬钉版本风险（仅用于诊断提示，不作为运行前置）。"""
+    out: Dict[str, str] = {}
+    if _THIRD_PARTY_HIPPO_SETUP.exists():
+        text = _THIRD_PARTY_HIPPO_SETUP.read_text(encoding="utf-8")
+        m = re.search(r'openai==([0-9][^"\']*)', text)
+        if m:
+            out["setup_openai_pin"] = f"openai=={m.group(1)}"
+    if _THIRD_PARTY_HIPPO_REQ.exists():
+        req_text = _THIRD_PARTY_HIPPO_REQ.read_text(encoding="utf-8")
+        m_req = re.search(r'^\s*openai==([0-9][^\s#]*)', req_text, flags=re.MULTILINE)
+        if m_req:
+            out["requirements_openai_pin"] = f"openai=={m_req.group(1)}"
+    return out
+
+
 def ensure_hipporag_runtime_dependencies(verbose: bool = True) -> None:
     """前置检查 HippoRAG 运行依赖，缺失时抛出聚焦且可执行的错误。
 
     检查项：
-    1) `import hipporag`
-    2) `from igraph import Graph`
+    1) 仓库内 HippoRAG 源码路径可见性（优先 third_party/memoRaxis 直导入）
+    2) `import hipporag`
+    3) `from igraph import Graph`
+    4) 上游 editable install 风险提示（openai hard pin）
     """
     checks = []
+    source_state = _ensure_hipporag_source_visibility()
+    editable_constraints = _inspect_editable_install_constraints()
+
+    def _raise(detail: str, *, cause: Optional[BaseException] = None) -> None:
+        if verbose:
+            print(f"[HippoRAG][Preflight] {' | '.join(checks) if checks else 'no-checks'}")
+            if editable_constraints:
+                print(f"[HippoRAG][Preflight][NOTE] editable constraints={editable_constraints}")
+        if cause is None:
+            raise HippoRAGDependencyError(detail)
+        raise HippoRAGDependencyError(detail) from cause
+
+    if source_state["mode"] == "missing_source":
+        checks.append("source=missing")
+        detail = (
+            "HippoRAG 源码路径不存在：未找到 memoRaxis/external/hipporag_repo/src 或 "
+            "third_party/HippoRAG/src。\n"
+            "这是源码路径问题，不是 igraph 问题。\n"
+            "请确认 third_party/HippoRAG 已拉取到仓库。"
+        )
+        _raise(detail)
+
+    if source_state["mode"] == "source_not_visible":
+        checks.append("source=not_visible")
+        detail = (
+            "已找到 HippoRAG 源码，但 Python 仍不可见。\n"
+            f"source_root={source_state.get('source_root', '?')}\n"
+            "这是源码路径可见性问题；请检查 PYTHONPATH 或启动脚本工作目录。"
+        )
+        _raise(detail)
+
+    checks.append(f"source=ok({source_state.get('source_root', '?')})")
+    checks.append(f"module_origin={source_state.get('module_origin', 'unknown')}")
 
     try:
         importlib.import_module("hipporag")
@@ -55,22 +140,23 @@ def ensure_hipporag_runtime_dependencies(verbose: bool = True) -> None:
         if exc.name in {"igraph", "python_igraph"}:
             checks.append(f"hipporag=blocked_by_{exc.name}")
             detail = (
-                "缺少 igraph/python-igraph 依赖，HippoRAG StructMemEval 无法运行。\n"
+                f"hipporag 包已可见，但导入被底层依赖 {exc.name} 阻塞。\n"
+                "这属于运行依赖缺失，不是源码路径问题。\n"
                 "请安装 python-igraph（PyPI 包名通常是 python-igraph / python_igraph）。\n"
                 "示例：pip install python-igraph==0.11.8"
             )
-            raise HippoRAGDependencyError(detail) from exc
-        checks.append(f"hipporag=missing({exc})")
+            _raise(detail, cause=exc)
+        checks.append(f"hipporag=blocked_by_{exc.name}")
         detail = (
-            "缺少 hipporag 包（或源码路径不可见），HippoRAG backend 无法运行。\n"
-            "请确认 third_party/HippoRAG/src 已在 PYTHONPATH，或执行：\n"
-            "  pip install -e third_party/HippoRAG"
+            f"hipporag 导入失败，底层缺少模块: {exc.name}\n"
+            "这不是“包不可见”的笼统问题，而是导入链依赖缺失。\n"
+            "请先补齐该模块，再重试 StructMemEval。"
         )
-        raise HippoRAGDependencyError(detail) from exc
+        _raise(detail, cause=exc)
     except Exception as exc:
         checks.append(f"hipporag=error({exc})")
         detail = f"HippoRAG 导入失败：{exc}"
-        raise HippoRAGDependencyError(detail) from exc
+        _raise(detail, cause=exc)
 
     try:
         from igraph import Graph  # type: ignore  # noqa: F401
@@ -82,10 +168,21 @@ def ensure_hipporag_runtime_dependencies(verbose: bool = True) -> None:
             "请安装 python-igraph（PyPI 包名通常是 python-igraph / python_igraph）。\n"
             "示例：pip install python-igraph==0.11.8"
         )
-        raise HippoRAGDependencyError(detail) from exc
+        _raise(detail, cause=exc)
+
+    if editable_constraints:
+        pin_msg = editable_constraints.get("setup_openai_pin") or editable_constraints.get("requirements_openai_pin")
+        if pin_msg:
+            checks.append(f"editable_install_pin={pin_msg}")
 
     if verbose:
         print(f"[HippoRAG][Preflight] {' | '.join(checks)}")
+        if editable_constraints:
+            print(
+                "[HippoRAG][Preflight][NOTE] 检测到上游 editable install 依赖硬钉："
+                f"{editable_constraints}。若 `pip install -e third_party/HippoRAG` 报 "
+                "`No matching distribution found`，请优先使用当前仓库的源码路径直导入方案。"
+            )
 
 
 def _text_to_chunks(text: str, chunk_size: int = CHUNK_SIZE) -> List[str]:
