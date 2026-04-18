@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from amem_bench_src import AMemBenchMemory
+from benchmark_io_utils import load_json_with_fallback
 
 BASE = Path("StructMemEval/benchmark")
 CATEGORIES = {
@@ -90,7 +91,7 @@ def judge_answer(llm, question, pred, reference, category):
 def eval_case(task):
     category = task["category"]
     path     = task["path"]
-    case     = json.load(open(path))
+    case     = load_json_with_fallback(path)
     case_id  = case.get("case_id", path.stem)
     queries  = case.get("queries", [])
 
@@ -168,7 +169,7 @@ def main():
     prior_results = []
     done_keys = set()
     if RESULTS_PATH.exists():
-        prior = json.load(open(RESULTS_PATH))
+        prior = load_json_with_fallback(RESULTS_PATH)
         prior_results = [r for r in prior.get("results", []) if not r.get("skipped")]
         done_keys = {(r["category"], r["case_id"]) for r in prior_results}
         print(f"  Resume: 跳过 {len(done_keys)} 个已完成 case")

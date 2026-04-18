@@ -13,6 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import SimpleRAGMemory, get_config, OpenAIClient
+from benchmark_io_utils import load_json_with_fallback
 
 DATA_PATH   = Path("memory-probe/data/locomo10.json")
 MAX_WORKERS = 5    # 10 对话，5 并发
@@ -142,8 +143,7 @@ def main():
     print("memory-probe (LoCoMo) 全量评测 (SimpleMem, 并行)")
     print("=" * 70)
 
-    with open(DATA_PATH) as f:
-        data = json.load(f)
+    data = load_json_with_fallback(DATA_PATH)
     print(f"总对话数: {len(data)} | MAX_WORKERS={MAX_WORKERS}")
     total_qa = sum(len(c["qa"]) for c in data)
     print(f"总 QA 数: {total_qa}\n")

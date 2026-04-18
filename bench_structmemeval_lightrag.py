@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, OpenAIClient
 from lightrag_bench_src import LightRAGBenchMemory
+from benchmark_io_utils import load_json_with_fallback
 
 BASE = Path("StructMemEval/benchmark")
 CATEGORIES = {
@@ -90,7 +91,7 @@ def judge_answer(llm, question, pred, reference, category):
 def eval_case(task):
     category = task["category"]
     path     = task["path"]
-    case     = json.load(open(path))
+    case     = load_json_with_fallback(path)
     case_id  = case.get("case_id", path.stem)
     queries  = case.get("queries", [])
 
