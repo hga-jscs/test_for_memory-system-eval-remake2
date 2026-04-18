@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""RAPTOR bench wrapper with robust path resolution and fallback mode."""
+"""RAPTOR bench wrapper with robust path resolution (strict backend mode)."""
 from __future__ import annotations
 
 import sys
@@ -24,7 +24,6 @@ for _raptor_repo in _RAPTOR_REPO_CANDIDATES:
         break
 
 from simpleMem_src import get_config
-from fallback_memory_backend import FallbackMemoryBackend
 
 import logging
 logger = logging.getLogger(__name__)
@@ -60,7 +59,6 @@ class RaptorBenchMemory:
         self._emb = None
         self._summ = None
         self._ingest_time_ms = 0
-        self._fallback: Optional[FallbackMemoryBackend] = None
         self.backend_mode = "raptor"
 
     def add_memory(self, text: str) -> None:
@@ -159,31 +157,17 @@ class RaptorBenchMemory:
     def build_index(self) -> None:
         if not self._buffer:
             return
-        try:
-            RetrievalAugmentation, config = self._make_runtime()
-            ra = RetrievalAugmentation(config=config, tree=None)
-            text = "\n\n".join(self._buffer)
-            t0 = _time.time()
-            ra.add_documents(text)
-            self._ingest_time_ms = int((_time.time() - t0) * 1000)
-            self._ra = ra
-            self.backend_mode = "raptor"
-            self._fallback = None
-        except Exception as e:
-            # 兼容原因：某些环境无法下载 tiktoken 词表或 RAPTOR 依赖不完整。
-            # 回退到本地 TF-IDF，保证 benchmark 全链路可运行。
-            print(f"[RaptorBenchMemory][WARN] fallback enabled due to: {e}")
-            fb = FallbackMemoryBackend("raptor")
-            fb._buffer = list(self._buffer)
-            fb.build_index()
-            self._fallback = fb
-            self._ra = None
-            self._ingest_time_ms = fb.audit_ingest()["ingest_time_ms"]
-            self.backend_mode = "fallback"
+        RetrievalAugmentation, config = self._make_runtime()
+        ra = RetrievalAugmentation(config=config, tree=None)
+        text = "\n\n".join(self._buffer)
+        t0 = _time.time()
+        ra.add_documents(text)
+        self._ingest_time_ms = int((_time.time() - t0) * 1000)
+        self._ra = ra
+        self.backend_mode = "raptor"
+        print(f"[RaptorBenchMemory][DEBUG] indexed chunks={len(self._buffer)} tree_nodes={len(self._ra.tree.all_nodes) if self._ra and self._ra.tree else 0}")
 
     def retrieve(self, query: str, top_k: int = 10) -> List[Evidence]:
-        if self._fallback is not None:
-            return [Evidence(content=e.content, metadata=e.metadata) for e in self._fallback.retrieve(query, top_k=top_k)]
         if self._ra is None or self._ra.tree is None:
             return []
 
@@ -229,7 +213,6 @@ class RaptorBenchMemory:
         self._ingest_time_ms = 0
         self._emb = None
         self._summ = None
-        self._fallback = None
 
     def audit_ingest(self) -> dict:
         llm_calls = 0

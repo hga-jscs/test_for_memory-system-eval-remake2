@@ -17,7 +17,6 @@ from typing import Any, Dict, List, Optional
 
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, Evidence
-from fallback_memory_backend import FallbackMemoryBackend
 
 # HippoRAG 源码路径（优先 memoRaxis/external，其次 third_party）
 _REPO_ROOT = Path(__file__).resolve().parent
@@ -123,7 +122,6 @@ class HippoRAGMemory:
         self.top_k_default = top_k_default
         self._buffer: List[str] = []
         self._h = None          # lazy init in build_index
-        self._fallback: Optional[FallbackMemoryBackend] = None
         self.backend_mode = "hipporag"
 
         # audit 字段（build_index 后填充）
@@ -159,41 +157,21 @@ class HippoRAGMemory:
         Path(self.save_dir).mkdir(parents=True, exist_ok=True)
 
         self.ingest_chunks = len(self._buffer)
-        try:
-            self._h = _build_hipporag(self.save_dir)
-            t0 = time.time()
-            self._h.index(self._buffer)
-            self.ingest_time_ms = (time.time() - t0) * 1000
+        self._h = _build_hipporag(self.save_dir)
+        t0 = time.time()
+        self._h.index(self._buffer)
+        self.ingest_time_ms = (time.time() - t0) * 1000
 
-            self.ingest_llm_calls = self._h._audit_llm_calls
-            self.ingest_llm_prompt_tokens = self._h._audit_prompt_tokens
-            self.ingest_llm_completion_tokens = self._h._audit_completion_tokens
-            self.backend_mode = "hipporag"
-            self._fallback = None
-        except Exception as e:
-            # 兼容原因：某些运行环境缺少 HippoRAG 依赖（torch/vllm）或受网络代理限制。
-            # 回退到本地 TF-IDF 检索，保证 benchmark 三段链路可继续执行。
-            print(f"[HippoRAGMemory][WARN] fallback enabled due to: {e}")
-            fb = FallbackMemoryBackend("hipporag")
-            fb._buffer = list(self._buffer)
-            fb.build_index()
-            self._fallback = fb
-            self._h = None
-            self.backend_mode = "fallback"
-            audit = fb.audit_ingest()
-            self.ingest_time_ms = audit["ingest_time_ms"]
-            self.ingest_llm_calls = 0
-            self.ingest_llm_prompt_tokens = 0
-            self.ingest_llm_completion_tokens = 0
+        self.ingest_llm_calls = self._h._audit_llm_calls
+        self.ingest_llm_prompt_tokens = self._h._audit_prompt_tokens
+        self.ingest_llm_completion_tokens = self._h._audit_completion_tokens
+        self.backend_mode = "hipporag"
+        print(f"[HippoRAGMemory][DEBUG] indexed chunks={self.ingest_chunks} llm_calls={self.ingest_llm_calls}")
 
     # ── retrieve ─────────────────────────────────────────────────────────
 
     def retrieve(self, query: str, top_k: int = 0) -> List[Evidence]:
         k = top_k or self.top_k_default
-        if self._fallback is not None:
-            ev = self._fallback.retrieve(query, top_k=k)
-            self.retrieve_count += 1
-            return [Evidence(content=e.content, metadata=e.metadata) for e in ev]
         if self._h is None:
             return []
 
@@ -231,7 +209,6 @@ class HippoRAGMemory:
             shutil.rmtree(self.save_dir)
         self._buffer = []
         self._h = None
-        self._fallback = None
         self.ingest_time_ms = 0.0
         self.ingest_llm_prompt_tokens = 0
         self.ingest_llm_completion_tokens = 0
