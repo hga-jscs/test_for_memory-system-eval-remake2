@@ -119,11 +119,16 @@ def eval_case(task):
     )
 
     try:
+        print(f"[LightRAG][CASE] start category={category} case_id={case_id} working_dir={save_dir}")
         ingest_case(mem, case, category)
         t0 = time.time()
         mem.build_index()
         ingest_time_ms = (time.time() - t0) * 1000
         audit = mem.audit_ingest()
+        if audit["ingest_chunks"] <= 0:
+            raise RuntimeError(
+                f"[LightRAG][CASE] ingest 未生成有效 chunks: category={category} case_id={case_id}"
+            )
 
         t1 = time.time()
         tokens_before = llm.total_tokens
@@ -145,6 +150,10 @@ def eval_case(task):
 
         infer_time_ms    = (time.time() - t1) * 1000
         infer_llm_tokens = llm.total_tokens - tokens_before
+        print(
+            f"[LightRAG][CASE] done category={category} case_id={case_id} "
+            f"queries={len(queries)} correct={correct} ingest_ms={round(ingest_time_ms)} infer_ms={round(infer_time_ms)}"
+        )
 
         return {
             "case_id":    case_id,
