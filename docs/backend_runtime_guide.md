@@ -78,16 +78,20 @@ python -c "from raptor_bench_src import RaptorBenchMemory; print('ok')"
 pip install -r third_party/HippoRAG/requirements.txt
 ```
 
-推荐（更稳妥）：
+可选（仅当你明确需要把 HippoRAG 当作站点包安装时）：
 
 ```bash
 pip install -e third_party/HippoRAG
 ```
 
 说明（关键）：
-- 本仓库 `hipporag_bench_src.py` 会优先把 `third_party/HippoRAG/src` 加入 `sys.path` 后直接 `import hipporag`。
-- **源码路径直导入不会自动安装依赖**，因此即便代码能 import 到 `hipporag`，运行时仍可能缺少 `python-igraph`。
-- `bench_structmemeval_hipporag.py` 已加入前置依赖检查：启动时会同时检查 `hipporag` 与 `from igraph import Graph`，缺失时会立即失败并给出安装提示，避免在几十个 case 中重复报错。
+- 当前仓库 HippoRAG backend 的默认策略是 **源码路径直导入**（优先 `memoRaxis/external/hipporag_repo/src`，其次 `third_party/HippoRAG/src`），并不依赖 editable install 才能运行。
+- preflight 会在启动时区分并输出：
+  - 源码路径缺失 / 不可见；
+  - `hipporag` 包导入链缺失模块（例如 `igraph`）；
+  - 上游 editable install 的硬钉依赖提示（例如 `openai==1.91.1`）。
+- `pip install -e third_party/HippoRAG` 可能因上游 `setup.py/requirements.txt` 中 `openai==1.91.1` 等硬钉失败；这不应阻塞本仓库使用源码路径运行 benchmark。
+- **源码路径直导入不会自动安装依赖**，因此即便能 `import hipporag`，运行时仍可能缺少 `python-igraph`。
 
 检查：
 

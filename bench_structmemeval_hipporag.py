@@ -189,7 +189,7 @@ def main() -> int:
     print("=" * 70)
     print("StructMemEval 全量评测 (HippoRAG, openie_mode=online, chunk_size=1000)")
     print("=" * 70)
-    print("[Preflight] 检查 HippoRAG 运行依赖 ...")
+    print("[Preflight] 检查 HippoRAG 运行依赖（源码路径直导入 + 关键运行依赖）...")
     try:
         ensure_hipporag_runtime_dependencies(verbose=True)
     except HippoRAGDependencyError as exc:
