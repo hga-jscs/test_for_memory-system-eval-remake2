@@ -15,11 +15,13 @@ import time
 import importlib
 import importlib.util
 import re
+import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import get_config, Evidence
+from ingest_audit_utils import IngestAuditWriter
 
 # HippoRAG 源码路径（优先 memoRaxis/external，其次 third_party）
 _REPO_ROOT = Path(__file__).resolve().parent
@@ -186,19 +188,36 @@ def ensure_hipporag_runtime_dependencies(verbose: bool = True) -> None:
 
 
 def _text_to_chunks(text: str, chunk_size: int = CHUNK_SIZE) -> List[str]:
-    """按词边界将长文本切成 ~chunk_size char 的片段。"""
-    words = text.split()
-    chunks, cur = [], []
-    cur_len = 0
-    for w in words:
-        if cur_len + len(w) + 1 > chunk_size and cur:
-            chunks.append(" ".join(cur))
-            cur, cur_len = [], 0
-        cur.append(w)
-        cur_len += len(w) + 1
-    if cur:
-        chunks.append(" ".join(cur))
-    return chunks or [text[:chunk_size]]
+    """结构保真 chunker：优先按换行切，其次按空格切。"""
+    if len(text) <= chunk_size:
+        return [text]
+    lines = text.splitlines(keepends=True)
+    chunks: List[str] = []
+    cur = ""
+    for line in lines:
+        if len(cur) + len(line) <= chunk_size:
+            cur += line
+            continue
+        if cur:
+            chunks.append(cur.rstrip("\n"))
+            cur = ""
+        if len(line) <= chunk_size:
+            cur = line
+            continue
+        start = 0
+        while start < len(line):
+            end = min(start + chunk_size, len(line))
+            if end < len(line):
+                cut = line.rfind(" ", start, end)
+                if cut > start:
+                    end = cut
+            piece = line[start:end].rstrip()
+            if piece:
+                chunks.append(piece)
+            start = end + (1 if end < len(line) and line[end:end + 1] == " " else 0)
+    if cur.strip():
+        chunks.append(cur.rstrip("\n"))
+    return chunks
 
 
 def _patch_llm_tracking(h) -> None:
@@ -274,8 +293,10 @@ class HippoRAGMemory:
         self.save_dir = save_dir
         self.top_k_default = top_k_default
         self._buffer: List[str] = []
+        self._buffer_meta: List[Dict[str, Any]] = []
         self._h = None          # lazy init in build_index
         self.backend_mode = "hipporag"
+        self._audit_writer = IngestAuditWriter(backend="hipporag", save_dir=save_dir)
 
         # audit 字段（build_index 后填充）
         self.ingest_time_ms: float = 0.0
@@ -287,15 +308,19 @@ class HippoRAGMemory:
 
     # ── pre-chunking helpers ──────────────────────────────────────────────
 
-    def add_text(self, text: str) -> int:
+    def add_text(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> int:
         """将一段文本按 CHUNK_SIZE 预分块后加入 buffer。返回新增 chunk 数。"""
         chunks = _text_to_chunks(text)
-        self._buffer.extend(chunks)
+        base_meta = dict(metadata or {})
+        source_id = str(base_meta.get("source_id") or f"source-{len(self._buffer_meta):06d}")
+        for i, chunk in enumerate(chunks):
+            self._buffer.append(chunk)
+            self._buffer_meta.append({**base_meta, "source_id": source_id, "chunk_offset": i})
         return len(chunks)
 
     def add_memory(self, text: str, metadata: Optional[Dict] = None) -> None:
         """兼容旧接口：直接按 CHUNK_SIZE 拆分后缓存。"""
-        self.add_text(text)
+        self.add_text(text, metadata=metadata)
 
     # ── index build ──────────────────────────────────────────────────────
 
@@ -312,6 +337,20 @@ class HippoRAGMemory:
         Path(self.save_dir).mkdir(parents=True, exist_ok=True)
 
         self.ingest_chunks = len(self._buffer)
+        self._audit_writer.write_config(
+            {"save_dir": self.save_dir, "chunk_size": CHUNK_SIZE, "openie_mode": "online"}
+        )
+        for idx, chunk in enumerate(self._buffer):
+            meta = self._buffer_meta[idx] if idx < len(self._buffer_meta) else {}
+            self._audit_writer.add_chunk(
+                {
+                    "chunk_id": f"hipporag-{idx:06d}",
+                    "chunk_idx": idx,
+                    "text": chunk,
+                    "source_metadata": meta,
+                    "storage_target": {"save_dir": self.save_dir},
+                }
+            )
         self._h = _build_hipporag(self.save_dir)
         t0 = time.time()
         self._h.index(self._buffer)
@@ -321,6 +360,23 @@ class HippoRAGMemory:
         self.ingest_llm_prompt_tokens = self._h._audit_prompt_tokens
         self.ingest_llm_completion_tokens = self._h._audit_completion_tokens
         self.backend_mode = "hipporag"
+        graph_files = sorted(str(p) for p in Path(self.save_dir).rglob("*") if p.is_file())
+        self._audit_writer.write_provenance(
+            {
+                "original_chunk_count": len(self._buffer),
+                "indexed_chunk_count": self.ingest_chunks,
+                "graph_file_count": len(graph_files),
+                "graph_files": graph_files[:200],
+            }
+        )
+        self._audit_writer.finalize(
+            summary=self.audit_ingest(),
+            storage_manifest={
+                "backend": "hipporag",
+                "save_dir": self.save_dir,
+                "graph_file_count": len(graph_files),
+            },
+        )
         print(f"[HippoRAGMemory][DEBUG] indexed chunks={self.ingest_chunks} llm_calls={self.ingest_llm_calls}")
 
     # ── retrieve ─────────────────────────────────────────────────────────
@@ -381,4 +437,8 @@ class HippoRAGMemory:
             "ingest_llm_calls": self.ingest_llm_calls,
             "ingest_llm_prompt_tokens": self.ingest_llm_prompt_tokens,
             "ingest_llm_completion_tokens": self.ingest_llm_completion_tokens,
+            "chunk_boundary_preserved": True,
+            "original_chunk_count": len(self._buffer_meta),
+            "ingest_audit_run_id": self._audit_writer.run_id,
+            "ingest_audit_dir": str(self._audit_writer.root),
         }
