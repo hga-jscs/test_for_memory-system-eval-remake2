@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 import re
 import sys
@@ -16,6 +17,7 @@ from typing import Any, Dict, List, Optional
 
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import Evidence, get_config
+from ingest_audit_utils import IngestAuditWriter
 
 _REPO_ROOT = Path(__file__).resolve().parent
 _LIGHTRAG_CANDIDATES = [
@@ -45,6 +47,7 @@ class LightRAGBenchMemory:
         self.save_dir = save_dir
         self.chunk_size = chunk_size
         self._buffer: List[str] = []
+        self._buffer_meta: List[Dict[str, Any]] = []
         self._backend = None
         self._loop: Optional[asyncio.AbstractEventLoop] = None
         self.backend_mode = "uninitialized"
@@ -53,6 +56,12 @@ class LightRAGBenchMemory:
         self._retrieve_calls = 0
         self._retrieve_time_ms_total = 0
         self._retrieve_last_count = 0
+        self._audit_writer = IngestAuditWriter(backend="lightrag", save_dir=save_dir)
+        self._usage: Dict[str, Any] = {
+            "ingest_llm_calls": "unknown_not_exposed_by_upstream",
+            "ingest_llm_prompt_tokens": "unknown_not_exposed_by_upstream",
+            "ingest_llm_completion_tokens": "unknown_not_exposed_by_upstream",
+        }
 
     @staticmethod
     def _check_runtime_deps() -> None:
@@ -67,11 +76,15 @@ class LightRAGBenchMemory:
             )
 
     def add_memory(self, text: str, metadata: Optional[Dict] = None) -> None:
-        self.add_text(text)
+        self.add_text(text, metadata=metadata)
 
-    def add_text(self, text: str) -> int:
+    def add_text(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> int:
         chunks = self._text_to_chunks(text)
-        self._buffer.extend(chunks)
+        base_meta = dict(metadata or {})
+        source_id = str(base_meta.get("source_id") or f"source-{len(self._buffer_meta):06d}")
+        for i, chunk in enumerate(chunks):
+            self._buffer.append(chunk)
+            self._buffer_meta.append({**base_meta, "source_id": source_id, "chunk_offset": i})
         return len(chunks)
 
     def _text_to_chunks(self, text: str) -> List[str]:
@@ -198,6 +211,13 @@ class LightRAGBenchMemory:
             f"dim={self._embedding_meta.get('dim')}",
             f"source={self._embedding_meta.get('source')}",
         )
+        self._audit_writer.write_config(
+            {
+                "save_dir": self.save_dir,
+                "chunk_size": self.chunk_size,
+                "embedding_meta": self._embedding_meta,
+            }
+        )
 
         os.makedirs(self.save_dir, exist_ok=True)
         self._loop = asyncio.new_event_loop()
@@ -211,7 +231,27 @@ class LightRAGBenchMemory:
         t0 = time.time()
         try:
             self._run_coro(rag.initialize_storages())
-            self._run_coro(rag.ainsert("\n\n".join(self._buffer)))
+            for idx, chunk in enumerate(self._buffer):
+                meta = self._buffer_meta[idx] if idx < len(self._buffer_meta) else {}
+                chunk_id = f"lightrag-{idx:06d}"
+                payload = (
+                    f"[chunk_id={chunk_id}]"
+                    f"[source_id={meta.get('source_id', 'unknown')}]"
+                    f"[case_id={meta.get('case_id', 'unknown')}]"
+                    f"[user_id={meta.get('user_id', 'unknown')}]"
+                    f"[conv_id={meta.get('conv_id', 'unknown')}]\n"
+                    f"{chunk}"
+                )
+                self._run_coro(rag.ainsert(payload))
+                self._audit_writer.add_chunk(
+                    {
+                        "chunk_id": chunk_id,
+                        "chunk_idx": idx,
+                        "text": chunk,
+                        "source_metadata": meta,
+                        "storage_target": {"working_dir": self.save_dir},
+                    }
+                )
         except Exception as e:
             err_text = str(e)
             if "Embedding dimension mismatch detected" in err_text:
@@ -239,6 +279,22 @@ class LightRAGBenchMemory:
         self._backend = rag
         self.backend_mode = "real_lightrag_data_api_v1"
         self._ingest_time_ms = int((time.time() - t0) * 1000)
+        graph_files = sorted(str(p) for p in Path(self.save_dir).rglob("*") if p.is_file())
+        self._audit_writer.write_provenance(
+            {
+                "original_chunk_count": len(self._buffer),
+                "working_dir_file_count": len(graph_files),
+                "working_dir_files": graph_files[:200],
+            }
+        )
+        self._audit_writer.finalize(
+            summary=self.audit_ingest(),
+            storage_manifest={
+                "backend": "lightrag",
+                "working_dir": self.save_dir,
+                "file_count": len(graph_files),
+            },
+        )
         _safe_print("[LightRAGBenchMemory][DEBUG]", f"indexed chunks={len(self._buffer)}", f"time_ms={self._ingest_time_ms}")
 
     def retrieve(self, query: str, top_k: int = 5) -> List[Evidence]:
@@ -352,6 +408,7 @@ class LightRAGBenchMemory:
 
     def reset(self) -> None:
         self._buffer = []
+        self._buffer_meta = []
         if self._backend is not None:
             self._shutdown_backend()
         self._backend = None
@@ -426,12 +483,12 @@ class LightRAGBenchMemory:
             "backend_mode": self.backend_mode,
             "ingest_chunks": len(self._buffer),
             "ingest_time_ms": self._ingest_time_ms,
-            "ingest_llm_calls": 0,
-            "ingest_llm_prompt_tokens": 0,
-            "ingest_llm_completion_tokens": 0,
+            **self._usage,
             "embedding_model": self._embedding_meta.get("model"),
             "embedding_dim": self._embedding_meta.get("dim"),
             "embedding_config_source": self._embedding_meta.get("source"),
+            "ingest_audit_run_id": self._audit_writer.run_id,
+            "ingest_audit_dir": str(self._audit_writer.root),
         }
 
     def audit_retrieve(self) -> Dict[str, Any]:

@@ -20,9 +20,11 @@ from typing import Any, Dict, List, Optional
 from urllib.parse import urljoin
 
 import requests
+from requests import exceptions as req_exc
 
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import Evidence
+from ingest_audit_utils import IngestAuditWriter, compact_error, parse_time_to_iso
 
 _REPO_ROOT = Path(__file__).resolve().parent
 _LETTA_CANDIDATES = [
@@ -54,6 +56,7 @@ class LettaBenchMemory:
         self.save_dir = save_dir
         self.chunk_size = chunk_size
         self._buffer: List[str] = []
+        self._buffer_meta: List[Dict[str, Any]] = []
 
         self._base_url = ""
         self._http: Optional[requests.Session] = None
@@ -72,21 +75,34 @@ class LettaBenchMemory:
 
         # Letta archival writes/searches通常不经过 LLM；token usage 并未由这些 endpoint 返回。
         self._usage = {
-            "ingest_llm_calls": 0,
-            "ingest_llm_prompt_tokens": 0,
-            "ingest_llm_completion_tokens": 0,
+            "ingest_llm_calls": "not_exposed_by_upstream",
+            "ingest_llm_prompt_tokens": "not_exposed_by_upstream",
+            "ingest_llm_completion_tokens": "not_exposed_by_upstream",
             "retrieve_llm_calls": 0,
             "retrieve_llm_prompt_tokens": 0,
             "retrieve_llm_completion_tokens": 0,
             "token_usage_note": "Letta archival-memory REST endpoints do not expose token usage in responses.",
         }
+        self._ingest_errors: List[Dict[str, Any]] = []
+        self._chunk_audit: List[Dict[str, Any]] = []
+        self._audit_writer = IngestAuditWriter(backend="memgpt", save_dir=save_dir)
 
     def add_memory(self, text: str, metadata: Optional[Dict] = None) -> None:
-        self.add_text(text)
+        self.add_text(text, metadata=metadata)
 
-    def add_text(self, text: str) -> int:
+    def add_text(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> int:
         chunks = self._text_to_chunks(text)
-        self._buffer.extend(chunks)
+        base_meta = dict(metadata or {})
+        source_id = str(base_meta.get("source_id") or f"source-{len(self._buffer_meta):06d}")
+        for offset, chunk in enumerate(chunks):
+            self._buffer.append(chunk)
+            self._buffer_meta.append(
+                {
+                    **base_meta,
+                    "source_id": source_id,
+                    "chunk_offset": offset,
+                }
+            )
         return len(chunks)
 
     def _text_to_chunks(self, text: str) -> List[str]:
@@ -144,9 +160,30 @@ class LettaBenchMemory:
             f"embedding_models={len(self._embedding_models)}",
         )
 
+        self._audit_writer.write_config(
+            {
+                "backend_mode": self.backend_mode,
+                "base_url": self._base_url,
+                "agent_model": self._model_handle,
+                "embedding_model": self._embedding_handle,
+                "save_dir": self.save_dir,
+                "chunk_size": self.chunk_size,
+            }
+        )
+
         for idx, chunk in enumerate(self._buffer):
-            memory_id = self._insert_archival_memory(chunk=chunk, chunk_idx=idx)
+            metadata = self._buffer_meta[idx] if idx < len(self._buffer_meta) else {}
+            memory_id = self._insert_archival_memory(chunk=chunk, chunk_idx=idx, metadata=metadata)
             self._created_passage_ids.append(memory_id)
+            row = {
+                "chunk_id": f"memgpt-{idx:06d}",
+                "chunk_idx": idx,
+                "text": chunk,
+                "source_metadata": metadata,
+                "storage_target": {"agent_id": self._agent_id, "memory_id": memory_id},
+            }
+            self._chunk_audit.append(row)
+            self._audit_writer.add_chunk(row)
             if idx < 3 or idx == len(self._buffer) - 1:
                 _safe_print(
                     "[LettaBenchMemory][DEBUG]",
@@ -155,6 +192,16 @@ class LettaBenchMemory:
                 )
 
         self._ingest_time_ms = int((time.time() - t0) * 1000)
+        self._audit_writer.finalize(
+            summary=self.audit_ingest(),
+            storage_manifest={
+                "backend": "memgpt",
+                "run_id": self._audit_writer.run_id,
+                "save_dir": self.save_dir,
+                "agent_id": self._agent_id,
+                "created_passage_count": len(self._created_passage_ids),
+            },
+        )
 
     @staticmethod
     def _make_agent_name(save_dir: str) -> str:
@@ -261,19 +308,44 @@ class LettaBenchMemory:
             raise RuntimeError(f"[LettaBenchMemory] create_agent 返回缺少 id: {data}")
         return str(agent_id)
 
-    def _insert_archival_memory(self, chunk: str, chunk_idx: int) -> str:
+    def _insert_archival_memory(self, chunk: str, chunk_idx: int, metadata: Dict[str, Any]) -> str:
         if not self._agent_id:
             raise RuntimeError("[LettaBenchMemory] agent not initialized before ingestion")
+        created_at = (
+            parse_time_to_iso(metadata.get("session_time"))
+            or parse_time_to_iso(metadata.get("time"))
+            or parse_time_to_iso(metadata.get("period"))
+            or datetime.now(timezone.utc).isoformat()
+        )
+        prefix = (
+            f"[chunk_idx={chunk_idx}]"
+            f"[source_id={metadata.get('source_id', f'source-{chunk_idx:06d}')}]"
+            f"[case_id={metadata.get('case_id', 'unknown')}]"
+            f"[user_id={metadata.get('user_id', 'unknown')}]"
+            f"[conv_id={metadata.get('conv_id', 'unknown')}]"
+            f"[session_time={metadata.get('session_time') or metadata.get('time') or 'unknown'}]"
+            f"[period={metadata.get('period', 'unknown')}]"
+            f"[category={metadata.get('category', 'unknown')}]"
+        )
         payload = {
-            "text": chunk,
+            "text": prefix + "\n" + chunk,
             "tags": [
                 "bench",
                 "real-letta",
                 f"chunk-{chunk_idx:06d}",
+                f"source-{metadata.get('source_id', f'source-{chunk_idx:06d}')}",
+                f"case-{metadata.get('case_id', 'unknown')}",
+                f"user-{metadata.get('user_id', 'unknown')}",
+                f"conv-{metadata.get('conv_id', 'unknown')}",
             ],
-            "created_at": datetime.now(timezone.utc).isoformat(),
+            "created_at": created_at,
         }
-        data = self._request("POST", f"/v1/agents/{self._agent_id}/archival-memory", json=payload)
+        data = self._request_with_retry(
+            "POST",
+            f"/v1/agents/{self._agent_id}/archival-memory",
+            json=payload,
+            op=f"insert_chunk_{chunk_idx}",
+        )
         if not isinstance(data, list) or not data:
             raise RuntimeError(f"[LettaBenchMemory] archival-memory 写入返回异常: {data}")
         first = data[0]
@@ -344,6 +416,7 @@ class LettaBenchMemory:
             self._http.close()
 
         self._buffer = []
+        self._buffer_meta = []
         self._http = None
         self._agent_id = None
         self._created_passage_ids = []
@@ -354,6 +427,11 @@ class LettaBenchMemory:
         self.backend_mode = "uninitialized"
 
     def audit_ingest(self) -> Dict[str, Any]:
+        source_complete = 0
+        for row in self._chunk_audit:
+            meta = row.get("source_metadata", {})
+            if all(meta.get(k) is not None for k in ["source_id"]):
+                source_complete += 1
         return {
             "backend_mode": self.backend_mode,
             "ingest_path": "POST /v1/agents/ + POST /v1/agents/{agent_id}/archival-memory",
@@ -364,6 +442,10 @@ class LettaBenchMemory:
             "created_passage_count": len(self._created_passage_ids),
             "agent_model": self._model_handle,
             "embedding_model": self._embedding_handle,
+            "source_metadata_complete": source_complete,
+            "ingest_error_count": len(self._ingest_errors),
+            "ingest_audit_run_id": self._audit_writer.run_id,
+            "ingest_audit_dir": str(self._audit_writer.root),
         }
 
     def audit_retrieve(self) -> Dict[str, Any]:
@@ -377,18 +459,51 @@ class LettaBenchMemory:
             **self._usage,
         }
 
+    def _request_with_retry(
+        self,
+        method: str,
+        path: str,
+        *,
+        json: Any | None = None,
+        params: Dict[str, Any] | None = None,
+        op: str = "request",
+        retries: int = 3,
+    ) -> Any:
+        for attempt in range(1, retries + 1):
+            try:
+                return self._request(method, path, json=json, params=params)
+            except RuntimeError as exc:
+                msg = str(exc)
+                retryable = ("HTTP 5" in msg) or ("timeout" in msg.lower()) or ("connection" in msg.lower())
+                if attempt >= retries or not retryable:
+                    self._ingest_errors.append({"op": op, "attempt": attempt, **compact_error(exc)})
+                    raise
+                sleep_s = min(2.0 * attempt, 5.0)
+                _safe_print(f"[LettaBenchMemory][WARN] {op} failed attempt={attempt}/{retries}, retrying in {sleep_s}s: {msg}")
+                time.sleep(sleep_s)
+        raise RuntimeError(f"[LettaBenchMemory] unreachable retry path op={op}")
+
     def _request(self, method: str, path: str, *, json: Any | None = None, params: Dict[str, Any] | None = None) -> Any:
         if self._http is None:
             raise RuntimeError("[LettaBenchMemory] HTTP session not initialized")
         url = urljoin(self._base_url.rstrip("/") + "/", path.lstrip("/"))
         try:
             resp = self._http.request(method=method.upper(), url=url, json=json, params=params, timeout=30)
+        except req_exc.Timeout as e:
+            raise RuntimeError(f"[LettaBenchMemory][timeout] 请求超时 {method} {url}: {e}") from e
+        except req_exc.ProxyError as e:
+            raise RuntimeError(f"[LettaBenchMemory][proxy] 代理错误 {method} {url}: {e}") from e
+        except req_exc.ConnectionError as e:
+            raise RuntimeError(f"[LettaBenchMemory][connection] 连接失败 {method} {url}: {e}") from e
         except requests.RequestException as e:
-            raise RuntimeError(f"[LettaBenchMemory] 请求失败 {method} {url}: {e}") from e
+            raise RuntimeError(f"[LettaBenchMemory][request] 请求失败 {method} {url}: {e}") from e
 
         if resp.status_code >= 400:
             body = _safe_console_text(resp.text, limit=400)
-            raise RuntimeError(f"[LettaBenchMemory] HTTP {resp.status_code} {method} {url} body={body}")
+            category = "4xx_config_or_payload" if 400 <= resp.status_code < 500 else "5xx_server"
+            if "embedding" in body.lower() or "model" in body.lower():
+                category = "model_or_embedding_handle_error"
+            raise RuntimeError(f"[LettaBenchMemory][{category}] HTTP {resp.status_code} {method} {url} body={body}")
 
         if not resp.content:
             return {}

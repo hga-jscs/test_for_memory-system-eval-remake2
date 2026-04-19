@@ -6,9 +6,10 @@ from __future__ import annotations
 import sys
 import threading
 import time as _time
+import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
 from scipy.spatial import distance
 
@@ -24,6 +25,7 @@ for _raptor_repo in _RAPTOR_REPO_CANDIDATES:
         break
 
 from simpleMem_src import create_openai_client_compatible, get_config
+from ingest_audit_utils import IngestAuditWriter
 
 import logging
 logger = logging.getLogger(__name__)
@@ -49,6 +51,7 @@ class RaptorBenchMemory:
         self.save_dir = save_dir
         self._chunk_size = chunk_size
         self._buffer: List[str] = []
+        self._buffer_meta: List[Dict[str, Any]] = []
         self._tb_num_layers = tb_num_layers
         self._tb_max_tokens = tb_max_tokens
         self._tb_summarization_length = tb_summarization_length
@@ -60,13 +63,18 @@ class RaptorBenchMemory:
         self._summ = None
         self._ingest_time_ms = 0
         self.backend_mode = "raptor"
+        self._provenance_map: Dict[str, Any] = {}
+        self._audit_writer = IngestAuditWriter(backend="raptor", save_dir=save_dir)
 
-    def add_memory(self, text: str) -> None:
-        for chunk in self._text_to_chunks(text):
+    def add_memory(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> None:
+        base_meta = dict(metadata or {})
+        source_id = str(base_meta.get("source_id") or f"source-{len(self._buffer_meta):06d}")
+        for i, chunk in enumerate(self._text_to_chunks(text)):
             self._buffer.append(chunk)
+            self._buffer_meta.append({**base_meta, "source_id": source_id, "chunk_offset": i})
 
-    def add_text(self, text: str) -> None:
-        self.add_memory(text)
+    def add_text(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> None:
+        self.add_memory(text, metadata=metadata)
 
     def _text_to_chunks(self, text: str) -> List[str]:
         if len(text) <= self._chunk_size:
@@ -165,12 +173,70 @@ class RaptorBenchMemory:
             return
         RetrievalAugmentation, config = self._make_runtime()
         ra = RetrievalAugmentation(config=config, tree=None)
-        text = "\n\n".join(self._buffer)
+        prefixed_chunks: List[str] = []
+        join_offsets: List[Dict[str, Any]] = []
+        cursor = 0
+        for idx, chunk in enumerate(self._buffer):
+            meta = self._buffer_meta[idx] if idx < len(self._buffer_meta) else {}
+            chunk_id = f"raptor-{idx:06d}"
+            prefix = (
+                f"[chunk_id={chunk_id}]"
+                f"[source_id={meta.get('source_id', 'unknown')}]"
+                f"[case_id={meta.get('case_id', 'unknown')}]"
+                f"[user_id={meta.get('user_id', 'unknown')}]"
+                f"[conv_id={meta.get('conv_id', 'unknown')}]"
+                f"[session={meta.get('session', 'unknown')}]"
+            )
+            body = prefix + "\n" + chunk
+            prefixed_chunks.append(body)
+            join_offsets.append({"chunk_id": chunk_id, "start": cursor, "end": cursor + len(body), "source_metadata": meta})
+            cursor += len(body) + 2
+            self._audit_writer.add_chunk(
+                {
+                    "chunk_id": chunk_id,
+                    "chunk_idx": idx,
+                    "text": chunk,
+                    "source_metadata": meta,
+                    "storage_target": {"runtime": "RAPTOR tree"},
+                }
+            )
+        text = "\n\n".join(prefixed_chunks)
         t0 = _time.time()
         ra.add_documents(text)
         self._ingest_time_ms = int((_time.time() - t0) * 1000)
         self._ra = ra
         self.backend_mode = "raptor"
+        self._provenance_map = {
+            "original_chunk_count": len(self._buffer),
+            "joined_text_length": len(text),
+            "chunk_join_offsets": join_offsets,
+        }
+        self._audit_writer.write_config(
+            {
+                "save_dir": self.save_dir,
+                "tb_num_layers": self._tb_num_layers,
+                "tb_max_tokens": self._tb_max_tokens,
+                "tb_summarization_length": self._tb_summarization_length,
+                "tr_threshold": self._tr_threshold,
+                "tr_top_k": self._tr_top_k,
+            }
+        )
+        tree_summary = {
+            "tree_nodes": len(self._ra.tree.all_nodes) if self._ra and self._ra.tree else 0,
+            "tree_layers": self._ra.tree.num_layers if self._ra and self._ra.tree else 0,
+            "ingest_time_ms": self._ingest_time_ms,
+        }
+        Path(self.save_dir).mkdir(parents=True, exist_ok=True)
+        (Path(self.save_dir) / "tree_summary.json").write_text(json.dumps(tree_summary, ensure_ascii=False, indent=2), encoding="utf-8")
+        self._audit_writer.write_provenance(self._provenance_map)
+        self._audit_writer.finalize(
+            summary=self.audit_ingest(),
+            storage_manifest={
+                "backend": "raptor",
+                "save_dir": self.save_dir,
+                "tree_summary_file": str(Path(self.save_dir) / "tree_summary.json"),
+            },
+        )
         print(f"[RaptorBenchMemory][DEBUG] indexed chunks={len(self._buffer)} tree_nodes={len(self._ra.tree.all_nodes) if self._ra and self._ra.tree else 0}")
 
     def retrieve(self, query: str, top_k: int = 10) -> List[Evidence]:
@@ -242,4 +308,12 @@ class RaptorBenchMemory:
             "ingest_llm_completion_tokens": completion_tokens,
             "tree_nodes": n_nodes,
             "tree_layers": n_layers,
+            "original_chunk_count": len(self._buffer_meta),
+            "source_map_available": bool(self._provenance_map),
+            "persisted_audit_files": [
+                str(self._audit_writer.chunks_path),
+                str(self._audit_writer.provenance_path),
+                str(Path(self.save_dir) / "tree_summary.json"),
+            ],
+            "ingest_audit_run_id": self._audit_writer.run_id,
         }
