@@ -151,6 +151,7 @@ def eval_case(task):
         "ingest_llm_completion": audit["ingest_llm_completion_tokens"],
         "infer_time_ms":         round(infer_time_ms),
         "infer_llm_tokens":      infer_llm_tokens,
+        "backend_mode":          audit.get("backend_mode", "unknown"),
         "qa_results":            qa_results,
     }
 
@@ -159,7 +160,7 @@ def main() -> int:
     SAVE_BASE.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
-    print("StructMemEval 全量评测 (MemGPT/Letta, top_k=5)")
+    print("StructMemEval 全量评测 (MemGPT/Letta REAL archival retrieval, top_k=5)")
     print("=" * 70)
 
     tasks = collect_cases()

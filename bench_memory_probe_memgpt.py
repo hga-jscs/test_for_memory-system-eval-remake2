@@ -114,6 +114,7 @@ def eval_conv(conv, conv_idx):
         "ingest_llm_completion": audit["ingest_llm_completion_tokens"],
         "infer_time_ms":         round(infer_time_ms),
         "infer_llm_tokens":      infer_llm_tokens,
+        "backend_mode":          audit.get("backend_mode", "unknown"),
         "qa_results":            qa_results,
     }
 
@@ -122,7 +123,7 @@ def main():
     SAVE_BASE.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
-    print("memory-probe 全量评测 (MemGPT/Letta, top_k=5)")
+    print("memory-probe 全量评测 (MemGPT/Letta REAL archival retrieval, top_k=5)")
     print("=" * 70)
 
     data  = load_json_with_fallback(DATA_PATH)
