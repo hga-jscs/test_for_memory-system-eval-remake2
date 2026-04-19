@@ -1,23 +1,28 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Letta benchmark backend wrapper.
+"""Letta benchmark backend wrapper (REAL Letta archival memory only).
 
-注意：本实现不再使用 TF-IDF fallback。
-如果当前环境尚未完成 Letta 服务端配置，会在 build_index 阶段抛出带修复建议的错误。
+本实现强制走真实 Letta archival memory 写入/检索：
+- 禁止本地 overlap fallback
+- Letta 连接或 API 失败时直接抛错
 """
 
 from __future__ import annotations
 
+import hashlib
 import os
 import sys
 import time
+import uuid
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from urllib.parse import urljoin
 
+import requests
+
 sys.path.insert(0, str(Path(__file__).parent))
 from simpleMem_src import Evidence
-import requests
 
 _REPO_ROOT = Path(__file__).resolve().parent
 _LETTA_CANDIDATES = [
@@ -31,15 +36,34 @@ for _repo in _LETTA_CANDIDATES:
 
 
 class LettaBenchMemory:
-    """Letta memory wrapper (strict mode, no fallback)."""
+    """Letta memory wrapper (strict REAL backend mode)."""
 
     def __init__(self, save_dir: str = "/tmp/letta_bench", chunk_size: int = 1000):
         self.save_dir = save_dir
         self.chunk_size = chunk_size
         self._buffer: List[str] = []
-        self._backend = None
+
+        self._base_url = ""
+        self._http: Optional[requests.Session] = None
+        self._agent_id: Optional[str] = None
+        self._created_passage_ids: List[str] = []
+
         self.backend_mode = "uninitialized"
         self._ingest_time_ms = 0
+        self._retrieve_calls = 0
+        self._retrieve_time_ms_total = 0
+        self._retrieve_last_count = 0
+
+        # Letta archival writes/searches通常不经过 LLM；token usage 并未由这些 endpoint 返回。
+        self._usage = {
+            "ingest_llm_calls": 0,
+            "ingest_llm_prompt_tokens": 0,
+            "ingest_llm_completion_tokens": 0,
+            "retrieve_llm_calls": 0,
+            "retrieve_llm_prompt_tokens": 0,
+            "retrieve_llm_completion_tokens": 0,
+            "token_usage_note": "Letta archival-memory REST endpoints do not expose token usage in responses.",
+        }
 
     def add_memory(self, text: str, metadata: Optional[Dict] = None) -> None:
         self.add_text(text)
@@ -78,110 +102,190 @@ class LettaBenchMemory:
                 "请启动 Letta server 并设置 LETTA_BASE_URL，详见 docs/backend_runtime_guide.md。"
             )
 
-        try:
-            client = self._create_client(base_url=base_url)
-            health = _check_letta_health(base_url=base_url)
-            self._backend = _LettaInMemoryAdapter(client=client, docs=list(self._buffer), health=health)
-            self.backend_mode = "letta"
-            self._ingest_time_ms = int((time.time() - t0) * 1000)
-            print(
-                f"[LettaBenchMemory][DEBUG] indexed chunks={len(self._buffer)} "
-                f"mode={self.backend_mode} base_url={base_url}"
-            )
-        except Exception as e:
-            raise RuntimeError(f"[LettaBenchMemory] Letta 初始化失败: {e}") from e
+        self._base_url = base_url.rstrip("/")
+        self._http = requests.Session()
 
-    @staticmethod
-    def _create_client(base_url: str) -> Any:
-        sdk_errors: List[str] = []
-        try:
-            from letta_client import Letta
+        health = _check_letta_health(base_url=self._base_url, http=self._http)
+        agent_name = self._make_agent_name(self.save_dir)
+        self._agent_id = self._create_agent(agent_name)
+        self.backend_mode = "real_letta_archival_memory_v1"
 
-            print("[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)", flush=True)
-            return Letta(base_url=base_url)
-        except Exception as err:
-            sdk_errors.append(f"letta-client: {err}")
-
-        try:
-            from letta import create_client
-
-            print("[LettaBenchMemory][DEBUG] SDK=letta (legacy fallback)", flush=True)
-            return create_client(base_url=base_url)
-        except Exception as err:
-            sdk_errors.append(f"letta(create_client): {err}")
-
-        raise RuntimeError(
-            "[LettaBenchMemory] 未检测到可用 Letta Python SDK。"
-            "请优先安装: pip install letta-client。"
-            f" detail={'; '.join(sdk_errors)}"
+        print(
+            f"[LettaBenchMemory][DEBUG] health_status={health.get('status')} server_version={health.get('version', 'unknown')} "
+            f"backend_mode={self.backend_mode} base_url={self._base_url} agent_id={self._agent_id}",
+            flush=True,
         )
 
+        for idx, chunk in enumerate(self._buffer):
+            memory_id = self._insert_archival_memory(chunk=chunk, chunk_idx=idx)
+            self._created_passage_ids.append(memory_id)
+            if idx < 3 or idx == len(self._buffer) - 1:
+                print(
+                    f"[LettaBenchMemory][DEBUG] ingest chunk={idx + 1}/{len(self._buffer)} memory_id={memory_id}",
+                    flush=True,
+                )
+
+        self._ingest_time_ms = int((time.time() - t0) * 1000)
+
+    @staticmethod
+    def _make_agent_name(save_dir: str) -> str:
+        digest = hashlib.sha1(save_dir.encode("utf-8")).hexdigest()[:10]
+        return f"bench-{digest}-{uuid.uuid4().hex[:8]}"
+
+    def _create_agent(self, name: str) -> str:
+        payload = {
+            "name": name,
+            "include_base_tools": True,
+            "include_multi_agent_tools": False,
+            "agent_type": "memgpt_v2_agent",
+            "metadata": {
+                "benchmark": "memgpt_bench",
+                "save_dir": self.save_dir,
+                "created_by": "LettaBenchMemory",
+            },
+            "tags": ["benchmark", "memgpt", "real-letta"],
+        }
+        data = self._request("POST", "/v1/agents/", json=payload)
+        agent_id = data.get("id")
+        if not agent_id:
+            raise RuntimeError(f"[LettaBenchMemory] create_agent 返回缺少 id: {data}")
+        return str(agent_id)
+
+    def _insert_archival_memory(self, chunk: str, chunk_idx: int) -> str:
+        if not self._agent_id:
+            raise RuntimeError("[LettaBenchMemory] agent not initialized before ingestion")
+        payload = {
+            "text": chunk,
+            "tags": [
+                "bench",
+                "real-letta",
+                f"chunk-{chunk_idx:06d}",
+            ],
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+        data = self._request("POST", f"/v1/agents/{self._agent_id}/archival-memory", json=payload)
+        if not isinstance(data, list) or not data:
+            raise RuntimeError(f"[LettaBenchMemory] archival-memory 写入返回异常: {data}")
+        first = data[0]
+        memory_id = first.get("id")
+        if not memory_id:
+            raise RuntimeError(f"[LettaBenchMemory] 写入结果缺少 memory_id: {first}")
+        return str(memory_id)
+
     def retrieve(self, query: str, top_k: int = 5) -> List[Evidence]:
-        if self._backend is None:
+        if not self._agent_id:
             raise RuntimeError("[LettaBenchMemory] backend is not ready, call build_index() first.")
-        out = self._backend.retrieve(query=query, top_k=top_k)
-        print(f"[LettaBenchMemory][DEBUG] query={query[:48]!r} top_k={top_k} hit={len(out)}")
-        return out
+
+        t0 = time.time()
+        data = self._request(
+            "GET",
+            f"/v1/agents/{self._agent_id}/archival-memory/search",
+            params={"query": query, "top_k": max(1, int(top_k))},
+        )
+        results = data.get("results", []) if isinstance(data, dict) else []
+        if not isinstance(results, list):
+            raise RuntimeError(f"[LettaBenchMemory] search 返回结构异常: {data}")
+
+        evidences: List[Evidence] = []
+        for rank, item in enumerate(results[:top_k], start=1):
+            content = str(item.get("content", ""))
+            if not content.strip():
+                continue
+            evidences.append(
+                Evidence(
+                    content=content,
+                    metadata={
+                        "source": "LettaArchivalMemory",
+                        "backend_mode": self.backend_mode,
+                        "agent_id": self._agent_id,
+                        "memory_id": item.get("id"),
+                        "timestamp": item.get("timestamp"),
+                        "rank": rank,
+                        "score": None,
+                    },
+                )
+            )
+
+        self._retrieve_calls += 1
+        elapsed_ms = int((time.time() - t0) * 1000)
+        self._retrieve_time_ms_total += elapsed_ms
+        self._retrieve_last_count = len(evidences)
+
+        print(
+            f"[LettaBenchMemory][DEBUG] retrieve real-letta route=/v1/agents/{{agent_id}}/archival-memory/search "
+            f"query={query[:64]!r} top_k={top_k} returned={len(evidences)} elapsed_ms={elapsed_ms} agent_id={self._agent_id}",
+            flush=True,
+        )
+        return evidences
 
     def reset(self) -> None:
+        if self._agent_id:
+            try:
+                self._request("DELETE", f"/v1/agents/{self._agent_id}")
+                print(f"[LettaBenchMemory][DEBUG] deleted agent_id={self._agent_id}", flush=True)
+            except Exception as e:
+                raise RuntimeError(f"[LettaBenchMemory] reset 删除 agent 失败 id={self._agent_id}: {e}") from e
+
+        if self._http is not None:
+            self._http.close()
+
         self._buffer = []
-        self._backend = None
+        self._http = None
+        self._agent_id = None
+        self._created_passage_ids = []
         self._ingest_time_ms = 0
+        self._retrieve_calls = 0
+        self._retrieve_time_ms_total = 0
+        self._retrieve_last_count = 0
         self.backend_mode = "uninitialized"
 
     def audit_ingest(self) -> Dict[str, Any]:
         return {
             "backend_mode": self.backend_mode,
+            "ingest_path": "POST /v1/agents/ + POST /v1/agents/{agent_id}/archival-memory",
             "ingest_chunks": len(self._buffer),
             "ingest_time_ms": self._ingest_time_ms,
-            "ingest_llm_calls": 0,
-            "ingest_llm_prompt_tokens": 0,
-            "ingest_llm_completion_tokens": 0,
+            **self._usage,
+            "agent_id": self._agent_id,
+            "created_passage_count": len(self._created_passage_ids),
         }
 
+    def audit_retrieve(self) -> Dict[str, Any]:
+        return {
+            "backend_mode": self.backend_mode,
+            "retrieve_path": "GET /v1/agents/{agent_id}/archival-memory/search",
+            "retrieve_calls": self._retrieve_calls,
+            "retrieve_time_ms_total": self._retrieve_time_ms_total,
+            "retrieve_last_count": self._retrieve_last_count,
+            "agent_id": self._agent_id,
+            **self._usage,
+        }
 
-class _LettaInMemoryAdapter:
-    """占位适配器：用于以 Letta server 可连接性作为硬门槛。
+    def _request(self, method: str, path: str, *, json: Any | None = None, params: Dict[str, Any] | None = None) -> Any:
+        if self._http is None:
+            raise RuntimeError("[LettaBenchMemory] HTTP session not initialized")
+        url = urljoin(self._base_url.rstrip("/") + "/", path.lstrip("/"))
+        try:
+            resp = self._http.request(method=method.upper(), url=url, json=json, params=params, timeout=30)
+        except requests.RequestException as e:
+            raise RuntimeError(f"[LettaBenchMemory] 请求失败 {method} {url}: {e}") from e
 
-    当前仓库场景下我们只需要 benchmark 的 add/retrieve 契约。
-    若后续接入 Letta archival memory API，可在该类内替换为真实写入/检索。
-    """
+        if resp.status_code >= 400:
+            body = resp.text[:400]
+            raise RuntimeError(f"[LettaBenchMemory] HTTP {resp.status_code} {method} {url} body={body}")
 
-    def __init__(self, client: Any, docs: List[str], health: Dict[str, Any]):
-        self._client = client
-        self._docs = docs
-        self._health = health
-        print(
-            f"[LettaBenchMemory][DEBUG] health_status={health.get('status')} "
-            f"server_version={health.get('version', 'unknown')}",
-            flush=True,
-        )
-
-    def retrieve(self, query: str, top_k: int) -> List[Evidence]:
-        # 当前 benchmark 以 Letta 运行时可达作为硬门槛。
-        # 在未绑定 archival memory API 前，使用确定性的本地词重叠检索，保证流程可判定、可失败、可复现。
-        scores: List[tuple[int, str, float]] = []
-        q_terms = set(query.lower().split())
-        for idx, doc in enumerate(self._docs):
-            d_terms = set(doc.lower().split())
-            overlap = len(q_terms & d_terms)
-            if overlap > 0:
-                score = overlap / max(len(q_terms), 1)
-                scores.append((idx, doc, float(score)))
-        scores.sort(key=lambda x: x[2], reverse=True)
-        out = [
-            Evidence(content=doc, metadata={"source": "LettaValidatedLocal", "rank": rank + 1, "score": score})
-            for rank, (_, doc, score) in enumerate(scores[:top_k])
-        ]
-        if not out and self._docs:
-            out.append(Evidence(content=self._docs[0], metadata={"source": "LettaValidatedLocal", "rank": 1, "score": 0.0}))
-        return out
+        if not resp.content:
+            return {}
+        try:
+            return resp.json()
+        except ValueError as e:
+            raise RuntimeError(f"[LettaBenchMemory] 非 JSON 响应 {method} {url}: {resp.text[:300]}") from e
 
 
-def _check_letta_health(base_url: str) -> Dict[str, Any]:
+def _check_letta_health(base_url: str, http: requests.Session) -> Dict[str, Any]:
     health_url = urljoin(base_url.rstrip("/") + "/", "v1/health/")
     try:
-        response = requests.get(health_url, timeout=8)
+        response = http.get(health_url, timeout=8)
     except requests.exceptions.ProxyError as err:
         raise RuntimeError(
             "[LettaBenchMemory] Letta 服务请求被代理拦截（ProxyError）。"
