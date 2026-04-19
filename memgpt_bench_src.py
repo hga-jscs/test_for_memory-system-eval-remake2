@@ -61,6 +61,8 @@ class LettaBenchMemory:
         self._created_passage_ids: List[str] = []
         self._model_handle: Optional[str] = None
         self._embedding_handle: Optional[str] = None
+        self._llm_models: List[Dict[str, Any]] = []
+        self._embedding_models: List[Dict[str, Any]] = []
 
         self.backend_mode = "uninitialized"
         self._ingest_time_ms = 0
@@ -120,8 +122,11 @@ class LettaBenchMemory:
         self._http = requests.Session()
 
         health = _check_letta_health(base_url=self._base_url, http=self._http)
+        self._llm_models = self._list_llm_models()
+        self._embedding_models = self._list_embedding_models()
         self._model_handle = self._resolve_model_handle()
         self._embedding_handle = self._resolve_embedding_handle()
+        self._validate_model_embedding_pair()
         agent_name = self._make_agent_name(self.save_dir)
         self._agent_id = self._create_agent(agent_name)
         self.backend_mode = "real_letta_archival_memory_v2"
@@ -135,6 +140,8 @@ class LettaBenchMemory:
             f"agent_id={self._agent_id}",
             f"model={self._model_handle}",
             f"embedding={self._embedding_handle}",
+            f"llm_models={len(self._llm_models)}",
+            f"embedding_models={len(self._embedding_models)}",
         )
 
         for idx, chunk in enumerate(self._buffer):
@@ -158,8 +165,8 @@ class LettaBenchMemory:
         configured = os.getenv("LETTA_AGENT_MODEL") or os.getenv("LETTA_MODEL")
         if configured:
             return configured
-        models = self._request("GET", "/v1/models/")
-        if not isinstance(models, list) or not models:
+        models = self._llm_models
+        if not models:
             raise RuntimeError(
                 "[LettaBenchMemory] /v1/models/ 返回空，无法自动选择 agent model。"
                 "请设置 LETTA_AGENT_MODEL (或 LETTA_MODEL)。"
@@ -174,12 +181,63 @@ class LettaBenchMemory:
         configured = os.getenv("LETTA_EMBEDDING_MODEL") or os.getenv("LETTA_EMBEDDING")
         if configured:
             return configured
-        models = self._request("GET", "/v1/models/embedding")
-        if not isinstance(models, list) or not models:
+        models = self._embedding_models
+        if not models:
             return None
         first = models[0]
         handle = first.get("handle") or first.get("name")
         return str(handle) if handle else None
+
+    def _list_llm_models(self) -> List[Dict[str, Any]]:
+        data = self._request("GET", "/v1/models/")
+        if not isinstance(data, list):
+            raise RuntimeError(f"[LettaBenchMemory] /v1/models/ 返回结构异常: {type(data)}")
+        return [m for m in data if isinstance(m, dict)]
+
+    def _list_embedding_models(self) -> List[Dict[str, Any]]:
+        data = self._request("GET", "/v1/models/embedding")
+        if not isinstance(data, list):
+            raise RuntimeError(f"[LettaBenchMemory] /v1/models/embedding 返回结构异常: {type(data)}")
+        return [m for m in data if isinstance(m, dict)]
+
+    @staticmethod
+    def _model_map_by_handle(models: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+        mapped: Dict[str, Dict[str, Any]] = {}
+        for m in models:
+            handle = m.get("handle") or m.get("name")
+            if handle:
+                mapped[str(handle)] = m
+        return mapped
+
+    def _validate_model_embedding_pair(self) -> None:
+        if not self._model_handle:
+            raise RuntimeError("[LettaBenchMemory] model handle 为空，无法创建 agent")
+
+        llm_map = self._model_map_by_handle(self._llm_models)
+        emb_map = self._model_map_by_handle(self._embedding_models)
+
+        if self._model_handle not in llm_map:
+            available = ", ".join(list(llm_map.keys())[:6]) or "<empty>"
+            raise RuntimeError(
+                "[LettaBenchMemory] 指定的 LETTA_AGENT_MODEL/LETTA_MODEL 不在 /v1/models/ 列表中。"
+                f" model={self._model_handle} available={available}"
+            )
+
+        if self._embedding_handle:
+            if self._embedding_handle not in emb_map:
+                available = ", ".join(list(emb_map.keys())[:6]) or "<empty>"
+                raise RuntimeError(
+                    "[LettaBenchMemory] 指定的 LETTA_EMBEDDING_MODEL/LETTA_EMBEDDING 不在 /v1/models/embedding 列表中。"
+                    f" embedding={self._embedding_handle} available={available}"
+                )
+            if self._embedding_handle == self._model_handle:
+                raise RuntimeError(
+                    "[LettaBenchMemory] model 与 embedding handle 相同。"
+                    "这通常意味着把同一个句柄误同时用于 LLM 与 embedding，"
+                    "会在 archival-memory 写入时触发服务端 embedding 错误。"
+                    f" model=embedding={self._model_handle}。"
+                    "请设置不同的 LETTA_AGENT_MODEL 与 LETTA_EMBEDDING_MODEL。"
+                )
 
     def _create_agent(self, name: str) -> str:
         payload: Dict[str, Any] = {
