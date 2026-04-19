@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """StructMemEval 全量评测 - MemGPT/Letta 版
 覆盖: state_machine_location (42) / tree_based (100) / recommendations (30)
-MemGPT/Letta: tree=3L, top_k=5
+MemGPT/Letta: top_k=5
 """
 
 import json
@@ -159,7 +159,7 @@ def main() -> int:
     SAVE_BASE.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
-    print("StructMemEval 全量评测 (MemGPT/Letta, tree=3L, top_k=5)")
+    print("StructMemEval 全量评测 (MemGPT/Letta, top_k=5)")
     print("=" * 70)
 
     tasks = collect_cases()
@@ -220,10 +220,7 @@ def main() -> int:
         print(f"    Ingest | time: {a['ingest_ms']:.0f}ms | chunks: {a['chunks']} | llm_calls: {a['llm_calls']}")
         print(f"    Infer  | time: {a['infer_ms']:.0f}ms")
         for k in a:
-            if k != "tree_layers":
-                g[k] += a[k]
-            else:
-                g[k] = max(g[k], a[k])
+            g[k] += a[k]
 
     overall = g["correct"] / g["total"] * 100 if g["total"] else 0
     print("\n" + "\u2500" * 70)

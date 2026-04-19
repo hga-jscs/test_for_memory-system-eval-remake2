@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """memory-probe 全量评测 - MemGPT/Letta 版
 LoCoMo-10: 10 段对话，每段 ~199 QA（总计 ~1461 QA），category 1-5
-MemGPT/Letta: tree=3L, top_k=5
+MemGPT/Letta: top_k=5
 """
 
 import json
@@ -122,7 +122,7 @@ def main():
     SAVE_BASE.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
-    print("memory-probe 全量评测 (MemGPT/Letta, tree=3L, top_k=5)")
+    print("memory-probe 全量评测 (MemGPT/Letta, top_k=5)")
     print("=" * 70)
 
     data  = load_json_with_fallback(DATA_PATH)

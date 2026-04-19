@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """AMemGym 全量评测 - MemGPT/Letta 版
 20 个用户各自独立：ingest 全部 11 periods → 回答全部 10 QA（5选1）
-MemGPT/Letta: tree=3L, top_k=5
+MemGPT/Letta: top_k=5
 """
 
 import json
@@ -134,7 +134,7 @@ def main():
     SAVE_BASE.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
-    print("AMemGym 全量评测 (MemGPT/Letta, tree=3L, top_k=5)")
+    print("AMemGym 全量评测 (MemGPT/Letta, top_k=5)")
     print("=" * 70)
 
     data = load_json_with_fallback(DATA_PATH)
@@ -159,7 +159,7 @@ def main():
                     f"chunks={r['ingest_chunks']}  "
                     f"ingest={r['ingest_time_ms']}ms  infer={r['infer_time_ms']}ms  "
                     f"llm_calls={r['ingest_llm_calls']}  "
-                    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+                    f"llm_tokens(p/c)={r['ingest_llm_prompt']}/{r['ingest_llm_completion']}"
                 )
             except Exception as e:
                 errors.append({"user_id": uid, "error": str(e)})
