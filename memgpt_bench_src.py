@@ -35,6 +35,18 @@ for _repo in _LETTA_CANDIDATES:
         break
 
 
+def _safe_console_text(value: Any, limit: int = 240) -> str:
+    text = str(value)
+    if len(text) > limit:
+        text = text[:limit] + "..."
+    return text.encode("ascii", "backslashreplace").decode("ascii")
+
+
+def _safe_print(*parts: Any) -> None:
+    safe_line = " ".join(_safe_console_text(p) for p in parts)
+    print(safe_line, flush=True)
+
+
 class LettaBenchMemory:
     """Letta memory wrapper (strict REAL backend mode)."""
 
@@ -47,6 +59,8 @@ class LettaBenchMemory:
         self._http: Optional[requests.Session] = None
         self._agent_id: Optional[str] = None
         self._created_passage_ids: List[str] = []
+        self._model_handle: Optional[str] = None
+        self._embedding_handle: Optional[str] = None
 
         self.backend_mode = "uninitialized"
         self._ingest_time_ms = 0
@@ -106,23 +120,31 @@ class LettaBenchMemory:
         self._http = requests.Session()
 
         health = _check_letta_health(base_url=self._base_url, http=self._http)
+        self._model_handle = self._resolve_model_handle()
+        self._embedding_handle = self._resolve_embedding_handle()
         agent_name = self._make_agent_name(self.save_dir)
         self._agent_id = self._create_agent(agent_name)
-        self.backend_mode = "real_letta_archival_memory_v1"
+        self.backend_mode = "real_letta_archival_memory_v2"
 
-        print(
-            f"[LettaBenchMemory][DEBUG] health_status={health.get('status')} server_version={health.get('version', 'unknown')} "
-            f"backend_mode={self.backend_mode} base_url={self._base_url} agent_id={self._agent_id}",
-            flush=True,
+        _safe_print(
+            "[LettaBenchMemory][DEBUG]",
+            f"health_status={health.get('status')}",
+            f"server_version={health.get('version', 'unknown')}",
+            f"backend_mode={self.backend_mode}",
+            f"base_url={self._base_url}",
+            f"agent_id={self._agent_id}",
+            f"model={self._model_handle}",
+            f"embedding={self._embedding_handle}",
         )
 
         for idx, chunk in enumerate(self._buffer):
             memory_id = self._insert_archival_memory(chunk=chunk, chunk_idx=idx)
             self._created_passage_ids.append(memory_id)
             if idx < 3 or idx == len(self._buffer) - 1:
-                print(
-                    f"[LettaBenchMemory][DEBUG] ingest chunk={idx + 1}/{len(self._buffer)} memory_id={memory_id}",
-                    flush=True,
+                _safe_print(
+                    "[LettaBenchMemory][DEBUG]",
+                    f"ingest chunk={idx + 1}/{len(self._buffer)}",
+                    f"memory_id={memory_id}",
                 )
 
         self._ingest_time_ms = int((time.time() - t0) * 1000)
@@ -132,9 +154,37 @@ class LettaBenchMemory:
         digest = hashlib.sha1(save_dir.encode("utf-8")).hexdigest()[:10]
         return f"bench-{digest}-{uuid.uuid4().hex[:8]}"
 
+    def _resolve_model_handle(self) -> str:
+        configured = os.getenv("LETTA_AGENT_MODEL") or os.getenv("LETTA_MODEL")
+        if configured:
+            return configured
+        models = self._request("GET", "/v1/models/")
+        if not isinstance(models, list) or not models:
+            raise RuntimeError(
+                "[LettaBenchMemory] /v1/models/ 返回空，无法自动选择 agent model。"
+                "请设置 LETTA_AGENT_MODEL (或 LETTA_MODEL)。"
+            )
+        first = models[0]
+        handle = first.get("handle") or first.get("name")
+        if not handle:
+            raise RuntimeError(f"[LettaBenchMemory] /v1/models/ 返回缺少 handle/name: {first}")
+        return str(handle)
+
+    def _resolve_embedding_handle(self) -> Optional[str]:
+        configured = os.getenv("LETTA_EMBEDDING_MODEL") or os.getenv("LETTA_EMBEDDING")
+        if configured:
+            return configured
+        models = self._request("GET", "/v1/models/embedding")
+        if not isinstance(models, list) or not models:
+            return None
+        first = models[0]
+        handle = first.get("handle") or first.get("name")
+        return str(handle) if handle else None
+
     def _create_agent(self, name: str) -> str:
-        payload = {
+        payload: Dict[str, Any] = {
             "name": name,
+            "model": self._model_handle,
             "include_base_tools": True,
             "include_multi_agent_tools": False,
             "agent_type": "memgpt_v2_agent",
@@ -145,6 +195,8 @@ class LettaBenchMemory:
             },
             "tags": ["benchmark", "memgpt", "real-letta"],
         }
+        if self._embedding_handle:
+            payload["embedding"] = self._embedding_handle
         data = self._request("POST", "/v1/agents/", json=payload)
         agent_id = data.get("id")
         if not agent_id:
@@ -211,10 +263,14 @@ class LettaBenchMemory:
         self._retrieve_time_ms_total += elapsed_ms
         self._retrieve_last_count = len(evidences)
 
-        print(
-            f"[LettaBenchMemory][DEBUG] retrieve real-letta route=/v1/agents/{{agent_id}}/archival-memory/search "
-            f"query={query[:64]!r} top_k={top_k} returned={len(evidences)} elapsed_ms={elapsed_ms} agent_id={self._agent_id}",
-            flush=True,
+        _safe_print(
+            "[LettaBenchMemory][DEBUG]",
+            "retrieve real-letta route=/v1/agents/{agent_id}/archival-memory/search",
+            f"query={query}",
+            f"top_k={top_k}",
+            f"returned={len(evidences)}",
+            f"elapsed_ms={elapsed_ms}",
+            f"agent_id={self._agent_id}",
         )
         return evidences
 
@@ -222,7 +278,7 @@ class LettaBenchMemory:
         if self._agent_id:
             try:
                 self._request("DELETE", f"/v1/agents/{self._agent_id}")
-                print(f"[LettaBenchMemory][DEBUG] deleted agent_id={self._agent_id}", flush=True)
+                _safe_print("[LettaBenchMemory][DEBUG]", f"deleted agent_id={self._agent_id}")
             except Exception as e:
                 raise RuntimeError(f"[LettaBenchMemory] reset 删除 agent 失败 id={self._agent_id}: {e}") from e
 
@@ -248,6 +304,8 @@ class LettaBenchMemory:
             **self._usage,
             "agent_id": self._agent_id,
             "created_passage_count": len(self._created_passage_ids),
+            "agent_model": self._model_handle,
+            "embedding_model": self._embedding_handle,
         }
 
     def audit_retrieve(self) -> Dict[str, Any]:
@@ -271,7 +329,7 @@ class LettaBenchMemory:
             raise RuntimeError(f"[LettaBenchMemory] 请求失败 {method} {url}: {e}") from e
 
         if resp.status_code >= 400:
-            body = resp.text[:400]
+            body = _safe_console_text(resp.text, limit=400)
             raise RuntimeError(f"[LettaBenchMemory] HTTP {resp.status_code} {method} {url} body={body}")
 
         if not resp.content:
@@ -279,7 +337,7 @@ class LettaBenchMemory:
         try:
             return resp.json()
         except ValueError as e:
-            raise RuntimeError(f"[LettaBenchMemory] 非 JSON 响应 {method} {url}: {resp.text[:300]}") from e
+            raise RuntimeError(f"[LettaBenchMemory] 非 JSON 响应 {method} {url}: {_safe_console_text(resp.text, limit=300)}") from e
 
 
 def _check_letta_health(base_url: str, http: requests.Session) -> Dict[str, Any]:
@@ -293,7 +351,7 @@ def _check_letta_health(base_url: str, http: requests.Session) -> Dict[str, Any]
         ) from err
     except requests.exceptions.ConnectionError as err:
         raise RuntimeError(
-            f"[LettaBenchMemory] Letta 服务不可达: {health_url}。"
+            f"[LettaBenchMemory] Letta 服务不可达: {health_url}."
             "请确认 LETTA_BASE_URL 正确且服务已启动。"
         ) from err
     except requests.RequestException as err:
@@ -301,7 +359,7 @@ def _check_letta_health(base_url: str, http: requests.Session) -> Dict[str, Any]
 
     if response.status_code >= 500:
         raise RuntimeError(
-            f"[LettaBenchMemory] Letta 服务返回 5xx: status={response.status_code} url={health_url}。"
+            f"[LettaBenchMemory] Letta 服务返回 5xx: status={response.status_code} url={health_url}."
             "若是 502/503，请先检查 NO_PROXY 与本地代理设置。"
         )
     if response.status_code >= 400:

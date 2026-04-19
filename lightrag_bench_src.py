@@ -28,6 +28,18 @@ for _repo in _LIGHTRAG_CANDIDATES:
         break
 
 
+def _safe_console_text(value: Any, limit: int = 240) -> str:
+    text = str(value)
+    if len(text) > limit:
+        text = text[:limit] + "..."
+    return text.encode("ascii", "backslashreplace").decode("ascii")
+
+
+def _safe_print(*parts: Any) -> None:
+    line = " ".join(_safe_console_text(p) for p in parts)
+    print(line, flush=True)
+
+
 class LightRAGBenchMemory:
     def __init__(self, save_dir: str = "/tmp/lightrag_bench", chunk_size: int = 1000):
         self.save_dir = save_dir
@@ -38,6 +50,9 @@ class LightRAGBenchMemory:
         self.backend_mode = "uninitialized"
         self._ingest_time_ms = 0
         self._embedding_meta: Dict[str, Any] = {}
+        self._retrieve_calls = 0
+        self._retrieve_time_ms_total = 0
+        self._retrieve_last_count = 0
 
     @staticmethod
     def _check_runtime_deps() -> None:
@@ -163,10 +178,12 @@ class LightRAGBenchMemory:
                 "[LightRAGBenchMemory] embedding 维度不匹配。"
                 f" expected_dim={expected_dim} actual_dim={actual_dim} model={model_name} config_source={source}"
             )
-        print(
-            "[LightRAGBenchMemory][DEBUG] "
-            f"embedding_probe_ok expected_dim={expected_dim} actual_dim={actual_dim} "
-            f"model={model_name} source={source}"
+        _safe_print(
+            "[LightRAGBenchMemory][DEBUG]",
+            f"embedding_probe_ok expected_dim={expected_dim}",
+            f"actual_dim={actual_dim}",
+            f"model={model_name}",
+            f"source={source}",
         )
 
     def build_index(self) -> None:
@@ -175,10 +192,11 @@ class LightRAGBenchMemory:
 
         self._check_runtime_deps()
         LightRAG, llm_func, embedding_func = self._build_runtime()
-        print(
-            "[LightRAGBenchMemory][DEBUG] "
-            f"embedding_config model={self._embedding_meta.get('model')} "
-            f"dim={self._embedding_meta.get('dim')} source={self._embedding_meta.get('source')}"
+        _safe_print(
+            "[LightRAGBenchMemory][DEBUG]",
+            f"embedding_config model={self._embedding_meta.get('model')}",
+            f"dim={self._embedding_meta.get('dim')}",
+            f"source={self._embedding_meta.get('source')}",
         )
 
         os.makedirs(self.save_dir, exist_ok=True)
@@ -219,24 +237,118 @@ class LightRAGBenchMemory:
             ) from e
 
         self._backend = rag
-        self.backend_mode = "lightrag"
+        self.backend_mode = "real_lightrag_data_api_v1"
         self._ingest_time_ms = int((time.time() - t0) * 1000)
-        print(f"[LightRAGBenchMemory][DEBUG] indexed chunks={len(self._buffer)} time_ms={self._ingest_time_ms}")
+        _safe_print("[LightRAGBenchMemory][DEBUG]", f"indexed chunks={len(self._buffer)}", f"time_ms={self._ingest_time_ms}")
 
     def retrieve(self, query: str, top_k: int = 5) -> List[Evidence]:
         if self._backend is None:
             raise RuntimeError("[LightRAGBenchMemory] backend is not ready, call build_index() first.")
+        assert self._loop is not None
+        t0 = time.time()
         try:
             from lightrag import QueryParam
-            resp = self._run_coro(self._backend.aquery(query, param=QueryParam(mode="hybrid", top_k=top_k)))
+
+            data = self._run_coro(
+                self._backend.aquery_data(
+                    query,
+                    param=QueryParam(mode="hybrid", top_k=top_k, chunk_top_k=top_k, only_need_context=True),
+                )
+            )
         except Exception as e:
             raise RuntimeError(
                 "[LightRAGBenchMemory] retrieve 失败，请根据 docs/backend_runtime_guide.md 排查。"
             ) from e
 
-        text = resp if isinstance(resp, str) else str(resp)
-        print(f"[LightRAGBenchMemory][DEBUG] query={query[:48]!r} top_k={top_k} resp_chars={len(text)}")
-        return [Evidence(content=text, metadata={"source": "LightRAG", "rank": 1, "score": 1.0})]
+        if not isinstance(data, dict):
+            raise RuntimeError(f"[LightRAGBenchMemory] retrieve 返回结构异常: {type(data)}")
+
+        status = str(data.get("status", ""))
+        if status and status.lower() != "success":
+            raise RuntimeError(f"[LightRAGBenchMemory] retrieve 数据接口失败: {data.get('message', '<unknown>')}")
+
+        payload = data.get("data", {}) if isinstance(data.get("data", {}), dict) else {}
+        chunks = payload.get("chunks", []) if isinstance(payload.get("chunks", []), list) else []
+        entities = payload.get("entities", []) if isinstance(payload.get("entities", []), list) else []
+        relationships = payload.get("relationships", []) if isinstance(payload.get("relationships", []), list) else []
+
+        evidences: List[Evidence] = []
+
+        for chunk in chunks[:top_k]:
+            content = str(chunk.get("content", "")).strip()
+            if not content:
+                continue
+            evidences.append(
+                Evidence(
+                    content=content,
+                    metadata={
+                        "source": "LightRAGChunk",
+                        "backend_mode": self.backend_mode,
+                        "chunk_id": chunk.get("chunk_id"),
+                        "file_path": chunk.get("file_path"),
+                        "reference_id": chunk.get("reference_id"),
+                        "score": None,
+                    },
+                )
+            )
+
+        for ent in entities:
+            if len(evidences) >= top_k:
+                break
+            ent_name = str(ent.get("entity_name", "")).strip()
+            ent_desc = str(ent.get("description", "")).strip()
+            if not ent_name and not ent_desc:
+                continue
+            evidences.append(
+                Evidence(
+                    content=f"ENTITY {ent_name}: {ent_desc}".strip(),
+                    metadata={
+                        "source": "LightRAGEntity",
+                        "backend_mode": self.backend_mode,
+                        "entity_type": ent.get("entity_type"),
+                        "reference_id": ent.get("reference_id"),
+                        "score": None,
+                    },
+                )
+            )
+
+        for rel in relationships:
+            if len(evidences) >= top_k:
+                break
+            src = str(rel.get("src_id", "")).strip()
+            tgt = str(rel.get("tgt_id", "")).strip()
+            desc = str(rel.get("description", "")).strip()
+            if not (src or tgt or desc):
+                continue
+            evidences.append(
+                Evidence(
+                    content=f"REL {src} -> {tgt}: {desc}".strip(),
+                    metadata={
+                        "source": "LightRAGRelation",
+                        "backend_mode": self.backend_mode,
+                        "keywords": rel.get("keywords"),
+                        "reference_id": rel.get("reference_id"),
+                        "score": rel.get("weight"),
+                    },
+                )
+            )
+
+        elapsed_ms = int((time.time() - t0) * 1000)
+        self._retrieve_calls += 1
+        self._retrieve_time_ms_total += elapsed_ms
+        self._retrieve_last_count = len(evidences)
+
+        _safe_print(
+            "[LightRAGBenchMemory][DEBUG]",
+            f"retrieve query={query}",
+            f"top_k={top_k}",
+            f"chunks={len(chunks)}",
+            f"entities={len(entities)}",
+            f"relations={len(relationships)}",
+            f"returned={len(evidences)}",
+            f"elapsed_ms={elapsed_ms}",
+        )
+        return evidences
 
     def reset(self) -> None:
         self._buffer = []
@@ -247,6 +359,9 @@ class LightRAGBenchMemory:
             self._shutdown_loop()
             self._loop = None
         self._ingest_time_ms = 0
+        self._retrieve_calls = 0
+        self._retrieve_time_ms_total = 0
+        self._retrieve_last_count = 0
         self.backend_mode = "uninitialized"
 
     def _run_coro(self, coro: Any) -> Any:
@@ -270,7 +385,7 @@ class LightRAGBenchMemory:
             if callable(finalize):
                 self._run_coro(finalize())
         except Exception as e:  # noqa: BLE001 - cleanup path best effort
-            print(f"[LightRAGBenchMemory][WARN] finalize_storages failed: {e}")
+            _safe_print(f"[LightRAGBenchMemory][WARN] finalize_storages failed: {e}")
 
         try:
             llm_func = getattr(self._backend, "llm_model_func", None)
@@ -278,14 +393,14 @@ class LightRAGBenchMemory:
             if callable(shutdown):
                 self._run_coro(shutdown())
         except Exception as e:  # noqa: BLE001 - cleanup path best effort
-            print(f"[LightRAGBenchMemory][WARN] llm_model_func.shutdown failed: {e}")
+            _safe_print(f"[LightRAGBenchMemory][WARN] llm_model_func.shutdown failed: {e}")
 
         try:
             from lightrag.kg.shared_storage import finalize_share_data
 
             finalize_share_data()
         except Exception as e:  # noqa: BLE001 - cleanup path best effort
-            print(f"[LightRAGBenchMemory][WARN] finalize_share_data failed: {e}")
+            _safe_print(f"[LightRAGBenchMemory][WARN] finalize_share_data failed: {e}")
 
     def _shutdown_loop(self) -> None:
         assert self._loop is not None
@@ -295,13 +410,13 @@ class LightRAGBenchMemory:
         except Exception:
             pending = []
         if pending:
-            print(f"[LightRAGBenchMemory][DEBUG] cancelling pending_tasks={len(pending)}")
+            _safe_print(f"[LightRAGBenchMemory][DEBUG] cancelling pending_tasks={len(pending)}")
             for task in pending:
                 task.cancel()
             try:
                 loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
             except Exception as e:  # noqa: BLE001 - cleanup path best effort
-                print(f"[LightRAGBenchMemory][WARN] pending task cleanup failed: {e}")
+                _safe_print(f"[LightRAGBenchMemory][WARN] pending task cleanup failed: {e}")
 
         loop.run_until_complete(loop.shutdown_asyncgens())
         loop.close()
@@ -314,4 +429,19 @@ class LightRAGBenchMemory:
             "ingest_llm_calls": 0,
             "ingest_llm_prompt_tokens": 0,
             "ingest_llm_completion_tokens": 0,
+            "embedding_model": self._embedding_meta.get("model"),
+            "embedding_dim": self._embedding_meta.get("dim"),
+            "embedding_config_source": self._embedding_meta.get("source"),
+        }
+
+    def audit_retrieve(self) -> Dict[str, Any]:
+        return {
+            "backend_mode": self.backend_mode,
+            "retrieve_calls": self._retrieve_calls,
+            "retrieve_time_ms_total": self._retrieve_time_ms_total,
+            "retrieve_last_count": self._retrieve_last_count,
+            "retrieve_path": "LightRAG.aquery_data(mode=hybrid, only_need_context=True)",
+            "retrieve_llm_calls": 0,
+            "retrieve_llm_prompt_tokens": 0,
+            "retrieve_llm_completion_tokens": 0,
         }
