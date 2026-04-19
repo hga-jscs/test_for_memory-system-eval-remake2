@@ -12,14 +12,17 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import subprocess
 import sys
 import time
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
+
+from benchmark_observability import collect_runtime_metadata, stable_run_id
 
 BACKEND_TO_SCRIPTS = {
     "memgpt": [
@@ -88,6 +91,16 @@ def parse_args() -> argparse.Namespace:
         "--continue-on-fail",
         action="store_true",
         help="遇到失败后继续跑后续项（默认关闭，默认策略为正确性优先的严格失败）。",
+    )
+    parser.add_argument(
+        "--smoke",
+        action="store_true",
+        help="先运行代表性 smoke test（run_smoke_tests.py）。",
+    )
+    parser.add_argument(
+        "--results-root",
+        default="results",
+        help="结构化结果根目录，默认 results。",
     )
     return parser.parse_args()
 
@@ -183,6 +196,32 @@ def print_final_summary(all_records: list[RunRecord], started_at: float, logs_di
     print("-" * 100)
 
 
+
+
+def write_split_summary(*, out_dir: Path, run_id: str, all_records: list[RunRecord], strict_fail: bool, selected_backends: list[str], started_at: str, finished_at: str) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    summary = {
+        "run_id": run_id,
+        "started_at": started_at,
+        "finished_at": finished_at,
+        "strict_fail": strict_fail,
+        "selected_backends": selected_backends,
+        "runtime": collect_runtime_metadata(),
+        "records": [asdict(r) for r in all_records],
+        "failed": [asdict(r) for r in all_records if r.status != "PASS"],
+    }
+    (out_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def run_smoke_if_needed(args: argparse.Namespace) -> None:
+    if not args.smoke:
+        return
+    cmd = [sys.executable, "run_smoke_tests.py", "--backends", *backend_order(args.backends)]
+    print(f"[DEBUG] smoke_cmd={' '.join(cmd)}")
+    proc = subprocess.run(cmd, text=True)
+    if proc.returncode != 0 and not args.continue_on_fail:
+        raise RuntimeError("smoke tests failed in strict mode")
+
 def backend_order(backends_arg: Iterable[str]) -> list[str]:
     if "all" in backends_arg:
         return list(BACKEND_TO_SCRIPTS.keys())
@@ -195,8 +234,13 @@ def main() -> int:
     logs_dir = Path(args.logs_dir)
     logs_dir.mkdir(parents=True, exist_ok=True)
 
+    run_id = stable_run_id(backend="multi", benchmark="full_split")
+    results_dir = Path(args.results_root) / "multi" / "full_split" / run_id
+
     total_steps = sum(len(BACKEND_TO_SCRIPTS[b]) for b in selected_backends)
     strict_fail = not args.continue_on_fail
+
+    run_smoke_if_needed(args)
 
     banner("SPLIT RUNNER: 四后端分开做全 benchmark")
     print(f"[DEBUG] started_at={utc_now()}")
@@ -239,6 +283,16 @@ def main() -> int:
         print_backend_summary(backend, backend_records)
 
     print_final_summary(all_records, started_at, logs_dir)
+
+    write_split_summary(
+        out_dir=results_dir,
+        run_id=run_id,
+        all_records=all_records,
+        strict_fail=strict_fail,
+        selected_backends=selected_backends,
+        started_at=utc_now(),
+        finished_at=utc_now(),
+    )
 
     any_failed = any(r.status != "PASS" for r in all_records)
     return 1 if any_failed else 0
