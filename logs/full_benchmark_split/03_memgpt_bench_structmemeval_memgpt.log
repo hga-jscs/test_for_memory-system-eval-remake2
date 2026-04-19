@@ -1,0 +1,1345 @@
+# start: 2026-04-18 13:48:49 UTC
+# backend: memgpt
+# script: bench_structmemeval_memgpt.py
+
+======================================================================
+StructMemEval 全量评测 (MemGPT/Letta, tree=3L, top_k=5)
+======================================================================
+  recommendations: 30 cases
+  state_machine_location: 42 cases
+  tree_based: 100 cases
+  合计: 172 cases | MAX_WORKERS=1
+
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do you have every morning at the bakery?' top_k=5 hit=3
+[  1/172] state_machine_location static_001                   1/1  chunks=3  ingest=320ms  infer=1299ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Where do you go when you need tools?' top_k=5 hit=2
+[  2/172] state_machine_location static_002                   1/1  chunks=2  ingest=11ms  infer=1209ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do you enjoy doing in the evenings?' top_k=5 hit=2
+[  3/172] state_machine_location static_003                   1/1  chunks=2  ingest=29ms  infer=1298ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do you like to do for your morning coffee?' top_k=5 hit=2
+[  4/172] state_machine_location static_004                   1/1  chunks=2  ingest=27ms  infer=1357ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast?' top_k=5 hit=2
+[  5/172] state_machine_location static_005                   1/1  chunks=2  ingest=30ms  infer=1071ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What can you tell me about your neighbor?' top_k=5 hit=2
+[  6/172] state_machine_location static_006                   1/1  chunks=2  ingest=27ms  infer=2357ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is your neighbor?' top_k=5 hit=1
+[  7/172] state_machine_location static_007                   1/1  chunks=2  ingest=32ms  infer=814ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday morning?' top_k=5 hit=5
+[  8/172] state_machine_location transition_001               1/1  chunks=5  ingest=27ms  infer=1672ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday morning?' top_k=5 hit=5
+[  9/172] state_machine_location transition_002               0/1  chunks=5  ingest=33ms  infer=1580ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday morning?' top_k=5 hit=5
+[ 10/172] state_machine_location transition_003               1/1  chunks=5  ingest=44ms  infer=1427ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday morning?' top_k=5 hit=4
+[ 11/172] state_machine_location transition_004               1/1  chunks=5  ingest=29ms  infer=1533ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday morning?' top_k=5 hit=5
+[ 12/172] state_machine_location transition_005               1/1  chunks=5  ingest=41ms  infer=1513ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday morning?' top_k=5 hit=5
+[ 13/172] state_machine_location transition_006               1/1  chunks=5  ingest=28ms  infer=2221ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday morning?' top_k=5 hit=4
+[ 14/172] state_machine_location transition_007               0/1  chunks=5  ingest=37ms  infer=1475ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=6 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 15/172] state_machine_location transition_2tr_001           1/1  chunks=6  ingest=19ms  infer=1671ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=4
+[ 16/172] state_machine_location transition_2tr_002           1/1  chunks=5  ingest=51ms  infer=1373ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is my neighbor based on where I live now?' top_k=5 hit=5
+[ 17/172] state_machine_location transition_2tr_003           1/1  chunks=5  ingest=25ms  infer=1606ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 18/172] state_machine_location transition_2tr_004           1/1  chunks=5  ingest=26ms  infer=1429ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is my neighbor based on where I live now?' top_k=5 hit=5
+[ 19/172] state_machine_location transition_2tr_005           1/1  chunks=5  ingest=39ms  infer=1642ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=5
+[ 20/172] state_machine_location transition_2tr_006           1/1  chunks=5  ingest=30ms  infer=1480ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 21/172] state_machine_location transition_2tr_007           1/1  chunks=5  ingest=32ms  infer=1902ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 22/172] state_machine_location transition_3tr_001           0/1  chunks=7  ingest=34ms  infer=1640ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 23/172] state_machine_location transition_3tr_002           1/1  chunks=7  ingest=54ms  infer=2033ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=5
+[ 24/172] state_machine_location transition_3tr_003           0/1  chunks=7  ingest=22ms  infer=1340ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is my neighbor based on where I live now?' top_k=5 hit=5
+[ 25/172] state_machine_location transition_3tr_004           1/1  chunks=7  ingest=23ms  infer=968ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=5
+[ 26/172] state_machine_location transition_3tr_005           0/1  chunks=7  ingest=54ms  infer=1570ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 27/172] state_machine_location transition_3tr_006           0/1  chunks=7  ingest=20ms  infer=1547ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is my neighbor based on where I live now?' top_k=5 hit=5
+[ 28/172] state_machine_location transition_3tr_007           0/1  chunks=7  ingest=22ms  infer=1128ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 29/172] state_machine_location transition_4tr_001           0/1  chunks=9  ingest=27ms  infer=1428ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is my neighbor based on where I live now?' top_k=5 hit=5
+[ 30/172] state_machine_location transition_4tr_002           1/1  chunks=5  ingest=30ms  infer=1350ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=5
+[ 31/172] state_machine_location transition_4tr_003           0/1  chunks=9  ingest=33ms  infer=1309ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 32/172] state_machine_location transition_4tr_004           0/1  chunks=9  ingest=30ms  infer=2651ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is my neighbor based on where I live now?' top_k=5 hit=5
+[ 33/172] state_machine_location transition_4tr_005           0/1  chunks=9  ingest=39ms  infer=1027ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=5
+[ 34/172] state_machine_location transition_4tr_006           0/1  chunks=9  ingest=38ms  infer=1600ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 35/172] state_machine_location transition_4tr_007           0/1  chunks=9  ingest=31ms  infer=1513ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=11 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 36/172] state_machine_location transition_5tr_001           0/1  chunks=11  ingest=24ms  infer=1686ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=5
+[ 37/172] state_machine_location transition_5tr_002           0/1  chunks=7  ingest=24ms  infer=1212ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=11 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is my neighbor based on where I live now?' top_k=5 hit=5
+[ 38/172] state_machine_location transition_5tr_003           0/1  chunks=11  ingest=11ms  infer=1385ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=11 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=5
+[ 39/172] state_machine_location transition_5tr_004           0/1  chunks=11  ingest=24ms  infer=1130ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=11 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What should I do this Saturday based on where I ' top_k=5 hit=5
+[ 40/172] state_machine_location transition_5tr_005           0/1  chunks=11  ingest=32ms  infer=1558ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=11 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Who is my neighbor based on where I live now?' top_k=5 hit=5
+[ 41/172] state_machine_location transition_5tr_006           0/1  chunks=11  ingest=22ms  infer=2901ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=11 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What do I usually have for breakfast based on wh' top_k=5 hit=5
+[ 42/172] state_machine_location transition_5tr_007           0/1  chunks=11  ingest=23ms  infer=1341ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=3
+[ 43/172] tree_based             graph_0_trimmed_100          2/2  chunks=5  ingest=10ms  infer=9755ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=1
+[ 44/172] tree_based             graph_0_trimmed_10_with_path 1/1  chunks=1  ingest=12ms  infer=1848ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=1
+[ 45/172] tree_based             graph_0_trimmed_10_with_path 1/1  chunks=1  ingest=11ms  infer=1641ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=4
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=5
+[ 46/172] tree_based             graph_0_trimmed_150          2/2  chunks=7  ingest=22ms  infer=9685ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=1
+[ 47/172] tree_based             graph_0_trimmed_20           1/2  chunks=1  ingest=40ms  infer=4215ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=4
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=5
+[ 48/172] tree_based             graph_0_trimmed_200          2/2  chunks=9  ingest=27ms  infer=7868ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=5
+[ 49/172] tree_based             graph_0_trimmed_250          2/2  chunks=12  ingest=30ms  infer=10557ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=1
+[ 50/172] tree_based             graph_0_trimmed_30           1/2  chunks=2  ingest=32ms  infer=7988ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=1
+[ 51/172] tree_based             graph_0_trimmed_40           1/2  chunks=2  ingest=27ms  infer=7954ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Brenda Nguyen and Johnny Fisher related to e' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Billy Sanchez and George Coleman related to ' top_k=5 hit=2
+[ 52/172] tree_based             graph_0_trimmed_50           2/2  chunks=3  ingest=42ms  infer=7774ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=2
+[ 53/172] tree_based             graph_1_trimmed_100          1/2  chunks=5  ingest=40ms  infer=4810ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=1
+[ 54/172] tree_based             graph_1_trimmed_10_with_path 1/1  chunks=1  ingest=38ms  infer=2775ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=1
+[ 55/172] tree_based             graph_1_trimmed_10_with_path 1/1  chunks=1  ingest=12ms  infer=1717ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=2
+[ 56/172] tree_based             graph_1_trimmed_150          2/2  chunks=7  ingest=38ms  infer=7868ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=1
+[ 57/172] tree_based             graph_1_trimmed_20           1/2  chunks=1  ingest=31ms  infer=3403ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=3
+[ 58/172] tree_based             graph_1_trimmed_200          2/2  chunks=9  ingest=28ms  infer=11301ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=3
+[ 59/172] tree_based             graph_1_trimmed_250          2/2  chunks=12  ingest=41ms  infer=9221ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=1
+[ 60/172] tree_based             graph_1_trimmed_30           2/2  chunks=2  ingest=36ms  infer=7438ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=1
+[ 61/172] tree_based             graph_1_trimmed_40           1/2  chunks=2  ingest=42ms  infer=4806ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Susan Williams and Janet Aguilar related to ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Gregory Nguyen and Austin Sanchez related to' top_k=5 hit=1
+[ 62/172] tree_based             graph_1_trimmed_50           2/2  chunks=3  ingest=35ms  infer=6290ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=4
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=2
+[ 63/172] tree_based             graph_2_trimmed_100          1/2  chunks=5  ingest=34ms  infer=3949ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=1
+[ 64/172] tree_based             graph_2_trimmed_10_with_path 1/1  chunks=1  ingest=35ms  infer=1910ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=1
+[ 65/172] tree_based             graph_2_trimmed_10_with_path 1/1  chunks=1  ingest=39ms  infer=1809ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=3
+[ 66/172] tree_based             graph_2_trimmed_150          1/2  chunks=7  ingest=26ms  infer=4510ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=1
+[ 67/172] tree_based             graph_2_trimmed_20           1/2  chunks=1  ingest=18ms  infer=3467ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=4
+[ 68/172] tree_based             graph_2_trimmed_200          1/2  chunks=9  ingest=63ms  infer=3444ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=5
+[ 69/172] tree_based             graph_2_trimmed_250          1/2  chunks=12  ingest=32ms  infer=4023ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=1
+[ 70/172] tree_based             graph_2_trimmed_30           1/2  chunks=2  ingest=23ms  infer=3470ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=1
+[ 71/172] tree_based             graph_2_trimmed_40           1/2  chunks=2  ingest=55ms  infer=2801ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Shirley James and Timothy Stevens related to' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Jessica Butler and Danielle Jackson related ' top_k=5 hit=1
+[ 72/172] tree_based             graph_2_trimmed_50           1/2  chunks=3  ingest=20ms  infer=3397ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=4
+[ 73/172] tree_based             graph_3_trimmed_100          1/2  chunks=5  ingest=35ms  infer=10633ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=1
+[ 74/172] tree_based             graph_3_trimmed_10_with_path 1/1  chunks=1  ingest=39ms  infer=1928ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=1
+[ 75/172] tree_based             graph_3_trimmed_10_with_path 1/1  chunks=1  ingest=34ms  infer=2214ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=5
+[ 76/172] tree_based             graph_3_trimmed_150          1/2  chunks=7  ingest=25ms  infer=4656ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=1
+[ 77/172] tree_based             graph_3_trimmed_20           1/2  chunks=1  ingest=21ms  infer=3730ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=5
+[ 78/172] tree_based             graph_3_trimmed_200          1/2  chunks=9  ingest=28ms  infer=6131ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=5
+[ 79/172] tree_based             graph_3_trimmed_250          2/2  chunks=12  ingest=28ms  infer=9939ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=2
+[ 80/172] tree_based             graph_3_trimmed_30           2/2  chunks=2  ingest=29ms  infer=6934ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=2
+[ 81/172] tree_based             graph_3_trimmed_40           2/2  chunks=2  ingest=29ms  infer=9337ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Nicholas Rodriguez and Teresa Young related ' top_k=5 hit=3
+[LettaBenchMemory][DEBUG] query='Are Justin Harrison and Janice Jones related to ' top_k=5 hit=2
+[ 82/172] tree_based             graph_3_trimmed_50           1/2  chunks=3  ingest=26ms  infer=8309ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=2
+[ 83/172] tree_based             graph_4_trimmed_100          1/2  chunks=5  ingest=12ms  infer=10000ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=1
+[ 84/172] tree_based             graph_4_trimmed_10_with_path 1/1  chunks=1  ingest=26ms  infer=1955ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=1
+[ 85/172] tree_based             graph_4_trimmed_10_with_path 1/1  chunks=1  ingest=28ms  infer=2503ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=3
+[ 86/172] tree_based             graph_4_trimmed_150          1/2  chunks=7  ingest=28ms  infer=5818ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=1
+[ 87/172] tree_based             graph_4_trimmed_20           2/2  chunks=1  ingest=25ms  infer=9105ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=3
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=3
+[ 88/172] tree_based             graph_4_trimmed_200          1/2  chunks=9  ingest=28ms  infer=8386ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=11 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=3
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=4
+[ 89/172] tree_based             graph_4_trimmed_250          2/2  chunks=11  ingest=29ms  infer=11308ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=2
+[ 90/172] tree_based             graph_4_trimmed_30           2/2  chunks=2  ingest=21ms  infer=9759ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=2
+[ 91/172] tree_based             graph_4_trimmed_40           2/2  chunks=2  ingest=11ms  infer=5714ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Emily Sanders and Brittany Powell related to' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Walter Russell and Marilyn Long related to e' top_k=5 hit=2
+[ 92/172] tree_based             graph_4_trimmed_50           2/2  chunks=3  ingest=32ms  infer=9662ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=3
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=2
+[ 93/172] tree_based             graph_5_trimmed_100          1/2  chunks=5  ingest=37ms  infer=8297ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=1
+[ 94/172] tree_based             graph_5_trimmed_10_with_path 1/1  chunks=1  ingest=33ms  infer=1971ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=1
+[ 95/172] tree_based             graph_5_trimmed_10_with_path 1/2  chunks=1  ingest=28ms  infer=3505ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=2
+[ 96/172] tree_based             graph_5_trimmed_150          1/2  chunks=7  ingest=29ms  infer=5178ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=1
+[ 97/172] tree_based             graph_5_trimmed_20           1/2  chunks=1  ingest=34ms  infer=4342ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=4
+[ 98/172] tree_based             graph_5_trimmed_200          1/2  chunks=9  ingest=22ms  infer=5233ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=5
+[ 99/172] tree_based             graph_5_trimmed_250          1/2  chunks=12  ingest=28ms  infer=4461ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=1
+[100/172] tree_based             graph_5_trimmed_30           1/2  chunks=2  ingest=34ms  infer=7342ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=1
+[101/172] tree_based             graph_5_trimmed_40           1/2  chunks=2  ingest=25ms  infer=9564ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Mary Simmons and Donna Long related to each ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Karen Hernandez and Justin Moore related to ' top_k=5 hit=1
+[102/172] tree_based             graph_5_trimmed_50           1/2  chunks=3  ingest=26ms  infer=7672ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=4
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=2
+[103/172] tree_based             graph_6_trimmed_100          1/2  chunks=5  ingest=32ms  infer=4851ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=1
+[104/172] tree_based             graph_6_trimmed_10_with_path 1/1  chunks=1  ingest=17ms  infer=2328ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=1
+[105/172] tree_based             graph_6_trimmed_10_with_path 1/1  chunks=1  ingest=10ms  infer=2170ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=2
+[106/172] tree_based             graph_6_trimmed_150          1/2  chunks=7  ingest=26ms  infer=5233ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=1
+[107/172] tree_based             graph_6_trimmed_20           1/2  chunks=1  ingest=10ms  infer=4771ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=9 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=4
+[108/172] tree_based             graph_6_trimmed_200          1/2  chunks=9  ingest=10ms  infer=5285ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=5
+[109/172] tree_based             graph_6_trimmed_250          1/2  chunks=12  ingest=38ms  infer=6117ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=1
+[110/172] tree_based             graph_6_trimmed_30           1/2  chunks=2  ingest=22ms  infer=4179ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=1
+[111/172] tree_based             graph_6_trimmed_40           2/2  chunks=2  ingest=33ms  infer=8346ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kevin Ramirez and Pamela Sanchez related to ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are William Reed and Jean Reynolds related to ea' top_k=5 hit=1
+[112/172] tree_based             graph_6_trimmed_50           1/2  chunks=3  ingest=30ms  infer=3758ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=4
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=5
+[113/172] tree_based             graph_7_trimmed_100          2/2  chunks=5  ingest=21ms  infer=6723ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=1
+[114/172] tree_based             graph_7_trimmed_10_with_path 1/1  chunks=1  ingest=25ms  infer=1929ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=1
+[115/172] tree_based             graph_7_trimmed_10_with_path 1/1  chunks=1  ingest=33ms  infer=1956ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=5
+[116/172] tree_based             graph_7_trimmed_150          2/2  chunks=7  ingest=39ms  infer=7027ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=1
+[117/172] tree_based             graph_7_trimmed_20           2/2  chunks=1  ingest=19ms  infer=5317ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=10 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=5
+[118/172] tree_based             graph_7_trimmed_200          2/2  chunks=10  ingest=33ms  infer=6201ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=5
+[119/172] tree_based             graph_7_trimmed_250          2/2  chunks=12  ingest=34ms  infer=7756ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=1
+[120/172] tree_based             graph_7_trimmed_30           2/2  chunks=2  ingest=30ms  infer=8398ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=1
+[121/172] tree_based             graph_7_trimmed_40           2/2  chunks=2  ingest=25ms  infer=7956ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Helen Jordan and Joan Rivera related to each' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Natalie Lewis and Thomas Sanchez related to ' top_k=5 hit=2
+[122/172] tree_based             graph_7_trimmed_50           2/2  chunks=3  ingest=32ms  infer=7465ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=4
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=2
+[123/172] tree_based             graph_8_trimmed_100          2/2  chunks=5  ingest=24ms  infer=8350ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=1
+[124/172] tree_based             graph_8_trimmed_10_with_path 1/1  chunks=1  ingest=27ms  infer=2268ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=1
+[125/172] tree_based             graph_8_trimmed_10_with_path 1/1  chunks=1  ingest=30ms  infer=2124ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=3
+[126/172] tree_based             graph_8_trimmed_150          2/2  chunks=7  ingest=35ms  infer=8186ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=1
+[127/172] tree_based             graph_8_trimmed_20           1/2  chunks=1  ingest=36ms  infer=5244ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=10 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=5
+[128/172] tree_based             graph_8_trimmed_200          2/2  chunks=10  ingest=36ms  infer=7682ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=5
+[129/172] tree_based             graph_8_trimmed_250          1/2  chunks=12  ingest=31ms  infer=4998ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=2
+[130/172] tree_based             graph_8_trimmed_30           2/2  chunks=2  ingest=33ms  infer=9575ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=2
+[131/172] tree_based             graph_8_trimmed_40           1/2  chunks=2  ingest=28ms  infer=10935ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Kimberly Kim and Nicholas Gibson related to ' top_k=5 hit=2
+[LettaBenchMemory][DEBUG] query='Are Willie Hill and Bryan Jackson related to eac' top_k=5 hit=2
+[132/172] tree_based             graph_8_trimmed_50           2/2  chunks=3  ingest=21ms  infer=9279ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=5 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=5
+[133/172] tree_based             graph_9_trimmed_100          1/2  chunks=5  ingest=32ms  infer=5165ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=1
+[134/172] tree_based             graph_9_trimmed_10_with_path 1/1  chunks=1  ingest=30ms  infer=2074ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=1
+[135/172] tree_based             graph_9_trimmed_10_with_path 1/1  chunks=1  ingest=10ms  infer=1784ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=7 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=3
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=5
+[136/172] tree_based             graph_9_trimmed_150          1/2  chunks=7  ingest=25ms  infer=5422ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=1 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=1
+[137/172] tree_based             graph_9_trimmed_20           1/2  chunks=1  ingest=10ms  infer=3515ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=10 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=5
+[138/172] tree_based             graph_9_trimmed_200          1/2  chunks=10  ingest=25ms  infer=5980ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=5
+[139/172] tree_based             graph_9_trimmed_250          1/2  chunks=12  ingest=28ms  infer=5805ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=2
+[140/172] tree_based             graph_9_trimmed_30           1/2  chunks=2  ingest=35ms  infer=4863ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=2 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=2
+[141/172] tree_based             graph_9_trimmed_40           1/2  chunks=2  ingest=33ms  infer=5285ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=3 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Are Angela Smith and Harold Ramos related to eac' top_k=5 hit=1
+[LettaBenchMemory][DEBUG] query='Are Jesse Richardson and Ryan Nguyen related to ' top_k=5 hit=2
+[142/172] tree_based             graph_9_trimmed_50           1/2  chunks=3  ingest=23ms  infer=4628ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=15 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='How many artists did I praise without any critic' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artist did I reject entirely, with no posi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artist received both praise and criticism ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I visit the Monet exhibit or the Renoir r' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, how many sculpto' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Across all our conversations, what percentage of' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's my breaking point with abstract art—when " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I praise for revealing the art' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What specific activities did I mention doing wit' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How many total messages have we exchanged, and w' top_k=5 hit=5
+[143/172] recommendations        recommendations_art_100      1/10  chunks=15  ingest=21ms  infer=31480ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=23 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='How many artists did I praise without any critic' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artist did I reject entirely, with no posi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artist received both praise and criticism ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I visit the Monet exhibit or the Renoir r' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, how many sculpto' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Across all our conversations, what percentage of' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's my breaking point with abstract art—when " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I praise for revealing the art' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What specific activities did I mention doing wit' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How many total messages have we exchanged, and w' top_k=5 hit=5
+[144/172] recommendations        recommendations_art_150      0/10  chunks=23  ingest=33ms  infer=35716ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=31 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='How many artists did I praise without any critic' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I reject entirely, with no pos' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artist received both praise and criticism ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I visit the Monet exhibit or the Renoir r' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, how many sculpto' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Between Brancusi's minimalist sculptures and Ser" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Across all our conversations, what percentage of' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's my breaking point with abstract art—when " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I praise for revealing the art' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What role does art's healing power play in my pr" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What specific activities did I mention doing wit' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on our conversations, rank painting and sc' top_k=5 hit=5
+[145/172] recommendations        recommendations_art_200      2/12  chunks=31  ingest=11ms  infer=46475ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=41 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='How many artists did I praise without any critic' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I reject entirely, with no pos' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artist received both praise and criticism ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I specifically mention for the' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='In which session did I state my ultimate test fo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on our conversations, when is biographical' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I explicitly contrast in terms' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='For which artists did I explicitly state that th' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What specific activities did I mention doing wit' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="In multiple sessions, I used the words 'truth' o" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Using only direct quotes from our conversations,' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, rank the followi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I have time to see only one exhibition next mont' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which three artists did I describe with language' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='If a museum offered simultaneous exhibitions of ' top_k=5 hit=5
+[146/172] recommendations        recommendations_art_275      0/15  chunks=41  ingest=30ms  infer=69246ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=51 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='How many artists did I praise without any critic' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I reject entirely, with no pos' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists received both praise and criticism' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which artists did I specifically mention for the' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='In which session did I state my ultimate test fo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on our conversations, when is biographical' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What distinction did I make between art meant fo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='For which artists did I explicitly state that th' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What specific activities did I mention doing wit' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="In multiple sessions, I used the words 'truth' o" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Using only direct quotes from our conversations,' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, rank the followi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I have time to see only one exhibition next mont' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which three artists did I describe with language' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='If a museum offered simultaneous exhibitions of ' top_k=5 hit=5
+[147/172] recommendations        recommendations_art_350      1/15  chunks=51  ingest=40ms  infer=76078ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=14 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, what is the appr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which game is mentioned most often across our co' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate ratio of positive to neg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What single game mechanism receives the most cri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three game characteristics are most importa' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='You have mixed feelings about party games. What ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What factors contribute most to game replayabili' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate success rate of cooperat' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on your feedback, which type of game (stra' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all your feedback, what single question' top_k=5 hit=5
+[148/172] recommendations        recommendations_boardgames_1 2/10  chunks=14  ingest=23ms  infer=46614ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=19 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, rank the board g' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate percentage of cooperativ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate ratio of positive to neg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What single game mechanism receives the most cri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three game mechanisms do you most consisten' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate percentage point differe' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three factors most strongly influence a gam' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What percentage of your factual game discussions' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which game is mentioned most frequently across o' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on your feedback, what single question bes' top_k=5 hit=5
+[149/172] recommendations        recommendations_boardgames_1 0/10  chunks=19  ingest=24ms  infer=54917ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=39 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, rank the board g' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate percentage of cooperativ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate ratio of positive to neg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What single game mechanism receives the most cri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three game mechanisms do you most consisten' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate percentage point differe' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three factors most strongly influence a gam' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your preferred player count range for st' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How important is thematic integration to your en' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='You generally find party games shallow, yet you ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your philosophy on building and maintain' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on your feedback, what single question bes' top_k=5 hit=5
+[150/172] recommendations        recommendations_boardgames_2 0/12  chunks=39  ingest=29ms  infer=63142ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=56 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, what is the perc' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three game mechanisms do you most consisten' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Compare your positive feedback percentages for s' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your preferred player count range for st' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What single design flaw causes the 'alpha player" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your ideal game length range, and how ma' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three factors most strongly influence a gam' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your attitude toward legacy games, and h' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What single game mechanism receives the most cri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='You generally find party games shallow, yet you ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How important is thematic integration to your en' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your philosophy on building and maintain' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which single game is mentioned most frequently a' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What percentage of your game discussions include' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on your feedback, what single question bes' top_k=5 hit=5
+[151/172] recommendations        recommendations_boardgames_2 2/15  chunks=56  ingest=33ms  infer=78823ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=68 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, what is the perc' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three game mechanisms do you most consisten' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Compare your positive feedback percentages for s' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your preferred player count range for st' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What single design flaw causes the 'alpha player" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your ideal game length range, and how ma' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three factors most strongly influence a gam' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your attitude toward legacy games, and h' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What single game mechanism receives the most cri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='You generally find party games shallow, yet you ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How important is thematic integration to your en' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is your philosophy on building and maintain' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which single game is mentioned most frequently a' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What percentage of your game discussions include' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on your feedback, what single question bes' top_k=5 hit=5
+[152/172] recommendations        recommendations_boardgames_3 1/15  chunks=68  ingest=31ms  infer=78759ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=13 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, can you rank my ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a fantasy book with logical magic, strong' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the #1 thing that makes me love or hate a" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Recommend a horror novel that matches my prefere' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I enjoy historical fiction without getti' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Suggest a romance that avoids artificial drama a' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What new genre should I explore that aligns with' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I use audiobooks or print for different g' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's my personal rule for starting a new fanta" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Do I care more about plot or character? Back it ' top_k=5 hit=5
+[153/172] recommendations        recommendations_books_100    1/10  chunks=13  ingest=25ms  infer=31897ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=23 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations about books, can ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a book that has logical magic systems, st' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Looking at all my reading preferences, what's th" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a horror novel that matches my preference' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want to enjoy historical fiction without getti' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a romance novel that avoids artificial dr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which genre should I explore next that would nat' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I use audiobooks or print for different g' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I'm anxious about unfinished series but love epi" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Summarize my core reading identity in three prin' top_k=5 hit=5
+[154/172] recommendations        recommendations_books_150    4/10  chunks=23  ingest=31ms  infer=40437ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=32 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations about books, can ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a book that has logical magic systems, st' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Looking at all my reading preferences, what's th" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want to enjoy historical fiction without getti' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a romance novel that avoids artificial dr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which genre should I explore next that would nat' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I use audiobooks or print for different g' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What percentage of my fantasy discussions were p' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Find me a book where character growth is the pri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What specific aspects of world-building do I val' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the #1 reason I abandon books across all " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Summarize my core reading identity in 3 principl' top_k=5 hit=5
+[155/172] recommendations        recommendations_books_200    1/12  chunks=32  ingest=25ms  infer=57570ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=42 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, rank the book ge' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a book with logical magic systems, strong' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the single most important factor that de' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Among Sanderson, Rothfuss, and Jordan, which fan' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a horror novel that relies on psychologic' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I often struggle with dense historical fiction l' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want a romance novel that avoids artificial dr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which new genre should I explore that naturally ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='For which genres should I use audiobooks versus ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I love epic fantasy but fear unfinished series. ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Compare my satisfaction with fantasy versus roma' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Recommend a book where character growth is the a' top_k=5 hit=5
+[156/172] ERROR books_data_275.json: 'gbk' codec can't encode character '\u2011' in position 58: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_structmemeval_memgpt.py", line 182, in main
+    r = future.result()
+  File "D:\anaconda3\envs\mem-eval-memgpt\lib\concurrent\futures\_base.py", line 451, in result
+    return self.__get_result()
+  File "D:\anaconda3\envs\mem-eval-memgpt\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "D:\anaconda3\envs\mem-eval-memgpt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\test_for_memory-system-eval-remake2\bench_structmemeval_memgpt.py", line 127, in eval_case
+    pred = answer_with_memory(llm, mem, question)
+  File "D:\test_for_memory-system-eval-remake2\bench_structmemeval_memgpt.py", line 60, in answer_with_memory
+    evidences = mem.retrieve(question, top_k=5)
+  File "D:\test_for_memory-system-eval-remake2\memgpt_bench_src.py", line 123, in retrieve
+    print(f"[LettaBenchMemory][DEBUG] query={query[:48]!r} top_k={top_k} hit={len(out)}")
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2011' in position 58: illegal multibyte sequence
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=64 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Which authors or books did I praise in every sin' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which authors or books did I mention only to cri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which authors or books received both positive an' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which authors did I praise for creating logical,' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the key factor that makes character deve' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="In your view, is it necessary to know an author'" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How do you decide whether to commit to a long se' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='For which genres did you explicitly state that a' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What habits or preferences reveal that you value' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I often use words like 'truth' or 'authentic' to" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Based on everything you've shared, what are the " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Rank your top four genres by how consistently th' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='If you could only read one book next month by ei' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which authors or books did you describe as showi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which author would you trust most to buy a new b' top_k=5 hit=5
+[157/172] recommendations        recommendations_books_350    3/15  chunks=64  ingest=11ms  infer=57759ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=12 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on our conversations, which genre should I' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How many of my film reviews have been negative v' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the #1 reason I quit or dislike a movie?" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I invest in a projector or sound system f' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Which films have I called 'perfect' or used simi" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What do all my negative reviews have in common?' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which genre am I most forgiving toward, and whic' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's my ideal film length, based on what I've " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How important is practical/physical authenticity' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the total number of messages we've exchan" top_k=5 hit=5
+[158/172] recommendations        recommendations_movies_100   0/10  chunks=12  ingest=35ms  infer=37027ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=19 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Rank film genres by my satisfaction rate based o' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How many distinct conversations have I praised p' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Compare how often Arnold Schwarzenegger, Tom Cru' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is my preferred film length range based on ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Have I ever given a positive review to a drama f' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which directors have I explicitly praised for pr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Overall, what is the approximate ratio of positi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Do I prioritize sound or visuals for home theate' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Which three films have I called 'perfect' or 'go" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Summarize my core film philosophy in three princ' top_k=5 hit=5
+[159/172] recommendations        recommendations_movies_150   3/10  chunks=19  ingest=39ms  infer=41238ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=31 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Rank film genres by my satisfaction rate based o' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How many distinct conversations have I praised p' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Compare how often Arnold Schwarzenegger, Tom Cru' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is my preferred film length range based on ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Have I ever given a positive review to a drama f' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which directors have I explicitly praised for pr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Overall, what is the approximate ratio of positi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Do I prioritize sound or visuals for home theate' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Which three films have I called 'perfect' or 'go" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Compare your criticism of modern superhero films' top_k=5 hit=5
+[160/172] ERROR movies_data_200.json: 'gbk' codec can't encode character '\u2011' in position 73: illegal multibyte sequence
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_structmemeval_memgpt.py", line 182, in main
+    r = future.result()
+  File "D:\anaconda3\envs\mem-eval-memgpt\lib\concurrent\futures\_base.py", line 451, in result
+    return self.__get_result()
+  File "D:\anaconda3\envs\mem-eval-memgpt\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "D:\anaconda3\envs\mem-eval-memgpt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\test_for_memory-system-eval-remake2\bench_structmemeval_memgpt.py", line 127, in eval_case
+    pred = answer_with_memory(llm, mem, question)
+  File "D:\test_for_memory-system-eval-remake2\bench_structmemeval_memgpt.py", line 60, in answer_with_memory
+    evidences = mem.retrieve(question, top_k=5)
+  File "D:\test_for_memory-system-eval-remake2\memgpt_bench_src.py", line 123, in retrieve
+    print(f"[LettaBenchMemory][DEBUG] query={query[:48]!r} top_k={top_k} hit={len(out)}")
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2011' in position 73: illegal multibyte sequence
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=42 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on our conversations, which genre should I' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How many times have I praised practical effects ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which actor do I admire most for doing their own' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's my ideal film length, based on what I've " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Have I ever given a positive review to a drama f' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which directors do I trust most to deliver the k' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What percentage of my film comments are positive' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='You mentioned home theater setup—do you prioriti' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="How many films have you called 'perfect' or 'gol" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Am I more critical of modern superhero films or ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How many of my favorite films feature Arnold Sch' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the main reason I dislike long dialogue s" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which recent film did I praise most highly?' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Do I prefer franchises or standalone films?' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Summarize my film philosophy in three principles' top_k=5 hit=5
+[161/172] recommendations        recommendations_movies_275   2/15  chunks=42  ingest=10ms  infer=33756ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=59 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Which actor do I mention most frequently and pos' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What percentage of the films you've praised rely" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on our talks, rank my satisfaction with di' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's my preferred movie length, and which film" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which directors do I trust most to deliver the k' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Compare your feelings about Arnold Schwarzenegge' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What makes a movie villain great in your eyes, a' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="How many films have you called 'perfect' or 'gol" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='You mentioned home theater setup—do you prioriti' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's your overall take on Marvel and DC movies" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What kind of comedy films do you enjoy? Give an ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Do you prefer 80s/90s action films or modern one' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which film did you criticize most harshly, and w' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which stunt or action sequence have you praised ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Summarize my film philosophy in three principles' top_k=5 hit=5
+[162/172] recommendations        recommendations_movies_350   5/15  chunks=59  ingest=29ms  infer=43606ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=18 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on our conversations, which genres receive' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate ratio of positive to neg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, which instrument' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Is there any genre you've discussed that you sho" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What production or recording aesthetic seems to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three core values define your musical taste' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How many different music genres have you discuss' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is it about blues music that moves you so d' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which guitarists have you mentioned as inspirati' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What overarching principle guides your explorati' top_k=5 hit=5
+[163/172] recommendations        recommendations_music_100    1/10  chunks=18  ingest=34ms  infer=34955ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=21 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on our conversations, which musical genre ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is the approximate ratio of positive to neg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, which instrument' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Given my mixed reactions to classical music, wha' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which guitarists do I most admire, and what qual' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are my main criticisms of modern pop music ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I generally don't enjoy metal, but what specific" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What is my philosophy regarding music production' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What three core values define my musical taste a' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Provide an approximate statistical breakdown of ' top_k=5 hit=5
+[164/172] recommendations        recommendations_music_150    0/10  chunks=21  ingest=33ms  infer=29005ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=30 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on our conversations, what are my top thre' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Given my mixed reactions to metal, what specific' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I'm still figuring out classical music—I love so" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I have such mixed feelings about pop music—somet' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want to improve my guitar playing—any thoughts' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I love discovering new alternative bands but som' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I play both guitar and violin—how can I make the' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I'm starting to record my own music—what product" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I want to branch out musically but don't want to" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are the exact statistics of my genre prefer' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I've been thinking about my musical identity lat" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I've noticed I react differently to live music v" top_k=5 hit=5
+[165/172] recommendations        recommendations_music_200    6/12  chunks=30  ingest=36ms  infer=49881ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=38 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all our conversations, which musical ge' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are my top three most positively regarded m' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I'm torn between focusing on guitar or violin. B" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which music genres should I approach cautiously ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What production style or aesthetic would best su' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which genres best combine the emotional depth an' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which genres or music styles have I implicitly o' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are my fundamental musical values that cut ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on our conversations about live performanc' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What patterns do you notice across my genre pref' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Based on how I've discussed learning instruments" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are the exact statistics of my genre prefer' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='If I were building a 10-song playlist that perfe' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Given that I have mixed reactions to metal, what' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Looking at my musical journey so far, what shoul' top_k=5 hit=5
+[166/172] recommendations        recommendations_music_275    3/15  chunks=38  ingest=22ms  infer=57913ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=50 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on our conversations, rank my top 3 most p' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all conversations, which instrument sho' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Given my mixed reactions to metal, what strategy' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What recording or production style best suits my' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How important is the balance between technical s' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What specific markers define 'authenticity' for " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What patterns emerge in my criticisms of pop and' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can my guitar and violin studies inform each' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my listening patterns and values, what ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Synthesize my core musical values into three pri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all conversations, do I prefer live or ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Summarize my musical personality in one sentence' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's my optimal approach to learning music, ba" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Provide exact statistics: how many positive, neg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Design a 5-song playlist that represents my musi' top_k=5 hit=5
+[167/172] recommendations        recommendations_music_350    6/15  chunks=50  ingest=11ms  infer=56450ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=18 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all my comments across our entire conve' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I watch Foundation or The Expanse next?' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What do all the detective shows I genuinely enjo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Is there any fantasy show I might actually enjoy' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What makes a comedy truly satisfying versus forg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Is my dislike of reality TV consistent across al' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='When should I choose a light comedy versus a ser' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='If I had to drop one entire genre from my viewin' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the single most important storytelling pr" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my preferences, which streaming platfor' top_k=5 hit=5
+[168/172] recommendations        recommendations_series_100   2/10  chunks=18  ingest=33ms  infer=31431ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=23 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all my comments across our entire conve' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I watch Foundation or The Expanse next?' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What do all the detective shows I genuinely enjo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Is there any fantasy show I might actually enjoy' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What makes a comedy truly satisfying versus forg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Is my dislike of reality TV consistent across al' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the single most important storytelling pr" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my preferences, which streaming platfor' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my entire viewing history across 150 me' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Across our entire conversation, has my taste sho' top_k=5 hit=5
+[169/172] recommendations        recommendations_series_150   1/10  chunks=23  ingest=13ms  infer=33408ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=26 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all my comments across our entire conve' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I watch Foundation or The Expanse next? J' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What do all the detective shows I genuinely enjo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Is there any fantasy show I might actually enjoy' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What makes a comedy truly satisfying versus forg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Is my dislike of reality TV consistent across al' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Drama wasn't in our original genre ranking, but " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Did any shows receive mixed reviews in our conve' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the single most important storytelling pr" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my preferences across all sessions, whi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on your entire viewing history across appr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="There's a significant gap between my top genre (" top_k=5 hit=5
+[170/172] recommendations        recommendations_series_200   2/12  chunks=26  ingest=22ms  infer=48526ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=33 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all my comments across our entire conve' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all sessions, which genres have the hig' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I watch Foundation or The Expanse next? J' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What do all the detective shows I genuinely enjo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Is there any fantasy show I might actually enjoy' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What makes a comedy truly satisfying versus forg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Drama wasn't in our original genre ranking, but " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Did any shows receive mixed reviews in our conve' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the single most important storytelling pr" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my preferences across all sessions, whi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on your entire viewing history across appr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Across our entire conversation, has my taste sho' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What pattern emerges when comparing my favorite ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my reactions to shows with unresolved m' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="There's a significant gap between my top genre (" top_k=5 hit=5
+[171/172] recommendations        recommendations_series_275   2/15  chunks=33  ingest=27ms  infer=71831ms  llm_calls=0
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=47 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Based on all my comments across our entire conve' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on all sessions, which genres have the hig' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I watch Foundation or The Expanse next? J' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What do all the detective shows I genuinely enjo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Is there any fantasy show I might actually enjoy' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What makes a comedy truly satisfying versus forg' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="Drama wasn't in our original genre ranking, but " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which shows received mixed reviews in our conver' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the single most important storytelling pr" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my preferences across all sessions, whi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on your entire viewing history across all ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Across our entire conversation, has my taste sho' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What pattern emerges when comparing my favorite ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Based on my reactions to shows with unresolved m' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="There's a significant gap between my top genre (" top_k=5 hit=5
+[172/172] recommendations        recommendations_series_350   2/15  chunks=47  ingest=35ms  infer=71401ms  llm_calls=0
+
+======================================================================
+
+  [recommendations]  53/345  (15.4%)
+    Ingest | time: 746ms | chunks: 925 | llm_calls: 0
+    Infer  | time: 1409341ms
+
+  [state_machine_location]  22/42  (52.4%)
+    Ingest | time: 1554ms | chunks: 267 | llm_calls: 0
+    Infer  | time: 64246ms
+
+  [tree_based]  132/181  (72.9%)
+    Ingest | time: 2840ms | chunks: 432 | llm_calls: 0
+    Infer  | time: 578208ms
+
+──────────────────────────────────────────────────────────────────────
+  总准确率  : 207/568 (36.4%)
+  Wall      : 2162583ms (36.0min)
+  Errors    : 2
+──────────────────────────────────────────────────────────────────────
+
+结果已保存到 results_structmemeval_memgpt.json
+[BENCH-STATUS] ok=True reason=ok total=172 completed=170 skipped=0 errors=2 evaluated_queries=568

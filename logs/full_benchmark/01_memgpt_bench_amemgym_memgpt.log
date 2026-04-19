@@ -1,0 +1,17 @@
+# start: 2026-04-18 11:05:44 UTC
+# backend: memgpt
+# script: bench_amemgym_memgpt.py
+
+D:\anaconda3\envs\mem-eval\lib\site-packages\requests\__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+======================================================================
+AMemGym 全量评测 (MemGPT/Letta, tree=3L, top_k=5)
+======================================================================
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 191, in <module>
+    main()
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 139, in main
+    data = json.load(open(DATA_PATH))
+  File "D:\anaconda3\envs\mem-eval\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x99 in position 23910: illegal multibyte sequence

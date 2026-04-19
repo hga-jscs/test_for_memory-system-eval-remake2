@@ -1,0 +1,381 @@
+# start: 2026-04-18 12:48:55 UTC
+# backend: memgpt
+# script: bench_amemgym_memgpt.py
+
+======================================================================
+AMemGym 全量评测 (MemGPT/Letta, tree=3L, top_k=5)
+======================================================================
+  用户数: 20 | MAX_WORKERS=1
+
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=46 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some engaging activities I can organize' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I best mentor young women in my communit' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are effective ways to introduce more native' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I organize a successful potluck that acc' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What strategies can I use to increase participat' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I stay safe and active while volunteerin' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some meaningful historic sites or cultu' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which needlecraft techniques would be best to te' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How should I adapt my soul food recipes for gues' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What would be the best way to celebrate an Alaba' top_k=5 hit=5
+[ 1/20] ERROR user=0: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=43 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What’s a good way to balance my ambition to make' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Could you recommend effective strategies for men' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some best practices for leading process' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I organize a historical walking tour of ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some challenging hiking destinations in' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest ways to introduce more contempor' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are effective ways to improve risk assessme' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I get more involved with community garde' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What’s the best way to prepare homemade lasagna ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Are there any upcoming Irish music festivals or ' top_k=5 hit=5
+[ 2/20] ERROR user=1: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=54 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some effective ways to balance voluntee' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which budgeting method would fit best for hostin' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I improve my skills to move from billing' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What’s a good way to choose my next historical f' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What organizational tips can help me manage my c' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How do I plan a coastal road trip that balances ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some strategies for developing leadersh' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest recipes from my vintage cookbook' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What tips do you have for exploring local commun' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I stay motivated and effectively learn n' top_k=5 hit=5
+[ 3/20] ERROR user=2: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=49 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some effective ways I can encourage bip' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest good woodworking projects that I' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some meaningful ways to get more involv' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How should I plan a solo road trip in Colorado t' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What strategies can I use to improve my public s' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest some unique Adams County dishes ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I balance my legislative workload with f' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What type of negotiation techniques should I foc' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Do you have recommendations for art museums or e' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you offer advice on the best time and route ' top_k=5 hit=5
+[ 4/20] ERROR user=3: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=49 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some creative ways I can make accountin' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I best organize spontaneous hiking trips' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What strategies can I use to balance CPA exam pr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Could you recommend some local arts events or ga' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the best way to stay emotionally resilien" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I improve my communication skills in acc' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest healthy, simple recipes using fa' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Should I consider taking on freelance accounting' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some effective ways for someone in thei' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I maintain an innovative mindset in solv' top_k=5 hit=5
+[ 5/20] ERROR user=4: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=45 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some effective ways I can transition my' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I make my home cooking more authentic to' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What steps should I take to pursue a career in m' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I improve my harmonica skills to perform' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which travel approach would best suit me for a s' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I balance my creative interests with the' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What steps should I take to get involved in loca' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which event planning roles would best fit my org' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I make my living space more comfortable ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What strategies can I use to maintain motivation' top_k=5 hit=5
+[ 6/20] ERROR user=5: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=46 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some effective ways I can improve my of' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I make my model train layout more realis' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest Southern comfort food recipes us' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some ideas to make my porch guitar sess' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How should I organize my fishing trip if I want ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What changes can I make to my office inventory m' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Could you recommend ways to refresh my home poke' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I gradually take on more managerial duti' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What should I consider when planning a scenic dr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest easy home repair or maintenance ' top_k=5 hit=5
+[ 7/20] ERROR user=6: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=45 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some effective ways to promote a new co' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest some engaging art workshop ideas' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I best organize a community garden focus' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Do you have any tips for making family trips to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What’s the best way to involve local youth in co' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I enhance my event management process fo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What should I consider when planning to teach bi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Could you recommend strategies for making tradit' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some fun ways to stay active and connec' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I approach seeking partnerships or spons' top_k=5 hit=5
+[ 8/20] ERROR user=7: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=45 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What’s the best way for me to connect with poten' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you recommend strategies for balancing my re' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which recipe or dish should I try next to celebr' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How should I prepare for mentoring younger agent' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What’s a good way for me to find and join pick-u' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I make my urban art gallery visits more ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What should I focus on to become a top performer' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Could you suggest R&B playlists or artists that ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I make the most of weekend trips to citi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What’s the best way to grow my referral network ' top_k=5 hit=5
+[ 9/20] ERROR user=8: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=44 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='Given my passion for art and entertaining, what ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I best mentor young professionals in fin' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some effective ways for me to maintain ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I'm planning a trip to Europe and want to balanc" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What strategies should I use to drive collaborat' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I incorporate more Southern-inspired com' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which accounting software should I recommend for' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some fun ways to stay connected with ot' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='If I want to organize a fundraiser around a musi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How do I set up a personal fitness plan that kee' top_k=5 hit=5
+[10/20] ERROR user=9: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=57 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What native plants should I focus on growing if ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest affordable upgrades for my woodw' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How could I best learn more about the genealogy ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What type of fishing gear would be most effectiv' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which traditional Cajun dishes should I try prep' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the best way to preserve and showcase loc" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I keep my landscaping business competiti' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some ways I can safely enjoy solo hunti' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I improve my communication with landscap' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are good ways to pass on local plant knowle' top_k=5 hit=5
+[11/20] ERROR user=10: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=56 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What steps can I take to effectively balance wri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Could you recommend strategies for making new co' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some effective ways to enhance my marke' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I get the most out of solo travel experi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What tools or methods should I use to stay motiv' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest ways to expand my blog audience,' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some engaging Korean dishes to cook for' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How should I prioritize developing screenwriting' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some ways I can stay physically and men' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you recommend a reading list that complement' top_k=5 hit=5
+[12/20] ERROR user=11: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=46 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some effective strategies for negotiati' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest the best way to budget for a tri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What should I do to stay motivated and productiv' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I deepen my appreciation for jazz and hi' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What should I consider when adapting classic sou' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I make the most out of my pickup basketb' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What approach should I take to strategically pla' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I select new music to explore that align' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some tactics I can use to mediate confl' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I build a reading routine that mixes his' top_k=5 hit=5
+[13/20] ERROR user=12: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=46 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some beginner-friendly ways to expand m' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I improve my vehicle inspection process ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What advice do you have for organizing a small, ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I support local textile artists and init' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What steps can I take to manage travel anxiety i' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which career advancement opportunities should I ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I make my handmade knit or crochet gifts' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest Southern comfort recipes using f' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What routines can I adopt to stay both physicall' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I deepen my appreciation for local art e' top_k=5 hit=5
+[14/20] ERROR user=13: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=40 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What skills should I focus on to improve my chan' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you recommend some history-rich small towns ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What should I keep in mind when mentoring a new ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I manage anxiety during stressful troubl' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some strategic openings I can practice ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Could you suggest hearty Midwestern dishes I cou' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some effective techniques for troublesh' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you recommend Irish folk music concerts or e' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some good books or biographies to read ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How could I get more involved in community event' top_k=5 hit=5
+[15/20] ERROR user=14: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=49 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some effective ways to network with oth' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What strategies can I use to balance planning so' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which machine learning specialization should I f' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest street art tours or workshops in' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How do I best approach leading a small team for ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some innovative ways to incorporate tra' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I stay consistently motivated to learn a' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some tips for finding and joining intim' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you recommend books—both fiction and non-fic' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some engaging hiking routes near Los An' top_k=5 hit=5
+[16/20] ERROR user=15: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=46 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query="I'm considering expanding our community programs" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I'd like to start experimenting with new cuisine" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some effective ways to revamp my garden' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How should I approach planning a hiking trip tha' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I’m interested in joining or starting a book clu' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some practical steps I can take to tran' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want to host effective community workshops—is ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I integrate evidence-based decision maki' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest travel destinations that combine' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some meaningful ways I can refresh my a' top_k=5 hit=5
+[17/20] ERROR user=16: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=47 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some creative ways I can improve teamwo' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest hearty comfort food recipes for ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the best way to get more involved with co" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I plan a safe and memorable kayaking tri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What steps should I take to advance from assembl' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you recommend activities or attractions in t' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How should I manage my time between work, volunt' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What are some ways I can introduce newcomers to ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I best support local artists during Firs' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What strategies can I use to teach assembly line' top_k=5 hit=5
+[18/20] ERROR user=17: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=48 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query="What's the best way for me to learn computer ski" top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which eco-friendly truck model should I consider' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Can you suggest some chess improvement technique' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="I'm looking for new history or science books to " top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What steps can I take to make my home garden mor' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I keep social gatherings enjoyable and m' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='I want to try new Ecuadorian recipes—what would ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How should I plan a spontaneous East Coast road ' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Could you recommend new ways to improve my deliv' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query="What's the best way for me to stay healthy and a" top_k=5 hit=5
+[19/20] ERROR user=18: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+[LettaBenchMemory][DEBUG] SDK=letta-client (preferred)
+[LettaBenchMemory][DEBUG] health_status=ok server_version=0.16.7
+[LettaBenchMemory][DEBUG] indexed chunks=42 mode=letta base_url=http://localhost:8283
+[LettaBenchMemory][DEBUG] query='What are some creative ways I can incorporate So' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='Which business structure would be best for start' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What kind of yoga routine would best suit my str' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I design a philosophical discussion even' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What pricing strategy should I use for my cateri' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What cities should I visit for inspiration in ar' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I market my catering business to align w' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What menu items could I feature to appeal to bot' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='What steps can I take to ensure financial stabil' top_k=5 hit=5
+[LettaBenchMemory][DEBUG] query='How can I balance personal time with event plann' top_k=5 hit=5
+[20/20] ERROR user=19: 'tree_nodes'
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval-remake2\bench_amemgym_memgpt.py", line 162, in main
+    f"tree={r['tree_nodes']}nodes/{r['tree_layers']}L"
+KeyError: 'tree_nodes'
+
+======================================================================
+
+  总准确率  : 54/200 (27.0%)
+  Ingest | time: 1029ms | chunks: 943
+         | llm_calls: 0
+  Infer  | time: 100375ms
+  Wall   : 101811ms (1.7min)
+  Errors : 20
+======================================================================
+
+结果已保存到 results_amemgym_memgpt.json

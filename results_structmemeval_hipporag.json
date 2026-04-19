@@ -8066,6 +8066,2346 @@
           "pred": "Fallback answer based on local mode. ## Question\nThere's a significant gap between my top genre (sci-fi at roughly 88%) "
         }
       ]
+    },
+    {
+      "case_id": "recommendations_art_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 2,
+      "ingest_chunks": 15,
+      "ingest_time_ms": 56999,
+      "ingest_llm_calls": 30,
+      "ingest_llm_prompt": 13393,
+      "ingest_llm_completion": 3777,
+      "infer_time_ms": 139053,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 12715,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "Three artists: Rodin, Degas, and Rothko.\n\n- Rodin: All comments were unambiguously positive (“unfinished in the best way"
+        },
+        {
+          "question": "Which artist did I reject entirely, with no positive comments whatsoever?",
+          "correct": true,
+          "pred": "Renoir. You described *Luncheon of the Boating Party* as “saccharine,” criticized his idealization for removing “all the"
+        },
+        {
+          "question": "Which artist received both praise and criticism in our conversations? What was t",
+          "correct": true,
+          "pred": "Jackson Pollock received both praise and criticism.  \n**Praise**: His “energy is undeniable” and works like *Number 1A* "
+        },
+        {
+          "question": "Should I visit the Monet exhibit or the Renoir retrospective next month?",
+          "correct": false,
+          "pred": "Visit the Monet exhibit. Your reflections consistently value art that invites deep, dynamic, and contemplative engagemen"
+        },
+        {
+          "question": "Based on all our conversations, how many sculptors did I praise and how many did",
+          "correct": false,
+          "pred": "You praised **four** sculptors:  \n- **Rodin** (admired his “unfinished” textures, emotional truth, moral weight in *The "
+        },
+        {
+          "question": "Across all our conversations, what percentage of my comments about Renaissance a",
+          "correct": false,
+          "pred": "100% of your comments about Renaissance artists were positive.  \nYou discussed **Botticelli** (The Birth of Venus) and *"
+        },
+        {
+          "question": "What's my breaking point with abstract art—when does it stop working for me? Use",
+          "correct": false,
+          "pred": "Your breaking point with abstract art is when it prioritizes concept or technique over tangible human presence—when the "
+        },
+        {
+          "question": "Which artists did I praise for revealing the artist's hand through visible techn",
+          "correct": false,
+          "pred": "You praised:  \n- **Van Gogh**, for his *impasto technique* in *Starry Night*, where the thick, trembling paint makes “hi"
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "You mentioned:  \n- **Spending forty minutes** watching light shift across Monet’s *Water Lilies* as clouds moved outside"
+        },
+        {
+          "question": "How many total messages have we exchanged, and what percentage were about art ju",
+          "correct": false,
+          "pred": "We exchanged **15 total messages** (5 sessions × 3 messages each: user query, assistant response, user follow-up).  \nAll"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_art_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 1,
+      "ingest_chunks": 23,
+      "ingest_time_ms": 60603,
+      "ingest_llm_calls": 46,
+      "ingest_llm_prompt": 20255,
+      "ingest_llm_completion": 4186,
+      "infer_time_ms": 140325,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 12761,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "Two artists: **Rodin** and **Rothko**.\n\n- Rodin: Praised consistently—“unfinished in the best way,” “deeper emotional tr"
+        },
+        {
+          "question": "Which artist did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "Pollock."
+        },
+        {
+          "question": "Which artist received both praise and criticism in our conversations? What was t",
+          "correct": false,
+          "pred": "Jackson Pollock received both praise and criticism.  \n**Praise**: His “energy is undeniable,” and works like *Number 1A*"
+        },
+        {
+          "question": "Should I visit the Monet exhibit or the Renoir retrospective next month?",
+          "correct": true,
+          "pred": "Visit the Monet exhibit. Your reflections consistently value authenticity, perceptual depth, meditative presence, and th"
+        },
+        {
+          "question": "Based on all our conversations, how many sculptors did I praise and how many did",
+          "correct": false,
+          "pred": "You praised **four** sculptors:  \n- **Rodin** (session_02): Celebrated for rough-hewn truth, emotional depth, and proces"
+        },
+        {
+          "question": "Across all our conversations, what percentage of my comments about Renaissance a",
+          "correct": false,
+          "pred": "You discussed two Renaissance artists: **Botticelli** (session_09) and **Michelangelo** (session_04).  \n\nAll your commen"
+        },
+        {
+          "question": "What's my breaking point with abstract art—when does it stop working for me? Use",
+          "correct": false,
+          "pred": "Your breaking point with abstract art is when technique overtakes presence—when the artist’s hand, intention, or emotion"
+        },
+        {
+          "question": "Which artists did I praise for revealing the artist's hand through visible techn",
+          "correct": false,
+          "pred": "You praised **Van Gogh**, **Rembrandt**, and **Rodin** for revealing the artist’s hand through visible technique:\n\n- **V"
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "You mentioned:  \n- Sitting for **forty minutes** before Rothko’s color fields in the Rothko Chapel, watching colors shif"
+        },
+        {
+          "question": "How many total messages have we exchanged, and what percentage were about art ju",
+          "correct": false,
+          "pred": "We exchanged **13 total messages** (5 user messages + 8 assistant messages across the 5 sessions).  \n\n- **Art judgments*"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_art_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 3,
+      "ingest_chunks": 31,
+      "ingest_time_ms": 70054,
+      "ingest_llm_calls": 62,
+      "ingest_llm_prompt": 27277,
+      "ingest_llm_completion": 5475,
+      "infer_time_ms": 167406,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 15215,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "You praised **one** artist without any criticism or mixed feelings: **Brancusi**.\n\nIn [4], you unequivocally prefer *Bir"
+        },
+        {
+          "question": "Which artists did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "None. You offered qualified criticism of Renoir, Serra, and (implicitly) Monet, but included positive remarks about each"
+        },
+        {
+          "question": "Which artist received both praise and criticism in our conversations? What was t",
+          "correct": true,
+          "pred": "Jackson Pollock received both praise and criticism.  \n**Praise**: His “energy is undeniable,” and works like *Number 1A*"
+        },
+        {
+          "question": "Should I visit the Monet exhibit or the Renoir retrospective next month?",
+          "correct": false,
+          "pred": "Visit the Monet exhibit. Your deep appreciation for immersive, light-responsive, contemplative experiences—like the brea"
+        },
+        {
+          "question": "Based on all our conversations, how many sculptors did I praise and how many did",
+          "correct": false,
+          "pred": "You praised **2 sculptors**:  \n- **Auguste Rodin** (admired for rough-hewn truth, emotional depth, human struggle, and t"
+        },
+        {
+          "question": "Between Brancusi's minimalist sculptures and Serra's steel installations, which ",
+          "correct": false,
+          "pred": "Prioritize Brancusi’s *Bird in Space*—it aligns with your core aesthetic principle that art should *expand* your world, "
+        },
+        {
+          "question": "Across all our conversations, what percentage of my comments about Renaissance a",
+          "correct": false,
+          "pred": "100% of your comments about Renaissance artists were positive.  \nYou discussed **Botticelli** (The Birth of Venus) and *"
+        },
+        {
+          "question": "What's my breaking point with abstract art—when does it stop working for me? Use",
+          "correct": false,
+          "pred": "Your breaking point with abstract art is when it loses tangible human presence—when technique, concept, or scale oversha"
+        },
+        {
+          "question": "Which artists did I praise for revealing the artist's hand through visible techn",
+          "correct": false,
+          "pred": "You praised:  \n- **Van Gogh**, for the *trembling, purposeful impasto* in *Starry Night*—where thick paint creates shift"
+        },
+        {
+          "question": "What role does art's healing power play in my preferences? Quote my ultimate tes",
+          "correct": true,
+          "pred": "Art’s healing power is central to your preferences—it’s the ethical benchmark by which you judge all art. Your ultimate "
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": true,
+          "pred": "You mentioned:  \n- Sitting on a bench for **forty minutes** watching Rothko’s colors shift with changing daylight (Rothk"
+        },
+        {
+          "question": "Based on our conversations, rank painting and sculpture from most to least align",
+          "correct": false,
+          "pred": "Sculpture: 12 positive, 0 negative, 0 mixed  \nPainting: 3 positive, 0 negative, 1 mixed  \n\n**Ranking:** Sculpture > Pain"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_art_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 1,
+      "ingest_chunks": 41,
+      "ingest_time_ms": 87395,
+      "ingest_llm_calls": 82,
+      "ingest_llm_prompt": 36696,
+      "ingest_llm_completion": 7469,
+      "infer_time_ms": 216107,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 21415,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "Two artists: **Brancusi** and **Rodin**.\n\n- Brancusi is praised unreservedly in [3] (“Give me Brancusi's *Bird in Space*"
+        },
+        {
+          "question": "Which artists did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "None. You offered some respect or acknowledgment for each artist—even Ai Weiwei (“I respect his activism”) and Serra (“I"
+        },
+        {
+          "question": "Which artist received both praise and criticism in our conversations? What was t",
+          "correct": true,
+          "pred": "Jackson Pollock received both praise and criticism.  \n**Praise:** His “energy is undeniable,” and works like *Number 1A*"
+        },
+        {
+          "question": "Which artists did I specifically mention for their use of impasto, rough texture",
+          "correct": false,
+          "pred": "You specifically mentioned:\n\n- **Rembrandt**: “those thick impasto highlights aren’t showy, they’re necessary to capture"
+        },
+        {
+          "question": "In which session did I state my ultimate test for whether something is 'decorati",
+          "correct": false,
+          "pred": "You stated your ultimate test in **Session 11** (Renoir’s *Luncheon of the Boating Party*):  \n**“I’d rather have an impe"
+        },
+        {
+          "question": "Based on our conversations, when is biographical knowledge helpful versus necess",
+          "correct": false,
+          "pred": "Biographical knowledge is helpful—but not necessary—when it deepens emotional engagement; it becomes unnecessary when “a"
+        },
+        {
+          "question": "Which artists did I explicitly contrast in terms of showing the artist's hand ve",
+          "correct": false,
+          "pred": "You explicitly contrasted **Brancusi and Serra**, and **Hirst and Monet**, in terms of showing the artist’s hand versus "
+        },
+        {
+          "question": "For which artists did I explicitly state that their choice of medium was essenti",
+          "correct": false,
+          "pred": "You explicitly stated this for **Degas** and **Van Gogh**:  \n\n- On **Degas**: *“The pastel medium lets him capture movem"
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "You mentioned:  \n- Spending **twenty minutes** looking at Vermeer’s *Girl with a Pearl Earring*—no photos, no notes, jus"
+        },
+        {
+          "question": "In multiple sessions, I used the words 'truth' or 'honest' to describe what I va",
+          "correct": false,
+          "pred": "1. On Rembrandt: *“Rembrandt's late self-portraits show aging without vanity… His light doesn't flatter; it forgives.”* "
+        },
+        {
+          "question": "Using only direct quotes from our conversations, synthesize my complete artistic",
+          "correct": false,
+          "pred": "Your artistic philosophy is:  \n“Vermeer’s work feels like a sanctuary for slow looking.”  \n“Deep attention creates relat"
+        },
+        {
+          "question": "Based on all our conversations, rank the following art mediums from most to leas",
+          "correct": false,
+          "pred": "**Ranking (most to least aligned):**  \n1. **Sculpture**  \n2. **Painting**  \n3. **Installation art**  \n\n**Raw counts per "
+        },
+        {
+          "question": "I have time to see only one exhibition next month. Based on our conversations, s",
+          "correct": false,
+          "pred": "Rothko—because your comments consistently prioritize **spiritual resonance, meditative stillness, and active, time-based"
+        },
+        {
+          "question": "Which three artists did I describe with language of transformation (e.g., turnin",
+          "correct": false,
+          "pred": "1. **Van Gogh**: *“Van Gogh's Starry Night isn't just paint—it's emotional weather. Those swirling skies feel like hope "
+        },
+        {
+          "question": "If a museum offered simultaneous exhibitions of Rodin, Brancusi, and Serra, whic",
+          "correct": false,
+          "pred": "Prioritize **Brancusi**—because, as you said: *“Give me Brancusi's Bird in Space over Serra's walls any day—one lifts th"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_art_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 0,
+      "ingest_chunks": 51,
+      "ingest_time_ms": 113682,
+      "ingest_llm_calls": 102,
+      "ingest_llm_prompt": 45545,
+      "ingest_llm_completion": 8484,
+      "infer_time_ms": 229209,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 23238,
+      "qa_results": [
+        {
+          "question": "How many artists did I praise without any criticism or mixed feelings across all",
+          "correct": false,
+          "pred": "None.  \n\nIn every conversation, you expressed nuanced, mixed views—praising aspects of each artist (Basquiat’s energy an"
+        },
+        {
+          "question": "Which artists did I reject entirely, with no positive comments whatsoever?",
+          "correct": false,
+          "pred": "You rejected **Renoir** and **Warhol** entirely, with no positive comments.  \n\n- For **Renoir**, you called *The Luncheo"
+        },
+        {
+          "question": "Which artists received both praise and criticism in our conversations? What was ",
+          "correct": false,
+          "pred": "Four artists received both praise and criticism:\n\n- **Basquiat**:  \n  *Praise*: His raw energy, emotional anchors, and n"
+        },
+        {
+          "question": "Which artists did I specifically mention for their use of impasto, rough texture",
+          "correct": false,
+          "pred": "You specifically mentioned:\n\n- **Rembrandt**: *“those thick impasto highlights aren’t showy, they’re necessary to captur"
+        },
+        {
+          "question": "In which session did I state my ultimate test for whether something is 'decorati",
+          "correct": false,
+          "pred": "You stated your ultimate test in **Session 07** (Van Gogh’s *Starry Night*):  \n**“Authenticity of experience separates d"
+        },
+        {
+          "question": "Based on our conversations, when is biographical knowledge helpful versus necess",
+          "correct": false,
+          "pred": "Biographical knowledge is helpful when it “makes the technical challenges feel urgent”—as with Ross King’s Michelangelo "
+        },
+        {
+          "question": "What distinction did I make between art meant for public spaces versus private h",
+          "correct": false,
+          "pred": "You distinguished that **public art** (e.g., street art, *Guernica*, Basquiat’s urban works) should provoke, disrupt, or"
+        },
+        {
+          "question": "For which artists did I explicitly state that their choice of medium was essenti",
+          "correct": false,
+          "pred": "You explicitly stated this for **Van Gogh** and **Renoir**, quoting:\n\n- **Van Gogh**: *“The thick paint creates shadows "
+        },
+        {
+          "question": "What specific activities did I mention doing with art that reveal my preference ",
+          "correct": false,
+          "pred": "You mentioned:  \n- Spending **twenty minutes** with Vermeer’s *Girl with a Pearl Earring*, **no photos, no notes—just lo"
+        },
+        {
+          "question": "In multiple sessions, I used the words 'truth' or 'honest' to describe what I va",
+          "correct": false,
+          "pred": "1. On Rembrandt: *“Rembrandt's late self-portraits show aging without vanity… His light doesn't flatter; it forgives.”* "
+        },
+        {
+          "question": "Using only direct quotes from our conversations, synthesize my complete artistic",
+          "correct": false,
+          "pred": "“Art should demand something of you—not just sit pretty on a wall.”  \n“I want to be changed by what I see, not just deco"
+        },
+        {
+          "question": "Based on all our conversations, rank the following art mediums from most to leas",
+          "correct": false,
+          "pred": "**Ranking (most to least aligned):**  \n1. **Sculpture**  \n2. **Painting**  \n3. **Installation art**  \n\n**Raw counts:**  "
+        },
+        {
+          "question": "I have time to see only one exhibition next month. Based on our conversations, s",
+          "correct": false,
+          "pred": "Rothko—because your reflections on his work align most deeply with your core values: you describe Rothko’s color fields "
+        },
+        {
+          "question": "Which three artists did I describe with language of transformation (e.g., turnin",
+          "correct": false,
+          "pred": "1. **Frida Kahlo**: *“Kahlo's self-portraits turn pain into power—not by hiding scars, but by making them part of her cr"
+        },
+        {
+          "question": "If a museum offered simultaneous exhibitions of Rodin, Brancusi, and Serra, whic",
+          "correct": false,
+          "pred": "Prioritize **Rodin**, because your comments consistently highlight how his work *expands* and *engages* the viewer physi"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 3,
+      "ingest_chunks": 14,
+      "ingest_time_ms": 33221,
+      "ingest_llm_calls": 28,
+      "ingest_llm_prompt": 12614,
+      "ingest_llm_completion": 1642,
+      "infer_time_ms": 147775,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 13069,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, what is the approximate percentage of positive f",
+          "correct": false,
+          "pred": "Based on the conversation memories, here’s an approximate count and percentage of *positive feedback* per genre (only ex"
+        },
+        {
+          "question": "Which game is mentioned most often across our conversations, and what does its t",
+          "correct": true,
+          "pred": "**Terraforming Mars** is mentioned most often (in sessions 01, 05, and 09). Its treatment reveals a core tension in your"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative sessions across all your b",
+          "correct": false,
+          "pred": "All 5 sessions ([1]–[5]) are substantive board game discussions with clearly positive sentiment—each reflects enjoyment,"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "The single game mechanism that receives the most criticism is **alpha player dominance in cooperative games**, criticize"
+        },
+        {
+          "question": "What three game characteristics are most important for your enjoyment, based on ",
+          "correct": false,
+          "pred": "1. **Tactile and visual component quality** – *Azul* (beautiful, weighty tiles enhance satisfaction).  \n2. **Strategic d"
+        },
+        {
+          "question": "You have mixed feelings about party games. What percentage of your party game di",
+          "correct": false,
+          "pred": "Based on the memories, **~60% of your party game discussions are positive** (3 out of 5 sessions: [1], [3], and part of "
+        },
+        {
+          "question": "What factors contribute most to game replayability based on your feedback patter",
+          "correct": true,
+          "pred": "Based on your feedback patterns, the key factors contributing to game replayability are:\n\n1. **Strategic Variability**  "
+        },
+        {
+          "question": "What is the approximate success rate of cooperative games for you, and what mech",
+          "correct": false,
+          "pred": "Your cooperative game success rate is roughly **50%**: Spirit Island and The Crew succeeded, while Pandemic Legacy faile"
+        },
+        {
+          "question": "Based on your feedback, which type of game (strategy, abstract, party, or cooper",
+          "correct": true,
+          "pred": "Strategy games—specifically those with *meaningful direct interaction*, like **Root** (which you called “perfect” for it"
+        },
+        {
+          "question": "Based on all your feedback, what single question best predicts whether you will ",
+          "correct": false,
+          "pred": "**Best predictive question:** *“Does the game offer meaningful variability across plays—through variable setup, asymmetr"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 1,
+      "ingest_chunks": 19,
+      "ingest_time_ms": 36133,
+      "ingest_llm_calls": 38,
+      "ingest_llm_prompt": 17061,
+      "ingest_llm_completion": 2158,
+      "infer_time_ms": 137402,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 14232,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, rank the board game genres by your positive feed",
+          "correct": false,
+          "pred": "Based on explicit positive feedback across all sessions, ranked by frequency and enthusiasm:\n\n1. **Abstract Strategy (e."
+        },
+        {
+          "question": "What is the approximate percentage of cooperative games that successfully engage",
+          "correct": false,
+          "pred": "Based on the memories:  \n- You played **3 cooperative games**: *Forbidden Island* (failed), *Pandemic* (failed), and *Sp"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative sessions across all your b",
+          "correct": false,
+          "pred": "4 positive : 2 negative → **2:1**"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "The single most criticized game mechanism is **lack of player agency during other players’ turns**, which appears in **4"
+        },
+        {
+          "question": "What three game mechanisms do you most consistently praise across our conversati",
+          "correct": false,
+          "pred": "1. **Asymmetry** – *Root* (different factions play like entirely distinct games)  \n2. **Emergent complexity from simple "
+        },
+        {
+          "question": "What is the approximate percentage point difference between your positive feedba",
+          "correct": false,
+          "pred": "The question mischaracterizes the memories: there is no “your” (the assistant’s) feedback—only the *user’s* expressed pr"
+        },
+        {
+          "question": "What three factors most strongly influence a game's long‑term replayability for ",
+          "correct": false,
+          "pred": "1. **Asymmetric Factions / Variable Setup**  \n   - *Positive:* Root—each faction (e.g., Vagabond vs. Marquise de Cat) pl"
+        },
+        {
+          "question": "What percentage of your factual game discussions involve explicit criticism of p",
+          "correct": false,
+          "pred": "100% of the factual game discussions in the memories explicitly criticize player agency.  \n\nThree games criticized for a"
+        },
+        {
+          "question": "Which game is mentioned most frequently across our conversations, and what does ",
+          "correct": true,
+          "pred": "Terraforming Mars is mentioned most frequently (in sessions 01, 05, and 14). Its treatment reveals a strong preference f"
+        },
+        {
+          "question": "Based on your feedback, what single question best predicts whether you will enjo",
+          "correct": false,
+          "pred": "**Question:** *Does the game maintain meaningful player agency throughout every player’s turn—not just during their own?"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 0,
+      "ingest_chunks": 39,
+      "ingest_time_ms": 53360,
+      "ingest_llm_calls": 78,
+      "ingest_llm_prompt": 34452,
+      "ingest_llm_completion": 3411,
+      "infer_time_ms": 168397,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 16397,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, rank the board game genres by your positive feed",
+          "correct": false,
+          "pred": "Based on your expressed preferences across all sessions, here’s the ranking of board game genres by *positive feedback p"
+        },
+        {
+          "question": "What is the approximate percentage of cooperative games that successfully engage",
+          "correct": false,
+          "pred": "0% of the cooperative games *without* anti-quarterbacking mechanics engaged you (Pandemic, Pandemic Legacy, Forbidden Is"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative sessions across all your b",
+          "correct": false,
+          "pred": "Out of the 5 referenced sessions:  \n- Positive: session_17 (Spirit Island — praised for true cooperation) and session_03"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "The single game mechanism most criticized is **lack of mechanical barriers to quarterbacking (alpha-player dominance)** "
+        },
+        {
+          "question": "What three game mechanisms do you most consistently praise across our conversati",
+          "correct": false,
+          "pred": "1. **Tactile and visual component quality** – *Azul* (praised for tile weight, color, and physical satisfaction).  \n2. *"
+        },
+        {
+          "question": "What is the approximate percentage point difference between your positive feedba",
+          "correct": false,
+          "pred": "The question presumes I’ve given *quantitative* positive feedback (e.g., ratings or percentages) for strategy vs. abstra"
+        },
+        {
+          "question": "What three factors most strongly influence a game's long‑term replayability for ",
+          "correct": false,
+          "pred": "1. **Asymmetric Factions / Roles**  \n   - *Positive:* Root—Vagabond vs. Marquise de Cat play like entirely different gam"
+        },
+        {
+          "question": "What is your preferred player count range for strategy games, and how many times",
+          "correct": false,
+          "pred": "Preferred player count range: 3–4 players.  \nMentioned positively: 1 time (in [Session: session_24])."
+        },
+        {
+          "question": "How important is thematic integration to your enjoyment of a game? Provide examp",
+          "correct": false,
+          "pred": "Thematic integration is **essential**—but only when it *emerges from and reinforces the mechanics*, not as superficial d"
+        },
+        {
+          "question": "You generally find party games shallow, yet you praised Just One. What percentag",
+          "correct": false,
+          "pred": "100% of the party games discussed *positively* were Just One (1 out of 1). Codenames and other unnamed party games were "
+        },
+        {
+          "question": "What is your philosophy on building and maintaining a board game collection, bas",
+          "correct": false,
+          "pred": "My philosophy centers on **intentionality, accessibility, and sensory engagement**:  \n1. **Prioritize games that deliver"
+        },
+        {
+          "question": "Based on your feedback, what single question best predicts whether you will enjo",
+          "correct": false,
+          "pred": "**\"Does the game retain emergent complexity and meaningful decision-making across multiple plays—or does it devolve into"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 2,
+      "ingest_chunks": 56,
+      "ingest_time_ms": 73549,
+      "ingest_llm_calls": 112,
+      "ingest_llm_prompt": 49609,
+      "ingest_llm_completion": 6125,
+      "infer_time_ms": 217570,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 21179,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, what is the percentage of cooperative games that",
+          "correct": false,
+          "pred": "Based on your conversations:  \n- You tried **4 cooperative games**: *Pandemic*, *Pandemic Legacy*, *Forbidden Island*, a"
+        },
+        {
+          "question": "What three game mechanisms do you most consistently praise across our conversati",
+          "correct": false,
+          "pred": "1. **Progressive complexity** – *Wingspan* (teaches one mechanic per round via visual examples)  \n2. **Tactile/physical "
+        },
+        {
+          "question": "Compare your positive feedback percentages for strategy games versus abstract ga",
+          "correct": false,
+          "pred": "I don’t track or calculate “positive feedback percentages” for game categories—I don’t quantify user sentiment numerical"
+        },
+        {
+          "question": "What is your preferred player count range for strategy games, and how many times",
+          "correct": false,
+          "pred": "Your preferred player count range is **3–4 players**, and you’ve mentioned this preference **positively 3 times** (in se"
+        },
+        {
+          "question": "What single design flaw causes the 'alpha player' problem in cooperative games, ",
+          "correct": true,
+          "pred": "The single design flaw is **lack of distributed agency**—specifically, open information combined with simple, globally o"
+        },
+        {
+          "question": "What is your ideal game length range, and how many games in our conversations fa",
+          "correct": false,
+          "pred": "Your ideal game length is **60–90 minutes**, as evidenced by your 90-minute Root session (session_27) and the contrast w"
+        },
+        {
+          "question": "What three factors most strongly influence a game's long-term replayability for ",
+          "correct": false,
+          "pred": "1. **Asymmetric Factions / Variable Setup**  \n   - *Positive:* Root—each faction (e.g., Vagabond vs. Marquise de Cat) pl"
+        },
+        {
+          "question": "What is your attitude toward legacy games, and how many legacy games have you di",
+          "correct": false,
+          "pred": "You’re skeptical of legacy games when they fail to address core design flaws—like the “alpha player” problem in *Pandemi"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "The single game mechanism most criticized is **lack of mechanical barriers against quarterbacking (alpha-player dominanc"
+        },
+        {
+          "question": "You generally find party games shallow, yet you praised Just One. What percentag",
+          "correct": false,
+          "pred": "Of the party games discussed, **1 out of 3** (≈33%) were praised positively—only *Just One*.  \n\nThe distinction: *Just O"
+        },
+        {
+          "question": "How important is thematic integration to your enjoyment of a game? Provide examp",
+          "correct": true,
+          "pred": "Thematic integration is **essential**—not as decoration, but as *mechanical reinforcement*. When theme and mechanics are"
+        },
+        {
+          "question": "What is your philosophy on building and maintaining a board game collection, bas",
+          "correct": false,
+          "pred": "Based on our conversations, your board game collection philosophy centers on **intentionality, sensory engagement, and p"
+        },
+        {
+          "question": "Which single game is mentioned most frequently across our conversations, and wha",
+          "correct": false,
+          "pred": "Root is mentioned most frequently. This reveals your core gaming values: **strategic depth through meaningful asymmetry*"
+        },
+        {
+          "question": "What percentage of your game discussions include explicit mentions of player age",
+          "correct": false,
+          "pred": "100% of the cited game discussions explicitly mention player agency or related concepts (e.g., “executing another’s plan"
+        },
+        {
+          "question": "Based on your feedback, what single question best predicts whether you will enjo",
+          "correct": false,
+          "pred": "**Question:** *“Does the game teach itself through play—using intuitive components, progressive examples, and tactile fe"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_boardgames_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 2,
+      "ingest_chunks": 68,
+      "ingest_time_ms": 81675,
+      "ingest_llm_calls": 136,
+      "ingest_llm_prompt": 60632,
+      "ingest_llm_completion": 7076,
+      "infer_time_ms": 217742,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 21893,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, what is the percentage of cooperative games that",
+          "correct": false,
+          "pred": "Based on our conversations, **1 out of 4 cooperative games** you played was successfully engaging:  \n- ✅ *Spirit Island*"
+        },
+        {
+          "question": "What three game mechanisms do you most consistently praise across our conversati",
+          "correct": false,
+          "pred": "1. **Sustained Focus & Decision Density** – Praised in *Terraforming Mars* (session_21, session_33): rewards prolonged, "
+        },
+        {
+          "question": "Compare your positive feedback percentages for strategy games versus abstract ga",
+          "correct": false,
+          "pred": "I don’t track or calculate “positive feedback percentages” for game categories—I don’t quantify user sentiment numerical"
+        },
+        {
+          "question": "What is your preferred player count range for strategy games, and how many times",
+          "correct": false,
+          "pred": "Your preferred player count range for strategy games is **3–4 players**, and you’ve mentioned this preference **positive"
+        },
+        {
+          "question": "What single design flaw causes the 'alpha player' problem in cooperative games, ",
+          "correct": true,
+          "pred": "The single design flaw is **open information combined with low decision-space complexity**, which enables one player to "
+        },
+        {
+          "question": "What is your ideal game length range, and how many games in our conversations fa",
+          "correct": false,
+          "pred": "Your ideal game length is **90 minutes** for deep strategy, with appreciation for shorter games (e.g., 30 minutes) that "
+        },
+        {
+          "question": "What three factors most strongly influence a game's long-term replayability for ",
+          "correct": false,
+          "pred": "1. **Asymmetric Factions / Variable Setup**  \n   - *Positive:* Root—each faction (e.g., Vagabond vs. Marquise de Cat) pl"
+        },
+        {
+          "question": "What is your attitude toward legacy games, and how many legacy games have you di",
+          "correct": true,
+          "pred": "You’re skeptical of legacy games, viewing permanent changes as often gimmicky unless they meaningfully transform gamepla"
+        },
+        {
+          "question": "What single game mechanism receives the most criticism from you, and in how many",
+          "correct": false,
+          "pred": "The single game mechanism most criticized is **fixed, deterministic setups that lead to solved or optimal strategies**, "
+        },
+        {
+          "question": "You generally find party games shallow, yet you praised Just One. What percentag",
+          "correct": false,
+          "pred": "Only **1 out of 4** party games discussed was positive (Just One), so **25%**.\n\nThe distinction: Just One avoids shallow"
+        },
+        {
+          "question": "How important is thematic integration to your enjoyment of a game? Provide examp",
+          "correct": false,
+          "pred": "Thematic integration is **essential** to your enjoyment—you value games where theme and mechanics are inseparable, not d"
+        },
+        {
+          "question": "What is your philosophy on building and maintaining a board game collection, bas",
+          "correct": false,
+          "pred": "My philosophy centers on **intentional curation over accumulation**, guided by three principles:  \n1. **Play-value prior"
+        },
+        {
+          "question": "Which single game is mentioned most frequently across our conversations, and wha",
+          "correct": false,
+          "pred": "**Root** is mentioned most frequently (in memory [1]). This reveals your core gaming value is **strategic depth through "
+        },
+        {
+          "question": "What percentage of your game discussions include explicit mentions of player age",
+          "correct": false,
+          "pred": "100% of the cited game discussions explicitly mention player agency or related concepts (e.g., “spectatorship,” “executi"
+        },
+        {
+          "question": "Based on your feedback, what single question best predicts whether you will enjo",
+          "correct": false,
+          "pred": "**Best predictive question:**  \n*“Does every minute of play deliver meaningful, non-puzzle-like decisions with genuine t"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 1,
+      "ingest_chunks": 13,
+      "ingest_time_ms": 12856,
+      "ingest_llm_calls": 26,
+      "ingest_llm_prompt": 11449,
+      "ingest_llm_completion": 1123,
+      "infer_time_ms": 69770,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 11838,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, can you rank my genres by satisfaction rate and ",
+          "correct": false,
+          "pred": "No—I can’t assign exact satisfaction percentages to your genres. Our conversations reveal strong, nuanced preferences (e"
+        },
+        {
+          "question": "I want a fantasy book with logical magic, strong character growth, AND a guarant",
+          "correct": false,
+          "pred": "Brandon Sanderson’s *Mistborn* trilogy—especially the original trilogy (*The Final Empire*, *The Well of Ascension*, *Th"
+        },
+        {
+          "question": "What's the #1 thing that makes me love or hate a book, regardless of genre?",
+          "correct": false,
+          "pred": "**Intentionality**—whether the book feels carefully crafted and purposeful (e.g., seeded plots, immersive worldbuilding,"
+        },
+        {
+          "question": "Recommend a horror novel that matches my preference for psychological tension ov",
+          "correct": false,
+          "pred": "*We Have Always Lived in the Castle* by Shirley Jackson — same masterful, uncanny prose as *Hill House*, steeped in psyc"
+        },
+        {
+          "question": "How can I enjoy historical fiction without getting lost in dense prose?",
+          "correct": false,
+          "pred": "Prioritize historical fiction where facts serve emotion—not the other way around. Look for lyrical but clear prose (like"
+        },
+        {
+          "question": "Suggest a romance that avoids artificial drama and has real character developmen",
+          "correct": false,
+          "pred": "*The Flatshare*—it avoids artificial miscommunication, roots conflict in authentic life pressures (not character stupidi"
+        },
+        {
+          "question": "What new genre should I explore that aligns with my current tastes?",
+          "correct": false,
+          "pred": "Historical fantasy—blends your love of immersive worldbuilding (fantasy), emotionally grounded storytelling (The Book Th"
+        },
+        {
+          "question": "Should I use audiobooks or print for different genres based on my past struggles",
+          "correct": false,
+          "pred": "Yes—match format to genre and your cognitive strengths:  \n- **Poetry**: Audiobooks (your auditory processing unlocks mea"
+        },
+        {
+          "question": "What's my personal rule for starting a new fantasy series without anxiety?",
+          "correct": false,
+          "pred": "I only commit to a new fantasy series if I know it has a planned, completed ending—like Sanderson’s outlined sagas—not a"
+        },
+        {
+          "question": "Do I care more about plot or character? Back it up with stats from our chats.",
+          "correct": true,
+          "pred": "You care **more about character**—specifically, meaningful character growth—than plot.  \n\nEvidence from our chats:  \n- I"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 2,
+      "ingest_chunks": 23,
+      "ingest_time_ms": 31107,
+      "ingest_llm_calls": 46,
+      "ingest_llm_prompt": 20403,
+      "ingest_llm_completion": 1968,
+      "infer_time_ms": 140323,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 13107,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations about books, can you rank my genres from highest ",
+          "correct": false,
+          "pred": "Based on your conversation memories, here's your genre satisfaction ranking (highest to lowest), inferred from frequency"
+        },
+        {
+          "question": "I want a book that has logical magic systems, strong character growth, AND a gua",
+          "correct": true,
+          "pred": "Brandon Sanderson’s *Mistborn* trilogy — especially the original trilogy (*The Final Empire*, *The Well of Ascension*, *"
+        },
+        {
+          "question": "Looking at all my reading preferences, what's the common thread that makes me lo",
+          "correct": false,
+          "pred": "The common thread is **psychological authenticity and meaningful change**—you love books where characters evolve through"
+        },
+        {
+          "question": "I want a horror novel that matches my preferences for psychological tension with",
+          "correct": false,
+          "pred": "Read *We Have Always Lived in the Castle* by Shirley Jackson. It aligns perfectly with your preferences: it builds profo"
+        },
+        {
+          "question": "I want to enjoy historical fiction without getting bogged down by dense prose. W",
+          "correct": false,
+          "pred": "Prioritize historical fiction where history is *woven through character experience*—not layered on top of it. Based on y"
+        },
+        {
+          "question": "I want a romance novel that avoids artificial drama while delivering strong char",
+          "correct": true,
+          "pred": "*The Flatshare*—it avoids artificial drama (obstacles arise from real-life circumstances, not miscommunication), and del"
+        },
+        {
+          "question": "Which genre should I explore next that would naturally extend from my current pr",
+          "correct": false,
+          "pred": "**Historical fiction with strong character arcs and immersive world-building.**  \n\nYou deeply value *character growth ro"
+        },
+        {
+          "question": "Should I use audiobooks or print for different genres based on my past struggles",
+          "correct": false,
+          "pred": "Yes—here's your personalized format strategy, based on your memories:\n\n- **Poetry → Audio only**: You consistently find "
+        },
+        {
+          "question": "I'm anxious about unfinished series but love epic fantasy. What's my optimal rea",
+          "correct": false,
+          "pred": "Prioritize authors known for reliability and completion—like Sanderson—whose series you can trust to deliver satisfying,"
+        },
+        {
+          "question": "Summarize my core reading identity in three principles that predict whether I'll",
+          "correct": false,
+          "pred": "1. **Character Growth as Moral Evolution**: You require characters who meaningfully change through authentic, consequent"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 1,
+      "ingest_chunks": 32,
+      "ingest_time_ms": 45569,
+      "ingest_llm_calls": 64,
+      "ingest_llm_prompt": 28386,
+      "ingest_llm_completion": 3408,
+      "infer_time_ms": 179430,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 18690,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations about books, can you rank my genres from highest ",
+          "correct": false,
+          "pred": "I can’t provide exact percentages—our conversations don’t include quantitative data (e.g., number of books read, ratings"
+        },
+        {
+          "question": "I want a book that has logical magic systems, strong character growth, AND a gua",
+          "correct": false,
+          "pred": "Brandon Sanderson’s *Stormlight Archive*—especially the completed arcs (Books 1–5)—is your perfect match:  \n- **Logical "
+        },
+        {
+          "question": "Looking at all my reading preferences, what's the common thread that makes me lo",
+          "correct": false,
+          "pred": "Distinctiveness—whether in character voices, world-building, genre balance, or emotional/psychological impact. You love "
+        },
+        {
+          "question": "I want to enjoy historical fiction without getting bogged down by dense prose. W",
+          "correct": false,
+          "pred": "Prioritize historical fiction where history serves character—not the other way around. Choose books like *The Nightingal"
+        },
+        {
+          "question": "I want a romance novel that avoids artificial drama while delivering strong char",
+          "correct": true,
+          "pred": "*The Flatshare*—it avoids artificial drama by grounding romance in realistic, pre-existing lives (Tiffy’s career ambitio"
+        },
+        {
+          "question": "Which genre should I explore next that would naturally extend from my current pr",
+          "correct": false,
+          "pred": "Historical fantasy—specifically *mythic historical fantasy* (e.g., Juliet Marillier’s work or Naomi Novik’s *Uprooted*/*"
+        },
+        {
+          "question": "Should I use audiobooks or print for different genres based on my past struggles",
+          "correct": false,
+          "pred": "Yes—tailor format to genre *and* your cognitive/emotional needs:\n\n- **Poetry → Audiobooks only**: Your access point is s"
+        },
+        {
+          "question": "What percentage of my fantasy discussions were positive versus romance discussio",
+          "correct": false,
+          "pred": "Of your **5 recorded sessions**, **3** are primarily about **fantasy** (sessions 05, 25, and 26), and **2** are primaril"
+        },
+        {
+          "question": "Find me a book where character growth is the primary focus across any genre. Jus",
+          "correct": false,
+          "pred": "**Book:** *The Giver* by Lois Lowry  \n\n**Justification:** Your memories consistently prioritize *earned, internal charac"
+        },
+        {
+          "question": "What specific aspects of world-building do I value most based on our conversatio",
+          "correct": false,
+          "pred": "Based on your conversations, here’s how you value world-building aspects—ranked by importance with direct evidence:\n\n1. "
+        },
+        {
+          "question": "What's the #1 reason I abandon books across all genres? Analyze my negative feed",
+          "correct": false,
+          "pred": "The #1 reason you abandon books across all genres is **a perceived lack of authorial intentionality**—specifically, when"
+        },
+        {
+          "question": "Summarize my core reading identity in 3 principles that predict whether I'll lov",
+          "correct": false,
+          "pred": "1. **Emotional authenticity first**: Characters must feel real and fully realized—grounded in believable lives, jobs, st"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 2,
+      "ingest_chunks": 42,
+      "ingest_time_ms": 55377,
+      "ingest_llm_calls": 84,
+      "ingest_llm_prompt": 36806,
+      "ingest_llm_completion": 4665,
+      "infer_time_ms": 224972,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 20282,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, rank the book genres I've discussed by my satisf",
+          "correct": false,
+          "pred": "Based on the conversation memories, you discussed **three genres**, each with clear positive or negative valence:\n\n- **F"
+        },
+        {
+          "question": "I want a book with logical magic systems, strong character growth, and a guarant",
+          "correct": false,
+          "pred": "*Elantris*—it features Sanderson’s signature logical, rule-based magic (AonDor), deep character growth (Raoden’s moral e"
+        },
+        {
+          "question": "What is the single most important factor that determines whether I will love or ",
+          "correct": false,
+          "pred": "The single most important factor is **emotional authenticity of characters**—i.e., characters feeling real, relatable, a"
+        },
+        {
+          "question": "Among Sanderson, Rothfuss, and Jordan, which fantasy author should I read next, ",
+          "correct": false,
+          "pred": "Fallback answer based on local mode. ## Question\nAmong Sanderson, Rothfuss, and Jordan, which fantasy author should I re"
+        },
+        {
+          "question": "I want a horror novel that relies on psychological tension and atmosphere, not g",
+          "correct": false,
+          "pred": "*The Haunting of Hill House* fits you best.  \n\nSupporting quotes:  \n- “I prefer horror that creates a sense of dread thr"
+        },
+        {
+          "question": "I often struggle with dense historical fiction like Wolf Hall. What strategy sho",
+          "correct": true,
+          "pred": "Prioritize books where history is *woven through character experience*—not layered on top of it. Based on your successes"
+        },
+        {
+          "question": "I want a romance novel that avoids artificial drama and has strong character dev",
+          "correct": true,
+          "pred": "Choose *The Flatshare*. It avoids artificial drama by grounding conflict in realistic, character-driven tensions—Tiffy’s"
+        },
+        {
+          "question": "Which new genre should I explore that naturally extends from my current tastes, ",
+          "correct": false,
+          "pred": "**Historical fantasy**—it bridges your love of grounded, intimate magic (low fantasy) with rich world-building and emoti"
+        },
+        {
+          "question": "For which genres should I use audiobooks versus print, based on my past experien",
+          "correct": false,
+          "pred": "**Your Personalized Format Guide:**\n\n- **Poetry → Audiobook (strong preference):**  \n  Audio unlocks rhythm, emphasis, a"
+        },
+        {
+          "question": "I love epic fantasy but fear unfinished series. How should I choose what to read",
+          "correct": false,
+          "pred": "Here’s a tiered strategy tailored to your love of epic fantasy *and* your valid fear of unfinished series:\n\n**Tier 1: Sa"
+        },
+        {
+          "question": "Compare my satisfaction with fantasy versus romance. Give exact percentages and ",
+          "correct": false,
+          "pred": "You haven’t provided explicit satisfaction percentages for fantasy versus romance—so no exact numbers exist in your memo"
+        },
+        {
+          "question": "Recommend a book where character growth is the absolute center of the story, reg",
+          "correct": false,
+          "pred": "*The Giver* by Lois Lowry.  \n\nIt centers entirely on Jonas’s moral and emotional growth—his awakening to truth, pain, lo"
+        },
+        {
+          "question": "Rank the aspects of world‑building that matter most to me, with evidence from ou",
+          "correct": false,
+          "pred": "1. **Integration of magic with the real or lived-in world**  \n   *Evidence*: You prefer low fantasy (e.g., *Addie LaRue*"
+        },
+        {
+          "question": "I want to enjoy poetry but find print intimidating. Create a step‑by‑step plan b",
+          "correct": false,
+          "pred": "Here’s your personalized, low-pressure poetry plan—built from what’s already working for you:\n\n1. **Start daily with *Th"
+        },
+        {
+          "question": "Summarize my core reading identity in three principles that predict my reaction ",
+          "correct": false,
+          "pred": "1. **Characters first, genre/history second** – You prioritize emotional authenticity and relatability over plot mechani"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_books_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 3,
+      "ingest_chunks": 64,
+      "ingest_time_ms": 56365,
+      "ingest_llm_calls": 128,
+      "ingest_llm_prompt": 54735,
+      "ingest_llm_completion": 5297,
+      "infer_time_ms": 207005,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 17436,
+      "qa_results": [
+        {
+          "question": "Which authors or books did I praise in every single conversation where they were",
+          "correct": false,
+          "pred": "Kristin Hannah (*The Nightingale*), Min Jin Lee (*Pachinko*), Anthony Doerr (*All the Light We Cannot See*), and Markus "
+        },
+        {
+          "question": "Which authors or books did I mention only to criticize, with no redeeming qualit",
+          "correct": false,
+          "pred": "None. You criticized *A Court of Thorns and Roses* for unbalanced genre blending, but that critique was framed construct"
+        },
+        {
+          "question": "Which authors or books received both positive and negative feedback in different",
+          "correct": false,
+          "pred": "None of the authors or books mentioned received *both* positive and negative feedback across the conversations. All feed"
+        },
+        {
+          "question": "Which authors did I praise for creating logical, consistent magic systems? What ",
+          "correct": false,
+          "pred": "You praised **Brandon Sanderson** for creating logical, consistent magic systems. You highlighted that his systems feel "
+        },
+        {
+          "question": "What is the key factor that makes character development feel 'earned' to me, and",
+          "correct": true,
+          "pred": "The key factor is **small, meaningful moral choices that drive gradual, believable growth**—not just plot-driven change."
+        },
+        {
+          "question": "In your view, is it necessary to know an author's biography or intent to appreci",
+          "correct": false,
+          "pred": "No—it’s not necessary. Your appreciation of *The Nightingale* and *The Book Thief* proves this: you were deeply moved by"
+        },
+        {
+          "question": "How do you decide whether to commit to a long series versus a standalone novel? ",
+          "correct": false,
+          "pred": "I prioritize **authorial reliability and narrative purpose** over format alone. For long series, I commit only to author"
+        },
+        {
+          "question": "For which genres did you explicitly state that audio format significantly improv",
+          "correct": true,
+          "pred": "You explicitly stated that audio significantly improved your experience with **poetry**, because it bypasses the decodin"
+        },
+        {
+          "question": "What habits or preferences reveal that you value slow, immersive reading? Give e",
+          "correct": false,
+          "pred": "You value slow, immersive reading through:  \n- **Preferring audio poetry** (e.g., Amanda Gorman’s inauguration poem, *Th"
+        },
+        {
+          "question": "I often use words like 'truth' or 'authentic' to describe what I value. Can you ",
+          "correct": false,
+          "pred": "Yes—here are three examples where you emphasized *emotional truth* or *authenticity* as central to your appreciation:\n\n1"
+        },
+        {
+          "question": "Based on everything you've shared, what are the core principles of your reading ",
+          "correct": false,
+          "pred": "My reading philosophy centers on **emotional immersion** above all—seeking stories that foster deep connection, wonder, "
+        },
+        {
+          "question": "Rank your top four genres by how consistently they satisfy you. Use the number o",
+          "correct": false,
+          "pred": "Based on the conversation memories, your top four genres—ranked by consistency of satisfaction—are:\n\n1. **Character-driv"
+        },
+        {
+          "question": "If you could only read one book next month by either Sanderson, King, or Hannah,",
+          "correct": false,
+          "pred": "Stephen King’s *The Shining*—because you prioritize psychological depth, emotional authenticity, and horror that lingers"
+        },
+        {
+          "question": "Which authors or books did you describe as showing profound character transforma",
+          "correct": false,
+          "pred": "- **Brandon Sanderson’s *Mistborn* (Vin)**: Described as a model of earned growth—Vin evolves from a mistrustful street "
+        },
+        {
+          "question": "Which author would you trust most to buy a new book from without reading any rev",
+          "correct": true,
+          "pred": "Brandon Sanderson — because your trust criteria center on *reliability*: delivering on promises, tying up plot threads, "
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 4,
+      "ingest_chunks": 12,
+      "ingest_time_ms": 34184,
+      "ingest_llm_calls": 24,
+      "ingest_llm_prompt": 11481,
+      "ingest_llm_completion": 1721,
+      "infer_time_ms": 125597,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 12818,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, which genre should I pick for movie night—action or ",
+          "correct": true,
+          "pred": "Action—specifically *practical, tightly paced, character-driven action* (like *Die Hard*, *Fury Road*, or *John Wick Cha"
+        },
+        {
+          "question": "How many of my film reviews have been negative versus positive?",
+          "correct": false,
+          "pred": "You gave **negative reviews** for *The Irishman*, *Superbad*, and *John Wick Chapter 4* — that’s **3 negative**.  \nYou g"
+        },
+        {
+          "question": "What's the #1 reason I quit or dislike a movie?",
+          "correct": false,
+          "pred": "The #1 reason you quit or dislike a movie is **self-indulgent pacing—specifically, scenes that lack narrative momentum a"
+        },
+        {
+          "question": "Should I invest in a projector or sound system first for my home theater?",
+          "correct": false,
+          "pred": "Invest in the sound system first—sound is your top priority, as you’ve consistently emphasized that physical impact (e.g"
+        },
+        {
+          "question": "Which films have I called 'perfect' or used similar high praise for?",
+          "correct": true,
+          "pred": "You’ve called **Die Hard** “the perfect action movie” and **The Grand Budapest Hotel** “perfect” in balancing whimsy and"
+        },
+        {
+          "question": "What do all my negative reviews have in common?",
+          "correct": true,
+          "pred": "They all cite **inefficient pacing and lack of narrative momentum**—scenes that feel unnecessary, overlong, or self-indu"
+        },
+        {
+          "question": "Which genre am I most forgiving toward, and which am I strictest with?",
+          "correct": false,
+          "pred": "You’re **most forgiving toward comedy**—as shown by your appreciation for *The Grand Budapest Hotel*, where whimsy and s"
+        },
+        {
+          "question": "What's my ideal film length, based on what I've said?",
+          "correct": true,
+          "pred": "Your ideal film length is **tight and purposeful—typically around 90 minutes**, as you explicitly stated: *“Give me a ti"
+        },
+        {
+          "question": "How important is practical/physical authenticity to my viewing experience?",
+          "correct": false,
+          "pred": "Extremely important—it’s foundational to your viewing experience. You consistently prioritize visceral, physical impact "
+        },
+        {
+          "question": "What's the total number of messages we've exchanged?",
+          "correct": false,
+          "pred": "We’ve exchanged **30 messages** (15 user messages and 15 assistant messages) across the 5 sessions listed."
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 3,
+      "ingest_chunks": 19,
+      "ingest_time_ms": 62313,
+      "ingest_llm_calls": 38,
+      "ingest_llm_prompt": 17359,
+      "ingest_llm_completion": 3800,
+      "infer_time_ms": 146217,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 13851,
+      "qa_results": [
+        {
+          "question": "Rank film genres by my satisfaction rate based on our conversations. For each ge",
+          "correct": false,
+          "pred": "Based on your sessions, ranked by satisfaction rate (positive sentiment + explicit praise + rewatch/endorsement behavior"
+        },
+        {
+          "question": "How many distinct conversations have I praised practical effects over CGI? Name ",
+          "correct": false,
+          "pred": "You praised practical effects over CGI in **5 distinct conversations** (sessions 03, 05, 10, 13, and 15).\n\nFilms mention"
+        },
+        {
+          "question": "Compare how often Arnold Schwarzenegger, Tom Cruise, and Keanu Reeves are mentio",
+          "correct": false,
+          "pred": "Arnold Schwarzenegger is mentioned most frequently—appearing positively in **two** sessions (session_01 on *Terminator 2"
+        },
+        {
+          "question": "What is my preferred film length range based on explicit statements? Name one fi",
+          "correct": true,
+          "pred": "Your preferred film length range is **under 2.5 hours**, based on your praise of *Die Hard* at **2 hours 12 minutes** an"
+        },
+        {
+          "question": "Have I ever given a positive review to a drama film? If yes, which one? If no, w",
+          "correct": true,
+          "pred": "No—you have not given a positive review to a drama film. All drama-related discussions (The Irishman, Heat, and Tarantin"
+        },
+        {
+          "question": "Which directors have I explicitly praised for practical filmmaking? Name them an",
+          "correct": false,
+          "pred": "You explicitly praised:  \n- **George Miller** for *Mad Max: Fury Road*  \n- **Chad Stahelski** for the *John Wick* series"
+        },
+        {
+          "question": "Overall, what is the approximate ratio of positive to negative sessions across a",
+          "correct": false,
+          "pred": "All 5 sessions are positive—each reflects enthusiastic engagement with films the user loves (Heat, Fury Road, Die Hard, "
+        },
+        {
+          "question": "Do I prioritize sound or visuals for home theater? Explain why, giving examples ",
+          "correct": true,
+          "pred": "You prioritize **sound** over visuals for your home theater—explicitly stating, “Just a good sound system first, then ma"
+        },
+        {
+          "question": "Which three films have I called 'perfect' or 'gold standard'? List them.",
+          "correct": false,
+          "pred": "Terminator 2, Predator, Heat"
+        },
+        {
+          "question": "Summarize my core film philosophy in three principles, supporting each with exam",
+          "correct": false,
+          "pred": "1. **Tangible Reality Over Digital Abstraction**: You value practical effects, real locations, and physical stakes—e.g.,"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 3,
+      "ingest_chunks": 30,
+      "ingest_time_ms": 58340,
+      "ingest_llm_calls": 60,
+      "ingest_llm_prompt": 27528,
+      "ingest_llm_completion": 3833,
+      "infer_time_ms": 171964,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 17151,
+      "qa_results": [
+        {
+          "question": "Rank film genres by my satisfaction rate based on our conversations. For each ge",
+          "correct": false,
+          "pred": "Based on our conversations, your satisfaction ranking by genre is:\n\n1. **Action** — 7 positive sessions (100% of action-"
+        },
+        {
+          "question": "How many distinct conversations have I praised practical effects over CGI? List ",
+          "correct": false,
+          "pred": "You’ve praised practical effects over CGI in **4 distinct conversations**, mentioning these films:\n\n- **Mad Max: Fury Ro"
+        },
+        {
+          "question": "Compare how often Arnold Schwarzenegger, Tom Cruise, and Keanu Reeves are mentio",
+          "correct": true,
+          "pred": "Arnold Schwarzenegger is mentioned most frequently—appearing positively in **three** sessions:  \n- Session 01 (Terminato"
+        },
+        {
+          "question": "What is my preferred film length range based on explicit statements? Name one fi",
+          "correct": true,
+          "pred": "Your preferred film length range is **tight 90-minute to ~2 hours 12 minutes**—you explicitly praise “a tight 90-minute "
+        },
+        {
+          "question": "Have I ever given a positive review to a drama film? If yes, which one? If no, w",
+          "correct": true,
+          "pred": "No—you have not given a positive review to a drama film in the provided memories. All drama-related discussions (The Iri"
+        },
+        {
+          "question": "Which directors have I explicitly praised for practical filmmaking? Name them an",
+          "correct": false,
+          "pred": "You explicitly praised:  \n- **George Miller** for *Mad Max: Fury Road* (Session 03)  \n- **Chad Stahelski** for the *John"
+        },
+        {
+          "question": "Overall, what is the approximate ratio of positive to negative sessions across a",
+          "correct": false,
+          "pred": "All 5 sessions are positive—each reflects deep, consistent engagement with films the user loves (e.g., *Inglourious Bast"
+        },
+        {
+          "question": "Do I prioritize sound or visuals for home theater? Explain why, giving examples ",
+          "correct": false,
+          "pred": "You prioritize **sound** over visuals for your home theater—specifically, **physical, weighty, immersive sound design** "
+        },
+        {
+          "question": "Which three films have I called 'perfect' or 'gold standard'? List them.",
+          "correct": false,
+          "pred": "Terminator 2, Die Hard, Predator"
+        },
+        {
+          "question": "Compare your criticism of modern superhero films versus dramas. What are the mai",
+          "correct": false,
+          "pred": "- **Modern superhero films**: Criticized for **excessive CGI**, resulting in **weightless, consequence-free action**, **"
+        },
+        {
+          "question": "What specific elements do I value in sci‑fi films? List at least three films tha",
+          "correct": false,
+          "pred": "You value **practical effects**, **real physical stakes**, and **action that reveals character**—not just spectacle—in s"
+        },
+        {
+          "question": "Summarize my core film philosophy in three principles, supporting each with exam",
+          "correct": false,
+          "pred": "1. **Authenticity over spectacle**: You believe real danger and physical commitment create genuine emotional stakes—e.g."
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 3,
+      "ingest_chunks": 42,
+      "ingest_time_ms": 83351,
+      "ingest_llm_calls": 84,
+      "ingest_llm_prompt": 38160,
+      "ingest_llm_completion": 5953,
+      "infer_time_ms": 175729,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 16202,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, which genre should I pick for movie night—action or ",
+          "correct": false,
+          "pred": "Action—specifically practical, character-driven action films like *Predator*, *True Lies*, *Heat*, and *Terminator 2*. Y"
+        },
+        {
+          "question": "How many times have I praised practical effects over CGI in our chats?",
+          "correct": false,
+          "pred": "You’ve praised practical effects over CGI in **every session referenced**—specifically [1], [2], [3], [4], and [5]—so **"
+        },
+        {
+          "question": "Which actor do I admire most for doing their own stunts?",
+          "correct": false,
+          "pred": "Tom Cruise."
+        },
+        {
+          "question": "What's my ideal film length, based on what I've said?",
+          "correct": false,
+          "pred": "Your ideal film length is **2 hours 12 minutes**—the runtime of *Die Hard*, which you’ve repeatedly cited as the benchma"
+        },
+        {
+          "question": "Have I ever given a positive review to a drama film?",
+          "correct": false,
+          "pred": "No—you’ve explicitly criticized slow dramas like *The Irishman*, quitting after 45 minutes for lacking momentum, and con"
+        },
+        {
+          "question": "Which directors do I trust most to deliver the kind of filmmaking I love?",
+          "correct": false,
+          "pred": "You trust directors who prioritize physical environments, practical stunts, and tangible stakes—like John McTiernan (Die"
+        },
+        {
+          "question": "What percentage of my film comments are positive vs negative?",
+          "correct": false,
+          "pred": "0% negative — all your comments are positive, reflecting consistent enthusiasm and clear, values-driven praise for authe"
+        },
+        {
+          "question": "You mentioned home theater setup—do you prioritize sound or visuals? Why?",
+          "correct": true,
+          "pred": "I prioritize sound—especially deep, physical bass—because I want to *feel* the impact of action (like gunfire and explos"
+        },
+        {
+          "question": "How many films have you called 'perfect' or 'gold standard'? Which ones?",
+          "correct": false,
+          "pred": "You’ve called **two** films “perfect” or “gold standard”:  \n- *Terminator 2* — “still the **gold standard** for action f"
+        },
+        {
+          "question": "Am I more critical of modern superhero films or modern dramas?",
+          "correct": false,
+          "pred": "You’re more critical of modern superhero films. Your feedback consistently highlights frustrations with their overrelian"
+        },
+        {
+          "question": "How many of my favorite films feature Arnold Schwarzenegger?",
+          "correct": true,
+          "pred": "Four: *Terminator 2*, *Predator*, *True Lies*, and *Commando*."
+        },
+        {
+          "question": "What's the main reason I dislike long dialogue scenes?",
+          "correct": true,
+          "pred": "You dislike long dialogue scenes when they lack narrative momentum—specifically, when they don’t advance the story, rais"
+        },
+        {
+          "question": "Which recent film did I praise most highly?",
+          "correct": false,
+          "pred": "You praised *Avengers: Endgame* most highly among recent films—specifically for its earned emotional payoff, character-d"
+        },
+        {
+          "question": "Do I prefer franchises or standalone films?",
+          "correct": false,
+          "pred": "You prefer standalone films—your emphasis on efficient storytelling, clear stakes, and authentic action (e.g., *Die Hard"
+        },
+        {
+          "question": "Summarize my film philosophy in three principles.",
+          "correct": false,
+          "pred": "1. **Authenticity over spectacle**: Prioritize real stunts, physical commitment, and tangible stakes over CGI polish and"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_movies_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 5,
+      "ingest_chunks": 59,
+      "ingest_time_ms": 125506,
+      "ingest_llm_calls": 118,
+      "ingest_llm_prompt": 53065,
+      "ingest_llm_completion": 11154,
+      "infer_time_ms": 194623,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 17961,
+      "qa_results": [
+        {
+          "question": "Which actor do I mention most frequently and positively across our conversations",
+          "correct": false,
+          "pred": "Keanu Reeves — mentioned **5 times**, all positively (Sessions 10, 32, and implicitly in comparisons to Cruise/Schwarzen"
+        },
+        {
+          "question": "What percentage of the films you've praised rely primarily on practical effects ",
+          "correct": false,
+          "pred": "100% — Every film you’ve praised (T2, Fury Road, Heat, The Dark Knight Rises, The Dark Knight, Dune, Alien, Blade Runner"
+        },
+        {
+          "question": "Based on our talks, rank my satisfaction with different film genres.",
+          "correct": false,
+          "pred": "1. **Action** (highest satisfaction—e.g., *Die Hard*, *The Matrix*, *Commando*: tight pacing, clear stakes, physical con"
+        },
+        {
+          "question": "What's my preferred movie length, and which films exemplify it?",
+          "correct": false,
+          "pred": "Your preferred movie length is **under 2.5 hours**, ideally **tight and efficient**—with **no wasted scenes**. Films tha"
+        },
+        {
+          "question": "Which directors do I trust most to deliver the kind of filmmaking I love?",
+          "correct": false,
+          "pred": "You trust George Miller and Denis Villeneuve most—they consistently deliver the practical, authentic, character-driven f"
+        },
+        {
+          "question": "Compare your feelings about Arnold Schwarzenegger and Tom Cruise. Who do you adm",
+          "correct": false,
+          "pred": "I admire both deeply—but Tom Cruise slightly more, because he’s carrying the torch *today*. Schwarzenegger defined pract"
+        },
+        {
+          "question": "What makes a movie villain great in your eyes, and which villains exemplify that",
+          "correct": true,
+          "pred": "A great villain has clear, believable motivation and philosophical depth—not just evil for its own sake—making the confl"
+        },
+        {
+          "question": "How many films have you called 'perfect' or 'gold standard'? Which ones?",
+          "correct": false,
+          "pred": "You’ve called **three** films “perfect” or “gold standard”:  \n- *Terminator 2* — “still the gold standard for action fil"
+        },
+        {
+          "question": "You mentioned home theater setup—do you prioritize sound or visuals? Why?",
+          "correct": true,
+          "pred": "I prioritize sound first—specifically a high-quality sound system—because I value immersive, physically impactful audio "
+        },
+        {
+          "question": "What's your overall take on Marvel and DC movies, based on our talks?",
+          "correct": false,
+          "pred": "You value authenticity, character-driven stakes, and practical filmmaking over CGI spectacle—so Marvel and DC movies inc"
+        },
+        {
+          "question": "What kind of comedy films do you enjoy? Give an example.",
+          "correct": true,
+          "pred": "I enjoy smart, character-driven comedies with sharp writing and committed performances—jokes that serve the story and ch"
+        },
+        {
+          "question": "Do you prefer 80s/90s action films or modern ones?",
+          "correct": false,
+          "pred": "You strongly prefer 80s/90s action films—citing their practical stunts, physical authenticity, real stakes, tight pacing"
+        },
+        {
+          "question": "Which film did you criticize most harshly, and why?",
+          "correct": true,
+          "pred": "You criticized *The Irishman* most harshly—calling it “3.5 hours of old men talking,” quitting after 45 minutes because "
+        },
+        {
+          "question": "Which stunt or action sequence have you praised most often?",
+          "correct": true,
+          "pred": "The HALO jump in *Mission: Impossible – Fallout*—praised for its real skydiving, single-take execution, and Tom Cruise’s"
+        },
+        {
+          "question": "Summarize my film philosophy in three principles.",
+          "correct": false,
+          "pred": "1. **Authenticity over spectacle**: You prioritize real stunts, practical effects, and tangible danger (e.g., *The Matri"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 3,
+      "ingest_chunks": 18,
+      "ingest_time_ms": 21562,
+      "ingest_llm_calls": 36,
+      "ingest_llm_prompt": 15422,
+      "ingest_llm_completion": 1382,
+      "infer_time_ms": 126838,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 13169,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, which genres receive the most consistently positive ",
+          "correct": false,
+          "pred": "The genres receiving the most consistently positive feedback are **folk** (praised for storytelling, lyrical depth, time"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative feedback across all your m",
+          "correct": false,
+          "pred": "The conversations contain overwhelmingly positive feedback—encouragement, affirmation, and validation—with no explicit n"
+        },
+        {
+          "question": "Based on all our conversations, which instrument appears most frequently in your",
+          "correct": false,
+          "pred": "The violin appears most frequently in your musical interests and practice—it’s central to your current learning journey "
+        },
+        {
+          "question": "Is there any genre you've discussed that you should probably avoid spending time",
+          "correct": true,
+          "pred": "Yes—death metal, specifically due to its aggressive, unintelligible screaming vocals. This conflicts with your core musi"
+        },
+        {
+          "question": "What production or recording aesthetic seems to best match your musical personal",
+          "correct": false,
+          "pred": "A production aesthetic that prioritizes **emotional clarity and expressive intention over technical display**—where tech"
+        },
+        {
+          "question": "What three core values define your musical taste across all the genres we've dis",
+          "correct": false,
+          "pred": "Authenticity, emotional honesty, and technical mastery in service of expression."
+        },
+        {
+          "question": "How many different music genres have you discussed positively in our conversatio",
+          "correct": false,
+          "pred": "You’ve discussed **four** genres positively:  \n- **Jazz** (Coltrane, Miles Davis, improvisation)  \n- **Metal** (Opeth, A"
+        },
+        {
+          "question": "What is it about blues music that moves you so deeply, according to our conversa",
+          "correct": true,
+          "pred": "Its raw emotional honesty—no pretense, just pure feeling expressed through simple, direct structures (“three chords and "
+        },
+        {
+          "question": "Which guitarists have you mentioned as inspirations, and what qualities make the",
+          "correct": false,
+          "pred": "You’ve mentioned **David Gilmour** as an inspiration, highlighting his **masterful phrasing**, **restraint**, and the **"
+        },
+        {
+          "question": "What overarching principle guides your exploration of different music genres, ba",
+          "correct": true,
+          "pred": "The overarching principle is **authentic emotional expression grounded in technical mastery**—where technique serves fee"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 3,
+      "ingest_chunks": 21,
+      "ingest_time_ms": 53924,
+      "ingest_llm_calls": 42,
+      "ingest_llm_prompt": 18401,
+      "ingest_llm_completion": 3622,
+      "infer_time_ms": 133860,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 11583,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, which musical genre receives the most positive feedb",
+          "correct": true,
+          "pred": "Classic rock receives the most positive feedback overall. You consistently praise its raw, emotional guitar work (especi"
+        },
+        {
+          "question": "What is the approximate ratio of positive to negative sessions across all my mus",
+          "correct": false,
+          "pred": "Out of 5 sessions, all express a clear positive appreciation for certain musical qualities (rawness, authenticity, versa"
+        },
+        {
+          "question": "Based on all our conversations, which instrument do I focus on most in my musica",
+          "correct": false,
+          "pred": "Violin."
+        },
+        {
+          "question": "Given my mixed reactions to classical music, what strategy would help me appreci",
+          "correct": true,
+          "pred": "Start with shorter, programmatic classical pieces (e.g., Saint-Saëns’ *Carnival of the Animals*, Mussorgsky’s *Pictures "
+        },
+        {
+          "question": "Which guitarists do I most admire, and what qualities make them stand out to me?",
+          "correct": false,
+          "pred": "You most admire David Gilmour and Mark Knopfler for their **restraint, emotional phrasing, melodic focus, and expressive"
+        },
+        {
+          "question": "What are my main criticisms of modern pop music based on our conversations?",
+          "correct": false,
+          "pred": "Your main criticisms of modern pop music are:  \n- Overuse of auto-tune, making vocals sound artificial and emotionless, "
+        },
+        {
+          "question": "I generally don't enjoy metal, but what specific metal subgenres or bands have I",
+          "correct": true,
+          "pred": "You’ve appreciated **progressive metal bands like Tool** (e.g., *Lateralus*, “Schism”) and **instrumental metal acts lik"
+        },
+        {
+          "question": "What is my philosophy regarding music production, based on my preferences across",
+          "correct": false,
+          "pred": "You value raw, lo-fi, and analog production that prioritizes authenticity, emotional honesty, and organic energy over po"
+        },
+        {
+          "question": "What three core values define my musical taste across all genres we've discussed",
+          "correct": false,
+          "pred": "1. **Authenticity and emotional rawness** (e.g., Led Zeppelin’s analog solos, Radiohead’s boundary-pushing soundscapes) "
+        },
+        {
+          "question": "Provide an approximate statistical breakdown of my positive feedback for rock, a",
+          "correct": false,
+          "pred": "Based on our conversations, your positive feedback breaks down approximately as follows:\n\n- **Rock (classic)**: ~35% — S"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 5,
+      "ingest_chunks": 30,
+      "ingest_time_ms": 52964,
+      "ingest_llm_calls": 60,
+      "ingest_llm_prompt": 26068,
+      "ingest_llm_completion": 4070,
+      "infer_time_ms": 171890,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 16215,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, what are my top three most positively regarded music",
+          "correct": false,
+          "pred": "Based on our conversations, your top three most positively regarded music genres are:\n\n1. **Blues & Folk** — ~95% satisf"
+        },
+        {
+          "question": "Given my mixed reactions to metal, what specific strategy would maximize my chan",
+          "correct": true,
+          "pred": "Focus on metal subgenres and bands that prioritize **dynamic contrast, clean or melodic vocals, instrumental sophisticat"
+        },
+        {
+          "question": "I'm still figuring out classical music—I love some parts but get lost in others.",
+          "correct": false,
+          "pred": "Start by leaning into what already resonates—like the emotional directness of Romantic composers (Brahms, Tchaikovsky) t"
+        },
+        {
+          "question": "I have such mixed feelings about pop music—sometimes I love the hooks, other tim",
+          "correct": true,
+          "pred": "Seek pop that balances catchy hooks with authentic expression—prioritize artists who value vocal imperfection, lyrical n"
+        },
+        {
+          "question": "I want to improve my guitar playing—any thoughts on which players I should study",
+          "correct": false,
+          "pred": "Based on what resonates with you—restraint, emotional phrasing, vocal-like bends/vibrato, analog warmth, and melody over"
+        },
+        {
+          "question": "I love discovering new alternative bands but sometimes they all start to sound t",
+          "correct": true,
+          "pred": "Listen for **authenticity in sound, risk-taking in structure, lyrical depth, and emotional honesty**—not just genre sign"
+        },
+        {
+          "question": "I play both guitar and violin—how can I make these instruments work together to ",
+          "correct": false,
+          "pred": "Leverage your guitar background to strengthen violin musicianship—especially in harmonic understanding, phrasing, and st"
+        },
+        {
+          "question": "I'm starting to record my own music—what production approach would suit my music",
+          "correct": true,
+          "pred": "Given your love of raw, authentic lo-fi aesthetics (like *Bleach*), appreciation for imperfections and room ambiance, an"
+        },
+        {
+          "question": "I want to branch out musically but don't want to waste time on genres that funda",
+          "correct": false,
+          "pred": "Start with **art-rock and post-punk**—genres that share your love of boundary-pushing arrangements (like *OK Computer*),"
+        },
+        {
+          "question": "What are the exact statistics of my genre preferences based on our conversations",
+          "correct": false,
+          "pred": "Based on the provided conversation memories, here are the exact counts of discussions per major genre:\n\n- **Metal (inclu"
+        },
+        {
+          "question": "I've been thinking about my musical identity lately—what ties together all the m",
+          "correct": false,
+          "pred": "It’s the authenticity and willingness to take creative risks—music that pushes boundaries, explores complex emotions, an"
+        },
+        {
+          "question": "I've noticed I react differently to live music versus recordings—what does this ",
+          "correct": true,
+          "pred": "It tells you that you deeply value the **human, physical, and spatial dimensions of music**—the immediacy, imperfection,"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 3,
+      "ingest_chunks": 38,
+      "ingest_time_ms": 62029,
+      "ingest_llm_calls": 76,
+      "ingest_llm_prompt": 33877,
+      "ingest_llm_completion": 5577,
+      "infer_time_ms": 224434,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 22032,
+      "qa_results": [
+        {
+          "question": "Based on all our conversations, which musical genre would be most beneficial for",
+          "correct": false,
+          "pred": "Romantic-era classical music—particularly composers like Brahms and Tchaikovsky—would be most beneficial for you. It ali"
+        },
+        {
+          "question": "What are my top three most positively regarded music genres based on our discuss",
+          "correct": false,
+          "pred": "1. **Romantic-era classical** – Valued for its *emotional directness* and *immediate, lyric-like expressiveness*, especi"
+        },
+        {
+          "question": "I'm torn between focusing on guitar or violin. Based on my musical preferences a",
+          "correct": false,
+          "pred": "Prioritize **violin**, because your deep appreciation for classical structure (Bach), heightened awareness of technical "
+        },
+        {
+          "question": "Which music genres should I approach cautiously based on my stated preferences, ",
+          "correct": true,
+          "pred": "Approach **hyper-polished pop, technical death metal, and Baroque classical** cautiously. They conflict with your values"
+        },
+        {
+          "question": "What production style or aesthetic would best suit my musical personality based ",
+          "correct": true,
+          "pred": "A raw, authentic production style—like the lo-fi aesthetic of Nirvana’s *Bleach*—that prioritizes emotional immediacy, e"
+        },
+        {
+          "question": "Which genres best combine the emotional depth and technical mastery I seem to va",
+          "correct": false,
+          "pred": "Based on your consistent preference for *emotional immediacy* paired with *technical mastery in service of expression*—n"
+        },
+        {
+          "question": "Which genres or music styles have I implicitly or explicitly criticized for lack",
+          "correct": false,
+          "pred": "You’ve implicitly or explicitly criticized **modern mainstream rock/pop** (e.g., “modern music often feels disposable,” "
+        },
+        {
+          "question": "What are my fundamental musical values that cut across all genres I've discussed",
+          "correct": false,
+          "pred": "Your core musical values are **emotional authenticity, expressive immediacy, and melodic integrity**—prioritizing raw fe"
+        },
+        {
+          "question": "Based on our conversations about live performances versus recordings, what's my ",
+          "correct": true,
+          "pred": "You strongly prefer live performances—both playing and listening—because they capture raw, human energy, spontaneous int"
+        },
+        {
+          "question": "What patterns do you notice across my genre preferences that reveal my deeper mu",
+          "correct": false,
+          "pred": "You consistently gravitate toward music that balances **technical mastery with emotional authenticity**—valuing expressi"
+        },
+        {
+          "question": "Based on how I've discussed learning instruments and appreciating music, what's ",
+          "correct": false,
+          "pred": "Your optimal approach to musical growth is **technique in service of emotional expression**—prioritizing expressive phra"
+        },
+        {
+          "question": "What are the exact statistics of my genre preferences based on our conversations",
+          "correct": false,
+          "pred": "No statistics were recorded or discussed in our conversations. The dialogues reflect qualitative insights—such as your a"
+        },
+        {
+          "question": "If I were building a 10-song playlist that perfectly represents my musical taste",
+          "correct": false,
+          "pred": "I’d select songs that **balance technical mastery with immediate emotional expression**, prioritizing:  \n1. **Cinematic,"
+        },
+        {
+          "question": "Given that I have mixed reactions to metal, what specific strategy would maximiz",
+          "correct": false,
+          "pred": "Start with melodic, technically nuanced bands that prioritize clean vocals and dynamic contrast—like Tool (for rhythmic "
+        },
+        {
+          "question": "Looking at my musical journey so far, what should my next 6 months of musical gr",
+          "correct": false,
+          "pred": "Focus on deepening your integration of technical mastery and emotional expression—especially through expressive, melodic"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_music_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 5,
+      "ingest_chunks": 50,
+      "ingest_time_ms": 73529,
+      "ingest_llm_calls": 100,
+      "ingest_llm_prompt": 44321,
+      "ingest_llm_completion": 6698,
+      "infer_time_ms": 205490,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 20628,
+      "qa_results": [
+        {
+          "question": "Based on our conversations, rank my top 3 most positively regarded music genres ",
+          "correct": false,
+          "pred": "1. **Classical (especially Bach)** – ~95%  \n2. **Blues (especially B.B. King–style expressive phrasing)** – ~90%  \n3. **"
+        },
+        {
+          "question": "Based on all conversations, which instrument should I prioritize for my musical ",
+          "correct": false,
+          "pred": "Prioritize the **violin**, because it’s uniquely deepening your holistic musicianship: it’s revealing structural, polyph"
+        },
+        {
+          "question": "Given my mixed reactions to metal, what strategy would maximize my enjoyment of ",
+          "correct": true,
+          "pred": "Focus exclusively on instrumental, melodic, technically sophisticated bands like Plini, Polyphia, and Animals as Leaders"
+        },
+        {
+          "question": "What recording or production style best suits my musical personality based on ou",
+          "correct": true,
+          "pred": "A raw, lo-fi production style that prioritizes emotional authenticity and human imperfection—capturing room ambiance, sl"
+        },
+        {
+          "question": "How important is the balance between technical skill and emotional expression to",
+          "correct": false,
+          "pred": "It’s central to your musical taste—you explicitly seek “technical skill with emotional expression,” rejecting both “pure"
+        },
+        {
+          "question": "What specific markers define 'authenticity' for me across different genres?",
+          "correct": false,
+          "pred": "For you, authenticity is defined by:  \n- **Raw, unpolished sound** (e.g., lo-fi production, room ambiance, audible imper"
+        },
+        {
+          "question": "What patterns emerge in my criticisms of pop and metal?",
+          "correct": false,
+          "pred": "You criticize pop for being **formulaic, commercially constrained, and lyrically shallow**, yet acknowledge its **struct"
+        },
+        {
+          "question": "How can my guitar and violin studies inform each other for musical growth?",
+          "correct": true,
+          "pred": "Your guitar and violin studies create a powerful feedback loop: violin deepens your appreciation for melodic phrasing, b"
+        },
+        {
+          "question": "Based on my listening patterns and values, what genre should I explore next?",
+          "correct": false,
+          "pred": "Blues-rock—your deep appreciation for emotional expression (B.B. King, Gilmour, Page), reverence for technique in servic"
+        },
+        {
+          "question": "Synthesize my core musical values into three principles based on all conversatio",
+          "correct": false,
+          "pred": "1. **Authenticity over polish**: You value raw, unfiltered expression—whether in lo-fi alternative rock (e.g., *Bleach*)"
+        },
+        {
+          "question": "Based on all conversations, do I prefer live or studio recordings, and why?",
+          "correct": true,
+          "pred": "You strongly prefer live recordings (or studio recordings made live, together in one room) because they capture raw ener"
+        },
+        {
+          "question": "Summarize my musical personality in one sentence based on all aggregated convers",
+          "correct": false,
+          "pred": "You’re a deeply feeling, technically curious musician drawn to genres and artists that masterfully balance virtuosic ski"
+        },
+        {
+          "question": "What's my optimal approach to learning music, based on how I've engaged with dif",
+          "correct": true,
+          "pred": "Your optimal approach is **technique in service of emotional expression**: you thrive when learning instruments (violin,"
+        },
+        {
+          "question": "Provide exact statistics: how many positive, negative, and total sessions per ge",
+          "correct": false,
+          "pred": "No statistics on session counts per genre are provided in the memories. The memories reference sessions (e.g., session_0"
+        },
+        {
+          "question": "Design a 5-song playlist that represents my musical identity, with rationale for",
+          "correct": false,
+          "pred": "1. **“The Pot” – Tool**  \n*Why*: Embodies your love for instrumental depth, dynamic tension, and melodic complexity—alig"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_100",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 3,
+      "ingest_chunks": 18,
+      "ingest_time_ms": 29023,
+      "ingest_llm_calls": 36,
+      "ingest_llm_prompt": 15336,
+      "ingest_llm_completion": 1421,
+      "infer_time_ms": 126388,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 10382,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "1. **Detective** (strongest alignment: praised *True Detective* S1’s psychological realism, *Lupin*’s intelligence and e"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next?",
+          "correct": true,
+          "pred": "The Expanse. It matches your clear preference for grounded, human-centered sci-fi with scientific plausibility, emotiona"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common?",
+          "correct": true,
+          "pred": "They all prioritize **psychological realism**—grounding suspense and intrigue in authentic human behavior, intelligence,"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term?",
+          "correct": false,
+          "pred": "Yes—*The Last Kingdom*. Its strong historical grounding, tangible stakes, and character-driven conflict align perfectly "
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me?",
+          "correct": false,
+          "pred": "A comedy is truly satisfying for you when it balances **authentic kindness**, **emotional weight**, **thematic ambition*"
+        },
+        {
+          "question": "Is my dislike of reality TV consistent across all formats, or are there exceptio",
+          "correct": false,
+          "pred": "Your dislike is consistent across all reality TV formats—Love Island, Big Brother, and reality TV broadly—with no except"
+        },
+        {
+          "question": "When should I choose a light comedy versus a serious sci-fi show?",
+          "correct": true,
+          "pred": "Choose a light comedy (like *Parks and Rec*) when you need warmth, comfort, and authentic kindness—especially if you val"
+        },
+        {
+          "question": "If I had to drop one entire genre from my viewing forever, which would hurt me l",
+          "correct": false,
+          "pred": "Reality TV. Your feedback consistently criticizes it for lacking narrative purpose, intentional storytelling, psychologi"
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Thematic ambition grounded in human resonance—whether through philosophical depth (Westworld), psychological realism (Tr"
+        },
+        {
+          "question": "Based on my preferences, which streaming platform should I prioritize for new co",
+          "correct": false,
+          "pred": "Prioritize **Apple TV+**—it aligns best with your taste: *Severance* (which you value for its immersive, moody, attentio"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_150",
+      "category": "recommendations",
+      "n_queries": 10,
+      "correct": 3,
+      "ingest_chunks": 23,
+      "ingest_time_ms": 40914,
+      "ingest_llm_calls": 46,
+      "ingest_llm_prompt": 20231,
+      "ingest_llm_completion": 2705,
+      "infer_time_ms": 126758,
+      "infer_emb_calls": 10,
+      "infer_llm_tokens": 11525,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "1. **Sci-fi**  \n2. **Detective**  \n3. **Comedy** (specifically *dramedy*—emotionally grounded, thematically rich)  \n4. *"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next?",
+          "correct": true,
+          "pred": "The Expanse—its grounded physics, morally complex politics, and character-driven tension align perfectly with your appre"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common?",
+          "correct": true,
+          "pred": "Psychological realism and intellectual respect—prioritizing authentic character dynamics, procedural authenticity, and s"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term?",
+          "correct": false,
+          "pred": "Yes—*The Last Kingdom*. It grounds fantasy in historical authenticity, prioritizes character-driven choices (like Uhtred"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me?",
+          "correct": true,
+          "pred": "A truly satisfying comedy for you balances warmth and authenticity—finding humor in people trying their best without pun"
+        },
+        {
+          "question": "Is my dislike of reality TV consistent across all formats, or are there exceptio",
+          "correct": false,
+          "pred": "Your dislike is consistent across formats—you reject reality TV not for its genre per se, but for the *absence of narrat"
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Emotional authenticity—grounding every genre (sci-fi, historical drama, comedy, time travel) in human truth, agency, and"
+        },
+        {
+          "question": "Based on my preferences, which streaming platform should I prioritize for new co",
+          "correct": false,
+          "pred": "Netflix — your preferences (cerebral sci-fi like *Severance* and *Black Mirror*, character-driven historical drama like "
+        },
+        {
+          "question": "Based on my entire viewing history across 150 messages, what single show would y",
+          "correct": false,
+          "pred": "**Succession** — because it masterfully merges the psychological depth and moral ambiguity you admire in *True Detective"
+        },
+        {
+          "question": "Across our entire conversation, has my taste shown any evolution or consistency?",
+          "correct": false,
+          "pred": "Your taste shows strong **consistency**, not evolution: you consistently value **authentic emotional stakes and moral in"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_200",
+      "category": "recommendations",
+      "n_queries": 12,
+      "correct": 2,
+      "ingest_chunks": 26,
+      "ingest_time_ms": 69484,
+      "ingest_llm_calls": 52,
+      "ingest_llm_prompt": 23817,
+      "ingest_llm_completion": 4729,
+      "infer_time_ms": 167624,
+      "infer_emb_calls": 12,
+      "infer_llm_tokens": 16898,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "Based on your consistent emphasis on **emotional authenticity, psychological realism, character-driven conflict, and gen"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next? Justify with aggregate evidence f",
+          "correct": true,
+          "pred": "Watch **The Expanse**.  \n\nAcross all your conversations, you consistently prioritize *emotional authenticity*, *psycholo"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common? Synthesize fro",
+          "correct": true,
+          "pred": "They prioritize **psychological realism and narrative integrity over stylistic gimmicks**—grounding detective work in au"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term? Use statistical evid",
+          "correct": false,
+          "pred": "No—your fantasy engagements show a consistent pattern of disengagement: you abandoned *Game of Thrones* (session 09) due"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me? Use all comedy e",
+          "correct": false,
+          "pred": "A truly satisfying comedy for you balances **emotional authenticity** with **genuine warmth**, avoids manufactured confl"
+        },
+        {
+          "question": "Is my dislike of reality TV consistent across all formats, or are there exceptio",
+          "correct": false,
+          "pred": "Your dislike is consistent across all reality TV formats—Love Island (background noise), Big Brother (no narrative progr"
+        },
+        {
+          "question": "Drama wasn't in our original genre ranking, but you've praised several dramas hi",
+          "correct": false,
+          "pred": "Drama is your top-tier genre—not ranked lower, but *defined* by your core philosophy: it’s the purest vessel for psychol"
+        },
+        {
+          "question": "Did any shows receive mixed reviews in our conversations? If so, what pattern ex",
+          "correct": false,
+          "pred": "Yes—*Only Murders in the Building* received mixed reviews. The pattern is **genre betrayal**: it began with strong detec"
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Psychological realism—grounding characters’ choices, motivations, and consequences in authentic human behavior—is your s"
+        },
+        {
+          "question": "Based on my preferences across all sessions, which streaming platform should I p",
+          "correct": false,
+          "pred": "No statistical evidence exists in the conversation memories to support prioritizing one streaming platform over another."
+        },
+        {
+          "question": "Based on your entire viewing history across approximately 200 messages, what sin",
+          "correct": false,
+          "pred": "**Succession**—because it embodies your core criteria: psychologically realistic, flawed characters making morally compl"
+        },
+        {
+          "question": "There's a significant gap between my top genre (sci-fi at approximately 85-90%) ",
+          "correct": false,
+          "pred": "There is no statistical evidence—full or partial—in the provided memories to support the claimed percentages (85–90% sci"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_275",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 6,
+      "ingest_chunks": 33,
+      "ingest_time_ms": 87407,
+      "ingest_llm_calls": 66,
+      "ingest_llm_prompt": 30563,
+      "ingest_llm_completion": 6062,
+      "infer_time_ms": 220168,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 23424,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "Based on your comments across all sessions, here's the ranking—ordered by *alignment with your core taste principles*: *"
+        },
+        {
+          "question": "Based on all sessions, which genres have the highest and lowest success rates (r",
+          "correct": false,
+          "pred": "Based on the sessions, **drama (especially prestige/realist drama)** has the **highest success rate**, while **comedy-de"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next? Justify with aggregate evidence f",
+          "correct": true,
+          "pred": "Watch **The Expanse**. Across conversations, you consistently prioritize:  \n- **Scientific plausibility as narrative eng"
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common? Synthesize fro",
+          "correct": false,
+          "pred": "They prioritize **psychological realism and procedural authenticity over spectacle**—using atmosphere, character-driven "
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term? Use statistical evid",
+          "correct": true,
+          "pred": "Yes—**The Last Kingdom**, based on your consistent preferences. Across all fantasy discussions, it’s the *only* fantasy-"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me? Use all comedy e",
+          "correct": true,
+          "pred": "A truly satisfying comedy—*for you*—is one that **grounds humor in emotional authenticity, psychological realism, and co"
+        },
+        {
+          "question": "Drama wasn't in our original genre ranking, but you've praised several dramas hi",
+          "correct": false,
+          "pred": "Drama is your top-tier genre—not just ranked highly, but *definitive*: it’s the natural home for your core values. You l"
+        },
+        {
+          "question": "Did any shows receive mixed reviews in our conversations? If so, what pattern ex",
+          "correct": false,
+          "pred": "Yes—*Peaky Blinders*, *The Rings of Power*, and *Shadow and Bone* received mixed reviews. The pattern is **aesthetic or "
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Psychological realism—the commitment to emotionally authentic, character-driven storytelling where genre serves as a len"
+        },
+        {
+          "question": "Based on my preferences across all sessions, which streaming platform should I p",
+          "correct": false,
+          "pred": "None—your preferences aren’t platform-dependent, and no statistical evidence links your criteria (psychological realism,"
+        },
+        {
+          "question": "Based on your entire viewing history across approximately 275 messages, what sin",
+          "correct": false,
+          "pred": "**Severance**—because it treats corporate dystopia as a vessel for profound questions of identity, memory, and selfhood "
+        },
+        {
+          "question": "Across our entire conversation, has my taste shown any evolution or consistency?",
+          "correct": true,
+          "pred": "Your taste shows **strong consistency**, not evolution. Across all 5 sessions, every critique and praise centers on **ps"
+        },
+        {
+          "question": "What pattern emerges when comparing my favorite shows across completely differen",
+          "correct": true,
+          "pred": "A consistent pattern: **psychological realism and emotional authenticity take precedence over genre conventions**—whethe"
+        },
+        {
+          "question": "Based on my reactions to shows with unresolved mysteries (1899) versus tightly p",
+          "correct": true,
+          "pred": "To you, *narrative integrity* means **authorial control and purposeful design**: every mystery must serve a clear emotio"
+        },
+        {
+          "question": "There's a significant gap between my top genre (sci-fi at approximately 89%) and",
+          "correct": false,
+          "pred": "There is no statistical evidence in the memories to support the claimed percentages (89%, 78%, 67%). The conversation lo"
+        }
+      ]
+    },
+    {
+      "case_id": "recommendations_series_350",
+      "category": "recommendations",
+      "n_queries": 15,
+      "correct": 3,
+      "ingest_chunks": 47,
+      "ingest_time_ms": 140631,
+      "ingest_llm_calls": 94,
+      "ingest_llm_prompt": 42409,
+      "ingest_llm_completion": 8849,
+      "infer_time_ms": 222392,
+      "infer_emb_calls": 15,
+      "infer_llm_tokens": 22033,
+      "qa_results": [
+        {
+          "question": "Based on all my comments across our entire conversation, rank these genres from ",
+          "correct": false,
+          "pred": "Based on your consistent critiques and endorsements across all sessions, here's the ranking—ordered by *alignment with y"
+        },
+        {
+          "question": "Based on all sessions, which genres have the highest and lowest success rates (r",
+          "correct": false,
+          "pred": "**Highest success rate: Historical/Political Drama**  \n- *Praised*: Chernobyl (1), Succession (1), Industry (1) → **3 pr"
+        },
+        {
+          "question": "Should I watch Foundation or The Expanse next? Justify with aggregate evidence f",
+          "correct": true,
+          "pred": "Watch **The Expanse**.  \n\nAcross conversations, you consistently prioritize:  \n- **Scientific plausibility as narrative "
+        },
+        {
+          "question": "What do all the detective shows I genuinely enjoy have in common? Synthesize fro",
+          "correct": true,
+          "pred": "They prioritize **psychological realism and intellectual engagement over stylistic gimmicks or superficial quirk**—groun"
+        },
+        {
+          "question": "Is there any fantasy show I might actually enjoy long-term? Use statistical evid",
+          "correct": false,
+          "pred": "No—based on your fantasy discussions (only *House of the Dragon*, [3]), you explicitly rejected it after three episodes,"
+        },
+        {
+          "question": "What makes a comedy truly satisfying versus forgettable for me? Use all comedy e",
+          "correct": false,
+          "pred": "A truly satisfying comedy for you balances **emotional authenticity with structural integrity**: it uses humor not to es"
+        },
+        {
+          "question": "Drama wasn't in our original genre ranking, but you've praised many dramas highl",
+          "correct": false,
+          "pred": "Drama is your **top-ranked genre**, implicitly confirmed by the fact that **100% of the shows you’ve praised across all "
+        },
+        {
+          "question": "Which shows received mixed reviews in our conversations, and what pattern explai",
+          "correct": false,
+          "pred": "*Peaky Blinders*, *Only Murders in the Building*, *The Afterparty*, and *Foundation* received mixed reviews. The consist"
+        },
+        {
+          "question": "What's the single most important storytelling principle across all genres for me",
+          "correct": false,
+          "pred": "Respect for the audience’s intelligence—manifested through narrative coherence, character agency, and restraint (in lore"
+        },
+        {
+          "question": "Based on my preferences across all sessions, which streaming platform should I p",
+          "correct": false,
+          "pred": "No statistical evidence exists in the conversation memories to support prioritizing one streaming platform over another."
+        },
+        {
+          "question": "Based on your entire viewing history across all sessions, what single show would",
+          "correct": false,
+          "pred": "**Devs** — because it merges *True Detective*’s atmospheric dread and philosophical weight, *Dark*’s precise, character-"
+        },
+        {
+          "question": "Across our entire conversation, has my taste shown any evolution or consistency?",
+          "correct": false,
+          "pred": "Consistency: 100%.  \nAll five memories reinforce the same core preference—psychological realism, nuanced power dynamics,"
+        },
+        {
+          "question": "What pattern emerges when comparing my favorite shows across completely differen",
+          "correct": true,
+          "pred": "A consistent pattern: **emotional authenticity over genre convention**, achieved through **restraint, psychological real"
+        },
+        {
+          "question": "Based on my reactions to shows with unresolved mysteries (1899, The Leftovers) v",
+          "correct": false,
+          "pred": "To you, *narrative integrity* means **authorial intentionality**: a clear, coherent architecture—where mystery serves ch"
+        },
+        {
+          "question": "There's a significant gap between my top genre (sci-fi at roughly 88%) and my se",
+          "correct": false,
+          "pred": "There is no statistical evidence in the memories to support the claimed percentages (88%, 78%, 75%). The conversation lo"
+        }
+      ]
     }
   ],
   "errors": [
@@ -8752,6 +11092,726 @@
     {
       "path": "StructMemEval/benchmark/recommendations/data/series_data/series_data_350.json",
       "error": "Connection error."
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\boardgames_data\\boardgames_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\movies_data\\movies_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\music_data\\music_data_350.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_100.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_150.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_200.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_275.json",
+      "error": "No module named 'igraph'"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_350.json",
+      "error": "No module named 'igraph'"
     }
   ]
 }
