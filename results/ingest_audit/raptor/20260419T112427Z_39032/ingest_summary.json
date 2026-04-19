@@ -1,0 +1,18 @@
+{
+  "backend_mode": "raptor",
+  "ingest_chunks": 2,
+  "ingest_time_ms": 2321,
+  "ingest_llm_calls": 0,
+  "ingest_llm_prompt_tokens": 0,
+  "ingest_llm_completion_tokens": 0,
+  "tree_nodes": 1,
+  "tree_layers": 0,
+  "original_chunk_count": 2,
+  "source_map_available": true,
+  "persisted_audit_files": [
+    "results\\ingest_audit\\raptor\\20260419T112427Z_39032\\ingest_chunks.jsonl",
+    "results\\ingest_audit\\raptor\\20260419T112427Z_39032\\provenance_map.json",
+    "results\\ingest_smoke\\raptor\\20260419T112427Z\\backend_store\\tree_summary.json"
+  ],
+  "ingest_audit_run_id": "20260419T112427Z_39032"
+}

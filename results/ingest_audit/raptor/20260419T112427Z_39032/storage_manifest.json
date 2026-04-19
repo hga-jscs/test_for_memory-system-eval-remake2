@@ -1,0 +1,5 @@
+{
+  "backend": "raptor",
+  "save_dir": "results\\ingest_smoke\\raptor\\20260419T112427Z\\backend_store",
+  "tree_summary_file": "results\\ingest_smoke\\raptor\\20260419T112427Z\\backend_store\\tree_summary.json"
+}

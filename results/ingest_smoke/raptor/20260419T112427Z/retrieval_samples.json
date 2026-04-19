@@ -1,0 +1,14 @@
+{
+  "q1": [
+    "[chunk_id=raptor-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha][session=s1] [Session: s1] [Time: 2023-07-01] Alice: Last Friday I bought a blue ceramic bowl with white dots Bob: I noted it next to pets: Oliver, Luna, Bailey Alice: Two weeks ago we planned camping at Voyageurs National Park [chunk_id=raptor-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha][session=s2] [Session: s2] [Time: 2023-07-02] Alicia: My dog named Scout was adopted from a breeder Alice: I have a sunflower tattoo Bob: activities: pottery, hiking, camping Bob: This is not true -> Alice owns a purple dragon"
+  ],
+  "q2": [
+    "[chunk_id=raptor-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha][session=s1] [Session: s1] [Time: 2023-07-01] Alice: Last Friday I bought a blue ceramic bowl with white dots Bob: I noted it next to pets: Oliver, Luna, Bailey Alice: Two weeks ago we planned camping at Voyageurs National Park [chunk_id=raptor-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha][session=s2] [Session: s2] [Time: 2023-07-02] Alicia: My dog named Scout was adopted from a breeder Alice: I have a sunflower tattoo Bob: activities: pottery, hiking, camping Bob: This is not true -> Alice owns a purple dragon"
+  ],
+  "q3": [
+    "[chunk_id=raptor-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha][session=s1] [Session: s1] [Time: 2023-07-01] Alice: Last Friday I bought a blue ceramic bowl with white dots Bob: I noted it next to pets: Oliver, Luna, Bailey Alice: Two weeks ago we planned camping at Voyageurs National Park [chunk_id=raptor-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha][session=s2] [Session: s2] [Time: 2023-07-02] Alicia: My dog named Scout was adopted from a breeder Alice: I have a sunflower tattoo Bob: activities: pottery, hiking, camping Bob: This is not true -> Alice owns a purple dragon"
+  ],
+  "negative": [
+    "[chunk_id=raptor-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha][session=s1] [Session: s1] [Time: 2023-07-01] Alice: Last Friday I bought a blue ceramic bowl with white dots Bob: I noted it next to pets: Oliver, Luna, Bailey Alice: Two weeks ago we planned camping at Voyageurs National Park [chunk_id=raptor-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha][session=s2] [Session: s2] [Time: 2023-07-02] Alicia: My dog named Scout was adopted from a breeder Alice: I have a sunflower tattoo Bob: activities: pottery, hiking, camping Bob: This is not true -> Alice owns a purple dragon"
+  ]
+}

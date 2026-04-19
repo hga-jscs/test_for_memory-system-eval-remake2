@@ -1,0 +1,67 @@
+{
+  "overall_accuracy": 44.037,
+  "wall_ms": 7283092,
+  "errors": [
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_150.json",
+      "error": "Connection error.",
+      "error_type": "connection_error"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_150.json",
+      "error": "Request timed out.",
+      "error_type": "runtime_error"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_350.json",
+      "error": "Connection error.",
+      "error_type": "connection_error"
+    },
+    {
+      "path": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_350.json",
+      "error": "Connection error.",
+      "error_type": "connection_error"
+    }
+  ],
+  "categories": {
+    "state_machine_location": {
+      "correct": 15,
+      "total": 42,
+      "ingest_ms": 224464,
+      "infer_ms": 359049,
+      "chunks": 267,
+      "llm_calls": 0,
+      "tree_nodes": 147,
+      "tree_layers": 0
+    },
+    "tree_based": {
+      "correct": 127,
+      "total": 181,
+      "ingest_ms": 404990,
+      "infer_ms": 1788257,
+      "chunks": 432,
+      "llm_calls": 0,
+      "tree_nodes": 368,
+      "tree_layers": 0
+    },
+    "recommendations": {
+      "correct": 98,
+      "total": 322,
+      "ingest_ms": 871394,
+      "infer_ms": 3550899,
+      "chunks": 841,
+      "llm_calls": 100,
+      "tree_nodes": 647,
+      "tree_layers": 1
+    }
+  },
+  "health": {
+    "total_tasks": 172,
+    "completed_cases": 168,
+    "skipped_cases": 0,
+    "error_cases": 4,
+    "evaluated_queries": 545,
+    "ok": true,
+    "reason": "ok"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "save_dir": "results\\ingest_smoke\\raptor\\20260419T112427Z\\backend_store",
+  "tb_num_layers": 3,
+  "tb_max_tokens": 200,
+  "tb_summarization_length": 120,
+  "tr_threshold": 0.5,
+  "tr_top_k": 10
+}

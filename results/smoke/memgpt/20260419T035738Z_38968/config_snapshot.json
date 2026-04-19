@@ -1,0 +1,32 @@
+{
+  "backend": "memgpt",
+  "run_id": "20260419T035738Z_38968",
+  "started_at": "2026-04-19T03:57:38.854186+00:00",
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "D:\\anaconda3\\envs\\mem-eval-memgpt\\python.exe",
+  "config": {
+    "llm": {
+      "provider": "openai",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model": "qwen-plus",
+      "api_key": "***"
+    },
+    "embedding": {
+      "provider": "openai",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model": "text-embedding-v3",
+      "api_key": "***",
+      "dim": 1024
+    }
+  },
+  "dependencies": {
+    "openai": "1.58.1",
+    "numpy": "2.2.6",
+    "torch": "unknown",
+    "igraph": "unknown",
+    "requests": "2.33.1",
+    "lightrag": "unknown",
+    "letta_client": "1.10.3",
+    "letta": "unknown"
+  }
+}

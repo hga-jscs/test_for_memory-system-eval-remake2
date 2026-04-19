@@ -1,0 +1,78 @@
+{
+  "backend": "raptor",
+  "benchmark": "structmemeval",
+  "run_id": "20260419T083245Z_raptor_structmemeval_26117f3b",
+  "started_at": "2026-04-19T08:32:45.474708+00:00",
+  "finished_at": "2026-04-19T10:34:08.671196+00:00",
+  "strict_fail": false,
+  "max_workers": 1,
+  "counts": {
+    "total": 172,
+    "completed": 168,
+    "failed": 4,
+    "skipped": 0
+  },
+  "ok": false,
+  "reason": "ok",
+  "runtime": {
+    "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda3\\envs\\mem-eval-raptor\\python.exe",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "git_commit": "unknown",
+    "dependency_versions": {
+      "openai": "1.3.3",
+      "numpy": "1.26.3",
+      "pandas": "2.3.3",
+      "scipy": "1.15.3",
+      "torch": "2.11.0"
+    }
+  },
+  "model_config": {
+    "llm_model": "qwen-plus",
+    "embedding_model": "text-embedding-v3",
+    "embedding_dim": 1024,
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  },
+  "artifacts": {
+    "manifest": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\manifest.json",
+    "summary": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\summary.json",
+    "summary_md": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\summary.md",
+    "cases": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\cases.jsonl",
+    "llm_calls": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\llm_calls.jsonl",
+    "retrievals": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\retrievals.jsonl",
+    "metrics": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\metrics.json",
+    "config_snapshot": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\config_snapshot.json",
+    "stdout": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\stdout.log",
+    "stderr": "results\\raptor\\structmemeval\\20260419T083245Z_raptor_structmemeval_26117f3b\\stderr.log"
+  },
+  "failures": [
+    {
+      "at": "2026-04-19T09:21:55.823883+00:00",
+      "case_id": "StructMemEval\\benchmark\\recommendations\\data\\art_data\\art_data_150.json",
+      "error_type": "connection_error",
+      "message": "Connection error.",
+      "stage": "eval_case"
+    },
+    {
+      "at": "2026-04-19T09:48:39.352263+00:00",
+      "case_id": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_150.json",
+      "error_type": "runtime_error",
+      "message": "Request timed out.",
+      "stage": "eval_case"
+    },
+    {
+      "at": "2026-04-19T09:55:50.010045+00:00",
+      "case_id": "StructMemEval\\benchmark\\recommendations\\data\\books_data\\books_data_350.json",
+      "error_type": "connection_error",
+      "message": "Connection error.",
+      "stage": "eval_case"
+    },
+    {
+      "at": "2026-04-19T10:34:08.666622+00:00",
+      "case_id": "StructMemEval\\benchmark\\recommendations\\data\\series_data\\series_data_350.json",
+      "error_type": "connection_error",
+      "message": "Connection error.",
+      "stage": "eval_case"
+    }
+  ]
+}

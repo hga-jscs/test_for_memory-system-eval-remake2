@@ -1,0 +1,48 @@
+{
+  "backend": "lightrag",
+  "run_id": "20260419T112958Z",
+  "ingest_failed": false,
+  "query_checks": {
+    "q1": {
+      "expect_present": "blue ceramic bowl with white dots",
+      "pass": true
+    },
+    "q2": {
+      "expect_present": "Voyageurs National Park",
+      "pass": true
+    },
+    "q3": {
+      "expect_present": "sunflower tattoo",
+      "pass": true
+    },
+    "negative": {
+      "expect_absent": "purple dragon",
+      "pass": false
+    }
+  },
+  "notes": [],
+  "ingest_audit": {
+    "backend_mode": "real_lightrag_data_api_v1",
+    "ingest_chunks": 2,
+    "ingest_time_ms": 90865,
+    "ingest_llm_calls": "unknown_not_exposed_by_upstream",
+    "ingest_llm_prompt_tokens": "unknown_not_exposed_by_upstream",
+    "ingest_llm_completion_tokens": "unknown_not_exposed_by_upstream",
+    "embedding_model": "text-embedding-v3",
+    "embedding_dim": 1024,
+    "embedding_config_source": "config.yaml:embedding.dim",
+    "ingest_audit_run_id": "20260419T112958Z_43524",
+    "ingest_audit_dir": "results\\ingest_audit\\lightrag\\20260419T112958Z_43524"
+  },
+  "chunk_count": 2,
+  "chunk_boundary_preserved": true,
+  "source_metadata_retained": true,
+  "storage_location": {
+    "save_dir": "results\\ingest_smoke\\lightrag\\20260419T112958Z\\backend_store",
+    "ingest_audit_dir": "results\\ingest_audit\\lightrag\\20260419T112958Z_43524",
+    "agent_id": null
+  },
+  "fallback_occurred": false,
+  "write_failure_count": 0,
+  "obvious_risk": "upstream usage accounting is not exposed, only marked unknown"
+}

@@ -1,0 +1,5 @@
+{
+  "backend": "lightrag",
+  "working_dir": "results\\ingest_smoke\\lightrag\\20260419T112958Z\\backend_store",
+  "file_count": 12
+}

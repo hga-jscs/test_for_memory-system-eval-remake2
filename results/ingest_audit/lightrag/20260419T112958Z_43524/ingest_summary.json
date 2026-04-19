@@ -1,0 +1,13 @@
+{
+  "backend_mode": "real_lightrag_data_api_v1",
+  "ingest_chunks": 2,
+  "ingest_time_ms": 90865,
+  "ingest_llm_calls": "unknown_not_exposed_by_upstream",
+  "ingest_llm_prompt_tokens": "unknown_not_exposed_by_upstream",
+  "ingest_llm_completion_tokens": "unknown_not_exposed_by_upstream",
+  "embedding_model": "text-embedding-v3",
+  "embedding_dim": 1024,
+  "embedding_config_source": "config.yaml:embedding.dim",
+  "ingest_audit_run_id": "20260419T112958Z_43524",
+  "ingest_audit_dir": "results\\ingest_audit\\lightrag\\20260419T112958Z_43524"
+}

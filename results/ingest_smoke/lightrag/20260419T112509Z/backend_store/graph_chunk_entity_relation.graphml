@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d13" for="edge" attr.name="truncate" attr.type="string" />
+  <key id="d12" for="edge" attr.name="created_at" attr.type="long" />
+  <key id="d11" for="edge" attr.name="file_path" attr.type="string" />
+  <key id="d10" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d9" for="edge" attr.name="keywords" attr.type="string" />
+  <key id="d8" for="edge" attr.name="description" attr.type="string" />
+  <key id="d7" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d6" for="node" attr.name="truncate" attr.type="string" />
+  <key id="d5" for="node" attr.name="created_at" attr.type="long" />
+  <key id="d4" for="node" attr.name="file_path" attr.type="string" />
+  <key id="d3" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d2" for="node" attr.name="description" attr.type="string" />
+  <key id="d1" for="node" attr.name="entity_type" attr.type="string" />
+  <key id="d0" for="node" attr.name="entity_id" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="Alice">
+      <data key="d0">Alice</data>
+      <data key="d1">person</data>
+      <data key="d2">Alice is a person who purchased a blue ceramic bowl with white dots and planned a camping trip.&lt;SEP&gt;Alice is a person who has a sunflower tattoo.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a&lt;SEP&gt;chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597987</data>
+      <data key="d6" />
+    </node>
+    <node id="Bob">
+      <data key="d0">Bob</data>
+      <data key="d1">person</data>
+      <data key="d2">Bob is a person who noted information related to pets and appears to be involved in shared planning or record-keeping.&lt;SEP&gt;Bob is a person whose activities include pottery, hiking, and camping.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a&lt;SEP&gt;chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597987</data>
+      <data key="d6" />
+    </node>
+    <node id="Oliver">
+      <data key="d0">Oliver</data>
+      <data key="d1">creature</data>
+      <data key="d2">Oliver is a pet mentioned by Bob in the context of shared notes.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597942</data>
+      <data key="d6" />
+    </node>
+    <node id="Luna">
+      <data key="d0">Luna</data>
+      <data key="d1">creature</data>
+      <data key="d2">Luna is a pet mentioned by Bob in the context of shared notes.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597942</data>
+      <data key="d6" />
+    </node>
+    <node id="Bailey">
+      <data key="d0">Bailey</data>
+      <data key="d1">creature</data>
+      <data key="d2">Bailey is a pet mentioned by Bob in the context of shared notes.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597942</data>
+      <data key="d6" />
+    </node>
+    <node id="Blue Ceramic Bowl With White Dots">
+      <data key="d0">Blue Ceramic Bowl With White Dots</data>
+      <data key="d1">artifact</data>
+      <data key="d2">A blue ceramic bowl with white dots, purchased by Alice last Friday.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597942</data>
+      <data key="d6" />
+    </node>
+    <node id="Voyageurs National Park">
+      <data key="d0">Voyageurs National Park</data>
+      <data key="d1">location</data>
+      <data key="d2">Voyageurs National Park is a national park where Alice and others planned a camping trip two weeks ago.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597942</data>
+      <data key="d6" />
+    </node>
+    <node id="Camping Trip">
+      <data key="d0">Camping Trip</data>
+      <data key="d1">event</data>
+      <data key="d2">A camping trip planned two weeks ago at Voyageurs National Park.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597942</data>
+      <data key="d6" />
+    </node>
+    <node id="Session S1">
+      <data key="d0">Session S1</data>
+      <data key="d1">event</data>
+      <data key="d2">Session S1 is a recorded session identified by the ID 's1' and timestamped on 2023-07-01.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597944</data>
+      <data key="d6" />
+    </node>
+    <node id="2023-07-01">
+      <data key="d0">2023-07-01</data>
+      <data key="d1">data</data>
+      <data key="d2">The date 2023-07-01 is the time associated with Session S1.</data>
+      <data key="d3">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597944</data>
+      <data key="d6" />
+    </node>
+    <node id="Alicia">
+      <data key="d0">Alicia</data>
+      <data key="d1">person</data>
+      <data key="d2">Alicia is a person who adopted a dog named Scout from a breeder.</data>
+      <data key="d3">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597987</data>
+      <data key="d6" />
+    </node>
+    <node id="Scout">
+      <data key="d0">Scout</data>
+      <data key="d1">creature</data>
+      <data key="d2">Scout is a dog adopted by Alicia from a breeder.</data>
+      <data key="d3">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597987</data>
+      <data key="d6" />
+    </node>
+    <node id="Sunflower Tattoo">
+      <data key="d0">Sunflower Tattoo</data>
+      <data key="d1">artifact</data>
+      <data key="d2">The sunflower tattoo is a body art owned by Alice.</data>
+      <data key="d3">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597987</data>
+      <data key="d6" />
+    </node>
+    <node id="Purple Dragon">
+      <data key="d0">Purple Dragon</data>
+      <data key="d1">creature</data>
+      <data key="d2">The purple dragon is a fictional creature falsely claimed to be owned by Alice.</data>
+      <data key="d3">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597987</data>
+      <data key="d6" />
+    </node>
+    <node id="Pottery">
+      <data key="d0">Pottery</data>
+      <data key="d1">concept</data>
+      <data key="d2">Pottery is a recreational activity practiced by Bob.</data>
+      <data key="d3">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597987</data>
+      <data key="d6" />
+    </node>
+    <node id="Hiking">
+      <data key="d0">Hiking</data>
+      <data key="d1">concept</data>
+      <data key="d2">Hiking is a recreational activity practiced by Bob.</data>
+      <data key="d3">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597987</data>
+      <data key="d6" />
+    </node>
+    <node id="Camping">
+      <data key="d0">Camping</data>
+      <data key="d1">concept</data>
+      <data key="d2">Camping is a recreational activity practiced by Bob.</data>
+      <data key="d3">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1776597990</data>
+      <data key="d6" />
+    </node>
+    <edge source="Alice" target="Blue Ceramic Bowl With White Dots">
+      <data key="d7">1.0</data>
+      <data key="d8">Alice bought the blue ceramic bowl with white dots last Friday.</data>
+      <data key="d9">ownership,purchase</data>
+      <data key="d10">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597947</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Alice" target="Camping Trip">
+      <data key="d7">1.0</data>
+      <data key="d8">Alice participated in planning the camping trip at Voyageurs National Park two weeks ago.</data>
+      <data key="d9">participation,planning</data>
+      <data key="d10">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597953</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Alice" target="Session S1">
+      <data key="d7">1.0</data>
+      <data key="d8">Alice participated in Session S1, as indicated by her messages logged under that session ID and timestamp.</data>
+      <data key="d9">participation,session context</data>
+      <data key="d10">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597959</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Alice" target="Sunflower Tattoo">
+      <data key="d7">1.0</data>
+      <data key="d8">Alice has a sunflower tattoo as a form of personal expression.</data>
+      <data key="d9">body art,personal expression</data>
+      <data key="d10">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597993</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Alice" target="Purple Dragon">
+      <data key="d7">1.0</data>
+      <data key="d8">The statement that Alice owns a purple dragon is explicitly declared false by Bob.</data>
+      <data key="d9">false claim,fiction</data>
+      <data key="d10">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597996</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Bob" target="Oliver">
+      <data key="d7">1.0</data>
+      <data key="d8">Bob noted Oliver next to pets, indicating Oliver is a pet associated with their shared context.</data>
+      <data key="d9">note-taking,pet ownership</data>
+      <data key="d10">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597947</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Bob" target="Luna">
+      <data key="d7">1.0</data>
+      <data key="d8">Bob noted Luna next to pets, indicating Luna is a pet associated with their shared context.</data>
+      <data key="d9">note-taking,pet ownership</data>
+      <data key="d10">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597950</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Bob" target="Bailey">
+      <data key="d7">1.0</data>
+      <data key="d8">Bob noted Bailey next to pets, indicating Bailey is a pet associated with their shared context.</data>
+      <data key="d9">note-taking,pet ownership</data>
+      <data key="d10">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597952</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Bob" target="Session S1">
+      <data key="d7">1.0</data>
+      <data key="d8">Bob participated in Session S1, as indicated by his messages logged under that session ID and timestamp.</data>
+      <data key="d9">participation,session context</data>
+      <data key="d10">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597955</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Bob" target="Pottery">
+      <data key="d7">1.0</data>
+      <data key="d8">Bob engages in pottery as one of his recreational activities.</data>
+      <data key="d9">activity,hobby</data>
+      <data key="d10">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597993</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Bob" target="Hiking">
+      <data key="d7">1.0</data>
+      <data key="d8">Bob engages in hiking as one of his recreational activities.</data>
+      <data key="d9">activity,hobby</data>
+      <data key="d10">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597999</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Bob" target="Camping">
+      <data key="d7">1.0</data>
+      <data key="d8">Bob engages in camping as one of his recreational activities.</data>
+      <data key="d9">activity,hobby</data>
+      <data key="d10">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776598001</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Voyageurs National Park" target="Camping Trip">
+      <data key="d7">1.0</data>
+      <data key="d8">The camping trip was planned to take place at Voyageurs National Park.</data>
+      <data key="d9">event setting,location</data>
+      <data key="d10">chunk-a2a04799c77a0a020976c244d78e737a</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597947</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Alicia" target="Scout">
+      <data key="d7">1.0</data>
+      <data key="d8">Alicia adopted Scout, a dog, from a breeder.</data>
+      <data key="d9">adoption,pet ownership</data>
+      <data key="d10">chunk-9deefd39a8612ff40a2c9934616536fa</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1776597993</data>
+      <data key="d13" />
+    </edge>
+  </graph>
+</graphml>

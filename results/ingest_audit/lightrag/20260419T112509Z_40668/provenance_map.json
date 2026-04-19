@@ -1,0 +1,18 @@
+{
+  "original_chunk_count": 2,
+  "working_dir_file_count": 12,
+  "working_dir_files": [
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\graph_chunk_entity_relation.graphml",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\kv_store_doc_status.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\kv_store_entity_chunks.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\kv_store_full_docs.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\kv_store_full_entities.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\kv_store_full_relations.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\kv_store_llm_response_cache.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\kv_store_relation_chunks.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\kv_store_text_chunks.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\vdb_chunks.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\vdb_entities.json",
+    "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store\\vdb_relationships.json"
+  ]
+}

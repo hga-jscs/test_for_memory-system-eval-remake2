@@ -1,0 +1,5 @@
+{
+  "backend": "hipporag",
+  "save_dir": "results\\ingest_smoke\\hipporag\\20260419T112501Z\\backend_store",
+  "graph_file_count": 6
+}

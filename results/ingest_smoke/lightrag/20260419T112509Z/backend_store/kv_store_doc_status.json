@@ -1,0 +1,36 @@
+{
+  "doc-a2a04799c77a0a020976c244d78e737a": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "content_summary": "[chunk_id=lightrag-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Lun...",
+    "content_length": 328,
+    "created_at": "2026-04-19T11:25:14.315498+00:00",
+    "updated_at": "2026-04-19T11:26:01.957762+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260419_192514_5f9cd052",
+    "metadata": {
+      "processing_start_time": 1776597914,
+      "processing_end_time": 1776597961
+    }
+  },
+  "doc-9deefd39a8612ff40a2c9934616536fa": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "content_summary": "[chunk_id=lightrag-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: ...",
+    "content_length": 328,
+    "created_at": "2026-04-19T11:26:01.970109+00:00",
+    "updated_at": "2026-04-19T11:26:48.143203+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260419_192601_dedef733",
+    "metadata": {
+      "processing_start_time": 1776597961,
+      "processing_end_time": 1776598008
+    }
+  }
+}

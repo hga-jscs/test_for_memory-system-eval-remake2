@@ -1,0 +1,16 @@
+{
+  "doc-a2a04799c77a0a020976c244d78e737a": {
+    "content": "[chunk_id=lightrag-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park.",
+    "file_path": "unknown_source",
+    "create_time": 1776597914,
+    "update_time": 1776597914,
+    "_id": "doc-a2a04799c77a0a020976c244d78e737a"
+  },
+  "doc-9deefd39a8612ff40a2c9934616536fa": {
+    "content": "[chunk_id=lightrag-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon.",
+    "file_path": "unknown_source",
+    "create_time": 1776597961,
+    "update_time": 1776597961,
+    "_id": "doc-9deefd39a8612ff40a2c9934616536fa"
+  }
+}

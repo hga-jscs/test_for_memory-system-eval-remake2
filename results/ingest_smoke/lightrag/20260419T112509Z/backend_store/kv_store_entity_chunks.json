@@ -1,0 +1,155 @@
+{
+  "Alice": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a",
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 2,
+    "update_time": 1776597987,
+    "_id": "Alice"
+  },
+  "Bob": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a",
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 2,
+    "update_time": 1776597987,
+    "_id": "Bob"
+  },
+  "Oliver": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597942,
+    "update_time": 1776597942,
+    "_id": "Oliver"
+  },
+  "Luna": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597942,
+    "update_time": 1776597942,
+    "_id": "Luna"
+  },
+  "Bailey": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597942,
+    "update_time": 1776597942,
+    "_id": "Bailey"
+  },
+  "Blue Ceramic Bowl With White Dots": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597942,
+    "update_time": 1776597942,
+    "_id": "Blue Ceramic Bowl With White Dots"
+  },
+  "Voyageurs National Park": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597942,
+    "update_time": 1776597942,
+    "_id": "Voyageurs National Park"
+  },
+  "Camping Trip": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597942,
+    "update_time": 1776597942,
+    "_id": "Camping Trip"
+  },
+  "Session S1": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597944,
+    "update_time": 1776597944,
+    "_id": "Session S1"
+  },
+  "2023-07-01": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597944,
+    "update_time": 1776597944,
+    "_id": "2023-07-01"
+  },
+  "Alicia": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597987,
+    "update_time": 1776597987,
+    "_id": "Alicia"
+  },
+  "Scout": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597987,
+    "update_time": 1776597987,
+    "_id": "Scout"
+  },
+  "Sunflower Tattoo": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597987,
+    "update_time": 1776597987,
+    "_id": "Sunflower Tattoo"
+  },
+  "Purple Dragon": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597987,
+    "update_time": 1776597987,
+    "_id": "Purple Dragon"
+  },
+  "Pottery": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597987,
+    "update_time": 1776597987,
+    "_id": "Pottery"
+  },
+  "Hiking": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597987,
+    "update_time": 1776597987,
+    "_id": "Hiking"
+  },
+  "Camping": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597990,
+    "update_time": 1776597990,
+    "_id": "Camping"
+  }
+}

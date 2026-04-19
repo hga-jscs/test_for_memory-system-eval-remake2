@@ -1,0 +1,30 @@
+{
+  "chunk-a2a04799c77a0a020976c244d78e737a": {
+    "tokens": 98,
+    "content": "[chunk_id=lightrag-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park.",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-a2a04799c77a0a020976c244d78e737a",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:3f06c8c34cee0b28b1695c41b3313628",
+      "default:extract:d8865e0d8d591549fc2c8e59c1c7265f"
+    ],
+    "create_time": 1776598202,
+    "update_time": 1776598224,
+    "_id": "chunk-a2a04799c77a0a020976c244d78e737a"
+  },
+  "chunk-9deefd39a8612ff40a2c9934616536fa": {
+    "tokens": 100,
+    "content": "[chunk_id=lightrag-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon.",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9deefd39a8612ff40a2c9934616536fa",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:1b00729a6d706f387dd153741bb9cbd2",
+      "default:extract:f17bb3e279a6c1cc0ac12f146c961b2b"
+    ],
+    "create_time": 1776598238,
+    "update_time": 1776598260,
+    "_id": "chunk-9deefd39a8612ff40a2c9934616536fa"
+  }
+}

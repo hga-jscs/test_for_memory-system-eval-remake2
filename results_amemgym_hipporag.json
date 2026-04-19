@@ -5,13 +5,13 @@
       "n_queries": 10,
       "correct": 2,
       "ingest_chunks": 46,
-      "ingest_time_ms": 157378,
+      "ingest_time_ms": 74927,
       "ingest_llm_calls": 92,
-      "ingest_llm_prompt": 40318,
-      "ingest_llm_completion": 8316,
-      "infer_time_ms": 165113,
+      "ingest_llm_prompt": 40147,
+      "ingest_llm_completion": 7887,
+      "infer_time_ms": 118949,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6064,
+      "infer_llm_tokens": 6545,
       "qa_results": [
         {
           "question": "What are some engaging activities I can organize for my monthly bridge gathering",
@@ -33,20 +33,20 @@
         },
         {
           "question": "How can I organize a successful potluck that accommodates guests with different ",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 3,
           "correct_idx": 0
         },
         {
           "question": "What strategies can I use to increase participation in choir performances, espec",
           "correct": false,
-          "pred_idx": 3,
+          "pred_idx": 0,
           "correct_idx": 4
         },
         {
           "question": "How can I stay safe and active while volunteering, especially with changing heal",
-          "correct": false,
-          "pred_idx": 2,
+          "correct": true,
+          "pred_idx": 0,
           "correct_idx": 0
         },
         {
@@ -63,14 +63,14 @@
         },
         {
           "question": "How should I adapt my soul food recipes for guests who prefer lighter or healthi",
-          "correct": false,
-          "pred_idx": 0,
+          "correct": true,
+          "pred_idx": 3,
           "correct_idx": 3
         },
         {
           "question": "What would be the best way to celebrate an Alabama Crimson Tide game at my home ",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 2,
           "correct_idx": 0
         }
       ]
@@ -78,26 +78,26 @@
     {
       "user_id": "875a8a65-5b3e-4cfb-b5f1-635d840cdeaf",
       "n_queries": 10,
-      "correct": 2,
+      "correct": 3,
       "ingest_chunks": 43,
-      "ingest_time_ms": 136576,
+      "ingest_time_ms": 59842,
       "ingest_llm_calls": 86,
-      "ingest_llm_prompt": 37330,
-      "ingest_llm_completion": 7752,
-      "infer_time_ms": 186669,
+      "ingest_llm_prompt": 37237,
+      "ingest_llm_completion": 7074,
+      "infer_time_ms": 110258,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6501,
+      "infer_llm_tokens": 6375,
       "qa_results": [
         {
           "question": "What’s a good way to balance my ambition to make partner at my accounting firm w",
-          "correct": false,
-          "pred_idx": 2,
+          "correct": true,
+          "pred_idx": 0,
           "correct_idx": 0
         },
         {
           "question": "Could you recommend effective strategies for mentoring junior team members while",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 0,
           "correct_idx": 5
         },
         {
@@ -108,14 +108,14 @@
         },
         {
           "question": "How can I organize a historical walking tour of Boston for my friends or colleag",
-          "correct": true,
-          "pred_idx": 2,
+          "correct": false,
+          "pred_idx": 0,
           "correct_idx": 2
         },
         {
           "question": "What are some challenging hiking destinations in New England that match my exper",
-          "correct": false,
-          "pred_idx": 0,
+          "correct": true,
+          "pred_idx": 2,
           "correct_idx": 2
         },
         {
@@ -155,13 +155,13 @@
       "n_queries": 10,
       "correct": 4,
       "ingest_chunks": 54,
-      "ingest_time_ms": 82448,
+      "ingest_time_ms": 70501,
       "ingest_llm_calls": 108,
-      "ingest_llm_prompt": 46161,
-      "ingest_llm_completion": 8498,
-      "infer_time_ms": 129342,
+      "ingest_llm_prompt": 46321,
+      "ingest_llm_completion": 8087,
+      "infer_time_ms": 114340,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 5135,
+      "infer_llm_tokens": 6503,
       "qa_results": [
         {
           "question": "What are some effective ways to balance volunteering at my church with my work a",
@@ -171,26 +171,26 @@
         },
         {
           "question": "Which budgeting method would fit best for hosting dinner parties while maintaini",
-          "correct": true,
-          "pred_idx": 0,
-          "correct_idx": 0
-        },
-        {
-          "question": "How can I improve my skills to move from billing clerk to office manager?",
-          "correct": true,
-          "pred_idx": 0,
-          "correct_idx": 0
-        },
-        {
-          "question": "What’s a good way to choose my next historical fiction book?",
           "correct": false,
           "pred_idx": 2,
           "correct_idx": 0
         },
         {
-          "question": "What organizational tips can help me manage my church women’s group projects mor",
+          "question": "How can I improve my skills to move from billing clerk to office manager?",
           "correct": false,
-          "pred_idx": 4,
+          "pred_idx": 2,
+          "correct_idx": 0
+        },
+        {
+          "question": "What’s a good way to choose my next historical fiction book?",
+          "correct": true,
+          "pred_idx": 0,
+          "correct_idx": 0
+        },
+        {
+          "question": "What organizational tips can help me manage my church women’s group projects mor",
+          "correct": true,
+          "pred_idx": 3,
           "correct_idx": 3
         },
         {
@@ -220,7 +220,7 @@
         {
           "question": "How can I stay motivated and effectively learn new bookkeeping systems?",
           "correct": false,
-          "pred_idx": 4,
+          "pred_idx": 0,
           "correct_idx": 2
         }
       ]
@@ -230,13 +230,13 @@
       "n_queries": 10,
       "correct": 3,
       "ingest_chunks": 49,
-      "ingest_time_ms": 110476,
+      "ingest_time_ms": 96500,
       "ingest_llm_calls": 98,
-      "ingest_llm_prompt": 42386,
-      "ingest_llm_completion": 8389,
-      "infer_time_ms": 142861,
+      "ingest_llm_prompt": 42380,
+      "ingest_llm_completion": 8766,
+      "infer_time_ms": 114672,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6236,
+      "infer_llm_tokens": 6538,
       "qa_results": [
         {
           "question": "What are some effective ways I can encourage bipartisan collaboration on tough c",
@@ -246,8 +246,8 @@
         },
         {
           "question": "Can you suggest good woodworking projects that I could donate to local organizat",
-          "correct": true,
-          "pred_idx": 2,
+          "correct": false,
+          "pred_idx": 0,
           "correct_idx": 2
         },
         {
@@ -265,7 +265,7 @@
         {
           "question": "What strategies can I use to improve my public speaking skills for larger audien",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 3,
           "correct_idx": 0
         },
         {
@@ -277,19 +277,19 @@
         {
           "question": "How can I balance my legislative workload with family and personal activities mo",
           "correct": false,
-          "pred_idx": 5,
+          "pred_idx": 3,
           "correct_idx": 1
         },
         {
           "question": "What type of negotiation techniques should I focus on to resolve conflicts in to",
-          "correct": false,
-          "pred_idx": 0,
+          "correct": true,
+          "pred_idx": 3,
           "correct_idx": 3
         },
         {
           "question": "Do you have recommendations for art museums or exhibits outside Denver that fit ",
           "correct": false,
-          "pred_idx": 3,
+          "pred_idx": 2,
           "correct_idx": 0
         },
         {
@@ -303,20 +303,20 @@
     {
       "user_id": "453d5aa4-82ae-4247-ab90-cd1c50b77de7",
       "n_queries": 10,
-      "correct": 0,
+      "correct": 2,
       "ingest_chunks": 49,
-      "ingest_time_ms": 174569,
+      "ingest_time_ms": 83440,
       "ingest_llm_calls": 98,
-      "ingest_llm_prompt": 42060,
-      "ingest_llm_completion": 8018,
-      "infer_time_ms": 144772,
+      "ingest_llm_prompt": 41960,
+      "ingest_llm_completion": 7908,
+      "infer_time_ms": 138587,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6323,
+      "infer_llm_tokens": 6345,
       "qa_results": [
         {
           "question": "What are some creative ways I can make accounting mentoring sessions more engagi",
           "correct": false,
-          "pred_idx": 4,
+          "pred_idx": 0,
           "correct_idx": 3
         },
         {
@@ -327,8 +327,8 @@
         },
         {
           "question": "What strategies can I use to balance CPA exam preparation with my work and commu",
-          "correct": false,
-          "pred_idx": 0,
+          "correct": true,
+          "pred_idx": 4,
           "correct_idx": 4
         },
         {
@@ -351,8 +351,8 @@
         },
         {
           "question": "Can you suggest healthy, simple recipes using farmers' market ingredients that w",
-          "correct": false,
-          "pred_idx": 3,
+          "correct": true,
+          "pred_idx": 0,
           "correct_idx": 0
         },
         {
@@ -364,7 +364,7 @@
         {
           "question": "What are some effective ways for someone in their mid-thirties to expand their n",
           "correct": false,
-          "pred_idx": 4,
+          "pred_idx": 0,
           "correct_idx": 2
         },
         {
@@ -378,15 +378,15 @@
     {
       "user_id": "3409cc29-513d-43ea-a8b6-4964de8d6d39",
       "n_queries": 10,
-      "correct": 1,
+      "correct": 4,
       "ingest_chunks": 45,
-      "ingest_time_ms": 84327,
+      "ingest_time_ms": 78222,
       "ingest_llm_calls": 90,
-      "ingest_llm_prompt": 38454,
-      "ingest_llm_completion": 7749,
-      "infer_time_ms": 126410,
+      "ingest_llm_prompt": 38491,
+      "ingest_llm_completion": 7937,
+      "infer_time_ms": 161861,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6147,
+      "infer_llm_tokens": 6190,
       "qa_results": [
         {
           "question": "What are some effective ways I can transition my furniture restoration hobby int",
@@ -397,13 +397,13 @@
         {
           "question": "How can I make my home cooking more authentic to both southern and Haitian flavo",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 2,
           "correct_idx": 1
         },
         {
           "question": "What steps should I take to pursue a career in museum curation?",
-          "correct": false,
-          "pred_idx": 0,
+          "correct": true,
+          "pred_idx": 2,
           "correct_idx": 2
         },
         {
@@ -420,14 +420,14 @@
         },
         {
           "question": "How can I balance my creative interests with the need for a stable and structure",
-          "correct": false,
-          "pred_idx": 0,
+          "correct": true,
+          "pred_idx": 2,
           "correct_idx": 2
         },
         {
           "question": "What steps should I take to get involved in local history or social issues initi",
-          "correct": false,
-          "pred_idx": 5,
+          "correct": true,
+          "pred_idx": 3,
           "correct_idx": 3
         },
         {
@@ -451,109 +451,34 @@
       ]
     },
     {
-      "user_id": "fd788a8b-ca97-403b-a6f7-8cd80fea4abd",
-      "n_queries": 10,
-      "correct": 3,
-      "ingest_chunks": 46,
-      "ingest_time_ms": 86182,
-      "ingest_llm_calls": 92,
-      "ingest_llm_prompt": 40087,
-      "ingest_llm_completion": 7648,
-      "infer_time_ms": 179010,
-      "infer_emb_calls": 10,
-      "infer_llm_tokens": 6157,
-      "qa_results": [
-        {
-          "question": "What are some effective ways I can improve my office filing system to prepare fo",
-          "correct": false,
-          "pred_idx": 0,
-          "correct_idx": 3
-        },
-        {
-          "question": "How can I make my model train layout more realistic and enjoyable given my avail",
-          "correct": false,
-          "pred_idx": 2,
-          "correct_idx": 3
-        },
-        {
-          "question": "Can you suggest Southern comfort food recipes using ingredients I usually keep a",
-          "correct": false,
-          "pred_idx": 4,
-          "correct_idx": 1
-        },
-        {
-          "question": "What are some ideas to make my porch guitar sessions more enjoyable for myself a",
-          "correct": true,
-          "pred_idx": 0,
-          "correct_idx": 0
-        },
-        {
-          "question": "How should I organize my fishing trip if I want to try a new location, based on ",
-          "correct": false,
-          "pred_idx": 2,
-          "correct_idx": 0
-        },
-        {
-          "question": "What changes can I make to my office inventory management routine to enhance eff",
-          "correct": false,
-          "pred_idx": 2,
-          "correct_idx": 1
-        },
-        {
-          "question": "Could you recommend ways to refresh my home poker nights to keep things interest",
-          "correct": false,
-          "pred_idx": 0,
-          "correct_idx": 1
-        },
-        {
-          "question": "How can I gradually take on more managerial duties at work given my current sche",
-          "correct": true,
-          "pred_idx": 2,
-          "correct_idx": 2
-        },
-        {
-          "question": "What should I consider when planning a scenic drive or small town visit to fit m",
-          "correct": false,
-          "pred_idx": 0,
-          "correct_idx": 4
-        },
-        {
-          "question": "Can you suggest easy home repair or maintenance projects that I can tackle over ",
-          "correct": true,
-          "pred_idx": 2,
-          "correct_idx": 2
-        }
-      ]
-    },
-    {
       "user_id": "e0e12fb1-6cf5-4cb0-8ac7-ea3424a7311f",
       "n_queries": 10,
       "correct": 4,
       "ingest_chunks": 45,
-      "ingest_time_ms": 88964,
+      "ingest_time_ms": 65274,
       "ingest_llm_calls": 90,
-      "ingest_llm_prompt": 39323,
-      "ingest_llm_completion": 8076,
-      "infer_time_ms": 172446,
+      "ingest_llm_prompt": 39383,
+      "ingest_llm_completion": 7898,
+      "infer_time_ms": 134146,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6607,
+      "infer_llm_tokens": 6855,
       "qa_results": [
         {
           "question": "What are some effective ways to promote a new community art studio in my neighbo",
-          "correct": false,
-          "pred_idx": 3,
+          "correct": true,
+          "pred_idx": 0,
           "correct_idx": 0
         },
         {
           "question": "Can you suggest some engaging art workshop ideas I could run for families at loc",
-          "correct": false,
-          "pred_idx": 3,
+          "correct": true,
+          "pred_idx": 0,
           "correct_idx": 0
         },
         {
           "question": "How can I best organize a community garden focusing on native Mexican plants?",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 2,
           "correct_idx": 3
         },
         {
@@ -564,14 +489,14 @@
         },
         {
           "question": "What’s the best way to involve local youth in collaborative art projects?",
-          "correct": false,
-          "pred_idx": 4,
+          "correct": true,
+          "pred_idx": 5,
           "correct_idx": 5
         },
         {
           "question": "How can I enhance my event management process for local festivals or art fairs?",
-          "correct": true,
-          "pred_idx": 2,
+          "correct": false,
+          "pred_idx": 0,
           "correct_idx": 2
         },
         {
@@ -582,8 +507,8 @@
         },
         {
           "question": "Could you recommend strategies for making traditional Mexican dishes healthier f",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 3,
           "correct_idx": 0
         },
         {
@@ -594,8 +519,8 @@
         },
         {
           "question": "How can I approach seeking partnerships or sponsorships for community art projec",
-          "correct": true,
-          "pred_idx": 3,
+          "correct": false,
+          "pred_idx": 0,
           "correct_idx": 3
         }
       ]
@@ -603,20 +528,20 @@
     {
       "user_id": "192bb826-f774-42d7-98bb-0672da149aa0",
       "n_queries": 10,
-      "correct": 2,
+      "correct": 0,
       "ingest_chunks": 45,
-      "ingest_time_ms": 143132,
+      "ingest_time_ms": 109325,
       "ingest_llm_calls": 90,
-      "ingest_llm_prompt": 39188,
-      "ingest_llm_completion": 7739,
-      "infer_time_ms": 161298,
+      "ingest_llm_prompt": 39127,
+      "ingest_llm_completion": 8739,
+      "infer_time_ms": 125204,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6615,
+      "infer_llm_tokens": 6591,
       "qa_results": [
         {
           "question": "What’s the best way for me to connect with potential clients at local community ",
           "correct": false,
-          "pred_idx": 3,
+          "pred_idx": 2,
           "correct_idx": 1
         },
         {
@@ -640,37 +565,37 @@
         {
           "question": "What’s a good way for me to find and join pick-up basketball games in new cities",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 4,
           "correct_idx": 2
         },
         {
           "question": "How can I make my urban art gallery visits more enriching and social?",
           "correct": false,
-          "pred_idx": 4,
+          "pred_idx": 2,
           "correct_idx": 0
         },
         {
           "question": "What should I focus on to become a top performer in my real estate market?",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 2,
           "correct_idx": 0
         },
         {
           "question": "Could you suggest R&B playlists or artists that match the vibe I want for my nex",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 2,
           "correct_idx": 0
         },
         {
           "question": "How can I make the most of weekend trips to cities like DC and Philly while mana",
           "correct": false,
-          "pred_idx": 3,
+          "pred_idx": 2,
           "correct_idx": 0
         },
         {
           "question": "What’s the best way to grow my referral network among other brokers and agents?",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 3,
           "correct_idx": 0
         }
       ]
@@ -678,15 +603,15 @@
     {
       "user_id": "571e744a-d097-4b1d-88cf-4ba76dbbeb0d",
       "n_queries": 10,
-      "correct": 6,
+      "correct": 5,
       "ingest_chunks": 44,
-      "ingest_time_ms": 82156,
+      "ingest_time_ms": 100737,
       "ingest_llm_calls": 88,
-      "ingest_llm_prompt": 38028,
-      "ingest_llm_completion": 8414,
-      "infer_time_ms": 137673,
+      "ingest_llm_prompt": 38278,
+      "ingest_llm_completion": 8502,
+      "infer_time_ms": 149261,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6470,
+      "infer_llm_tokens": 5818,
       "qa_results": [
         {
           "question": "Given my passion for art and entertaining, what are some creative themes I could",
@@ -703,7 +628,7 @@
         {
           "question": "What are some effective ways for me to maintain social connections and stay acti",
           "correct": false,
-          "pred_idx": 4,
+          "pred_idx": 3,
           "correct_idx": 1
         },
         {
@@ -744,8 +669,8 @@
         },
         {
           "question": "How do I set up a personal fitness plan that keeps me motivated and allows me to",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 2,
           "correct_idx": 0
         }
       ]
@@ -753,15 +678,15 @@
     {
       "user_id": "08575ecd-d53c-490b-95af-2f926fbcb0f7",
       "n_queries": 10,
-      "correct": 2,
+      "correct": 3,
       "ingest_chunks": 57,
-      "ingest_time_ms": 107382,
+      "ingest_time_ms": 101344,
       "ingest_llm_calls": 114,
-      "ingest_llm_prompt": 49085,
-      "ingest_llm_completion": 9328,
-      "infer_time_ms": 146857,
+      "ingest_llm_prompt": 48954,
+      "ingest_llm_completion": 8683,
+      "infer_time_ms": 122888,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6210,
+      "infer_llm_tokens": 6134,
       "qa_results": [
         {
           "question": "What native plants should I focus on growing if I want to start a small nursery ",
@@ -796,7 +721,7 @@
         {
           "question": "What's the best way to preserve and showcase local history artifacts for the Ver",
           "correct": false,
-          "pred_idx": 3,
+          "pred_idx": 1,
           "correct_idx": 4
         },
         {
@@ -807,8 +732,8 @@
         },
         {
           "question": "What are some ways I can safely enjoy solo hunting trips as I get older?",
-          "correct": false,
-          "pred_idx": 3,
+          "correct": true,
+          "pred_idx": 0,
           "correct_idx": 0
         },
         {
@@ -828,26 +753,26 @@
     {
       "user_id": "12e593e3-cb16-46f1-af5d-ba49251cb6d4",
       "n_queries": 10,
-      "correct": 1,
+      "correct": 2,
       "ingest_chunks": 56,
-      "ingest_time_ms": 123075,
+      "ingest_time_ms": 74939,
       "ingest_llm_calls": 112,
-      "ingest_llm_prompt": 47597,
-      "ingest_llm_completion": 8350,
-      "infer_time_ms": 170535,
+      "ingest_llm_prompt": 47691,
+      "ingest_llm_completion": 8852,
+      "infer_time_ms": 124109,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6088,
+      "infer_llm_tokens": 6008,
       "qa_results": [
         {
           "question": "What steps can I take to effectively balance writing my novel with pursuing free",
           "correct": false,
-          "pred_idx": 4,
+          "pred_idx": 2,
           "correct_idx": 1
         },
         {
           "question": "Could you recommend strategies for making new connections at poetry readings or ",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 4,
           "correct_idx": 0
         },
         {
@@ -883,19 +808,19 @@
         {
           "question": "How should I prioritize developing screenwriting skills alongside novel writing ",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 4,
           "correct_idx": 0
         },
         {
           "question": "What are some ways I can stay physically and mentally active during busy writing",
-          "correct": false,
-          "pred_idx": 2,
+          "correct": true,
+          "pred_idx": 0,
           "correct_idx": 0
         },
         {
           "question": "Can you recommend a reading list that complements my interests and helps inspire",
           "correct": false,
-          "pred_idx": 4,
+          "pred_idx": 3,
           "correct_idx": 0
         }
       ]
@@ -903,15 +828,15 @@
     {
       "user_id": "0ab93c51-21b3-47cc-aa1b-5171dc61062d",
       "n_queries": 10,
-      "correct": 1,
+      "correct": 2,
       "ingest_chunks": 46,
-      "ingest_time_ms": 115375,
+      "ingest_time_ms": 72231,
       "ingest_llm_calls": 92,
-      "ingest_llm_prompt": 39340,
-      "ingest_llm_completion": 6941,
-      "infer_time_ms": 153152,
+      "ingest_llm_prompt": 39252,
+      "ingest_llm_completion": 6722,
+      "infer_time_ms": 131018,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 5591,
+      "infer_llm_tokens": 6266,
       "qa_results": [
         {
           "question": "What are some effective strategies for negotiating a promotion or raise at work?",
@@ -933,8 +858,8 @@
         },
         {
           "question": "How can I deepen my appreciation for jazz and hip-hop beyond listening, especial",
-          "correct": false,
-          "pred_idx": 0,
+          "correct": true,
+          "pred_idx": 2,
           "correct_idx": 2
         },
         {
@@ -952,13 +877,13 @@
         {
           "question": "What approach should I take to strategically plan my next big career move toward",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 2,
           "correct_idx": 1
         },
         {
           "question": "How can I select new music to explore that aligns with my tastes but also expand",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 0,
           "correct_idx": 1
         },
         {
@@ -980,18 +905,18 @@
       "n_queries": 10,
       "correct": 3,
       "ingest_chunks": 46,
-      "ingest_time_ms": 90483,
+      "ingest_time_ms": 78477,
       "ingest_llm_calls": 92,
-      "ingest_llm_prompt": 40224,
-      "ingest_llm_completion": 7810,
-      "infer_time_ms": 160461,
+      "ingest_llm_prompt": 40291,
+      "ingest_llm_completion": 8300,
+      "infer_time_ms": 137286,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6561,
+      "infer_llm_tokens": 6626,
       "qa_results": [
         {
           "question": "What are some beginner-friendly ways to expand my gardening skills, especially f",
           "correct": false,
-          "pred_idx": 5,
+          "pred_idx": 3,
           "correct_idx": 1
         },
         {
@@ -1008,8 +933,8 @@
         },
         {
           "question": "How can I support local textile artists and initiatives while also pursuing my o",
-          "correct": false,
-          "pred_idx": 4,
+          "correct": true,
+          "pred_idx": 5,
           "correct_idx": 5
         },
         {
@@ -1033,7 +958,7 @@
         {
           "question": "Can you suggest Southern comfort recipes using fresh ingredients I can prepare f",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 3,
           "correct_idx": 1
         },
         {
@@ -1044,8 +969,8 @@
         },
         {
           "question": "How can I deepen my appreciation for local art exhibitions, especially as someon",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 2,
           "correct_idx": 0
         }
       ]
@@ -1053,15 +978,15 @@
     {
       "user_id": "76cb68d0-6f65-4758-ab68-d3f9aac194df",
       "n_queries": 10,
-      "correct": 2,
+      "correct": 3,
       "ingest_chunks": 40,
-      "ingest_time_ms": 72804,
+      "ingest_time_ms": 91062,
       "ingest_llm_calls": 80,
-      "ingest_llm_prompt": 34778,
-      "ingest_llm_completion": 6041,
-      "infer_time_ms": 153001,
+      "ingest_llm_prompt": 35148,
+      "ingest_llm_completion": 7849,
+      "infer_time_ms": 137546,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6580,
+      "infer_llm_tokens": 6546,
       "qa_results": [
         {
           "question": "What skills should I focus on to improve my chances of becoming a lead mechanic ",
@@ -1077,8 +1002,8 @@
         },
         {
           "question": "What should I keep in mind when mentoring a new technician who is struggling wit",
-          "correct": false,
-          "pred_idx": 2,
+          "correct": true,
+          "pred_idx": 4,
           "correct_idx": 4
         },
         {
@@ -1114,7 +1039,7 @@
         {
           "question": "What are some good books or biographies to read given my interest in history, sc",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 0,
           "correct_idx": 3
         },
         {
@@ -1128,15 +1053,15 @@
     {
       "user_id": "c9b22027-cc8e-4051-9cfb-79fb96f461b5",
       "n_queries": 10,
-      "correct": 1,
+      "correct": 2,
       "ingest_chunks": 49,
-      "ingest_time_ms": 93332,
+      "ingest_time_ms": 99133,
       "ingest_llm_calls": 98,
-      "ingest_llm_prompt": 42664,
-      "ingest_llm_completion": 8344,
-      "infer_time_ms": 172925,
+      "ingest_llm_prompt": 42714,
+      "ingest_llm_completion": 8612,
+      "infer_time_ms": 137723,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6603,
+      "infer_llm_tokens": 6597,
       "qa_results": [
         {
           "question": "What are some effective ways to network with other engineers and street artists ",
@@ -1147,7 +1072,7 @@
         {
           "question": "What strategies can I use to balance planning solo travel to places like Marrake",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 2,
           "correct_idx": 1
         },
         {
@@ -1159,13 +1084,13 @@
         {
           "question": "Can you suggest street art tours or workshops in LA that would offer fresh inspi",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 5,
           "correct_idx": 1
         },
         {
           "question": "How do I best approach leading a small team for a technical project, given my re",
-          "correct": false,
-          "pred_idx": 2,
+          "correct": true,
+          "pred_idx": 3,
           "correct_idx": 3
         },
         {
@@ -1205,18 +1130,18 @@
       "n_queries": 10,
       "correct": 0,
       "ingest_chunks": 46,
-      "ingest_time_ms": 101571,
+      "ingest_time_ms": 86391,
       "ingest_llm_calls": 92,
-      "ingest_llm_prompt": 39559,
-      "ingest_llm_completion": 7557,
-      "infer_time_ms": 177964,
+      "ingest_llm_prompt": 39488,
+      "ingest_llm_completion": 7944,
+      "infer_time_ms": 120262,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 5657,
+      "infer_llm_tokens": 6325,
       "qa_results": [
         {
           "question": "I'm considering expanding our community programs—what strategies should I use to",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 0,
           "correct_idx": 1
         },
         {
@@ -1264,7 +1189,7 @@
         {
           "question": "Can you suggest travel destinations that combine historic sites with natural won",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 3,
           "correct_idx": 2
         },
         {
@@ -1278,26 +1203,26 @@
     {
       "user_id": "b4657c7a-db78-4335-8750-28f2b0db3957",
       "n_queries": 10,
-      "correct": 2,
+      "correct": 4,
       "ingest_chunks": 47,
-      "ingest_time_ms": 90815,
+      "ingest_time_ms": 77292,
       "ingest_llm_calls": 94,
-      "ingest_llm_prompt": 40289,
-      "ingest_llm_completion": 7945,
-      "infer_time_ms": 146461,
+      "ingest_llm_prompt": 40395,
+      "ingest_llm_completion": 8446,
+      "infer_time_ms": 125680,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6544,
+      "infer_llm_tokens": 6549,
       "qa_results": [
         {
           "question": "What are some creative ways I can improve teamwork and morale on my assembly lin",
-          "correct": false,
-          "pred_idx": 3,
+          "correct": true,
+          "pred_idx": 0,
           "correct_idx": 0
         },
         {
           "question": "Can you suggest hearty comfort food recipes for hosting a fall potluck?",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 5,
           "correct_idx": 3
         },
         {
@@ -1314,14 +1239,14 @@
         },
         {
           "question": "What steps should I take to advance from assembler to team leader at work?",
-          "correct": false,
-          "pred_idx": 3,
+          "correct": true,
+          "pred_idx": 2,
           "correct_idx": 2
         },
         {
           "question": "Can you recommend activities or attractions in the Great Lakes region for a week",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 3,
           "correct_idx": 2
         },
         {
@@ -1353,15 +1278,15 @@
     {
       "user_id": "7203b59e-2fc6-4bf8-9cee-0a792ee7ea2c",
       "n_queries": 10,
-      "correct": 2,
+      "correct": 3,
       "ingest_chunks": 48,
-      "ingest_time_ms": 91656,
+      "ingest_time_ms": 109363,
       "ingest_llm_calls": 96,
-      "ingest_llm_prompt": 41523,
-      "ingest_llm_completion": 7873,
-      "infer_time_ms": 148134,
+      "ingest_llm_prompt": 41596,
+      "ingest_llm_completion": 8406,
+      "infer_time_ms": 126504,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6395,
+      "infer_llm_tokens": 6384,
       "qa_results": [
         {
           "question": "What's the best way for me to learn computer skills online without a strict sche",
@@ -1372,7 +1297,7 @@
         {
           "question": "Which eco-friendly truck model should I consider for my delivery work, given my ",
           "correct": false,
-          "pred_idx": 2,
+          "pred_idx": 0,
           "correct_idx": 1
         },
         {
@@ -1402,19 +1327,19 @@
         {
           "question": "I want to try new Ecuadorian recipes—what would you suggest based on my cooking ",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 1,
           "correct_idx": 2
         },
         {
           "question": "How should I plan a spontaneous East Coast road trip, considering my travel comp",
-          "correct": false,
-          "pred_idx": 0,
+          "correct": true,
+          "pred_idx": 2,
           "correct_idx": 2
         },
         {
           "question": "Could you recommend new ways to improve my delivery organization system, dependi",
           "correct": false,
-          "pred_idx": 3,
+          "pred_idx": 0,
           "correct_idx": 2
         },
         {
@@ -1428,20 +1353,20 @@
     {
       "user_id": "456dcc8e-55b5-4d2e-a070-b71fdca1d310",
       "n_queries": 10,
-      "correct": 7,
+      "correct": 3,
       "ingest_chunks": 42,
-      "ingest_time_ms": 75715,
+      "ingest_time_ms": 66874,
       "ingest_llm_calls": 84,
-      "ingest_llm_prompt": 36674,
-      "ingest_llm_completion": 7103,
-      "infer_time_ms": 155375,
+      "ingest_llm_prompt": 36500,
+      "ingest_llm_completion": 7100,
+      "infer_time_ms": 141249,
       "infer_emb_calls": 10,
-      "infer_llm_tokens": 6725,
+      "infer_llm_tokens": 6785,
       "qa_results": [
         {
           "question": "What are some creative ways I can incorporate South Asian art themes into my din",
           "correct": false,
-          "pred_idx": 3,
+          "pred_idx": 4,
           "correct_idx": 1
         },
         {
@@ -1458,32 +1383,32 @@
         },
         {
           "question": "How can I design a philosophical discussion event that's engaging for book club ",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 3,
           "correct_idx": 0
         },
         {
           "question": "What pricing strategy should I use for my catering menu?",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 2,
           "correct_idx": 0
         },
         {
           "question": "What cities should I visit for inspiration in art, culture, and cuisine?",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 3,
           "correct_idx": 0
         },
         {
           "question": "How can I market my catering business to align with my artistic vision?",
-          "correct": true,
-          "pred_idx": 0,
+          "correct": false,
+          "pred_idx": 2,
           "correct_idx": 0
         },
         {
           "question": "What menu items could I feature to appeal to both traditional and adventurous ea",
           "correct": false,
-          "pred_idx": 5,
+          "pred_idx": 0,
           "correct_idx": 4
         },
         {
@@ -1495,11 +1420,16 @@
         {
           "question": "How can I balance personal time with event planning and household responsibiliti",
           "correct": false,
-          "pred_idx": 0,
+          "pred_idx": 3,
           "correct_idx": 1
         }
       ]
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "user_id": 6,
+      "error": "Request timed out."
+    }
+  ]
 }

@@ -1,0 +1,9 @@
+{
+  "save_dir": "results\\ingest_smoke\\lightrag\\20260419T112509Z\\backend_store",
+  "chunk_size": 1000,
+  "embedding_meta": {
+    "model": "text-embedding-v3",
+    "dim": 1024,
+    "source": "config.yaml:embedding.dim"
+  }
+}

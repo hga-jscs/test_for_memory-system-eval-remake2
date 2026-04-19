@@ -1,0 +1,12 @@
+{
+  "backend_mode": "hipporag",
+  "ingest_chunks": 2,
+  "ingest_time_ms": 29376,
+  "ingest_llm_calls": 4,
+  "ingest_llm_prompt_tokens": 1530,
+  "ingest_llm_completion_tokens": 656,
+  "chunk_boundary_preserved": true,
+  "original_chunk_count": 2,
+  "ingest_audit_run_id": "20260419T112501Z_33744",
+  "ingest_audit_dir": "results\\ingest_audit\\hipporag\\20260419T112501Z_33744"
+}

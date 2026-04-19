@@ -1,0 +1,11 @@
+[SMOKE] backend=memgpt run_id=20260419T035738Z_38968 only=all
+[preflight] letta health=200 payload={"version":"0.16.7","status":"ok"}
+[memgpt] amemgym/amemgym_u0_q0 => FAIL tags=['unsupported_by_topk']
+[memgpt] amemgym/amemgym_u0_q1 => FAIL tags=['unsupported_by_topk']
+[memgpt] memory_probe/probe_c0_q0 => FAIL tags=['unsupported_by_topk']
+[memgpt] memory_probe/probe_c0_q1 => FAIL tags=['unsupported_by_topk']
+[memgpt] memory_probe/probe_c0_q2 => FAIL tags=['unsupported_by_topk']
+[memgpt] state_machine/state_machine_static_001 => FAIL tags=['retrieved_but_answer_missed_key_evidence']
+[memgpt] tree_based/tree_based_graph_0_trimmed_100 => FAIL tags=['unsupported_by_topk']
+[memgpt] recommendations/recommendations_art_data_100 => FAIL tags=['unsupported_by_topk']
+[SMOKE DONE] backend=memgpt ok=False reason=case_failures run_dir=results\smoke\memgpt\20260419T035738Z_38968

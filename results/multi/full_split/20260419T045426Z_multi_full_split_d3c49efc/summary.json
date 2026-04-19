@@ -1,0 +1,46 @@
+{
+  "run_id": "20260419T045426Z_multi_full_split_d3c49efc",
+  "started_at": "2026-04-19 06:34:04 UTC",
+  "finished_at": "2026-04-19 06:34:04 UTC",
+  "strict_fail": true,
+  "selected_backends": [
+    "memgpt"
+  ],
+  "runtime": {
+    "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda3\\envs\\mem-eval-memgpt\\python.exe",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "git_commit": "unknown",
+    "dependency_versions": {
+      "openai": "1.58.1",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "scipy": "1.15.3",
+      "torch": "unknown"
+    }
+  },
+  "records": [
+    {
+      "backend": "memgpt",
+      "script": "bench_amemgym_memgpt.py",
+      "elapsed_sec": 104.25168895721436,
+      "status": "PASS",
+      "log_path": "logs\\full_benchmark_split\\01_memgpt_bench_amemgym_memgpt.log"
+    },
+    {
+      "backend": "memgpt",
+      "script": "bench_memory_probe_memgpt.py",
+      "elapsed_sec": 3497.4920802116394,
+      "status": "PASS",
+      "log_path": "logs\\full_benchmark_split\\02_memgpt_bench_memory_probe_memgpt.log"
+    },
+    {
+      "backend": "memgpt",
+      "script": "bench_structmemeval_memgpt.py",
+      "elapsed_sec": 2376.8902230262756,
+      "status": "PASS",
+      "log_path": "logs\\full_benchmark_split\\03_memgpt_bench_structmemeval_memgpt.log"
+    }
+  ],
+  "failed": []
+}

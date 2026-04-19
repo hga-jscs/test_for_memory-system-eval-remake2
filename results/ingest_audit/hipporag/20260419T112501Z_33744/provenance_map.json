@@ -1,0 +1,13 @@
+{
+  "original_chunk_count": 2,
+  "indexed_chunk_count": 2,
+  "graph_file_count": 6,
+  "graph_files": [
+    "results\\ingest_smoke\\hipporag\\20260419T112501Z\\backend_store\\llm_cache\\qwen-plus_cache.sqlite",
+    "results\\ingest_smoke\\hipporag\\20260419T112501Z\\backend_store\\openie_results_ner_qwen-plus.json",
+    "results\\ingest_smoke\\hipporag\\20260419T112501Z\\backend_store\\qwen-plus_text-embedding-v3\\chunk_embeddings\\vdb_chunk.parquet",
+    "results\\ingest_smoke\\hipporag\\20260419T112501Z\\backend_store\\qwen-plus_text-embedding-v3\\entity_embeddings\\vdb_entity.parquet",
+    "results\\ingest_smoke\\hipporag\\20260419T112501Z\\backend_store\\qwen-plus_text-embedding-v3\\fact_embeddings\\vdb_fact.parquet",
+    "results\\ingest_smoke\\hipporag\\20260419T112501Z\\backend_store\\qwen-plus_text-embedding-v3\\graph.pickle"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "Alice<SEP>Blue Ceramic Bowl With White Dots": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597947,
+    "update_time": 1776597947,
+    "_id": "Alice<SEP>Blue Ceramic Bowl With White Dots"
+  },
+  "Bob<SEP>Oliver": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597947,
+    "update_time": 1776597947,
+    "_id": "Bob<SEP>Oliver"
+  },
+  "Camping Trip<SEP>Voyageurs National Park": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597947,
+    "update_time": 1776597947,
+    "_id": "Camping Trip<SEP>Voyageurs National Park"
+  },
+  "Bob<SEP>Luna": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597950,
+    "update_time": 1776597950,
+    "_id": "Bob<SEP>Luna"
+  },
+  "Bailey<SEP>Bob": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597952,
+    "update_time": 1776597952,
+    "_id": "Bailey<SEP>Bob"
+  },
+  "Alice<SEP>Camping Trip": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597953,
+    "update_time": 1776597953,
+    "_id": "Alice<SEP>Camping Trip"
+  },
+  "Bob<SEP>Session S1": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597955,
+    "update_time": 1776597955,
+    "_id": "Bob<SEP>Session S1"
+  },
+  "Alice<SEP>Session S1": {
+    "chunk_ids": [
+      "chunk-a2a04799c77a0a020976c244d78e737a"
+    ],
+    "count": 1,
+    "create_time": 1776597959,
+    "update_time": 1776597959,
+    "_id": "Alice<SEP>Session S1"
+  },
+  "Alicia<SEP>Scout": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597993,
+    "update_time": 1776597993,
+    "_id": "Alicia<SEP>Scout"
+  },
+  "Alice<SEP>Sunflower Tattoo": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597993,
+    "update_time": 1776597993,
+    "_id": "Alice<SEP>Sunflower Tattoo"
+  },
+  "Bob<SEP>Pottery": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597993,
+    "update_time": 1776597993,
+    "_id": "Bob<SEP>Pottery"
+  },
+  "Alice<SEP>Purple Dragon": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597996,
+    "update_time": 1776597996,
+    "_id": "Alice<SEP>Purple Dragon"
+  },
+  "Bob<SEP>Hiking": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776597999,
+    "update_time": 1776597999,
+    "_id": "Bob<SEP>Hiking"
+  },
+  "Bob<SEP>Camping": {
+    "chunk_ids": [
+      "chunk-9deefd39a8612ff40a2c9934616536fa"
+    ],
+    "count": 1,
+    "create_time": 1776598001,
+    "update_time": 1776598001,
+    "_id": "Bob<SEP>Camping"
+  }
+}

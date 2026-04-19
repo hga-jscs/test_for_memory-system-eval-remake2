@@ -1,0 +1,40 @@
+{
+  "original_chunk_count": 2,
+  "joined_text_length": 678,
+  "chunk_join_offsets": [
+    {
+      "chunk_id": "raptor-000000",
+      "start": 0,
+      "end": 338,
+      "source_metadata": {
+        "case_id": "ingest_case_001",
+        "user_id": "user_alice",
+        "conv_id": "conv_alpha",
+        "session": "s1",
+        "session_time": "2023-07-01T09:00:00Z",
+        "period": "2023-Q3",
+        "category": "travel",
+        "topic": "camping",
+        "source_id": "sess-s1",
+        "chunk_offset": 0
+      }
+    },
+    {
+      "chunk_id": "raptor-000001",
+      "start": 340,
+      "end": 678,
+      "source_metadata": {
+        "case_id": "ingest_case_001",
+        "user_id": "user_alice",
+        "conv_id": "conv_alpha",
+        "session": "s2",
+        "session_time": "2023-07-02T18:30:00Z",
+        "period": "2023-Q3",
+        "category": "bio",
+        "topic": "family",
+        "source_id": "sess-s2",
+        "chunk_offset": 0
+      }
+    }
+  ]
+}

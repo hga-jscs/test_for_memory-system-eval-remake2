@@ -1,0 +1,70 @@
+{
+  "doc-a2a04799c77a0a020976c244d78e737a": {
+    "relation_pairs": [
+      [
+        "Bob",
+        "Luna"
+      ],
+      [
+        "Alice",
+        "Voyageurs National Park"
+      ],
+      [
+        "Bailey",
+        "Bob"
+      ],
+      [
+        "Alice",
+        "Blue Ceramic Bowl With White Dots"
+      ],
+      [
+        "Alice",
+        "Camping"
+      ],
+      [
+        "Bob",
+        "Oliver"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1776598238,
+    "update_time": 1776598238,
+    "_id": "doc-a2a04799c77a0a020976c244d78e737a"
+  },
+  "doc-9deefd39a8612ff40a2c9934616536fa": {
+    "relation_pairs": [
+      [
+        "Bob",
+        "Camping"
+      ],
+      [
+        "Bob",
+        "Purple Dragon"
+      ],
+      [
+        "Bob",
+        "Pottery"
+      ],
+      [
+        "Breeder",
+        "Scout"
+      ],
+      [
+        "Bob",
+        "Hiking"
+      ],
+      [
+        "Alice",
+        "Sunflower Tattoo"
+      ],
+      [
+        "Alicia",
+        "Scout"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1776598293,
+    "update_time": 1776598293,
+    "_id": "doc-9deefd39a8612ff40a2c9934616536fa"
+  }
+}

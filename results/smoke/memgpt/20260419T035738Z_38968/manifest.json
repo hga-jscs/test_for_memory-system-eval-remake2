@@ -1,0 +1,71 @@
+{
+  "backend": "memgpt",
+  "run_id": "20260419T035738Z_38968",
+  "started_at": "2026-04-19T03:57:38.854186+00:00",
+  "finished_at": "2026-04-19T03:57:47.725101+00:00",
+  "counts": {
+    "total": 8,
+    "passed": 0,
+    "failed": 8,
+    "skipped": 0
+  },
+  "ok": false,
+  "reason": "case_failures",
+  "artifacts": {
+    "manifest": "results\\smoke\\memgpt\\20260419T035738Z_38968\\manifest.json",
+    "summary": "results\\smoke\\memgpt\\20260419T035738Z_38968\\summary.json",
+    "summary_md": "results\\smoke\\memgpt\\20260419T035738Z_38968\\summary.md",
+    "cases": "results\\smoke\\memgpt\\20260419T035738Z_38968\\cases.jsonl",
+    "retrievals": "results\\smoke\\memgpt\\20260419T035738Z_38968\\retrievals.jsonl",
+    "llm_calls": "results\\smoke\\memgpt\\20260419T035738Z_38968\\llm_calls.jsonl",
+    "stdout": "results\\smoke\\memgpt\\20260419T035738Z_38968\\stdout.log",
+    "stderr": "results\\smoke\\memgpt\\20260419T035738Z_38968\\stderr.log",
+    "config": "results\\smoke\\memgpt\\20260419T035738Z_38968\\config_snapshot.json"
+  },
+  "failures": [
+    {
+      "case_id": "amemgym_u0_q0",
+      "error_type": "unsupported_by_topk",
+      "message": "benchmark=amemgym"
+    },
+    {
+      "case_id": "amemgym_u0_q1",
+      "error_type": "unsupported_by_topk",
+      "message": "benchmark=amemgym"
+    },
+    {
+      "case_id": "probe_c0_q0",
+      "error_type": "unsupported_by_topk",
+      "message": "benchmark=memory_probe"
+    },
+    {
+      "case_id": "probe_c0_q1",
+      "error_type": "unsupported_by_topk",
+      "message": "benchmark=memory_probe"
+    },
+    {
+      "case_id": "probe_c0_q2",
+      "error_type": "unsupported_by_topk",
+      "message": "benchmark=memory_probe"
+    },
+    {
+      "case_id": "state_machine_static_001",
+      "error_type": "retrieved_but_answer_missed_key_evidence",
+      "message": "benchmark=state_machine"
+    },
+    {
+      "case_id": "tree_based_graph_0_trimmed_100",
+      "error_type": "unsupported_by_topk",
+      "message": "benchmark=tree_based"
+    },
+    {
+      "case_id": "recommendations_art_data_100",
+      "error_type": "unsupported_by_topk",
+      "message": "benchmark=recommendations"
+    }
+  ],
+  "preflight": {
+    "ok": true,
+    "reason": "ok"
+  }
+}

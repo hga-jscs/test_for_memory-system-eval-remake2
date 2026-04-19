@@ -1,0 +1,22 @@
+{
+  "backend": "raptor",
+  "benchmark": "structmemeval",
+  "run_id": "20260419T083245Z_raptor_structmemeval_26117f3b",
+  "started_at": "2026-04-19T08:32:45.474708+00:00",
+  "strict_fail": false,
+  "max_workers": 1,
+  "model_config": {},
+  "runtime": {
+    "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda3\\envs\\mem-eval-raptor\\python.exe",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "git_commit": "unknown",
+    "dependency_versions": {
+      "openai": "1.3.3",
+      "numpy": "1.26.3",
+      "pandas": "2.3.3",
+      "scipy": "1.15.3",
+      "torch": "2.11.0"
+    }
+  }
+}

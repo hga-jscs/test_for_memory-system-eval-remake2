@@ -1,0 +1,18 @@
+{
+  "q1": [
+    "[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park.",
+    "[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon."
+  ],
+  "q2": [
+    "[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park.",
+    "[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon."
+  ],
+  "q3": [
+    "[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon.",
+    "[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park."
+  ],
+  "negative": [
+    "[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon.",
+    "[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park."
+  ]
+}

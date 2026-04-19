@@ -1,0 +1,9 @@
+{
+  "backend": "memgpt",
+  "run_id": "20260419T113211Z",
+  "ingest_failed": true,
+  "query_checks": {},
+  "notes": [
+    "build_index failed: [LettaBenchMemory] model 与 embedding handle 相同。这通常意味着把同一个句柄误同时用于 LLM 与 embedding，会在 archival-memory 写入时触发服务端 embedding 错误。 model=embedding=letta/letta-free。请设置不同的 LETTA_AGENT_MODEL 与 LETTA_EMBEDDING_MODEL。"
+  ]
+}

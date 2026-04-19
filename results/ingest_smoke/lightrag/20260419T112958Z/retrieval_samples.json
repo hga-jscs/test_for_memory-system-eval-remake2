@@ -1,0 +1,30 @@
+{
+  "q1": [
+    "[chunk_id=lightrag-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park.",
+    "[chunk_id=lightrag-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon.",
+    "ENTITY Alice: Alice is a user who purchased a blue ceramic bowl and planned a camping trip.<SEP>Alice is a person who has a sunflower tattoo and is incorrectly claimed to own a purple dragon.",
+    "ENTITY Blue Ceramic Bowl With White Dots: The blue ceramic bowl with white dots is an item purchased by Alice last Friday.",
+    "ENTITY Sunflower Tattoo: The sunflower tattoo is a body art owned by Alice."
+  ],
+  "q2": [
+    "[chunk_id=lightrag-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park.",
+    "[chunk_id=lightrag-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon.",
+    "ENTITY Alice: Alice is a user who purchased a blue ceramic bowl and planned a camping trip.<SEP>Alice is a person who has a sunflower tattoo and is incorrectly claimed to own a purple dragon.",
+    "ENTITY Camping: Camping is a recreational activity planned by Alice and others at Voyageurs National Park two weeks ago.",
+    "ENTITY Voyageurs National Park: Voyageurs National Park is a location where Alice and others planned a camping trip two weeks ago."
+  ],
+  "q3": [
+    "[chunk_id=lightrag-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon.",
+    "[chunk_id=lightrag-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park.",
+    "ENTITY Sunflower Tattoo: The sunflower tattoo is a body art owned by Alice.",
+    "ENTITY Alice: Alice is a user who purchased a blue ceramic bowl and planned a camping trip.<SEP>Alice is a person who has a sunflower tattoo and is incorrectly claimed to own a purple dragon.",
+    "ENTITY Luna: Luna is a pet mentioned by Bob."
+  ],
+  "negative": [
+    "[chunk_id=lightrag-000001][source_id=sess-s2][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s2]\n[Time: 2023-07-02]\nAlicia: My dog named Scout was adopted from a breeder.\nAlice: I have a sunflower tattoo.\nBob: activities: pottery, hiking, camping.\nBob: This is not true -> Alice owns a purple dragon.",
+    "[chunk_id=lightrag-000000][source_id=sess-s1][case_id=ingest_case_001][user_id=user_alice][conv_id=conv_alpha]\n[Session: s1]\n[Time: 2023-07-01]\nAlice: Last Friday I bought a blue ceramic bowl with white dots.\nBob: I noted it next to pets: Oliver, Luna, Bailey.\nAlice: Two weeks ago we planned camping at Voyageurs National Park.",
+    "ENTITY Purple Dragon: The purple dragon is a fictional creature falsely claimed by Bob to be owned by Alice.",
+    "ENTITY Bob: Bob is a user who noted information related to pets.<SEP>Bob is a person whose activities include pottery, hiking, and camping, and who makes a false statement about Alice owning a purple dragon.",
+    "ENTITY Alice: Alice is a user who purchased a blue ceramic bowl and planned a camping trip.<SEP>Alice is a person who has a sunflower tattoo and is incorrectly claimed to own a purple dragon."
+  ]
+}
